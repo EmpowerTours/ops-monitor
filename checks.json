@@ -4,49 +4,56 @@
     "url": "https://asas.empowertours.xyz/",
     "judge_path": "/judge",
     "healthz": "/healthz",
-    "keyword": "Asas"
+    "keyword": "Asas",
+    "readyz": "/readyz"
   },
   {
     "app": "faez",
     "url": "https://faez.empowertours.xyz/",
     "judge_path": "/try",
     "healthz": "/healthz",
-    "keyword": "Faez"
+    "keyword": "Faez",
+    "readyz": "/readyz"
   },
   {
     "app": "cosecha",
     "url": "https://cosecha.empowertours.xyz/",
     "judge_path": "/judge",
     "healthz": "/healthz",
-    "keyword": "Cosecha"
+    "keyword": "Cosecha",
+    "readyz": "/readyz"
   },
   {
     "app": "haqiqi",
     "url": "https://haqiqi.empowertours.xyz/",
     "judge_path": "/",
     "healthz": "/healthz",
-    "keyword": "Haqiqi"
+    "keyword": "Haqiqi",
+    "readyz": "/readyz"
   },
   {
     "app": "relocatedubai",
     "url": "https://relocatedubai.empowertours.xyz/",
     "judge_path": "/judge",
     "healthz": "/healthz",
-    "keyword": "RelocateDubai"
+    "keyword": "RelocateDubai",
+    "readyz": "/readyz"
   },
   {
     "app": "hunt-dubai",
     "url": "https://hunt-dubai.empowertours.xyz/",
     "judge_path": "/judge",
     "healthz": "/healthz",
-    "keyword": "Hunt Dubai"
+    "keyword": "Hunt Dubai",
+    "readyz": "/readyz"
   },
   {
     "app": "sawweeli-trips",
     "url": "https://sawweeli.empowertours.xyz/",
     "judge_path": "/try",
     "healthz": "/healthz",
-    "keyword": "Sawweeli Trips"
+    "keyword": "Sawweeli Trips",
+    "readyz": "/readyz"
   },
   {
     "app": "sawweeli-hub",

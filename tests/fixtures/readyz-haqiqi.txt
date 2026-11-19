@@ -1,0 +1,2 @@
+ready
+ai_spend day=2026-11-19 spent=USD 0.00 reserved=USD 0.00 cap=USD 1.00 remaining=USD 1.00 month_committed=USD 0.00 month_cap=USD 8.00 month_remaining=USD 8.00 closed=false
