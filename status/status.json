@@ -1,10 +1,10 @@
 {
   "apps": {
     "asas": {
-      "cert_days": 79,
+      "cert_days": 78,
       "down_since": null,
       "issue": null,
-      "ms": 264,
+      "ms": 305,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -13,7 +13,7 @@
       "cert_days": 79,
       "down_since": null,
       "issue": null,
-      "ms": 228,
+      "ms": 158,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -22,16 +22,16 @@
       "cert_days": 89,
       "down_since": null,
       "issue": null,
-      "ms": 153,
+      "ms": 214,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "faez": {
-      "cert_days": 66,
+      "cert_days": 65,
       "down_since": null,
       "issue": null,
-      "ms": 154,
+      "ms": 173,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -40,7 +40,7 @@
       "cert_days": 77,
       "down_since": null,
       "issue": null,
-      "ms": 155,
+      "ms": 145,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -49,7 +49,7 @@
       "cert_days": 70,
       "down_since": null,
       "issue": null,
-      "ms": 166,
+      "ms": 155,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -58,31 +58,31 @@
       "cert_days": 71,
       "down_since": null,
       "issue": null,
-      "ms": 165,
+      "ms": 194,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "sawweeli-hub": {
-      "cert_days": 86,
+      "cert_days": 85,
       "down_since": null,
       "issue": null,
-      "ms": 223,
+      "ms": 171,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "sawweeli-trips": {
-      "cert_days": 73,
+      "cert_days": 72,
       "down_since": null,
       "issue": null,
-      "ms": 163,
+      "ms": 169,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     }
   },
-  "last_summary": null,
+  "last_summary": "2026-11-19",
   "outages": [
     {
       "app": "alert-test",
@@ -90,5 +90,5 @@
       "start": "2026-11-19T05:02:04Z"
     }
   ],
-  "updated": "2026-11-19T05:04:08Z"
+  "updated": "2026-11-19T15:40:33Z"
 }
