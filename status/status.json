@@ -1,10 +1,21 @@
 {
   "apps": {
+    "alert-test": {
+      "cert_days": 89,
+      "down_since": "2026-11-19T05:02:04Z",
+      "issue": 2,
+      "ms": 151,
+      "reasons": [
+        "HTTP 404"
+      ],
+      "since": "2026-11-19T05:02:04Z",
+      "status": "down"
+    },
     "asas": {
       "cert_days": 79,
       "down_since": null,
       "issue": null,
-      "ms": 395,
+      "ms": 337,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -13,7 +24,7 @@
       "cert_days": 79,
       "down_since": null,
       "issue": null,
-      "ms": 228,
+      "ms": 195,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -22,7 +33,7 @@
       "cert_days": 89,
       "down_since": null,
       "issue": null,
-      "ms": 194,
+      "ms": 201,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -31,7 +42,7 @@
       "cert_days": 66,
       "down_since": null,
       "issue": null,
-      "ms": 233,
+      "ms": 223,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -40,7 +51,7 @@
       "cert_days": 77,
       "down_since": null,
       "issue": null,
-      "ms": 228,
+      "ms": 192,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -49,7 +60,7 @@
       "cert_days": 70,
       "down_since": null,
       "issue": null,
-      "ms": 233,
+      "ms": 284,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -58,7 +69,7 @@
       "cert_days": 71,
       "down_since": null,
       "issue": null,
-      "ms": 272,
+      "ms": 239,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -67,7 +78,7 @@
       "cert_days": 86,
       "down_since": null,
       "issue": null,
-      "ms": 232,
+      "ms": 204,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -76,13 +87,19 @@
       "cert_days": 73,
       "down_since": null,
       "issue": null,
-      "ms": 238,
+      "ms": 186,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     }
   },
   "last_summary": null,
-  "outages": [],
-  "updated": "2026-11-19T04:56:36Z"
+  "outages": [
+    {
+      "app": "alert-test",
+      "end": null,
+      "start": "2026-11-19T05:02:04Z"
+    }
+  ],
+  "updated": "2026-11-19T05:02:04Z"
 }
