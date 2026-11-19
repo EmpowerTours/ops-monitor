@@ -20,7 +20,9 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import math
 import os
+import re
 import socket
 import ssl
 import sys
@@ -45,6 +47,13 @@ SUMMARY_TITLE = "Daily status"
 MAX_BODY = 2_000_000
 OUTAGE_KEEP_DAYS = 8
 USER_AGENT = "EmpowerTours-ops-monitor/1.0 (+https://github.com/EmpowerTours/ops-monitor)"
+# A run more than this long after the previous one is flagged in the daily summary (GitHub's scheduler drops runs).
+GAP_FLAG_S = 45 * 60
+# AI spend: an alert issue opens when an app's spend reaches this share of its daily cap.
+SPEND_ALERT_PCT = 80.0
+SPEND_LABEL = "spend"
+# The Sawweeli hub's ops endpoints, called only when OPS_TOKEN is set.
+OPS_HUB_URL = os.environ.get("OPS_HUB_URL", "https://sawweeli-agent.empowertours.xyz").rstrip("/")
 
 SSL_CTX = ssl.create_default_context()
 
@@ -190,6 +199,223 @@ def run_checks(checks: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return results
 
 
+# ------------------------------------------------------------- run gaps
+def run_times(samples: dict[str, list[list[Any]]]) -> list[int]:
+    """Start times of past runs, from the latency samples (every run adds one sample per app at the same moment)."""
+    times = sorted({int(s[0]) for v in samples.values() for s in v})
+    out: list[int] = []
+    for t in times:
+        if not out or t - out[-1] > 120:  # samples of one run land within seconds of each other
+            out.append(t)
+    return out
+
+
+def run_gaps(times: list[int], now_ts: int, threshold_s: int = GAP_FLAG_S) -> list[tuple[int, int]]:
+    """(previous run, next run) pairs more than threshold_s apart in the last 24 h, including the gap up to now_ts."""
+    seq = [t for t in times if t <= now_ts] + [now_ts]
+    cutoff = now_ts - 86400
+    return [(a, b) for a, b in zip(seq, seq[1:]) if b - a > threshold_s and b >= cutoff]
+
+
+def fmt_gaps(gaps: list[tuple[int, int]]) -> str:
+    def hm(t: int) -> str:
+        return dt.datetime.fromtimestamp(t, dt.timezone.utc).strftime("%m-%d %H:%M")
+    return "; ".join(f"{hm(a)} to {hm(b)} UTC ({fmt_duration(b - a)})" for a, b in gaps)
+
+
+# ------------------------------------------------------------- AI spend
+_SPEND_TOKEN = re.compile(r"(\w+)=(?:USD\s+)?(\S+)")
+
+
+def _num(v: Any) -> float | None:
+    if isinstance(v, bool) or v is None:
+        return None
+    try:
+        n = float(str(v).strip().lstrip("$"))
+    except ValueError:
+        return None
+    return n if math.isfinite(n) and n >= 0 else None
+
+
+def parse_readyz(body: str | None) -> dict[str, Any] | None:
+    """Today's AI spend from an app's /readyz body, in either published format:
+    JSON  {"ai_spend": {"day", "spent_usd", "reserved_usd", "cap_usd", ...}, ...}
+    text  a line "ai_spend day=YYYY-MM-DD spent=USD 0.00 reserved=USD 0.00 cap=USD 4.00 ..."
+    Returns {"day", "spent_usd", "reserved_usd", "cap_usd"} or None when neither format is found or a number is bad."""
+    if not body:
+        return None
+    try:
+        data = json.loads(body)
+    except ValueError:
+        data = None
+    if isinstance(data, dict):
+        s = data.get("ai_spend")
+        if isinstance(s, dict):
+            spent, cap = _num(s.get("spent_usd")), _num(s.get("cap_usd"))
+            reserved = _num(s.get("reserved_usd", 0))
+            if spent is None or cap is None or reserved is None:
+                return None
+            return {"day": str(s.get("day") or ""), "spent_usd": spent, "reserved_usd": reserved, "cap_usd": cap}
+        return None
+    for line in body.splitlines():
+        line = line.strip()
+        if not line.startswith("ai_spend "):
+            continue
+        kv = dict(_SPEND_TOKEN.findall(line))
+        spent, cap = _num(kv.get("spent")), _num(kv.get("cap"))
+        reserved = _num(kv.get("reserved", "0"))
+        if spent is None or cap is None or reserved is None:
+            return None
+        return {"day": kv.get("day", ""), "spent_usd": spent, "reserved_usd": reserved, "cap_usd": cap}
+    return None
+
+
+def spend_pct(r: dict[str, Any]) -> float | None:
+    """Spent plus in-flight reservations as a % of the daily cap. None when the cap is 0 (spending is closed)."""
+    cap = r["cap_usd"]
+    if cap <= 0:
+        return None
+    return 100.0 * (r["spent_usd"] + r.get("reserved_usd", 0.0)) / cap
+
+
+def fetch_spend(check: dict[str, Any]) -> dict[str, Any]:
+    parts = urlsplit(check["url"])
+    res = fetch(urljoin(f"{parts.scheme}://{parts.netloc}", check["readyz"]))
+    reading = parse_readyz(res["body"]) if res["status"] == 200 else None
+    err = None if reading else (res["error"] or (f"HTTP {res['status']}" if res["status"] != 200 else "no ai_spend in /readyz"))
+    return {"app": check["app"], "reading": reading, "error": err}
+
+
+def hub_call(method: str, path: str, token: str) -> Any:
+    """Authenticated call to the hub's /api/ops endpoints. Raises RuntimeError without the token in the message."""
+    if not OPS_HUB_URL.startswith("https://"):
+        raise RuntimeError("OPS_HUB_URL must be https")
+    req = urllib.request.Request(f"{OPS_HUB_URL}{path}", method=method, data=b"{}" if method == "POST" else None, headers={
+        "Authorization": f"Bearer {token}", "Accept": "application/json", "User-Agent": USER_AGENT,
+        "Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=60, context=SSL_CTX) as resp:
+            return json.loads(resp.read(MAX_BODY) or b"null")
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"hub {method} {path} -> HTTP {e.code}") from None
+    except (urllib.error.URLError, socket.timeout, TimeoutError, OSError, ValueError) as e:
+        raise RuntimeError(f"hub {method} {path} -> {type(e).__name__}") from None
+
+
+def parse_hub_spend(data: Any) -> list[dict[str, Any]]:
+    """GET /api/ops/spend -> one spend row per metered service: sawweeli-hub/llm, /tts, /stt."""
+    out: list[dict[str, Any]] = []
+    if not isinstance(data, dict):
+        return out
+    for kind in ("llm", "tts", "stt"):
+        s = data.get(kind)
+        if not isinstance(s, dict):
+            continue
+        spent, cap = _num(s.get("spent_usd")), _num(s.get("cap_usd"))
+        if spent is None or cap is None:
+            continue
+        out.append({"app": f"sawweeli-hub/{kind}", "error": None,
+                    "reading": {"day": str(data.get("day") or ""), "spent_usd": spent, "reserved_usd": 0.0, "cap_usd": cap}})
+    return out
+
+
+def spend_table(rows: list[dict[str, Any]]) -> str:
+    lines = ["| app | day | spent USD | reserved USD | daily cap USD | used |", "|---|---|---|---|---|---|"]
+    for row in rows:
+        r = row["reading"]
+        if r is None:
+            lines.append(f"| {row['app']} | - | - | - | - | unavailable ({row['error']}) |")
+            continue
+        p = spend_pct(r)
+        used = "cap 0 (closed)" if p is None else f"{p:.0f}%" + (" **ALERT**" if p >= SPEND_ALERT_PCT else "")
+        lines.append(f"| {row['app']} | {r['day'] or '-'} | {r['spent_usd']:.4f} | {r['reserved_usd']:.4f} | "
+                     f"{r['cap_usd']:.2f} | {used} |")
+    return "\n".join(lines)
+
+
+def process_spend_alerts(gh: Any, state: dict[str, Any], rows: list[dict[str, Any]], configured: set[str],
+                         now: dt.datetime, errors: list[str]) -> None:
+    """One issue "SPEND: <app>" (label `spend`) while an app is at SPEND_ALERT_PCT or more of its daily cap.
+    It closes when the share drops below, when the app's day rolls over, when the app stops being checked, or (if
+    /readyz stays unreachable) once the alert is more than a day old."""
+    alerts: dict[str, Any] = state.setdefault("spend_alerts", {})
+    stamp = iso(now)
+    by_app = {row["app"]: row for row in rows}
+
+    def close(app: str, why: str) -> None:
+        a = alerts[app]
+        try:
+            gh.comment(a["issue"], f"{why} at {stamp}. Closing.")
+            gh.close(a["issue"])
+            print(f"closed spend issue #{a['issue']} for {app} ({why})")
+            del alerts[app]
+        except RuntimeError as e:
+            errors.append(str(e))
+
+    for app in list(alerts):
+        a = alerts[app]
+        row = by_app.get(app)
+        r = row["reading"] if row else None
+        if app not in configured:
+            close(app, "No longer checked")
+        elif r is None:
+            try:
+                stale = (now.date() - dt.date.fromisoformat(a["day"])).days >= 2
+            except ValueError:
+                stale = True
+            if stale:
+                close(app, f"Spend unreadable and the alert day {a['day']} is over")
+        elif r["day"] != a["day"]:
+            close(app, f"Day rolled over ({a['day']} -> {r['day']})")
+        else:
+            p = spend_pct(r)
+            if p is None or p < SPEND_ALERT_PCT:
+                close(app, f"Back below {SPEND_ALERT_PCT:.0f}% of the daily cap "
+                           f"(now {'closed' if p is None else f'{p:.0f}%'})")
+            else:
+                a["pct"] = round(p, 1)
+
+    for row in rows:
+        app, r = row["app"], row["reading"]
+        if r is None or app in alerts:
+            continue
+        p = spend_pct(r)
+        if p is None or p < SPEND_ALERT_PCT:
+            continue
+        title = f"SPEND: {app}"
+        body = (f"**{app}** has used **{p:.0f}%** of its daily AI cap ({r['day']}): "
+                f"USD {r['spent_usd']:.4f} spent + USD {r['reserved_usd']:.4f} reserved of USD {r['cap_usd']:.2f}.\n\n"
+                f"The app's own cap still stops spending at 100%. This issue closes automatically when the share "
+                f"drops below {SPEND_ALERT_PCT:.0f}% or the app's day rolls over.")
+        try:
+            existing = gh.find_open_issue(title, SPEND_LABEL)
+            if existing:
+                gh.comment(existing, f"At {p:.0f}% of the daily cap at {stamp} ({r['day']}).")
+                num = existing
+            else:
+                num = gh.create_issue(title, body, [SPEND_LABEL])
+            alerts[app] = {"issue": num, "day": r["day"], "pct": round(p, 1), "since": stamp}
+            print(f"opened/updated spend issue #{num} for {app} ({p:.0f}%)")
+        except RuntimeError as e:
+            errors.append(str(e))
+
+
+def voice_keepalive(token: str) -> str:
+    """POST /api/ops/voice-keepalive once a day (with the summary). The hub pays for at most one short phrase per cloned
+    voice, and only for a voice with no paid call in 5 days. Returns one line for the summary."""
+    try:
+        r = hub_call("POST", "/api/ops/voice-keepalive", token)
+    except RuntimeError as e:
+        return f"failed ({e})"
+    if not isinstance(r, dict):
+        return "unexpected answer"
+    refreshed = [str(x) for x in r.get("refreshed") or []]
+    failed = [f"{x.get('voice')} ({x.get('why')})" for x in r.get("failed") or [] if isinstance(x, dict)]
+    return (f"refreshed {', '.join(refreshed) or 'none'}"
+            + (f"; **failed {', '.join(failed)}**" if failed else "")
+            + f"; checked {len(r.get('voices') or [])} voice(s).")
+
+
 # ------------------------------------------------------------- GitHub API
 class GitHub:
     def __init__(self, token: str, repo: str) -> None:
@@ -275,7 +501,9 @@ def significant(state: dict[str, Any]) -> Any:
         name: {k: a.get(k) for k in ("status", "down_since", "issue", "reasons")}
         for name, a in state.get("apps", {}).items()
     }
-    return {"apps": apps, "outages": state.get("outages", []), "last_summary": state.get("last_summary")}
+    alerts = {name: {k: a.get(k) for k in ("issue", "day")} for name, a in state.get("spend_alerts", {}).items()}
+    return {"apps": apps, "outages": state.get("outages", []), "last_summary": state.get("last_summary"),
+            "spend_alerts": alerts}
 
 
 def uptime_24h(app: str, outages: list[dict[str, Any]], now: dt.datetime) -> float:
@@ -309,7 +537,8 @@ def table(results: list[dict[str, Any]]) -> str:
 
 
 def summary_body(checks: list[dict[str, Any]], results: dict[str, dict[str, Any]],
-                 state: dict[str, Any], samples: dict[str, list[list[Any]]], now: dt.datetime) -> str:
+                 state: dict[str, Any], samples: dict[str, list[list[Any]]], now: dt.datetime,
+                 spend_rows: list[dict[str, Any]] | None = None, keepalive: str | None = None) -> str:
     lines = [f"**Daily status, {now.strftime('%Y-%m-%d %H:%M')} UTC** (last 24 h)", "",
              "| app | uptime 24h | avg ms | max ms | cert days | now |", "|---|---|---|---|---|---|"]
     slowest: tuple[str, float] | None = None
@@ -328,6 +557,21 @@ def summary_body(checks: list[dict[str, Any]], results: dict[str, dict[str, Any]
     lines += ["", f"Slowest app: **{slowest[0]}** (avg {slowest[1]:.0f} ms)" if slowest else "",
               f"Soonest certificate expiry: **{certs[0][1]}** ({certs[0][0]} days left)." if certs else "",
               f"Latency is from {n} sample(s) in the last 24 h; uptime is from recorded outages."]
+    times = run_times(samples)
+    if not times:
+        lines += ["", "**Run gaps:** unknown (no run history in the cache)."]
+    else:
+        gaps = run_gaps(times, int(now.timestamp()))
+        if gaps:
+            lines += ["", f"**Run gaps over {GAP_FLAG_S // 60} min: {len(gaps)}** ({len(times)} run(s) in 24 h): "
+                          + fmt_gaps(gaps)]
+        else:
+            lines += ["", f"Run gaps: none over {GAP_FLAG_S // 60} min ({len(times)} run(s) in 24 h)."]
+    if spend_rows:
+        lines += ["", "**AI spend today** (each app's own day; used = spent + reserved over the daily cap; "
+                      f"an alert opens at {SPEND_ALERT_PCT:.0f}%)", "", spend_table(spend_rows)]
+    if keepalive:
+        lines += ["", f"Voice keep-alive: {keepalive}"]
     return "\n".join(lines)
 
 
@@ -348,12 +592,35 @@ def main() -> int:
         with open(summary_path, "a", encoding="utf-8") as f:
             f.write(f"### Uptime check {iso(now)}\n\n{out}\n")
 
-    # latency samples (cache only, never committed)
+    # latency samples (cache only, never committed); they also give the run history for the gap flag
     samples: dict[str, list[list[Any]]] = load_json(SAMPLES_FILE, {})
+    prev = run_times(samples)
+    gap_note = (f"previous run {fmt_duration(now.timestamp() - prev[-1])} ago"
+                + (f" (**over {GAP_FLAG_S // 60} min**)" if now.timestamp() - prev[-1] > GAP_FLAG_S else "")
+                if prev else "no previous run in the cache")
+    print(f"gap: {gap_note}", flush=True)
     cutoff = time.time() - 86400
     for r in results_list:
         samples.setdefault(r["app"], []).append([int(time.time()), int(r["ok"]), r["ms"]])
     samples = {a: [s for s in v if s[0] >= cutoff] for a, v in samples.items() if a in results}
+
+    # AI spend: each app's public /readyz, plus the hub's /api/ops/spend when OPS_TOKEN is set
+    spend_checks = [c for c in checks if c.get("readyz")]
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        spend_rows = list(pool.map(fetch_spend, spend_checks))
+    configured = {c["app"] for c in spend_checks}
+    ops_token = (os.environ.get("OPS_TOKEN") or "").strip()
+    if ops_token:
+        configured |= {f"sawweeli-hub/{k}" for k in ("llm", "tts", "stt")}
+        try:
+            spend_rows += parse_hub_spend(hub_call("GET", "/api/ops/spend", ops_token))
+        except RuntimeError as e:
+            print(f"note: {e}", flush=True)
+    stbl = spend_table(spend_rows)
+    print(stbl, flush=True)
+    if summary_path:
+        with open(summary_path, "a", encoding="utf-8") as f:
+            f.write(f"\nGap since the previous run: {gap_note}\n\n### AI spend\n\n{stbl}\n")
 
     token = os.environ.get("GITHUB_TOKEN")
     repo = os.environ.get("GITHUB_REPOSITORY")
@@ -439,6 +706,12 @@ def main() -> int:
                 continue
         del apps[app]
 
+    try:
+        gh.ensure_label(SPEND_LABEL, "fbca04", "An app reached 80% of its daily AI spend cap")
+        process_spend_alerts(gh, state, spend_rows, configured, now, errors)
+    except RuntimeError as e:
+        errors.append(str(e))
+
     keep_after = now - dt.timedelta(days=OUTAGE_KEEP_DAYS)
     state["outages"] = [o for o in outages if o.get("end") is None or parse_iso(o["end"]) >= keep_after]
 
@@ -451,7 +724,8 @@ def main() -> int:
             if num is None:
                 num = gh.create_issue(SUMMARY_TITLE, "Daily uptime summary, one comment per day at 14:00 UTC.", [])
                 gh.try_pin(num)
-            gh.comment(num, summary_body(checks, results, state, samples, now))
+            keepalive = voice_keepalive(ops_token) if ops_token else None
+            gh.comment(num, summary_body(checks, results, state, samples, now, spend_rows, keepalive))
             if not force:  # a manual summary does not replace the scheduled one
                 state["last_summary"] = today
             print(f"posted daily summary to issue #{num}")

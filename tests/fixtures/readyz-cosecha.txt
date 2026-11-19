@@ -1,0 +1,1 @@
+{"ai_spend":{"day":"2026-11-19","spent_usd":0,"reserved_usd":0,"cap_usd":1,"remaining_usd":1,"month_spent_usd":0.42099,"month_cap_usd":20,"month_remaining_usd":19.57901,"paused":false,"ledger_available":true},"llm":"Claude (claude-sonnet-5-5)","ok":true}

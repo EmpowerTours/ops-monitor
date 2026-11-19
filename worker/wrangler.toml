@@ -1,0 +1,13 @@
+name = "ops-monitor-dispatch"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+# Cron only: no public workers.dev URL and no routes.
+workers_dev = false
+
+[triggers]
+# Every 15 minutes (UTC). Each run calls workflow_dispatch for uptime.yml on main.
+crons = ["*/15 * * * *"]
+
+# Secret (set by the owner, never committed): GH_DISPATCH_TOKEN
+# Optional plain vars to point it elsewhere: GH_REPO, GH_WORKFLOW, GH_REF

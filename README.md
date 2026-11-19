@@ -3,7 +3,8 @@
 Uptime monitor for the EmpowerTours Dubai championship apps. It runs only on
 GitHub Actions (every 15 minutes), uses the Python 3 standard library, makes
 plain read-only `GET` requests, and stores no credentials: the only token it
-uses is the workflow's built-in `GITHUB_TOKEN`.
+uses are the workflow's built-in `GITHUB_TOKEN` and, optionally, `OPS_TOKEN`
+for the Sawweeli hub's ops endpoints (see [AI spend](#ai-spend)).
 
 ## What is checked
 
@@ -40,8 +41,49 @@ To get the emails you must **Watch** this repository: *Watch -> All activity*
 <https://github.com/settings/notifications>. Issues are opened by
 `github-actions[bot]`, so they do notify you.
 
-GitHub's scheduler can start runs a few minutes late, so "every 15 minutes" is
-best effort.
+## What starts a run
+
+GitHub's scheduler fired this workflow's cron only once in 14 hours on
+2026-11-19, so the primary trigger is a Cloudflare cron Worker
+([`worker/`](worker/README.md)) that calls `workflow_dispatch` for `uptime.yml`
+on `main` every 15 minutes. The GitHub cron (`7,22,37,52 * * * *`) stays as a
+backup. The daily summary flags every gap of more than 45 minutes between runs
+in the last 24 h (from the run history in the Actions cache), so a broken
+trigger shows up the next day.
+
+## AI spend
+
+Seven apps publish today's AI spend against their daily cap at the public
+`GET /readyz` (the `readyz` field in `checks.json`). Two formats are parsed:
+JSON `{"ai_spend": {"day", "spent_usd", "reserved_usd", "cap_usd"}}` and the
+text line `ai_spend day=... spent=USD x reserved=USD y cap=USD z`. Every run
+writes a spend table to the run's summary page, and the daily summary includes
+it.
+
+- **Alert:** when an app's spent + reserved reaches **80%** of its daily cap,
+  the workflow opens one issue `SPEND: <app>` labelled `spend`. It closes the
+  issue when the share drops below 80%, when the app's day rolls over (each
+  app's own `day`), when the check is removed, or, if `/readyz` stays
+  unreadable, two days after the alert's day. A cap of 0 means spending is
+  closed and never alerts. The app's own cap still stops spending at 100%;
+  this is only the warning.
+- **Hub (optional):** with the repository secret `OPS_TOKEN` set, each run also
+  calls `GET /api/ops/spend` on the Sawweeli hub (LLM, TTS and STT spend against
+  their caps, alerting the same way as `sawweeli-hub/llm` etc.), and the daily
+  summary calls `POST /api/ops/voice-keepalive`, which keeps the two cloned
+  MiniMax voices alive (MiniMax deletes a clone unused for 7 days). Without
+  `OPS_TOKEN` both are skipped quietly. The token must equal the hub's
+  `OPS_TOKEN` Railway variable.
+
+## Tests
+
+```sh
+python3 -m unittest discover -s tests -v   # monitor: /readyz parsers, spend alerts, gap flag
+node --test worker/test/index.test.mjs     # dispatch Worker
+```
+
+`tests/fixtures/readyz-*.txt` are the real `/readyz` bodies captured with plain
+GETs on 2026-11-19.
 
 ## How to add an app
 
@@ -75,3 +117,5 @@ Test locally without touching issues (no `GITHUB_TOKEN` means dry run):
 GitHub disables scheduled workflows in a repository with no activity for 60
 days. The workflow commits `status/status.json` at least once a day (with the
 daily summary), which keeps the repository active.
+
+To stop the dispatch Worker as well: `npx wrangler delete` in `worker/`.

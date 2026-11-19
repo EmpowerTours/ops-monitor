@@ -1,0 +1,1 @@
+{"ai_spend":{"day":"2026-11-19","spent_usd":0,"reserved_usd":0,"cap_usd":0.75,"remaining_usd":0.75,"month_spent_usd":0.012398,"month_cap_usd":5,"month_remaining_usd":4.987602,"paused":false,"ledger_available":true},"plugin_unauthorized":0,"status":"ready"}

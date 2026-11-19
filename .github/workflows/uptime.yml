@@ -2,7 +2,8 @@ name: uptime
 
 on:
   schedule:
-    # every 15 minutes, off the top of the hour (GitHub delays or drops runs at :00 under load)
+    # Backup only. GitHub's scheduler fires this unreliably for this repository (once in 14 h on 2026-11-19); the
+    # primary trigger is the Cloudflare cron Worker in worker/, which calls workflow_dispatch every 15 minutes.
     - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
     inputs:
@@ -38,6 +39,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FORCE_SUMMARY: ${{ inputs.force_summary }}
+          # Optional. Unset: the hub's /api/ops endpoints are skipped quietly.
+          OPS_TOKEN: ${{ secrets.OPS_TOKEN }}
         run: python3 monitor.py
 
       - name: Save latency samples
