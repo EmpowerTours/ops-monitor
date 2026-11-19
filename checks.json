@@ -62,12 +62,5 @@
     "judge_path": null,
     "healthz": null,
     "keyword": "ok"
-  },
-  {
-    "app": "alert-test",
-    "url": "https://demo-studio.empowertours.xyz/definitely-not-a-page-404",
-    "judge_path": null,
-    "healthz": null,
-    "keyword": "ok"
   }
 ]
