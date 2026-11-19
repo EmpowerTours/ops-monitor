@@ -1,0 +1,61 @@
+name: uptime
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      force_summary:
+        description: "Post the daily summary now"
+        type: boolean
+        default: false
+
+permissions:
+  issues: write
+  contents: write
+
+concurrency:
+  group: uptime
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Restore latency samples
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .cache/samples.json
+          key: samples-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: samples-
+
+      - name: Run checks
+        id: monitor
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE_SUMMARY: ${{ inputs.force_summary }}
+        run: python3 monitor.py
+
+      - name: Save latency samples
+        if: always()
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .cache/samples.json
+          key: samples-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: Commit state if it changed
+        if: always() && steps.monitor.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add status/status.json
+          git commit -q -m "status: update $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0
+            sleep 5
+          done
+          echo "push failed after 3 attempts" >&2
+          exit 1

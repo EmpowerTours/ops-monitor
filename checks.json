@@ -1,0 +1,66 @@
+[
+  {
+    "app": "asas",
+    "url": "https://asas.empowertours.xyz/",
+    "judge_path": "/judge",
+    "healthz": "/healthz",
+    "keyword": "Asas"
+  },
+  {
+    "app": "faez",
+    "url": "https://faez.empowertours.xyz/",
+    "judge_path": "/try",
+    "healthz": "/healthz",
+    "keyword": "Faez"
+  },
+  {
+    "app": "cosecha",
+    "url": "https://cosecha.empowertours.xyz/",
+    "judge_path": "/judge",
+    "healthz": "/healthz",
+    "keyword": "Cosecha"
+  },
+  {
+    "app": "haqiqi",
+    "url": "https://haqiqi.empowertours.xyz/",
+    "judge_path": "/",
+    "healthz": "/healthz",
+    "keyword": "Haqiqi"
+  },
+  {
+    "app": "relocatedubai",
+    "url": "https://relocatedubai.empowertours.xyz/",
+    "judge_path": "/judge",
+    "healthz": "/healthz",
+    "keyword": "RelocateDubai"
+  },
+  {
+    "app": "hunt-dubai",
+    "url": "https://hunt-dubai.empowertours.xyz/",
+    "judge_path": "/judge",
+    "healthz": "/healthz",
+    "keyword": "Hunt Dubai"
+  },
+  {
+    "app": "sawweeli-trips",
+    "url": "https://sawweeli.empowertours.xyz/",
+    "judge_path": "/try",
+    "healthz": "/healthz",
+    "keyword": "Sawweeli Trips"
+  },
+  {
+    "app": "sawweeli-hub",
+    "url": "https://sawweeli-agent.empowertours.xyz/",
+    "judge_path": "/",
+    "healthz": "/healthz",
+    "healthz_keyword": "\"ok\":true",
+    "keyword": "Sawweeli"
+  },
+  {
+    "app": "demo-studio",
+    "url": "https://demo-studio.empowertours.xyz/healthz",
+    "judge_path": null,
+    "healthz": null,
+    "keyword": "ok"
+  }
+]
