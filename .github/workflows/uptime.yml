@@ -2,7 +2,8 @@ name: uptime
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    # every 15 minutes, off the top of the hour (GitHub delays or drops runs at :00 under load)
+    - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
     inputs:
       force_summary:
