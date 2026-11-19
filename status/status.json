@@ -4,7 +4,7 @@
       "cert_days": 79,
       "down_since": null,
       "issue": null,
-      "ms": 139,
+      "ms": 264,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -13,7 +13,7 @@
       "cert_days": 79,
       "down_since": null,
       "issue": null,
-      "ms": 36,
+      "ms": 228,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -22,7 +22,7 @@
       "cert_days": 89,
       "down_since": null,
       "issue": null,
-      "ms": 35,
+      "ms": 153,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -31,7 +31,7 @@
       "cert_days": 66,
       "down_since": null,
       "issue": null,
-      "ms": 42,
+      "ms": 154,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -40,7 +40,7 @@
       "cert_days": 77,
       "down_since": null,
       "issue": null,
-      "ms": 80,
+      "ms": 155,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -49,7 +49,7 @@
       "cert_days": 70,
       "down_since": null,
       "issue": null,
-      "ms": 30,
+      "ms": 166,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -58,7 +58,7 @@
       "cert_days": 71,
       "down_since": null,
       "issue": null,
-      "ms": 42,
+      "ms": 165,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -67,7 +67,7 @@
       "cert_days": 86,
       "down_since": null,
       "issue": null,
-      "ms": 34,
+      "ms": 223,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -76,13 +76,13 @@
       "cert_days": 73,
       "down_since": null,
       "issue": null,
-      "ms": 33,
+      "ms": 163,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     }
   },
-  "last_summary": null,
+  "last_summary": "2026-11-19",
   "outages": [
     {
       "app": "alert-test",
@@ -90,5 +90,5 @@
       "start": "2026-11-19T05:02:04Z"
     }
   ],
-  "updated": "2026-11-19T05:03:29Z"
+  "updated": "2026-11-19T05:04:08Z"
 }
