@@ -452,7 +452,8 @@ def main() -> int:
                 num = gh.create_issue(SUMMARY_TITLE, "Daily uptime summary, one comment per day at 14:00 UTC.", [])
                 gh.try_pin(num)
             gh.comment(num, summary_body(checks, results, state, samples, now))
-            state["last_summary"] = today
+            if not force:  # a manual summary does not replace the scheduled one
+                state["last_summary"] = today
             print(f"posted daily summary to issue #{num}")
         except RuntimeError as e:
             errors.append(str(e))
