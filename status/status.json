@@ -1,43 +1,52 @@
 {
   "apps": {
     "asas": {
-      "cert_days": 78,
+      "cert_days": 77,
       "down_since": null,
       "issue": null,
-      "ms": 305,
+      "ms": 286,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "cosecha": {
-      "cert_days": 79,
+      "cert_days": 78,
       "down_since": null,
       "issue": null,
-      "ms": 158,
+      "ms": 129,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "demo-studio": {
-      "cert_days": 89,
+      "cert_days": 88,
       "down_since": null,
       "issue": null,
-      "ms": 214,
+      "ms": 153,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "faez": {
-      "cert_days": 65,
+      "cert_days": 64,
       "down_since": null,
       "issue": null,
-      "ms": 173,
+      "ms": 165,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "haqiqi": {
-      "cert_days": 77,
+      "cert_days": 76,
+      "down_since": null,
+      "issue": null,
+      "ms": 121,
+      "reasons": [],
+      "since": "2026-11-19T04:56:36Z",
+      "status": "up"
+    },
+    "hunt-dubai": {
+      "cert_days": 69,
       "down_since": null,
       "issue": null,
       "ms": 145,
@@ -45,20 +54,11 @@
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
-    "hunt-dubai": {
+    "relocatedubai": {
       "cert_days": 70,
       "down_since": null,
       "issue": null,
-      "ms": 155,
-      "reasons": [],
-      "since": "2026-11-19T04:56:36Z",
-      "status": "up"
-    },
-    "relocatedubai": {
-      "cert_days": 71,
-      "down_since": null,
-      "issue": null,
-      "ms": 194,
+      "ms": 166,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -67,22 +67,22 @@
       "cert_days": 85,
       "down_since": null,
       "issue": null,
-      "ms": 171,
+      "ms": 172,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "sawweeli-trips": {
-      "cert_days": 72,
+      "cert_days": 71,
       "down_since": null,
       "issue": null,
-      "ms": 169,
+      "ms": 155,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     }
   },
-  "last_summary": "2026-11-19",
+  "last_summary": "2026-11-20",
   "outages": [
     {
       "app": "alert-test",
@@ -90,5 +90,6 @@
       "start": "2026-11-19T05:02:04Z"
     }
   ],
-  "updated": "2026-11-19T15:40:33Z"
+  "spend_alerts": {},
+  "updated": "2026-11-20T14:00:58Z"
 }
