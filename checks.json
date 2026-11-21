@@ -21,7 +21,8 @@
     "judge_path": "/judge",
     "healthz": "/healthz",
     "keyword": "Cosecha",
-    "readyz": "/readyz"
+    "readyz": "/readyz",
+    "sources_status": "/.well-known/sources-status.json"
   },
   {
     "app": "haqiqi",

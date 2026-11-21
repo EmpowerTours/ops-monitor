@@ -1,4 +1,5 @@
-/* Cron Worker that starts the uptime workflow of EmpowerTours/ops-monitor every 15 minutes.
+/* Cron Worker that starts the uptime workflow of EmpowerTours/ops-monitor every 15 minutes, and the
+   source-watch workflow once a day (05:17 UTC).
 
    GitHub's own scheduler fires the workflow's cron unreliably for this repository, so this Worker calls the GitHub REST
    API "create a workflow dispatch event" for .github/workflows/uptime.yml on main:
@@ -15,12 +16,23 @@ export const DEFAULTS = {
   ref: "main",
 };
 
+/* The daily source watch (docs/SOURCE-WATCH.md) runs from the same Worker on its own cron. It is
+   the same repository, so the same token (Actions: Read and write on ops-monitor) dispatches it. */
+export const SOURCE_WATCH_CRON = "17 5 * * *";
+export const SOURCE_WATCH_WORKFLOW = "source-watch.yml";
+
+/** The workflow a cron firing dispatches. */
+export function workflowFor(cron, env) {
+  if (cron === SOURCE_WATCH_CRON) return SOURCE_WATCH_WORKFLOW;
+  return env.GH_WORKFLOW || DEFAULTS.workflow;
+}
+
 /** Build the dispatch request. Pure, so it can be tested without the network. */
-export function dispatchRequest(env) {
+export function dispatchRequest(env, workflowOverride) {
   const token = (env.GH_DISPATCH_TOKEN || "").trim();
   if (!token) throw new Error("GH_DISPATCH_TOKEN is not set");
   const repo = env.GH_REPO || DEFAULTS.repo;
-  const workflow = env.GH_WORKFLOW || DEFAULTS.workflow;
+  const workflow = workflowOverride || env.GH_WORKFLOW || DEFAULTS.workflow;
   const ref = env.GH_REF || DEFAULTS.ref;
   return {
     url: `https://api.github.com/repos/${repo}/actions/workflows/${encodeURIComponent(workflow)}/dispatches`,
@@ -40,8 +52,8 @@ export function dispatchRequest(env) {
 }
 
 /** One dispatch. Resolves with the HTTP status on success (2xx), throws otherwise. */
-export async function dispatch(env, fetchImpl = fetch) {
-  const { url, init } = dispatchRequest(env);
+export async function dispatch(env, fetchImpl = fetch, workflow) {
+  const { url, init } = dispatchRequest(env, workflow);
   const res = await fetchImpl(url, {
     ...init,
     signal: AbortSignal.timeout(15_000),
@@ -56,9 +68,8 @@ export async function dispatch(env, fetchImpl = fetch) {
 
 export default {
   async scheduled(controller, env, ctx) {
-    const status = await dispatch(env);
-    console.log(
-      `dispatched ${env.GH_WORKFLOW || DEFAULTS.workflow} on ${env.GH_REF || DEFAULTS.ref}: HTTP ${status}`,
-    );
+    const workflow = workflowFor(controller.cron, env);
+    const status = await dispatch(env, fetch, workflow);
+    console.log(`dispatched ${workflow} on ${env.GH_REF || DEFAULTS.ref}: HTTP ${status}`);
   },
 };

@@ -6,8 +6,9 @@ compatibility_date = "2026-11-01"
 workers_dev = false
 
 [triggers]
-# Every 15 minutes (UTC). Each run calls workflow_dispatch for uptime.yml on main.
-crons = ["*/15 * * * *"]
+# Every 15 minutes (UTC): workflow_dispatch for uptime.yml on main.
+# Daily at 05:17 UTC: workflow_dispatch for source-watch.yml (see src/index.js SOURCE_WATCH_CRON).
+crons = ["*/15 * * * *", "17 5 * * *"]
 
 # Secret (set by the owner, never committed): GH_DISPATCH_TOKEN
 # Optional plain vars to point it elsewhere: GH_REPO, GH_WORKFLOW, GH_REF

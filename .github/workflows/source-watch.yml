@@ -1,0 +1,82 @@
+name: source-watch
+
+# Daily check of the official pages the Dubai apps cite (docs/SOURCE-WATCH.md). Primary trigger: the
+# Cloudflare cron Worker in worker/ (05:17 UTC, workflow_dispatch). The GitHub cron below is a backup
+# only; a second run on the same day is harmless (a miss needs two runs at least 20 h apart to change
+# anything in an app).
+on:
+  schedule:
+    - cron: "41 6 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Fetch and check only: send nothing to the apps, file no issue"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write # the captures branch
+  issues: write # the summary on the pinned "Source watch" issue
+
+concurrency:
+  group: source-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Check out the captures branch
+        run: |
+          if git fetch -q --depth=1 origin captures; then
+            git worktree add -q .captures FETCH_HEAD
+            git -C .captures checkout -q -B captures
+          else
+            git worktree add -q --detach .captures
+            git -C .captures checkout -q --orphan captures
+            git -C .captures rm -rfq .
+          fi
+
+      - name: Install the PDF reader (and the model SDK only when drafts are on)
+        env:
+          SOURCE_WATCH_LLM: ${{ vars.SOURCE_WATCH_LLM }}
+        run: |
+          python3 -m venv .venv
+          .venv/bin/pip install -q pypdf==6.21.4
+          if [ "$SOURCE_WATCH_LLM" = "on" ]; then .venv/bin/pip install -q anthropic==2.4.0; fi
+
+      - name: Run the source watch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # One verify token per app (each equals that app's SOURCES_VERIFY_TOKEN). Unset: results not sent.
+          SOURCE_VERIFY_TOKEN_COSECHA: ${{ secrets.SOURCE_VERIFY_TOKEN_COSECHA }}
+          # Optional: fine-grained token with Issues read/write on the app repos. Unset: issues go here.
+          SOURCE_WATCH_ISSUES_TOKEN: ${{ secrets.SOURCE_WATCH_ISSUES_TOKEN }}
+          # Optional model drafts: off unless the repository variable SOURCE_WATCH_LLM is "on".
+          SOURCE_WATCH_LLM: ${{ vars.SOURCE_WATCH_LLM }}
+          SOURCE_WATCH_LLM_MAX_USD: ${{ vars.SOURCE_WATCH_LLM_MAX_USD }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          args="--captures .captures --report .captures/last-run.json"
+          if [ "$DRY_RUN" = "true" ]; then args="$args --dry-run"; fi
+          .venv/bin/python source_watch.py $args
+
+      - name: Commit the captures
+        if: always()
+        run: |
+          cd .captures
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A .
+          if git diff --cached --quiet; then echo "no capture changed"; exit 0; fi
+          git commit -q -m "captures: $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git push -q origin HEAD:captures && exit 0
+            sleep 5
+          done
+          echo "captures push failed after 3 attempts" >&2
+          exit 1

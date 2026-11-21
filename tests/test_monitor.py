@@ -251,5 +251,48 @@ class RunGapFlag(unittest.TestCase):
         self.assertIn("Voice keep-alive: refreshed none", body)
 
 
+class WatchDeadMan(unittest.TestCase):
+    NOW = dt.datetime(2026, 11, 25, 12, 0, tzinfo=dt.timezone.utc)
+
+    def test_stale_rules(self):
+        fresh = {"v": 1, "verify_open": True, "last_report_at": "2026-11-24T05:17:03.5Z", "stale_after_hours": 48}
+        self.assertIsNone(monitor.watch_stale(fresh, self.NOW))
+        old = dict(fresh, last_report_at="2026-11-23T05:17:00+00:00")
+        self.assertIn("no source watch report", monitor.watch_stale(old, self.NOW))
+        never = {"v": 1, "verify_open": True, "last_report_at": None}
+        self.assertIn("ever arrived", monitor.watch_stale(never, self.NOW))
+        self.assertIsNone(monitor.watch_stale({"v": 1, "verify_open": False, "last_report_at": None}, self.NOW))
+        self.assertIsNone(monitor.watch_stale(None, self.NOW))
+
+    def test_alert_opens_and_closes(self):
+        class GH:
+            def __init__(self):
+                self.created, self.closed, self.comments = [], [], []
+
+            def find_open_issue(self, title, label=None):
+                return None
+
+            def create_issue(self, title, body, labels):
+                self.created.append(title)
+                return 7
+
+            def comment(self, n, body):
+                self.comments.append(n)
+
+            def close(self, n):
+                self.closed.append(n)
+
+        gh, state, errors = GH(), {}, []
+        old = {"v": 1, "verify_open": True, "last_report_at": "2026-11-20T05:17:00Z"}
+        monitor.process_watch_alerts(gh, state, [{"app": "cosecha", "doc": old}], self.NOW, errors)
+        self.assertEqual(gh.created, ["SOURCE WATCH STALE: cosecha"])
+        monitor.process_watch_alerts(gh, state, [{"app": "cosecha", "doc": old}], self.NOW, errors)
+        self.assertEqual(len(gh.created), 1, "one issue while it stays stale")
+        fresh = dict(old, last_report_at="2026-11-25T05:17:00Z")
+        monitor.process_watch_alerts(gh, state, [{"app": "cosecha", "doc": fresh}], self.NOW, errors)
+        self.assertEqual(gh.closed, [7])
+        self.assertEqual(errors, [])
+
+
 if __name__ == "__main__":
     unittest.main()

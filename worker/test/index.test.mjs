@@ -1,7 +1,8 @@
 // Run: node --test worker/test/
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import worker, { dispatch, dispatchRequest } from "../src/index.js";
+import worker, { dispatch, dispatchRequest, workflowFor, SOURCE_WATCH_CRON } from "../src/index.js";
+import { readFileSync } from "node:fs";
 
 const ENV = { GH_DISPATCH_TOKEN: "test-token-not-real" };
 
@@ -61,4 +62,26 @@ test("scheduled handler: one dispatch per invocation", async () => {
   }
   assert.equal(calls.length, 1);
   assert.equal(calls[0][1], "POST");
+});
+
+test("daily cron dispatches source-watch.yml; the 15-minute cron stays on uptime.yml", async () => {
+  assert.equal(workflowFor(SOURCE_WATCH_CRON, {}), "source-watch.yml");
+  assert.equal(workflowFor("*/15 * * * *", {}), "uptime.yml");
+  const toml = readFileSync(new URL("../wrangler.toml", import.meta.url), "utf8");
+  assert.ok(toml.includes(`"${SOURCE_WATCH_CRON}"`), "wrangler.toml must schedule the source watch cron");
+  const calls = [];
+  const orig = globalThis.fetch;
+  globalThis.fetch = async (url) => {
+    calls.push(url);
+    return new Response(null, { status: 204 });
+  };
+  try {
+    await worker.scheduled({ cron: SOURCE_WATCH_CRON }, ENV, {});
+  } finally {
+    globalThis.fetch = orig;
+  }
+  assert.equal(
+    calls[0],
+    "https://api.github.com/repos/EmpowerTours/ops-monitor/actions/workflows/source-watch.yml/dispatches",
+  );
 });

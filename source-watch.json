@@ -1,0 +1,16 @@
+{
+  "user_agent": "EmpowerTours-source-watch/1.0 (+https://github.com/EmpowerTours/ops-monitor)",
+  "timeout_s": 30,
+  "per_host_delay_s": 3,
+  "host_delay_s": {"comtradeapi.un.org": 12},
+  "manual_hosts": [],
+  "apps": [
+    {
+      "app": "cosecha",
+      "manifest": "https://cosecha.empowertours.xyz/.well-known/sources.json",
+      "verify": "https://cosecha.empowertours.xyz/internal/sources/verify",
+      "token_env": "SOURCE_VERIFY_TOKEN_COSECHA",
+      "repo": "EmpowerTours/cosecha"
+    }
+  ]
+}
