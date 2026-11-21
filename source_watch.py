@@ -104,6 +104,9 @@ class _HTMLText(html.parser.HTMLParser):
         self.title = ""
         self._in_title = False
         self.links: list[str] = []
+        self.anchors: list[tuple[str, str]] = []  # (href, link text), for the new-rule radar
+        self._a: list[str] | None = None
+        self._href = ""
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         if tag == "title":
@@ -118,6 +121,7 @@ class _HTMLText(html.parser.HTMLParser):
             for k, v in attrs:
                 if k == "href" and v:
                     self.links.append(v)
+                    self._a, self._href = [], v
 
     def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         self.handle_starttag(tag, attrs)
@@ -125,6 +129,9 @@ class _HTMLText(html.parser.HTMLParser):
             self.skip = max(0, self.skip - 1)
 
     def handle_endtag(self, tag: str) -> None:
+        if tag == "a" and self._a is not None:
+            self.anchors.append((self._href, norm_line(" ".join(self._a))))
+            self._a = None
         if tag == "title":
             self._in_title = False
         if tag in self.SKIP:
@@ -137,6 +144,8 @@ class _HTMLText(html.parser.HTMLParser):
             self.title += data
         if not self.skip:
             self.parts.append(data)
+            if self._a is not None:
+                self._a.append(data)
 
 
 def html_to_text(body: bytes, charset: str | None) -> tuple[str, list[str], str]:
@@ -1012,12 +1021,110 @@ def shared_pages(per_app_outcomes: dict[str, tuple[list[dict], list[Outcome]]]) 
         out.append({"url": u, "apps": apps, "conflicts": conflicts})
     return out
 
+
+# ---------------------------------------------------------------------------------------------
+# New-rule radar: new items on official announcement and circular lists, matched against the
+# keywords each app declares (manifest radar_keywords, or radar_keywords in source-watch.json).
+# Matching is code (whole words, case-insensitive). A match goes into one digest issue per app;
+# nothing in any app changes.
+
+RADAR_MIN_TITLE = 20
+
+
+def feed_items(url: str, body: bytes, content_type: str, item_pattern: str = "") -> list[dict]:
+    """(title, url) items of an announcement list: RSS/Atom entries, or the page's links whose text
+    is long enough to be a headline (and whose URL matches item_pattern when given)."""
+    ct = (content_type or "").lower()
+    head = body[:400].lstrip().lower()
+    items: list[dict] = []
+    if "xml" in ct or head.startswith(b"<?xml") or b"<rss" in head or b"<feed" in head:
+        import xml.etree.ElementTree as ET
+        try:
+            root = ET.fromstring(body)
+        except ET.ParseError:
+            return []
+        for el in root.iter():
+            tag = el.tag.split("}")[-1]
+            if tag in ("item", "entry"):
+                title, link = "", ""
+                for c in el:
+                    ctag = c.tag.split("}")[-1]
+                    if ctag == "title":
+                        title = norm_line(c.text or "")
+                    elif ctag == "link":
+                        link = (c.text or c.get("href") or "").strip()
+                if title and link:
+                    items.append({"title": title, "url": urllib.parse.urljoin(url, link)})
+        return items
+    p = _HTMLText()
+    p.feed(body.decode("utf-8", errors="replace"))
+    rx = re.compile(item_pattern) if item_pattern else None
+    seen = set()
+    for href, text in p.anchors:
+        u = urllib.parse.urljoin(url, html.unescape(href.strip()))
+        if len(text) < RADAR_MIN_TITLE or not u.startswith("http") or (rx and not rx.search(u)) or u in seen:
+            continue
+        seen.add(u)
+        items.append({"title": text, "url": u})
+    return items
+
+
+def keyword_hits(title: str, keywords: list[str]) -> list[str]:
+    t = norm_line(title).casefold()
+    return [k for k in keywords if re.search(r"(?<!\w)" + re.escape(norm_line(k).casefold()) + r"(?!\w)", t)]
+
+
+def run_radar(feeds: list[dict], app_keywords: dict[str, list[str]], fetcher: Fetcher, seen: dict[str, list[str]],
+              clock: Callable[[], dt.datetime]) -> dict:
+    """Read every feed once; new items are those not in seen[feed url] (updated in place). A feed
+    seen for the first time is seeded silently. Returns per-feed notes and per-app matches."""
+    out = {"feeds": [], "matches": {a: [] for a in app_keywords}}
+    for feed in feeds:
+        f = fetcher.get(feed["url"], accept="application/rss+xml,application/atom+xml,text/html;q=0.9,*/*;q=0.5")
+        note = {"name": feed["name"], "url": feed["url"], "items": 0, "new": 0, "status": "ok"}
+        if f.status != 200 or f.error:
+            note["status"] = f"not read ({f.error or f.status})"
+            out["feeds"].append(note)
+            continue
+        items = feed_items(f.final_url or feed["url"], f.body, f.content_type, feed.get("item_pattern", ""))
+        note["items"] = len(items)
+        if not items:
+            note["status"] = "no items read (the list needs a browser, or the page changed)"
+            out["feeds"].append(note)
+            continue
+        first = feed["url"] not in seen
+        known = set(seen.get(feed["url"], []))
+        new = [i for i in items if i["url"] not in known]
+        seen[feed["url"]] = sorted(known | {i["url"] for i in items})[-2000:]
+        if first:
+            note["status"] = f"seeded with {len(items)} items (first read; nothing reported)"
+            out["feeds"].append(note)
+            continue
+        note["new"] = len(new)
+        for item in new:
+            for app, kws in app_keywords.items():
+                hits = keyword_hits(item["title"], kws)
+                if hits:
+                    out["matches"][app].append({**item, "feed": feed["name"], "keywords": hits, "seen_at": now_iso(clock)})
+        out["feeds"].append(note)
+    return out
+
+
+def radar_digest(app: str, matches: list[dict], run_url: str) -> str:
+    lines = [f"New items on official announcement lists that match **{app}**'s radar keywords. "
+             "Nothing in the app changed: read each one and decide whether a fact needs an update.", ""]
+    for m in matches:
+        lines.append(f"- [{m['title']}]({m['url']}) ({m['feed']}; keywords: {', '.join(m['keywords'])})")
+    if run_url:
+        lines += ["", f"Run: {run_url}"]
+    return "\n".join(lines)
+
 # ---------------------------------------------------------------------------------------------
 # Run
 
 
 def summary_markdown(run_id: str, per_app: list[dict], run_url: str, canary: dict | None = None,
-                     shared: list[dict] | None = None, cache_hits: int = 0) -> str:
+                     shared: list[dict] | None = None, cache_hits: int = 0, radar: dict | None = None) -> str:
     lines = [f"## Source watch {run_id}", ""]
     if run_url:
         lines += [f"Run: {run_url}", ""]
@@ -1045,6 +1152,13 @@ def summary_markdown(run_id: str, per_app: list[dict], run_url: str, canary: dic
         lines += ["", f"Pages cited by several apps ({len(shared)}; fetched once each, {cache_hits} repeat fetches saved):"]
         for p_ in shared:
             lines.append(f"- {p_['url']}: {', '.join(p_['apps'])}" + ("".join(f"\n  - **conflict:** {c}" for c in p_["conflicts"])))
+    if radar:
+        lines += ["", "New-rule radar:"]
+        for f_ in radar["feeds"]:
+            lines.append(f"- {f_['name']}: {f_['status']}" + (f", {f_['items']} items, {f_['new']} new" if f_["status"] == "ok" else ""))
+        for a_, ms in radar["matches"].items():
+            if ms:
+                lines.append(f"- **{a_}**: {len(ms)} new matching item(s), see the radar digest issue")
     lines += ["", "Blocked or manual pages are a manual re-check due, never counted as verified. "
               "\"Not read\" means the page did not load as text (network, HTTP error, challenge or a browser-only page): nothing changes in the app."]
     return "\n".join(lines)
@@ -1084,6 +1198,8 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
     canary = run_canary(clock, ua)
     print(f"canary: {'ok' if canary['ok'] else 'FAILED'} ({canary['cases']} cases, {canary['day']} day) {canary['failures']}", flush=True)
     collected: dict[str, tuple[list[dict], list[Outcome]]] = {}
+    radar_keywords: dict[str, list[str]] = {a["app"]: list(a.get("radar_keywords") or []) for a in cfg["apps"]
+                                            if not args.only or a["app"] in args.only}
     per_app = []
     for app in cfg["apps"]:
         name = app["app"]
@@ -1099,9 +1215,10 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
                     raise ManifestError("no manifest served yet (404): app has not adopted source watch")
                 if f.status != 200 or f.error:
                     raise ManifestError(f"manifest not read ({f.error or f.status})")
-                manifest = validate_manifest(json.loads(f.body), name)
+                manifest_doc = json.loads(f.body)
             else:
-                manifest = validate_manifest(load_json(src_m), name)
+                manifest_doc = load_json(src_m)
+            manifest = validate_manifest(manifest_doc, name)
         except (ManifestError, ValueError, re.error) as e:
             rec["error"] = f"manifest: {e}"
             continue
@@ -1124,6 +1241,7 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
             print(f"{name} {s['id']} {o.status}{(' +' + o.edition) if o.edition else ''} {o.url} {o.detail}", flush=True)
         rec["n"], rec["counts"] = len(outcomes), count(outcomes)
         collected[name] = (manifest, outcomes)
+        radar_keywords[name] = list(dict.fromkeys((manifest_doc.get("radar_keywords") or []) + (app.get("radar_keywords") or [])))
         payload = verify_payload(name, run_id, outcomes, manifest)
         token = env.get(app.get("token_env", ""), "")
         vurl = overrides_v.get(name, app.get("verify", ""))
@@ -1177,8 +1295,31 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
                   "verify_response": rec.get("verify_response"), "draft_spent_usd": round(drafter.spent, 6)}
         if not args.offline:
             save_captures(args.captures, name, run_id, outcomes, manifest, report)
+    radar = None
+    if cfg.get("radar_feeds") and not args.offline:
+        seen_path = os.path.join(args.captures, "radar", "seen.json")
+        seen = load_json(seen_path) or {}
+        radar = run_radar(cfg["radar_feeds"], {a: k for a, k in radar_keywords.items() if k}, fetcher, seen, clock)
+        os.makedirs(os.path.dirname(seen_path), exist_ok=True)
+        with open(seen_path, "w", encoding="utf-8") as fh:
+            json.dump(seen, fh, indent=1, ensure_ascii=False, sort_keys=True)
+        repos = {a["app"]: a.get("repo") for a in cfg["apps"]}
+        for app_name, matches in radar["matches"].items():
+            if not matches:
+                continue
+            body = radar_digest(app_name, matches, run_url)
+            title = f"Source watch radar: {app_name}"
+            try:
+                if gh_apps and repos.get(app_name):
+                    gh_apps.upsert_issue(repos[app_name], title, body, "source-watch")
+                elif gh_alert:
+                    gh_alert.upsert_issue(alert_repo, title, body, "source-watch")
+                else:
+                    print(f"--- radar digest (dry run): {title}\n{body}\n---")
+            except Exception as e:
+                print(f"radar digest not filed: {type(e).__name__}", file=sys.stderr)
     shared = shared_pages(collected)
-    md = summary_markdown(run_id, per_app, run_url, canary, shared, fetcher.hits)
+    md = summary_markdown(run_id, per_app, run_url, canary, shared, fetcher.hits, radar)
     print(md)
     if env.get("GITHUB_STEP_SUMMARY"):
         with open(env["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as fh:
@@ -1201,7 +1342,7 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
             print(f"canary issue not filed: {type(e).__name__}", file=sys.stderr)
     if args.report:
         with open(args.report, "w", encoding="utf-8") as fh:
-            json.dump({"canary": canary, "shared_pages": shared, "apps": per_app}, fh, indent=1, ensure_ascii=False, default=str)
+            json.dump({"canary": canary, "shared_pages": shared, "radar": radar, "apps": per_app}, fh, indent=1, ensure_ascii=False, default=str)
     return 0 if canary["ok"] else 1
 
 

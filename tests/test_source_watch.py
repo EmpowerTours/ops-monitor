@@ -337,6 +337,35 @@ class Arabic(unittest.TestCase):
         self.assertEqual((r["missing_ar"], r["languages_disagree"]), ([0], True))
 
 
+class Radar(unittest.TestCase):
+    LIST1 = b"""<html><body><a href="/en/news/1">MOIAT updates the technical regulation for honey products</a>
+<a href="/en/about">About us</a><a href="/en/news/2">Honeywell opens a new factory in Abu Dhabi industrial city</a></body></html>"""
+    LIST2 = LIST1.replace(b"</body>", "<a href='/en/news/3'>قرار جديد بشأن استيراد العسل من الخارج</a></body>".encode())
+    RSS = b"""<?xml version="1.0"?><rss><channel><item><title>Green visa fee changes for investors</title><link>https://icp.gov.ae/n/9</link></item></channel></rss>"""
+
+    def test_items_and_whole_word_matching(self):
+        items = sw.feed_items("https://moiat.gov.ae/en/media-center/news", self.LIST1, "text/html")
+        self.assertEqual([i["url"] for i in items], ["https://moiat.gov.ae/en/news/1", "https://moiat.gov.ae/en/news/2"])
+        self.assertEqual(sw.keyword_hits(items[0]["title"], ["honey"]), ["honey"])
+        self.assertEqual(sw.keyword_hits(items[1]["title"], ["honey"]), [], "Honeywell is not honey")
+        self.assertEqual(sw.keyword_hits("استيراد عسل", ["عسل"]), ["عسل"])
+        rss = sw.feed_items("https://icp.gov.ae/rss", self.RSS, "application/rss+xml")
+        self.assertEqual(rss, [{"title": "Green visa fee changes for investors", "url": "https://icp.gov.ae/n/9"}])
+        self.assertEqual(sw.keyword_hits(rss[0]["title"], ["green visa", "bid bond"]), ["green visa"])
+
+    def test_first_read_seeds_then_new_items_match(self):
+        feeds = [{"name": "MOIAT news", "url": "https://moiat.gov.ae/en/media-center/news"}]
+        seen: dict = {}
+        r = sw.run_radar(feeds, {"cosecha": ["honey", "العسل"]}, fetcher({feeds[0]["url"]: (200, self.LIST1, "text/html")}), seen, CLOCK)
+        self.assertEqual(r["matches"]["cosecha"], [], "a first read only seeds")
+        self.assertIn("seeded", r["feeds"][0]["status"])
+        r = sw.run_radar(feeds, {"cosecha": ["honey", "العسل"]}, fetcher({feeds[0]["url"]: (200, self.LIST2, "text/html")}), seen, CLOCK)
+        self.assertEqual([m["url"] for m in r["matches"]["cosecha"]], ["https://moiat.gov.ae/en/news/3"])
+        empty = sw.run_radar([{"name": "x", "url": "https://x.gov.ae/"}], {"cosecha": ["honey"]},
+                             fetcher({"https://x.gov.ae/": (200, b"<html><div id=app></div></html>", "text/html")}), {}, CLOCK)
+        self.assertIn("no items read", empty["feeds"][0]["status"])
+
+
 class EndToEnd(unittest.TestCase):
     """A dry run over a manifest file, then an offline replay of the saved captures."""
 

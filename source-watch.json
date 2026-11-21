@@ -2,7 +2,9 @@
   "user_agent": "EmpowerTours-source-watch/1.0 (+https://github.com/EmpowerTours/ops-monitor)",
   "timeout_s": 30,
   "per_host_delay_s": 3,
-  "host_delay_s": {"comtradeapi.un.org": 12},
+  "host_delay_s": {
+    "comtradeapi.un.org": 12
+  },
   "manual_hosts": [],
   "apps": [
     {
@@ -10,7 +12,43 @@
       "manifest": "https://cosecha.empowertours.xyz/.well-known/sources.json",
       "verify": "https://cosecha.empowertours.xyz/internal/sources/verify",
       "token_env": "SOURCE_VERIFY_TOKEN_COSECHA",
-      "repo": "EmpowerTours/cosecha"
+      "repo": "EmpowerTours/cosecha",
+      "radar_keywords": []
+    }
+  ],
+  "radar_feeds": [
+    {
+      "name": "GDRFA Dubai news",
+      "url": "https://www.gdrfad.gov.ae/en/news"
+    },
+    {
+      "name": "MOIAT news",
+      "url": "https://moiat.gov.ae/en/media-center/news"
+    },
+    {
+      "name": "MOCCAE news",
+      "url": "https://www.moccae.gov.ae/en/media-center/news",
+      "note": "list is rendered in the browser: no items read by a plain GET (2026-11-21)"
+    },
+    {
+      "name": "MOCCAE legislation",
+      "url": "https://www.moccae.gov.ae/en/legislations",
+      "note": "rendered in the browser (2026-11-21)"
+    },
+    {
+      "name": "ICP news",
+      "url": "https://icp.gov.ae/en/news/",
+      "note": "rendered in the browser (2026-11-21)"
+    },
+    {
+      "name": "Dubai Legislation Portal",
+      "url": "https://dlp.dubai.gov.ae/en/",
+      "note": "home page lists categories, not new legislation (2026-11-21)"
+    },
+    {
+      "name": "Dubai DET news",
+      "url": "https://www.dubaidet.gov.ae/en/news",
+      "note": "HTTP 403 to plain GETs (2026-11-21)"
     }
   ]
 }
