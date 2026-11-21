@@ -75,10 +75,20 @@ it.
   `OPS_TOKEN` both are skipped quietly. The token must equal the hub's
   `OPS_TOKEN` Railway variable.
 
+## Source watch
+
+Daily, a second workflow (`source-watch.yml`, dispatched by the same Worker at 05:17 UTC) checks
+that the official pages the apps cite still say what the apps rely on, and reports to each app,
+which then shows a fact as unconfirmed when its words are gone (two daily misses on the same page
+text). It tests itself first with a canary, never counts a page it could not read as verified,
+saves every capture on the `captures` branch, and alerts through issues labelled `source-watch`.
+The uptime run alerts when an app's source watch has not reported for 48 h. Contract, owner setup
+and adoption guide: [`docs/SOURCE-WATCH.md`](docs/SOURCE-WATCH.md).
+
 ## Tests
 
 ```sh
-python3 -m unittest discover -s tests -v   # monitor: /readyz parsers, spend alerts, gap flag
+python3 -m unittest discover -s tests -v   # monitor and source watch (pip install pypdf==6.21.4 for the PDF cases)
 node --test worker/test/index.test.mjs     # dispatch Worker
 ```
 
