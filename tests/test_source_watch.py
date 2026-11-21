@@ -366,6 +366,63 @@ class Radar(unittest.TestCase):
         self.assertIn("no items read", empty["feeds"][0]["status"])
 
 
+class FixPR(unittest.TestCase):
+    URL = "https://a.gov.ae/release"
+    NEW = (b"<html><body><p>" + b"Filler text that makes the page long enough to count as read. " * 4 +
+           b"</p><table><tr><td>Release a consignment of farm products</td><td>AED 200</td></tr></table></body></html>")
+
+    def outcome(self, status, missing):
+        text = sw.extract(self.NEW, "text/html", "")[0]
+        return sw.Outcome(id="s-1", url=self.URL, status=status, text=text, kind="html", capture_sha256=sw.sha256_text(text), missing=missing)
+
+    def store(self):
+        return {self.URL: {"sha256": "0" * 64, "quotes": [{"text": "Release a consignment of agricultural products", "values": ["AED 200"]}]}}
+
+    def test_sha_refresh_and_quote_swap_keep_values(self):
+        new, why = sw.propose_fix(self.store(), {}, self.outcome("changed_quote_ok", []), None)
+        self.assertIn("sha256", why)
+        self.assertEqual(new[self.URL]["quotes"], self.store()[self.URL]["quotes"])
+        o = self.outcome("quote_missing", [{"index": 0, "reason": "quote"}])
+        draft = {"ok": True, "quote": "Release a consignment of farm products", "proposed_fact": "x"}
+        new, why = sw.propose_fix(self.store(), {}, o, draft)
+        q = new[self.URL]["quotes"][0]
+        self.assertEqual((q["text"], q["values"]), ("Release a consignment of farm products", ["AED 200"]))
+        self.assertEqual(new[self.URL]["sha256"], o.capture_sha256)
+
+    def test_no_fix_for_numbers_or_without_a_verified_draft(self):
+        o = self.outcome("quote_missing", [{"index": 0, "reason": "value", "value": "AED 200"}])
+        self.assertIsNone(sw.propose_fix(self.store(), {}, o, {"ok": True, "quote": "Release a consignment of farm products"}))
+        o = self.outcome("quote_missing", [{"index": 0, "reason": "quote"}])
+        self.assertIsNone(sw.propose_fix(self.store(), {}, o, None), "no model draft, no PR")
+        self.assertIsNone(sw.propose_fix(self.store(), {}, o, {"ok": False}))
+        st = self.store()
+        st[self.URL]["quotes"][0]["values"] = ["AED 999"]  # the old value is not next to the new words
+        self.assertIsNone(sw.propose_fix(st, {}, o, {"ok": True, "quote": "Release a consignment of farm products"}))
+
+    def test_open_fix_pr_is_a_draft(self):
+        calls = []
+
+        class GH:
+            def call(self, method, path, body=None):
+                calls.append((method, path, body))
+                if method == "GET" and "/pulls?" in path:
+                    return []
+                if "/git/ref/heads/" in path:
+                    return {"object": {"sha": "abc"}}
+                if method == "GET" and "/contents/" in path:
+                    return {"sha": "filesha"}
+                if method == "POST" and path.endswith("/pulls"):
+                    return {"html_url": "https://github.com/EmpowerTours/cosecha/pull/99"}
+                return {}
+
+        url = sw.open_fix_pr(GH(), "EmpowerTours/cosecha", "main", "internal/sources/quotes.json", "source-watch/s-1", "{}\n", "t", "b")
+        self.assertTrue(url.endswith("/pull/99"))
+        pr = [c for c in calls if c[0] == "POST" and c[1].endswith("/pulls")][0][2]
+        self.assertTrue(pr["draft"])
+        self.assertEqual((pr["head"], pr["base"]), ("source-watch/s-1", "main"))
+        self.assertFalse(any("merge" in c[1] for c in calls), "never merges")
+
+
 class EndToEnd(unittest.TestCase):
     """A dry run over a manifest file, then an offline replay of the saved captures."""
 

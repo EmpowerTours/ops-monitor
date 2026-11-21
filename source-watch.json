@@ -13,7 +13,11 @@
       "verify": "https://cosecha.empowertours.xyz/internal/sources/verify",
       "token_env": "SOURCE_VERIFY_TOKEN_COSECHA",
       "repo": "EmpowerTours/cosecha",
-      "radar_keywords": []
+      "radar_keywords": [],
+      "fix": {
+        "quotes_path": "internal/sources/quotes.json",
+        "base": "main"
+      }
     }
   ],
   "radar_feeds": [

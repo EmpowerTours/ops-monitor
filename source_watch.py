@@ -1119,6 +1119,104 @@ def radar_digest(app: str, matches: list[dict], run_url: str) -> str:
         lines += ["", f"Run: {run_url}"]
     return "\n".join(lines)
 
+
+# ---------------------------------------------------------------------------------------------
+# Fix PRs: a draft PR in the app repo that updates the app's quote store, which the app's own CI
+# then tests (tests and evals on the PR branch and on its base, before/after in a PR comment).
+# Never merged here, and never a number: values are carried over untouched, and a PR is offered
+# only when the change is about words, not values.
+#   - changed_quote_ok: every quote is still on the page; the PR refreshes the saved-copy sha256.
+#   - quote_missing, one quote, missing as a whole (not a value), with a model draft that passed
+#     the deterministic gate: the PR replaces that quote's words with the draft's verbatim quote,
+#     keeps its values, and only if those values stand next to the new words on the new capture.
+
+
+def propose_fix(store: dict, src: dict, o: Outcome, draft: dict | None) -> tuple[dict, str] | None:
+    """The updated quote store and a one-line reason, or None when no safe fix exists. store is
+    the app's quote file: {page url: {"sha256", "quotes": [{"text", "values"?}], "sha256_ar"?}}."""
+    e = store.get(o.url)
+    if not isinstance(e, dict) or o.kind == "" or not o.text:
+        return None
+    new = json.loads(json.dumps(store))
+    ne = new[o.url]
+    if o.status == "changed_quote_ok" and not o.missing_ar:
+        if ne.get("sha256") == o.capture_sha256 and (not o.capture_sha256_ar or ne.get("sha256_ar") == o.capture_sha256_ar):
+            return None
+        ne["sha256"] = o.capture_sha256
+        if o.capture_sha256_ar and ne.get("url_ar"):
+            ne["sha256_ar"] = o.capture_sha256_ar
+        return new, "refresh the saved-copy sha256: the page changed and every quote is still on it"
+    if o.status != "quote_missing" or o.missing_ar or len(o.missing) != 1 or o.missing[0]["reason"] != "quote":
+        return None
+    if not draft or not draft.get("ok"):
+        return None
+    i = o.missing[0]["index"]
+    quotes = ne.get("quotes") or []
+    if i >= len(quotes):
+        return None
+    q = dict(quotes[i])
+    q["text"] = draft["quote"]
+    if check_quotes(o.text, [q], o.kind == "pdf"):  # the old values must stand next to the new words
+        return None
+    quotes[i] = q
+    ne["quotes"], ne["sha256"] = quotes, o.capture_sha256
+    return new, f"replace quote {i + 1} with words found verbatim on the new page (values unchanged)"
+
+
+def dump_store(store: dict) -> str:
+    return json.dumps(store, indent=1, ensure_ascii=False) + "\n"
+
+
+def fetch_store(gh: "GitHub", repo: str, fix_cfg: dict) -> dict | None:
+    """The app's quote store on its base branch."""
+    import base64
+
+    q = urllib.parse.quote
+    doc = gh.call("GET", f"/repos/{repo}/contents/{q(fix_cfg['quotes_path'])}?ref={q(fix_cfg.get('base', 'main'))}")
+    data = json.loads(base64.b64decode(doc["content"]).decode("utf-8"))
+    return data if isinstance(data, dict) else None
+
+
+def open_fix_pr(gh: "GitHub", repo: str, base: str, path: str, branch: str, content: str, title: str, body: str) -> str:
+    """Create or update branch with the new file content and open (or comment on) a draft PR."""
+    import base64
+
+    q = urllib.parse.quote
+    owner = repo.split("/")[0]
+    prs = gh.call("GET", f"/repos/{repo}/pulls?state=open&head={q(owner + ':' + branch)}") or []
+    base_sha = gh.call("GET", f"/repos/{repo}/git/ref/heads/{q(base)}")["object"]["sha"]
+    if not prs:
+        try:
+            gh.call("POST", f"/repos/{repo}/git/refs", {"ref": f"refs/heads/{branch}", "sha": base_sha})
+        except urllib.error.HTTPError as e:
+            if e.code != 422:  # 422: the branch exists already (an earlier, closed proposal)
+                raise
+            gh.call("PATCH", f"/repos/{repo}/git/refs/heads/{q(branch)}", {"sha": base_sha, "force": True})
+    cur = gh.call("GET", f"/repos/{repo}/contents/{q(path)}?ref={q(branch)}")
+    gh.call("PUT", f"/repos/{repo}/contents/{q(path)}", {
+        "message": title, "branch": branch, "sha": cur["sha"],
+        "content": base64.b64encode(content.encode("utf-8")).decode()})
+    if prs:
+        gh.call("POST", f"/repos/{repo}/issues/{prs[0]['number']}/comments", {"body": "Updated by a new run.\n\n" + body[:60000]})
+        return prs[0]["html_url"]
+    pr = gh.call("POST", f"/repos/{repo}/pulls", {"title": title, "head": branch, "base": base, "body": body[:60000], "draft": True})
+    return pr["html_url"]
+
+
+def fix_pr_body(app: str, src: dict, o: Outcome, why: str, old_entry: dict, new_entry: dict, issue_md: str) -> str:
+    diff = "\n".join(difflib.unified_diff(json.dumps(old_entry, indent=1, ensure_ascii=False).splitlines(),
+                                          json.dumps(new_entry, indent=1, ensure_ascii=False).splitlines(),
+                                          "before", "after", lineterm=""))
+    return "\n".join([
+        f"Proposed by the source watch for **{app}**: {why}.", "",
+        f"Page: {o.url}", "",
+        "**Draft. Do not merge without reading.** Nothing here changes a number: values are carried over as they were. "
+        "The app's CI runs its tests and evals on this branch and on its base and posts the before/after as a comment; "
+        "approve only with that evidence in front of you.", "",
+        "### Change to the quote store", "```diff", diff, "```", "",
+        "### What the watch saw", issue_md])
+
+
 # ---------------------------------------------------------------------------------------------
 # Run
 
@@ -1265,6 +1363,18 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
         rec["attention"] = []
         for o in outcomes:
             if o.status in ("verified", "changed_quote_ok", "no_quotes") and not o.edition and not o.languages_disagree:
+                if o.status == "changed_quote_ok" and gh_apps and (app.get("fix") or {}).get("quotes_path") and canary["ok"]:
+                    try:  # quotes all present: offer the sha refresh as a draft PR, no issue
+                        fix_cfg = app["fix"]
+                        store_doc = fetch_store(gh_apps, app["repo"], fix_cfg)
+                        prop = propose_fix(store_doc, by_id[o.id], o, None) if store_doc else None
+                        if prop:
+                            new_store, why = prop
+                            open_fix_pr(gh_apps, app["repo"], fix_cfg.get("base", "main"), fix_cfg["quotes_path"], f"source-watch/{o.id}",
+                                        dump_store(new_store), f"Source watch: refresh saved copy of {urllib.parse.urlsplit(o.url).netloc} ({o.id})",
+                                        fix_pr_body(name, by_id[o.id], o, why, store_doc[o.url], new_store[o.url], o.detail))
+                    except Exception as e:
+                        print(f"sha refresh PR not opened for {o.id}: {type(e).__name__}", file=sys.stderr)
                 if o.status == "changed_quote_ok":
                     rec["attention"].append({"id": o.id, "status": o.status, "url": o.url, "detail": "flagged for a look"})
                 continue
@@ -1279,6 +1389,20 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
                 q0 = (src.get("quotes") or [{}])[o.missing[0]["index"]] if src.get("quotes") else {}
                 draft = drafter.draft(q0.get("text", ""), src.get("facts", []), best_window(o.text, q0.get("text", ""), 400), o.text)
             body = issue_body(name, src, o, old, draft, run_url)
+            fix_cfg = app.get("fix") or {}
+            if gh_apps and app.get("repo") and fix_cfg.get("quotes_path") and canary["ok"]:
+                try:
+                    store_doc = fetch_store(gh_apps, app["repo"], fix_cfg)
+                    prop = propose_fix(store_doc, src, o, draft) if store_doc else None
+                    if prop:
+                        new_store, why = prop
+                        pr_title = f"Source watch: {why.split(':')[0]} for {urllib.parse.urlsplit(o.url).netloc} ({o.id})"
+                        item_pr = open_fix_pr(gh_apps, app["repo"], fix_cfg.get("base", "main"), fix_cfg["quotes_path"],
+                                              f"source-watch/{o.id}", dump_store(new_store), pr_title,
+                                              fix_pr_body(name, src, o, why, store_doc[o.url], new_store[o.url], body))
+                        body += f"\n\nFix proposed as a draft PR: {item_pr}"
+                except Exception as e:
+                    body += f"\n\n(No fix PR: {type(e).__name__})"
             title = f"Source watch: {name} {o.id} {'new edition' if o.edition and o.status not in ('quote_missing', 'gone', 'manifest_error') else 'changed'}"
             item = {"id": o.id, "status": o.status if o.status != "verified" else o.edition, "url": o.url, "detail": o.detail or o.edition_detail}
             try:
