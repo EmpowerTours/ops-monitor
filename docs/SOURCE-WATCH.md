@@ -67,7 +67,7 @@ Public and read-only. No secrets in it: it lists pages the app already shows to 
 | `kind` | `page` (default) or `api`: an official API answer checked by `fields` instead of `quotes`. |
 | `check` | `auto` (default) or `manual`: the host blocks robots or needs a browser. A manual page is never fetched and is always reported as **manual re-check due**, never as verified. |
 | `read_at` | the day the app's maintainers read the page (`YYYY-MM-DD`). Never today's date. |
-| `sha256` | SHA-256 of the saved copy's text in the watcher's normal form (below). Empty: the watcher cannot tell "changed" from "unchanged", so it says so. Copy it from the capture (`captures` branch, `<app>/<id>.json`, field `sha256`). |
+| `sha256` | SHA-256 of the saved copy's text in the watcher's normal form (below). Empty: the watcher cannot tell "changed" from "unchanged", so it says so. Copy it from the public state (`source-watch-state` branch, `<app>/<id>.json`, field `sha256`). |
 | `facts` | ids of the app's facts that rest on this page, in the app's own naming. |
 | `quotes[]` | exact words the app relies on. Optional `values[]`: exact strings (a fee, a date, a percentage) that must stand in the **same paragraph or table row** as the quote (for a PDF: within 300 characters). Optional `facts[]`: the subset of the page's facts this quote backs (default: all). |
 | `fields[]` | for `kind: "api"`: `{"path": "data.0.primaryValue", "equals": 220681.649, "facts"?: [...]}`; the JSON value at the dotted path must equal `equals` exactly. |
@@ -184,14 +184,30 @@ are on, the pinned `anthropic` SDK.
   `unreachable`; hosts in `manual_hosts` and entries with `check: "manual"` are a **manual
   re-check due**. If the page is byte-for-byte the app's saved copy but a quote is not on it, the
   manifest is wrong: `manifest_error`, an issue, nothing sent.
-- **Captures:** every run commits each page's normalised text (`<app>/<id>.txt`, Arabic
-  `<id>.ar.txt`), its metadata (`<id>.json`: url, fetched_at, http status, sha256, status, missing
-  quotes), the manifest it checked against, and the run report (`runs/<run_id>-<app>.json`) to the
-  `captures` branch. `--offline` replays the checks on the saved captures without the network.
+- **No page text in public.** ops-monitor is a public repository and official pages may not be
+  reproduced (the u.ae copyright notice forbids it), so page text never goes to this repository:
+  not to a branch, an issue, the run log or an artifact. Two stores:
+  - **Public state** (`--state`, the `source-watch-state` branch here): per source only `id`,
+    `url`, `status`, `fetched_at`, `last_read_fetched_at`, `sha256`, `url_ar`, `sha256_ar`,
+    `manifest_fingerprint`, `run_id` (`PUBLIC_STATE_KEYS`), plus the radar's seen list
+    (`radar/seen.json`, item URLs only). `--check-public-state DIR` refuses
+    any other file or key, or a long or multi-line value, and the workflow runs it before every
+    commit, so a leak fails the run instead of being published.
+  - **Private captures** (`--captures`, a checkout of the PRIVATE repository named by
+    `SOURCE_CAPTURES_REPO`): each page's normalised text (`<app>/<id>.txt`, Arabic `<id>.ar.txt`),
+    its full metadata, `<id>.review.md` (closest text to each missing quote and the diff against
+    the previous capture), the manifest it checked against, and the run report
+    (`runs/<run_id>-<app>.json`). The workflow writes only after `GET /repos/<repo>` says
+    `private: true`. `--offline` replays the checks on these captures without the network.
+  - **No private store configured** (variable unset, token unset, repository not private or not
+    reachable): captures, diffs and excerpts are not saved, a warning is logged, nothing fails, and
+    the public state is still kept. Workflow artifacts are not used as a fallback: on a public
+    repository anyone signed in to GitHub can download them.
 - **Alerts:** issues in the app repo (with `SOURCE_WATCH_ISSUES_TOKEN`; otherwise in
   ops-monitor), one per source, for `quote_missing`, `gone`, `manifest_error`, `new_edition` and
-  language disagreements: the old quote, the closest text on the page now, and the diff against
-  the previous capture. One summary per run on the pinned `Source watch` issue in ops-monitor.
+  language disagreements: the page URL and hashes, the app's own quote (already public in its
+  manifest), any missing value, and where the excerpts and diff are in the private store. Never
+  page text. One summary per run on the pinned `Source watch` issue in ops-monitor.
 
 Run locally: `python3 source_watch.py --dry-run` (no issue, nothing sent), or against a local app:
 `--manifest cosecha=http://localhost:8080/.well-known/sources.json --verify-url cosecha=http://localhost:8080/internal/sources/verify`
@@ -242,7 +258,7 @@ quotes are found and another's are not, or two apps quote the same words with di
 
 Beyond the cited pages, the watcher reads official announcement and circular lists
 (`radar_feeds` in `source-watch.json`) once per run: RSS/Atom entries, or the page's headline
-links. New items (not seen in earlier runs; the seen list is kept on the `captures` branch) are
+links. New items (not seen in earlier runs; the seen list of item URLs is kept on the public `source-watch-state` branch) are
 matched against each app's `radar_keywords`: whole words, case-folded, Arabic included, no model.
 Matches go into one digest issue per app (`Source watch radar: <app>`). **Nothing in any app
 changes.** A list read for the first time is seeded silently. A list that yields no items (it
@@ -277,7 +293,7 @@ without a price in the code is refused), effort `low`, at most 4000 output token
 Per-run cap `SOURCE_WATCH_LLM_MAX_USD` (default 0.50, hard ceiling 5.00): each call reserves its
 worst case before it runs and is refused if that would pass the cap; any error gives no draft.
 The page text is passed as untrusted data. The draft is kept only if its quote is at least 20
-characters, appears verbatim in the new capture, and every number in the proposed fact is also in
+and at most 400 characters (it is published in the issue, so it must stay a short quote), appears verbatim in the new capture, and every number in the proposed fact is also in
 that quote.
 
 ## Owner setup
@@ -289,6 +305,9 @@ Nothing below is set by this change.
 | ops-monitor, Actions secret | `SOURCE_VERIFY_TOKEN_COSECHA` | a random string of 32+ characters (e.g. `openssl rand -hex 32`) |
 | Cosecha, Railway variable | `SOURCES_VERIFY_TOKEN` | the same string |
 | ops-monitor, Actions secret (optional) | `SOURCE_WATCH_ISSUES_TOKEN` | fine-grained PAT, resource owner EmpowerTours, only the app repos (cosecha now), permissions **Issues: read and write**, **Contents: read and write**, **Pull requests: read and write**. Without it issues go to ops-monitor and no fix PR is opened. |
+| GitHub, new **private** repository (optional) | e.g. `EmpowerTours/source-captures` | holds the full page captures; created by the owner, not by this change. Must stay private. |
+| ops-monitor, Actions variable or secret (optional) | `SOURCE_CAPTURES_REPO` | `owner/name` of that private repository. Unset: captures, diffs and excerpts are not saved (warning only). |
+| ops-monitor, Actions secret (optional) | `SOURCE_CAPTURES_TOKEN` | fine-grained PAT, only that repository, **Contents: read and write** (and Metadata: read, for the private check). |
 | ops-monitor, Actions secret (optional) | `ANTHROPIC_API_KEY` | only for model drafts |
 | ops-monitor, Actions variables (optional) | `SOURCE_WATCH_LLM` = `on`, `SOURCE_WATCH_LLM_MAX_USD` | drafts on, per-run cap |
 | Cloudflare | redeploy `worker/` (`npx wrangler deploy`) | adds the daily cron. The existing `GH_DISPATCH_TOKEN` already has Actions read/write on ops-monitor, which covers the new workflow: **no new scope**. |
@@ -309,7 +328,8 @@ stack; the contract above is the interface. For every app:
    already has (read dates per source, quotes, `sources[]`).
 2. **Quotes.** For each page, copy one or two short exact quotes per fact from a watcher capture
    (run `python3 source_watch.py --dry-run --manifest <app>=<file>` with a manifest that has empty
-   quotes; the text lands in `.captures/<app>/<id>.txt`), add `values` for every number or date the
+   quotes and `--captures <local dir>`; the text lands in `<local dir>/<app>/<id>.txt`; keep that
+   directory out of any public repository), add `values` for every number or date the
    app shows, and the capture's `sha256`. Pages a robot cannot read: `check: "manual"`.
 3. **Endpoints:** manifest, verify (token, 503 when unset, constant-time compare, rate limit,
    idempotent `run_id`, audit log, fingerprint check, anti-flap) and status, as in 1, 2 and 4.
