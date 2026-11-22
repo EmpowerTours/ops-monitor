@@ -107,6 +107,19 @@ class Checks(unittest.TestCase):
         self.assertEqual(sw.check_fields(body, [{"path": "data.3.x", "equals": 1}])[0]["reason"], "path")
         self.assertIsNone(sw.check_fields("<html>", ok))
 
+    def test_api_hash_ignores_the_answer_timing(self):
+        # UN Comtrade answers carry elapsedTime, different on every call: run 44974248996 reported both
+        # Comtrade sources as "changed" for that alone. The hash covers the data, not the timing.
+        a = b'{"elapsedTime":"0.12 secs","count":1,"data":[{"cmdCode":"0409","primaryValue":220681.649}],"error":""}'
+        b = b'{"error":"","data":[{"primaryValue":220681.649,"cmdCode":"0409"}],"count":1,"elapsedTime":"1.03 secs"}'
+        c = a.replace(b"220681.649", b"220681.650")
+        ta, tb, tc = (sw.extract(x, "application/json", "")[0] for x in (a, b, c))
+        self.assertEqual(sw.sha256_text(ta), sw.sha256_text(tb), "same data, other timing and key order: same hash")
+        self.assertNotEqual(sw.sha256_text(ta), sw.sha256_text(tc), "a changed value changes the hash")
+        self.assertNotIn("elapsedTime", ta)
+        self.assertEqual(sw.check_fields(ta, [{"path": "data.0.primaryValue", "equals": 220681.649}]), [])
+        self.assertEqual(sw.extract(b"not json", "application/json", "")[0], "not json", "a broken answer stays as read")
+
     def test_api_field_selector_is_order_independent(self):
         # UN Comtrade answers many rows (one per HS code) in no promised order: select the row by key.
         rows = [{"cmdCode": "081020", "primaryValue": 1879379.0}, {"cmdCode": "080440", "primaryValue": 9079106.0}]
