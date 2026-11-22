@@ -576,6 +576,83 @@ def summary_body(checks: list[dict[str, Any]], results: dict[str, dict[str, Any]
 
 
 # ------------------------------------------------------------------ main
+# ---------------------------------------------------------------- source watch dead-man switch
+WATCH_LABEL = "source-watch"
+
+
+def parse_any_iso(v: str) -> dt.datetime:
+    """An RFC 3339 time as apps write it (Z or an offset, optional fractions)."""
+    t = dt.datetime.fromisoformat(v.replace("Z", "+00:00"))
+    return t if t.tzinfo else t.replace(tzinfo=dt.timezone.utc)
+
+
+def watch_stale(doc: Any, now: dt.datetime) -> str | None:
+    """Why an app's source watch counts as stale, from its /.well-known/sources-status.json, or
+    None. Stale: the last report is older than the app's own limit (stale_after_hours, 48 by
+    default), or the verify endpoint is open and no report ever arrived. An unreadable status is
+    not judged here (the uptime check covers a down app)."""
+    if not isinstance(doc, dict) or doc.get("v") != 1:
+        return None
+    limit = float(doc.get("stale_after_hours") or 48)
+    last = doc.get("last_report_at")
+    if last:
+        try:
+            age = (now - parse_any_iso(str(last))).total_seconds()
+        except ValueError:
+            return f"last_report_at is not a time ({str(last)[:40]})"
+        if age > limit * 3600:
+            return f"no source watch report for {fmt_duration(age)} (last {last}); the app shows its checks as paused"
+        return None
+    if doc.get("verify_open"):
+        return "the verify endpoint is open but no source watch report has ever arrived"
+    return None
+
+
+def fetch_watch_status(check: dict[str, Any]) -> dict[str, Any]:
+    parts = urlsplit(check["url"])
+    res = fetch(urljoin(f"{parts.scheme}://{parts.netloc}", check["sources_status"]))
+    doc = None
+    if res["status"] == 200 and res["body"]:
+        try:
+            doc = json.loads(res["body"])
+        except ValueError:
+            doc = None
+    return {"app": check["app"], "doc": doc}
+
+
+def process_watch_alerts(gh: Any, state: dict[str, Any], rows: list[dict[str, Any]], now: dt.datetime,
+                         errors: list[str]) -> None:
+    """One issue "SOURCE WATCH STALE: <app>" (label source-watch) while an app's source watch is
+    stale; it closes when a report arrives again or the check is removed."""
+    alerts: dict[str, Any] = state.setdefault("watch_alerts", {})
+    stamp = iso(now)
+    why = {r["app"]: watch_stale(r["doc"], now) for r in rows}
+    readable = {r["app"] for r in rows if r["doc"] is not None}
+    for app in list(alerts):
+        if app not in why or (app in readable and why[app] is None):
+            try:
+                gh.comment(alerts[app]["issue"], f"Source watch reports again (or the check was removed) at {stamp}. Closing.")
+                gh.close(alerts[app]["issue"])
+                del alerts[app]
+            except RuntimeError as e:
+                errors.append(str(e))
+    for app, reason in why.items():
+        if reason is None or app in alerts:
+            continue
+        title = f"SOURCE WATCH STALE: {app}"
+        body = (f"**{app}**: {reason}.\n\nThe app stops showing the watch's dates after 48 h without a report, so nothing "
+                "looks checked that is not, but nobody is checking its official pages either. Look at the `source-watch` "
+                "workflow runs and the dispatch Worker. This issue closes when a report arrives.")
+        try:
+            existing = gh.find_open_issue(title, WATCH_LABEL)
+            num = existing or gh.create_issue(title, body, [WATCH_LABEL])
+            if existing:
+                gh.comment(existing, f"Still stale at {stamp}: {reason}")
+            alerts[app] = {"issue": num, "since": stamp}
+        except RuntimeError as e:
+            errors.append(str(e))
+
+
 def main() -> int:
     checks: list[dict[str, Any]] = load_json(CHECKS_FILE, [])
     if not checks:
@@ -711,6 +788,17 @@ def main() -> int:
         process_spend_alerts(gh, state, spend_rows, configured, now, errors)
     except RuntimeError as e:
         errors.append(str(e))
+
+    # source watch dead-man switch: apps that serve /.well-known/sources-status.json
+    watch_checks = [c for c in checks if c.get("sources_status")]
+    if watch_checks:
+        with ThreadPoolExecutor(max_workers=8) as pool:
+            watch_rows = list(pool.map(fetch_watch_status, watch_checks))
+        try:
+            gh.ensure_label(WATCH_LABEL, "5319e7", "Source watch: official pages the apps cite")
+            process_watch_alerts(gh, state, watch_rows, now, errors)
+        except RuntimeError as e:
+            errors.append(str(e))
 
     keep_after = now - dt.timedelta(days=OUTAGE_KEEP_DAYS)
     state["outages"] = [o for o in outages if o.get("end") is None or parse_iso(o["end"]) >= keep_after]

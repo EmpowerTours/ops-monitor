@@ -1,0 +1,144 @@
+name: source-watch
+
+# Daily check of the official pages the Dubai apps cite (docs/SOURCE-WATCH.md). Primary trigger: the
+# Cloudflare cron Worker in worker/ (05:17 UTC, workflow_dispatch). The GitHub cron below is a backup
+# only; a second run on the same day is harmless (a miss needs two runs at least 20 h apart to change
+# anything in an app).
+on:
+  schedule:
+    - cron: "41 6 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Fetch and check only: send nothing to the apps, file no issue"
+        type: boolean
+        default: false
+
+# Page text is never published here: this repository is public and official pages may not be
+# reproduced (u.ae copyright notice). The public source-watch-state branch holds only url, sha256,
+# fetched_at and status per source, and a check refuses to commit anything else. Full captures go to
+# the PRIVATE repository named by SOURCE_CAPTURES_REPO (variable or secret) with SOURCE_CAPTURES_TOKEN,
+# or are not saved at all (a warning, nothing fails).
+permissions:
+  contents: write # the public source-watch-state branch (metadata only)
+  issues: write # the summary on the pinned "Source watch" issue
+
+concurrency:
+  group: source-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Check out the public state branch (metadata only)
+        run: |
+          if git fetch -q --depth=1 origin source-watch-state; then
+            git worktree add -q .state FETCH_HEAD
+            git -C .state checkout -q -B source-watch-state
+          else
+            git worktree add -q --detach .state
+            git -C .state checkout -q --orphan source-watch-state
+            git -C .state rm -rfq .
+          fi
+
+      - name: Check out the private capture store
+        id: private
+        env:
+          REPO: ${{ vars.SOURCE_CAPTURES_REPO || secrets.SOURCE_CAPTURES_REPO }}
+          TOKEN: ${{ secrets.SOURCE_CAPTURES_TOKEN }}
+          GH_TOKEN: ${{ secrets.SOURCE_CAPTURES_TOKEN }}
+        run: |
+          echo "dir=" >> "$GITHUB_OUTPUT"
+          if [ -z "$REPO" ]; then
+            echo "::warning::SOURCE_CAPTURES_REPO is not set: page captures are not saved (only url, sha256, fetched_at, status)"
+            exit 0
+          fi
+          if [ -z "$TOKEN" ]; then
+            echo "::warning::SOURCE_CAPTURES_TOKEN is not set: cannot write $REPO; page captures are not saved"
+            exit 0
+          fi
+          # Never write page text to a repository that is not private.
+          private=$(gh api "repos/$REPO" --jq .private 2>/dev/null || echo unknown)
+          if [ "$private" != "true" ]; then
+            echo "::warning::$REPO is not a private repository the token can read (private=$private): page captures are not saved"
+            exit 0
+          fi
+          auth="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$TOKEN" | base64 -w0)"
+          if ! git -c http.https://github.com/.extraheader="$auth" clone -q --depth=1 "https://github.com/$REPO.git" .captures; then
+            echo "::warning::could not clone $REPO: page captures are not saved"
+            rm -rf .captures
+            exit 0
+          fi
+          if ! git -C .captures rev-parse -q --verify HEAD >/dev/null; then git -C .captures symbolic-ref HEAD refs/heads/main; fi
+          echo "dir=.captures" >> "$GITHUB_OUTPUT"
+
+      - name: Install the PDF reader (and the model SDK only when drafts are on)
+        env:
+          SOURCE_WATCH_LLM: ${{ vars.SOURCE_WATCH_LLM }}
+        run: |
+          python3 -m venv .venv
+          .venv/bin/pip install -q pypdf==6.21.4
+          if [ "$SOURCE_WATCH_LLM" = "on" ]; then .venv/bin/pip install -q anthropic==2.4.0; fi
+
+      - name: Run the source watch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # One verify token per app (each equals that app's SOURCES_VERIFY_TOKEN). Unset: results not sent.
+          SOURCE_VERIFY_TOKEN_COSECHA: ${{ secrets.SOURCE_VERIFY_TOKEN_COSECHA }}
+          # Optional: fine-grained token with Issues read/write on the app repos. Unset: issues go here.
+          SOURCE_WATCH_ISSUES_TOKEN: ${{ secrets.SOURCE_WATCH_ISSUES_TOKEN }}
+          # Optional model drafts: off unless the repository variable SOURCE_WATCH_LLM is "on".
+          SOURCE_WATCH_LLM: ${{ vars.SOURCE_WATCH_LLM }}
+          SOURCE_WATCH_LLM_MAX_USD: ${{ vars.SOURCE_WATCH_LLM_MAX_USD }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Save Page Now per reading (public timeline). SPN2 key "access:secret"; unset: no request is sent
+          # (the API refuses anonymous calls). The code waits 21 s between requests. SOURCE_WATCH_SPN=off stops it.
+          SOURCE_WATCH_SPN_KEY: ${{ secrets.SOURCE_WATCH_SPN_KEY }}
+          SOURCE_WATCH_SPN: ${{ vars.SOURCE_WATCH_SPN }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          CAPTURES: ${{ steps.private.outputs.dir }}
+        run: |
+          args="--state .state"
+          if [ -n "$CAPTURES" ]; then args="$args --captures $CAPTURES --report $CAPTURES/last-run.json"; fi
+          if [ "$DRY_RUN" = "true" ]; then args="$args --dry-run"; fi
+          .venv/bin/python source_watch.py $args
+
+      - name: Commit the public state (refused if anything but metadata is in it)
+        if: always()
+        run: |
+          .venv/bin/python source_watch.py --check-public-state .state
+          cd .state
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A .
+          if git diff --cached --quiet; then echo "no state changed"; exit 0; fi
+          git commit -q -m "state: $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git push -q origin HEAD:source-watch-state && exit 0
+            sleep 5
+          done
+          echo "state push failed after 3 attempts" >&2
+          exit 1
+
+      - name: Push the captures to the private store
+        if: always() && steps.private.outputs.dir != ''
+        env:
+          TOKEN: ${{ secrets.SOURCE_CAPTURES_TOKEN }}
+        run: |
+          cd .captures
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A .
+          if git diff --cached --quiet; then echo "no capture changed"; exit 0; fi
+          git commit -q -m "captures: $(date -u +%Y-%m-%dT%H:%MZ)"
+          auth="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$TOKEN" | base64 -w0)"
+          for i in 1 2 3; do
+            git -c http.https://github.com/.extraheader="$auth" push -q origin HEAD && exit 0
+            git -c http.https://github.com/.extraheader="$auth" pull -q --rebase origin HEAD || true
+            sleep 5
+          done
+          echo "::warning::captures push to the private store failed after 3 attempts"
