@@ -81,7 +81,8 @@ Daily, a second workflow (`source-watch.yml`, dispatched by the same Worker at 0
 that the official pages the apps cite still say what the apps rely on, and reports to each app,
 which then shows a fact as unconfirmed when its words are gone (two daily misses on the same page
 text). It tests itself first with a canary, never counts a page it could not read as verified,
-saves every capture on the `captures` branch, and alerts through issues labelled `source-watch`.
+keeps only url, sha256, fetched_at and status here (page text goes only to a private capture
+repository, `SOURCE_CAPTURES_REPO`, or is not saved), and alerts through issues labelled `source-watch`.
 The uptime run alerts when an app's source watch has not reported for 48 h. Contract, owner setup
 and adoption guide: [`docs/SOURCE-WATCH.md`](docs/SOURCE-WATCH.md).
 
