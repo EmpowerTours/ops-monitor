@@ -81,7 +81,8 @@ jobs:
           SOURCE_WATCH_LLM: ${{ vars.SOURCE_WATCH_LLM }}
         run: |
           python3 -m venv .venv
-          .venv/bin/pip install -q pypdf==6.21.4
+          # cryptography: pypdf needs it to read AES-encrypted PDFs (INEGI yearbooks).
+          .venv/bin/pip install -q pypdf==6.21.4 cryptography==50.0.2
           if [ "$SOURCE_WATCH_LLM" = "on" ]; then .venv/bin/pip install -q anthropic==2.4.0; fi
 
       - name: Run the source watch

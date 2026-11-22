@@ -177,8 +177,13 @@ are on, the pinned `anthropic` SDK.
   secret, the app repo, optional `fix` and `radar_keywords`). A 404 manifest is reported as "not
   adopted yet".
 - **Fetching:** plain GETs, user agent `EmpowerTours-source-watch/1.0 (+repo URL)` (no personal
-  details), 30 s timeout, 25 MB cap, 3 s between two requests to the same host (12 s for UN
-  Comtrade, which answers 429 faster), one retry for 404/410, 429, 5xx and network errors.
+  details), 30 s timeout (90 s for a `.pdf` URL), 25 MB cap, 3 s between two requests to the
+  same host (12 s for UN Comtrade, which answers 429 faster). A transient failure (timeout,
+  network error, 202, 429, 5xx) gets up to two retries, after 10 s and 40 s (a 429 after its
+  `Retry-After`, at most 120 s, else 30 s); each retry after a timeout doubles the timeout up to
+  120 s. A 403 is a block and is not retried. A 404/410 needs a second answer to count as `gone`.
+  All retries share a run budget of 900 s (`retry_budget_s`); once spent, the detail says so.
+  pypdf runs with `cryptography` so AES-encrypted PDFs (INEGI yearbooks) can be read.
 - **Never verified without reading:** a challenge page ("Just a moment...", "Access denied",
   ...), a page with under 200 characters of text, a non-JSON API answer or an unreadable file is
   `unreachable`; hosts in `manual_hosts` and entries with `check: "manual"` are a **manual

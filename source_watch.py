@@ -304,6 +304,7 @@ class Fetched:
     body: bytes = b""
     error: str = ""
     final_url: str = ""
+    retry_after: str = ""  # the Retry-After header of a 429, as sent
 
 
 class Fetcher:
@@ -311,8 +312,14 @@ class Fetcher:
     requests to the same host."""
 
     def __init__(self, user_agent: str, timeout: float, per_host_delay: float, sleep: Callable[[float], None] = time.sleep,
-                 opener: Callable[..., Any] | None = None, host_delay: dict[str, float] | None = None):
+                 opener: Callable[..., Any] | None = None, host_delay: dict[str, float] | None = None,
+                 pdf_timeout: float = 90.0, max_timeout: float = 120.0, retry_budget_s: float = 900.0):
         self.ua, self.timeout, self.delay, self.sleep = user_agent, timeout, per_host_delay, sleep
+        # PDFs are large and some official hosts are slow: a longer first timeout, and every retry
+        # after a timeout doubles it up to max_timeout. Retries share one run-wide budget (seconds
+        # waited plus seconds spent on retry requests) so the job stays inside its time limit.
+        self.pdf_timeout, self.max_timeout = pdf_timeout, max_timeout
+        self.retry_budget_s, self.retry_spent = retry_budget_s, 0.0
         self.host_delay = {k.lower(): float(v) for k, v in (host_delay or {}).items()}
         # Shared source registry: a page cited by several apps (or twice by one) is fetched once
         # per run; the cache lives as long as this Fetcher, i.e. one run.
@@ -331,21 +338,29 @@ class Fetcher:
                 self.sleep(delay - gap)
         self.last[host] = time.monotonic()
 
-    def get(self, url: str, accept: str = "text/html,application/pdf,application/json;q=0.9,*/*;q=0.5", fresh: bool = False) -> Fetched:
+    def timeout_for(self, url: str) -> float:
+        return max(self.timeout, self.pdf_timeout) if urllib.parse.urlsplit(url).path.lower().endswith(".pdf") else self.timeout
+
+    def retry_allowed(self, wait: float) -> bool:
+        return self.retry_spent + wait <= self.retry_budget_s
+
+    def get(self, url: str, accept: str = "text/html,application/pdf,application/json;q=0.9,*/*;q=0.5", fresh: bool = False,
+            timeout: float | None = None) -> Fetched:
         key = (url, accept)
         if not fresh and key in self.cache:
             self.hits += 1
             return self.cache[key]
-        f = self._get(url, accept)
+        f = self._get(url, accept, timeout or self.timeout_for(url))
         self.cache[key] = f
         return f
 
-    def _get(self, url: str, accept: str) -> Fetched:
+    def _get(self, url: str, accept: str, timeout: float | None = None) -> Fetched:
+        timeout = timeout or self.timeout_for(url)
         self._wait(url)
         req = urllib.request.Request(url, headers={"User-Agent": self.ua, "Accept": accept, "Accept-Language": "en,ar;q=0.8,es;q=0.7"})
         f = Fetched(url=url)
         try:
-            with self.opener(req, timeout=self.timeout) as r:
+            with self.opener(req, timeout=timeout) as r:
                 f.status = r.status
                 f.content_type = r.headers.get("Content-Type", "")
                 f.final_url = r.geturl()
@@ -354,6 +369,7 @@ class Fetcher:
                     f.error, f.body = f"body over {MAX_BYTES} bytes", b""
         except urllib.error.HTTPError as e:
             f.status, f.error = e.code, f"HTTP {e.code}"
+            f.retry_after = str((e.headers or {}).get("Retry-After", "") or "")[:40]
         except Exception as e:  # network, TLS, timeout: the page was not read
             f.error = f"{type(e).__name__}: {str(e)[:160]}"
         return f
@@ -405,20 +421,58 @@ class Read:
     body: bytes = b""
 
 
+RETRY_BACKOFF_S = (10, 40)  # pauses before the first and second retry of a transient failure
+RETRY_AFTER_MAX_S = 120  # never wait longer than this for a 429, whatever Retry-After says
+RETRY_429_DEFAULT_S = 30
+
+
+def transient(f: Fetched) -> bool:
+    """Worth another try: 202 (accepted, not ready), 429, 5xx, or a network error or timeout.
+    A 403 is a block, not a hiccup: never retried."""
+    return f.status in (202, 429) or f.status >= 500 or (not f.status and bool(f.error))
+
+
+def retry_wait(f: Fetched, attempt: int) -> float:
+    if f.status == 429:
+        try:
+            return float(min(max(int(f.retry_after.strip()), 0), RETRY_AFTER_MAX_S))
+        except ValueError:
+            return float(RETRY_429_DEFAULT_S)
+    return float(RETRY_BACKOFF_S[attempt])
+
+
 def read_page(url: str, fetcher: Fetcher, api: bool = False) -> Read:
-    """Fetch and extract one page. A 404/410 or a network or 5xx failure is retried once (a 429
-    after a longer pause). Never "read" unless real text came back: a challenge page, a page with
-    almost no text (one that needs a browser) or an unreadable file is "unreachable"."""
+    """Fetch and extract one page. A transient failure (timeout, network error, 202, 429, 5xx) is
+    retried up to twice with backoff (a 429 after its Retry-After, at most 120 s); each retry after
+    a timeout doubles the timeout, and PDFs start with a longer one. A 404/410 needs a second answer
+    to count as gone. All retries share the run's retry budget. Never "read" unless real text came
+    back: a challenge page, a page with almost no text (one that needs a browser) or an unreadable
+    file is "unreachable"."""
     f = fetcher.get(url)
-    if f.status in (404, 410, 429) or f.status >= 500 or (not f.status and f.error):
-        fetcher.sleep(30 if f.status == 429 else 10)
-        f2 = fetcher.get(url, fresh=True)
-        if f2.status == 200 or f.status in (404, 410):
-            f = f2
+    note = ""
+    if f.status in (404, 410):
+        fetcher.sleep(10)
+        f = fetcher.get(url, fresh=True)
+    else:
+        timeout, attempt = fetcher.timeout_for(url), 0
+        while transient(f) and attempt < len(RETRY_BACKOFF_S):
+            wait = retry_wait(f, attempt)
+            if not fetcher.retry_allowed(wait):
+                note = " (run retry budget spent; not retried)"
+                break
+            if not f.status and "timed out" in f.error.lower():
+                timeout = min(timeout * 2, fetcher.max_timeout)
+            fetcher.sleep(wait)
+            t0 = time.monotonic()
+            f = fetcher.get(url, fresh=True, timeout=timeout)
+            fetcher.retry_spent += wait + (time.monotonic() - t0)
+            attempt += 1
+        if attempt and transient(f):
+            note = f" (after {attempt} retries)"
     if f.status in (404, 410):
         return Read(False, "gone", f"HTTP {f.status}", http_status=f.status)
     if f.status != 200 or f.error:
-        return Read(False, "unreachable", f.error or f"HTTP {f.status}", http_status=f.status)
+        return Read(False, "unreachable", (f.error or f"HTTP {f.status}") + note, http_status=f.status)
     try:
         text, links, title, kind = extract(f.body, f.content_type, url)
     except Exception as e:
@@ -1413,7 +1467,9 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
         print(f"cannot read {args.config}", file=sys.stderr)
         return 2
     ua = cfg["user_agent"]
-    fetcher = Fetcher(ua, float(cfg.get("timeout_s", 30)), float(cfg.get("per_host_delay_s", 3)), host_delay=cfg.get("host_delay_s"))
+    fetcher = Fetcher(ua, float(cfg.get("timeout_s", 30)), float(cfg.get("per_host_delay_s", 3)), host_delay=cfg.get("host_delay_s"),
+                      pdf_timeout=float(cfg.get("pdf_timeout_s", 90)), max_timeout=float(cfg.get("max_timeout_s", 120)),
+                      retry_budget_s=float(cfg.get("retry_budget_s", 900)))
     manual = {h.lower() for h in cfg.get("manual_hosts", [])}
     run_id = args.run_id or clock().strftime("%Y%m%dT%H%M%SZ")
     if not RUN_ID_RE.match(run_id):
