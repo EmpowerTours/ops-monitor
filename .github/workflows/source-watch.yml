@@ -95,6 +95,10 @@ jobs:
           SOURCE_WATCH_LLM: ${{ vars.SOURCE_WATCH_LLM }}
           SOURCE_WATCH_LLM_MAX_USD: ${{ vars.SOURCE_WATCH_LLM_MAX_USD }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Save Page Now per reading (public timeline). Optional SPN2 key "access:secret"; unset: anonymous
+          # (about 3 captures/min, the code waits 21 s between requests). SOURCE_WATCH_SPN=off stops it.
+          SOURCE_WATCH_SPN_KEY: ${{ secrets.SOURCE_WATCH_SPN_KEY }}
+          SOURCE_WATCH_SPN: ${{ vars.SOURCE_WATCH_SPN }}
           DRY_RUN: ${{ inputs.dry_run }}
           CAPTURES: ${{ steps.private.outputs.dir }}
         run: |
