@@ -5,7 +5,11 @@
   "host_delay_s": {
     "comtradeapi.un.org": 12
   },
-  "manual_hosts": [],
+  "manual_hosts_note": "No answer within 120 s on 3 tries, from GitHub runners (run 44974248996) and from a residential connection (2026-11-22): a manual re-check, not a daily 4-minute wait.",
+  "manual_hosts": [
+    "micor.agriculture.gov.au",
+    "www.adafsa.gov.ae"
+  ],
   "archive": {
     "enabled": true,
     "user_agent": "source-watch/1.0",
