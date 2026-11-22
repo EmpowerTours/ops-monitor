@@ -173,17 +173,22 @@ def source_read_record(cited_by: str, reading: dict, quotes: list[dict] | None, 
             "queued_at": queued_at, "anchor": None}
 
 
+def key_name(k: Any) -> str:
+    """A key as it may appear in a guard message: a field name, or nothing of its content."""
+    return repr(k) if isinstance(k, str) and re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]{0,40}", k) else "(a key that is not a field name)"
+
+
 def _check_scalars(where: str, d: dict, allowed: frozenset) -> list[str]:
-    out = [f"{where}: key {k!r} may not be public" for k in sorted(set(d) - allowed)]
+    out = [f"{where}: key {key_name(k)} may not be public" for k in sorted(set(d) - allowed, key=str)]
     for k, v in d.items():
         if k in ("quotes", "quotes_ar"):
             if not isinstance(v, list) or not all(isinstance(q, str) and len(q) <= QUOTE_MAX_CHARS and "\n" not in q for q in v):
                 out.append(f"{where}: {k} must be short single-line quotes (<= {QUOTE_MAX_CHARS} characters)")
         elif isinstance(v, str):
             if len(v) > MAX_STR or "\n" in v:
-                out.append(f"{where}: {k!r} must be a short single-line string")
+                out.append(f"{where}: {key_name(k)} must be a short single-line string (value not shown)")
         elif not (v is None or isinstance(v, (bool, int))):
-            out.append(f"{where}: {k!r} must be a scalar")
+            out.append(f"{where}: {key_name(k)} must be a scalar (value not shown)")
     return out
 
 
@@ -191,7 +196,7 @@ def validate_record(r: Any) -> list[str]:
     """Problems that keep a record from being public (empty: fine)."""
     if not isinstance(r, dict):
         return ["record: not an object"]
-    out = [f"record: key {k!r} may not be public" for k in sorted(set(r) - RECORD_KEYS)]
+    out = [f"record: key {key_name(k)} may not be public" for k in sorted(set(r) - RECORD_KEYS, key=str)]
     if r.get("mode") != "public" or r.get("kind") != "source_read":
         out.append("record: only public source_read records go here")
     p = r.get("payload")

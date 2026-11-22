@@ -373,6 +373,43 @@ class Radar(unittest.TestCase):
                              fetcher({"https://x.gov.ae/": (200, b"<html><div id=app></div></html>", "text/html")}), {}, CLOCK)
         self.assertIn("no items read", empty["feeds"][0]["status"])
 
+    def test_item_urls_with_spaces_are_encoded_not_refused(self):
+        # MOIAT's news page links "?cat=Industrial Registry Services" with literal spaces (run 44974248996).
+        page = ("<html><body><a href='/en/services?cat=Industrial Registry Services'>Industrial Registry Services for factories</a>"
+                "<a href='/ar/أخبار/قرار جديد'>قرار جديد بشأن استيراد العسل من الخارج</a></body></html>").encode()
+        items = sw.feed_items("https://moiat.gov.ae/en/media-center/news", page, "text/html")
+        self.assertEqual(items[0]["url"], "https://moiat.gov.ae/en/services?cat=Industrial%20Registry%20Services")
+        self.assertTrue(all(" " not in i["url"] for i in items))
+        self.assertEqual(sw.canonical_url(items[0]["url"]), items[0]["url"], "encoding is idempotent")
+        seen: dict = {}
+        feeds = [{"name": "MOIAT news", "url": "https://moiat.gov.ae/en/media-center/news"}]
+        sw.run_radar(feeds, {"cosecha": ["honey"]}, fetcher({feeds[0]["url"]: (200, page, "text/html")}), seen, CLOCK)
+        with tempfile.TemporaryDirectory() as d:
+            os.makedirs(os.path.join(d, "radar"))
+            json.dump(seen, open(os.path.join(d, "radar", "seen.json"), "w"))
+            self.assertEqual(sw.check_public_state(d), [], "the guard is unchanged and the writer now passes it")
+
+    def test_guard_names_file_and_key_never_the_value(self):
+        secret = "https://moiat.gov.ae/x?cat=Leaked Value 12345"
+        with tempfile.TemporaryDirectory() as d:
+            os.makedirs(os.path.join(d, "radar"))
+            json.dump({"https://moiat.gov.ae/en/media-center/news": ["https://ok.gov.ae/a", secret]}, open(os.path.join(d, "radar", "seen.json"), "w"))
+            os.makedirs(os.path.join(d, "demo"))
+            json.dump({"id": "s-1", "status": "Leaked\nText", "Leaked page sentence as a key": "x"}, open(os.path.join(d, "demo", "s-1.json"), "w"))
+            err, old = io.StringIO(), sys.stderr
+            sys.stderr = err
+            try:
+                self.assertEqual(sw.main(["--check-public-state", d]), 1)
+            finally:
+                sys.stderr = old
+            out = err.getvalue()
+            self.assertIn("radar/seen.json", out)
+            self.assertIn("'https://moiat.gov.ae/en/media-center/news' item 1", out)
+            self.assertIn("demo/s-1.json", out)
+            self.assertIn("'status'", out)
+            self.assertNotIn("Leaked", out)
+            self.assertNotIn("12345", out)
+
     def test_seen_list_is_public_safe(self):
         feeds = [{"name": "MOIAT news", "url": "https://moiat.gov.ae/en/media-center/news"}]
         seen: dict = {}

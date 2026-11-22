@@ -259,7 +259,7 @@ quotes are found and another's are not, or two apps quote the same words with di
 
 Beyond the cited pages, the watcher reads official announcement and circular lists
 (`radar_feeds` in `source-watch.json`) once per run: RSS/Atom entries, or the page's headline
-links. New items (not seen in earlier runs; the seen list of item URLs is kept on the public `source-watch-state` branch) are
+links (item URLs are percent-encoded: some official pages link with literal spaces). New items (not seen in earlier runs; the seen list of item URLs is kept on the public `source-watch-state` branch) are
 matched against each app's `radar_keywords`: whole words, case-folded, Arabic included, no model.
 Matches go into one digest issue per app (`Source watch radar: <app>`). **Nothing in any app
 changes.** A list read for the first time is seeded silently. A list that yields no items (it
@@ -317,7 +317,7 @@ passed), for every page the watch actually fetched (`source_timeline.py`):
    It shows what the page said (its hash, its archived copy and whether our quotes were on it),
    never our reading of it.
 
-`--check-public-state` validates the queue and every timeline before each commit: only the keys
+`--check-public-state` names the file, the key and (in a list) the item position of anything it refuses, never the value, and validates the queue and every timeline before each commit: only the keys
 above, quotes of at most 400 characters, short single-line strings. Nothing else may be public.
 
 ## Fix proposals

@@ -662,11 +662,23 @@ def check_public_state(root: str) -> list[str]:
 
 def check_public_file(rel: str, path: str) -> list[str]:
     if rel == os.path.join("radar", "seen.json"):  # the radar's seen list: {list url: [item url, ...]}
+        # Messages name the file, the list (a feed URL from our config) and the item's position,
+        # never the refused value.
         doc = load_json(path)
-        ok = isinstance(doc, dict) and all(
-            isinstance(k, str) and isinstance(v, list) and all(isinstance(u, str) and re.fullmatch(r"https?://\S{1,2040}", u) for u in v)
-            for k, v in doc.items())
-        return [] if ok else [f"{rel}: the seen list may hold item URLs only"]
+        if not isinstance(doc, dict):
+            return [f"{rel}: not a JSON object"]
+        out = []
+        for k, v in doc.items():
+            if not isinstance(k, str) or not re.fullmatch(r"https?://\S{1,2040}", k):
+                out.append(f"{rel}: a list key is not a single http(s) URL (value not shown)")
+                continue
+            if not isinstance(v, list):
+                out.append(f"{rel}: list {k!r} is not a list")
+                continue
+            for i, u in enumerate(v):
+                if not (isinstance(u, str) and re.fullmatch(r"https?://\S{1,2040}", u)):
+                    out.append(f"{rel}: list {k!r} item {i}: not a single http(s) URL without spaces (value not shown)")
+        return out
     parts = rel.split(os.sep)
     if len(parts) == 3 and parts[0] == "timeline" and parts[2].endswith(".json"):
         return [f"{rel}: {x}" for x in timeline.validate_timeline(load_json(path))]
@@ -677,10 +689,10 @@ def check_public_file(rel: str, path: str) -> list[str]:
     doc = load_json(path)
     if not isinstance(doc, dict):
         return [f"{rel}: not a JSON object"]
-    out = [f"{rel}: key {k!r} may not be public" for k in sorted(set(doc) - PUBLIC_STATE_KEYS)]
+    out = [f"{rel}: key {timeline.key_name(k)} may not be public" for k in sorted(set(doc) - PUBLIC_STATE_KEYS)]
     for k, v in doc.items():
         if not isinstance(v, str) or len(v) > PUBLIC_STATE_MAX_STR or "\n" in v:
-            out.append(f"{rel}: {k!r} must be a short single-line string")
+            out.append(f"{rel}: {timeline.key_name(k)} must be a short single-line string (value not shown)")
     return out
 
 
@@ -1127,6 +1139,15 @@ def shared_pages(per_app_outcomes: dict[str, tuple[list[dict], list[Outcome]]]) 
 RADAR_MIN_TITLE = 20
 
 
+URL_SAFE = ":/?#[]@!$&'()*+,;=%~"
+
+
+def canonical_url(u: str) -> str:
+    """Percent-encode what may not stand in a URL (spaces, non-ASCII), keep what is already encoded.
+    Official pages link "?cat=Industrial Registry Services" with literal spaces."""
+    return urllib.parse.quote(u.strip(), safe=URL_SAFE)
+
+
 def feed_items(url: str, body: bytes, content_type: str, item_pattern: str = "") -> list[dict]:
     """(title, url) items of an announcement list: RSS/Atom entries, or the page's links whose text
     is long enough to be a headline (and whose URL matches item_pattern when given)."""
@@ -1150,14 +1171,14 @@ def feed_items(url: str, body: bytes, content_type: str, item_pattern: str = "")
                     elif ctag == "link":
                         link = (c.text or c.get("href") or "").strip()
                 if title and link:
-                    items.append({"title": title, "url": urllib.parse.urljoin(url, link)})
+                    items.append({"title": title, "url": canonical_url(urllib.parse.urljoin(url, link))})
         return items
     p = _HTMLText()
     p.feed(body.decode("utf-8", errors="replace"))
     rx = re.compile(item_pattern) if item_pattern else None
     seen = set()
     for href, text in p.anchors:
-        u = urllib.parse.urljoin(url, html.unescape(href.strip()))
+        u = canonical_url(urllib.parse.urljoin(url, html.unescape(href.strip())))
         if len(text) < RADAR_MIN_TITLE or not u.startswith("http") or (rx and not rx.search(u)) or u in seen:
             continue
         seen.add(u)
