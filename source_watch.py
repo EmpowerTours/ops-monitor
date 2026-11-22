@@ -1368,25 +1368,29 @@ def count(outcomes: list[Outcome]) -> dict[str, int]:
     return c
 
 
-def archiver_from(cfg: dict, env: dict[str, str]) -> timeline.Archiver | None:
-    """Save Page Now, unless switched off (config archive.enabled false or SOURCE_WATCH_SPN=off)."""
+def archiver_from(cfg: dict, env: dict[str, str]) -> tuple[timeline.Archiver | None, str]:
+    """Save Page Now, or (None, why not). SPN2 answers 401 to anonymous API requests (checked
+    2026-11-22), so without SOURCE_WATCH_SPN_KEY no request is sent at all."""
     a = cfg.get("archive") or {}
     if not a.get("enabled", False) or env.get("SOURCE_WATCH_SPN", "").lower() == "off":
-        return None
-    return timeline.Archiver(user_agent=a.get("user_agent", "source-watch/1.0"), auth=env.get("SOURCE_WATCH_SPN_KEY", ""),
+        return None, "Save Page Now is off"
+    if not env.get("SOURCE_WATCH_SPN_KEY"):
+        return None, "no Save Page Now key (SOURCE_WATCH_SPN_KEY)"
+    return timeline.Archiver(user_agent=a.get("user_agent", "source-watch/1.0"), auth=env["SOURCE_WATCH_SPN_KEY"],
                              min_interval_s=float(a.get("min_interval_s", 21)), max_per_run=int(a.get("max_per_run", 40)),
                              poll_s=float(a.get("poll_s", 10)), poll_rounds=int(a.get("poll_rounds", 12)),
-                             not_within=str(a.get("not_within", "20h")))
+                             not_within=str(a.get("not_within", "20h"))), ""
 
 
-def record_readings(state: str, collected: dict, archiver: timeline.Archiver | None, run_id: str, now: str) -> dict:
+def record_readings(state: str, collected: dict, archiver: timeline.Archiver | None, run_id: str, now: str,
+                    why_off: str = "Save Page Now is off") -> dict:
     """F2: one Save Page Now request per page read this run (once per URL across apps), one public
     source_read record per (app, source) queued for the proof batcher, one timeline entry each.
     Only pages the watch actually fetched; never page text."""
     readings = [(app, s, o) for app, (manifest, outcomes) in collected.items() for s, o in zip(manifest, outcomes) if o.fetched_at]
     urls = [u for _, _, o in readings for u in (o.url, o.url_ar) if u]
     archived = archiver.archive(urls) if archiver else {}
-    off = {"archive_url": "", "archive_status": "not archived: Save Page Now is off"}
+    off = {"archive_url": "", "archive_status": "not archived: " + why_off}
     queue = timeline.ProofQueue(os.path.join(state, "proof-queue", "source_read.jsonl"))
     counts = {"records": 0, "archived": 0}
     for app, s, o in readings:
@@ -1568,7 +1572,10 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
             if state:
                 save_state(state, name, run_id, outcomes, manifest)
     if state and canary["ok"] and not args.offline and not args.dry_run and collected:
-        tl_counts = record_readings(state, collected, archiver or archiver_from(cfg, env), run_id, clock().strftime("%Y-%m-%dT%H:%M:%SZ"))
+        arch, why_off = (archiver, "") if archiver else archiver_from(cfg, env)
+        if not arch:
+            print(f"WARNING: Save Page Now not used: {why_off}", file=sys.stderr, flush=True)
+        tl_counts = record_readings(state, collected, arch, run_id, clock().strftime("%Y-%m-%dT%H:%M:%SZ"), why_off or "Save Page Now is off")
         print(f"timeline: {tl_counts['records']} source_read records queued, {tl_counts['archived']} pages archived", flush=True)
     radar = None
     if cfg.get("radar_feeds") and not args.offline:

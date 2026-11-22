@@ -225,6 +225,17 @@ class Timeline(unittest.TestCase):
             self.assertEqual((e["sha256"], e["status"], e["http_status"], e["changed_since_previous"]), ("", "unreachable", 403, None))
 
 
+class Switch(unittest.TestCase):
+    def test_no_key_no_request(self):
+        import source_watch as sw
+        cfg = {"archive": {"enabled": True}}
+        self.assertEqual(sw.archiver_from(cfg, {}), (None, "no Save Page Now key (SOURCE_WATCH_SPN_KEY)"))
+        self.assertEqual(sw.archiver_from(cfg, {"SOURCE_WATCH_SPN_KEY": "a:b", "SOURCE_WATCH_SPN": "off"})[1], "Save Page Now is off")
+        self.assertEqual(sw.archiver_from({}, {"SOURCE_WATCH_SPN_KEY": "a:b"})[1], "Save Page Now is off")
+        a, why = sw.archiver_from(cfg, {"SOURCE_WATCH_SPN_KEY": "a:b"})
+        self.assertEqual((why, a.auth, a.ua, a.min_interval), ("", "a:b", "source-watch/1.0", 21.0))
+
+
 class EndToEnd(unittest.TestCase):
     """A real run: the public state gets a queued record and a timeline entry per reading, the
     checker passes, and no page text is anywhere in the public state."""

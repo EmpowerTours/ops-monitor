@@ -283,12 +283,14 @@ passed), for every page the watch actually fetched (`source_timeline.py`):
    data. Polite: one capture request per 21 s (anonymous SPN2 allows about 3 per minute and 200 per
    day), at most 40 per run, each URL once per run even when several apps cite it, and the first
    HTTP 429 stops archiving for the run. A refusal or error is recorded as
-   `not archived: <reason>`, never raised. Optional `SOURCE_WATCH_SPN_KEY` secret (SPN2 S3 key
-   `access:secret`, higher limits). `SOURCE_WATCH_SPN=off` (variable) or `archive.enabled: false`
-   in `source-watch.json` switch it off.
-   Limits are from the SPN2 API document (a Google Doc copy, read 2026-11-21, MEDIUM: it calls
-   the endpoint both "requires authentication" and open to anonymous users; if anonymous
-   requests are refused, every reading says `not archived` until the key is set).
+   `not archived: <reason>`, never raised. **Needs the `SOURCE_WATCH_SPN_KEY` secret** (SPN2 S3
+   key `access:secret` from a free archive.org account): an anonymous API request was answered
+   HTTP 401 (checked 2026-11-22), so without the key no request is sent and every reading says
+   `not archived: no Save Page Now key`. `SOURCE_WATCH_SPN=off` (variable) or
+   `archive.enabled: false` in `source-watch.json` switch it off.
+   Limits are from the SPN2 API document (a Google Doc copy, read 2026-11-21, MEDIUM): 7 captures
+   per minute and 30k per day with a key, 5 per URL per day; the 21 s spacing stays under 3 per
+   minute either way.
 2. **`source_read` record, public mode** (MONAD-RECORDS §3.1 and §3.3), one per app and source,
    appended to `proof-queue/source_read.jsonl` on the public `source-watch-state` branch:
    ```json
@@ -356,7 +358,7 @@ Nothing below is set by this change.
 | GitHub, new **private** repository (optional) | e.g. `EmpowerTours/source-captures` | holds the full page captures; created by the owner, not by this change. Must stay private. |
 | ops-monitor, Actions variable or secret (optional) | `SOURCE_CAPTURES_REPO` | `owner/name` of that private repository. Unset: captures, diffs and excerpts are not saved (warning only). |
 | ops-monitor, Actions secret (optional) | `SOURCE_CAPTURES_TOKEN` | fine-grained PAT, only that repository, **Contents: read and write** (and Metadata: read, for the private check). |
-| ops-monitor, Actions secret (optional) | `SOURCE_WATCH_SPN_KEY` | Internet Archive SPN2 S3 key `access:secret` (archive.org account, free). Unset: anonymous Save Page Now. |
+| ops-monitor, Actions secret (needed for the archive copies) | `SOURCE_WATCH_SPN_KEY` | Internet Archive SPN2 S3 key `access:secret` (free archive.org account, https://archive.org/account/s3.php). Unset: no Save Page Now request; records and timeline are still written, with `not archived`. |
 | ops-monitor, Actions variable (optional) | `SOURCE_WATCH_SPN` = `off` | stops Save Page Now requests |
 | ops-monitor, Actions secret (optional) | `ANTHROPIC_API_KEY` | only for model drafts |
 | ops-monitor, Actions variables (optional) | `SOURCE_WATCH_LLM` = `on`, `SOURCE_WATCH_LLM_MAX_USD` | drafts on, per-run cap |
