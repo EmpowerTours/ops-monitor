@@ -107,6 +107,20 @@ class Checks(unittest.TestCase):
         self.assertEqual(sw.check_fields(body, [{"path": "data.3.x", "equals": 1}])[0]["reason"], "path")
         self.assertIsNone(sw.check_fields("<html>", ok))
 
+    def test_api_field_selector_is_order_independent(self):
+        # UN Comtrade answers many rows (one per HS code) in no promised order: select the row by key.
+        rows = [{"cmdCode": "081020", "primaryValue": 1879379.0}, {"cmdCode": "080440", "primaryValue": 9079106.0}]
+        body = json.dumps({"data": rows})
+        f = [{"path": "data[cmdCode=080440].primaryValue", "equals": 9079106.0}]
+        self.assertEqual(sw.check_fields(body, f), [])
+        self.assertEqual(sw.check_fields(json.dumps({"data": rows[::-1]}), f), [], "same answer in another order")
+        self.assertEqual(sw.check_fields(json.dumps({"data": rows[:1]}), f)[0]["reason"], "path", "row gone: path missing")
+        dup = json.dumps({"data": rows + [{"cmdCode": "080440", "primaryValue": 1.0}]})
+        self.assertEqual(sw.check_fields(dup, f)[0]["reason"], "path", "two rows match: ambiguous, never guessed")
+        self.assertEqual(sw.json_path({"data": [{"partnerCode": 484}]}, "data[partnerCode=484].partnerCode"), (True, 484),
+                         "numbers match by their JSON text")
+        self.assertEqual(sw.json_path({"data": {"a": 1}}, "data[a=1].a")[0], False, "a selector needs a list")
+
 
 class Classify(unittest.TestCase):
     def run_one(self, routes, s, manual=()):

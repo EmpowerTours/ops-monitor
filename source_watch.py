@@ -230,10 +230,34 @@ def check_quotes(text: str, quotes: list[dict], pdf: bool) -> list[dict]:
     return missing
 
 
+_SELECTOR = re.compile(r"^([^\[\]]*)\[([A-Za-z0-9_]+)=([^\[\]]*)\]$")
+
+
+def _select(rows: Any, key: str, want: str) -> tuple[bool, Any]:
+    """The one row of a list whose key's JSON text equals want (strings compared bare). Zero or
+    several matches: not found, never a guess."""
+    if not isinstance(rows, list):
+        return False, None
+    hits = [r for r in rows if isinstance(r, dict) and key in r
+            and (r[key] if isinstance(r[key], str) else json.dumps(r[key])) == want]
+    return (True, hits[0]) if len(hits) == 1 else (False, None)
+
+
 def json_path(doc: Any, path: str) -> tuple[bool, Any]:
-    """A dotted path into JSON: "data.0.primaryValue". (found, value)."""
+    """A dotted path into JSON: "data.0.primaryValue", or with a row selector that does not depend
+    on order, "data[cmdCode=080440].primaryValue" (exactly one row must match). (found, value)."""
     cur = doc
     for part in path.split(".") if path else []:
+        if m := _SELECTOR.match(part):
+            name, key, want = m.groups()
+            if name:
+                if not (isinstance(cur, dict) and name in cur):
+                    return False, None
+                cur = cur[name]
+            ok, cur = _select(cur, key, want)
+            if not ok:
+                return False, None
+            continue
         if isinstance(cur, list) and part.isdigit() and int(part) < len(cur):
             cur = cur[int(part)]
         elif isinstance(cur, dict) and part in cur:
