@@ -1,0 +1,23 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: per-run cap of 40 reached",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:29:02Z",
+   "http_status": 200,
+   "payload_sha256": "67dca98ade1f2fbf7f97a8d8c69e999fdd3743f27ee32a4f825e1ef74a5556da",
+   "quotes": [
+    "5% of the value CIF (Cost Freight Insurance) value except for alcohol and cigarettes."
+   ],
+   "ref": "cosecha/s-d139427f0665/2026-11-22T18:29:02Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "9831d4c47fc656c46e0a0879bb6a48f0bda927b8fedde5787eaebbc30efdc60b",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-d139427f0665",
+ "url": "https://www.dubaicustoms.gov.ae/en/mobile/Pages/faq.aspx",
+ "v": 1
+}

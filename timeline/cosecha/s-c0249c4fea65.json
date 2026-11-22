@@ -1,0 +1,21 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: per-run cap of 40 reached",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:28:30Z",
+   "http_status": 200,
+   "payload_sha256": "c62750a0f59fb0b78aa00e52b9acb30100e35328f59ad049ba3ac941fb14816f",
+   "quotes": [],
+   "ref": "cosecha/s-c0249c4fea65/2026-11-22T18:28:30Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "2f5cd2bdbc2da97bc06810610ac52f8b64fd7f253ba5eda2846b8f050f9e22f9",
+   "status": "no_quotes"
+  }
+ ],
+ "source_id": "s-c0249c4fea65",
+ "url": "https://pwc.com/m1/en/services/tax/me-tax-legal-news/2022/uae-attestation-fees-commercial-invoices-for-imports-local-market.html",
+ "v": 1
+}

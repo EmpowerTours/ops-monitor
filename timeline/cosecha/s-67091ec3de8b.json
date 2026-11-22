@@ -1,0 +1,21 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: per-run cap of 40 reached",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:28:33Z",
+   "http_status": 0,
+   "payload_sha256": "7fada167627a96be637731a5041eea7a1ac57dddf809d8ecf8b5fdcb9e9a03b0",
+   "quotes": [],
+   "ref": "cosecha/s-67091ec3de8b/2026-11-22T18:28:33Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "",
+   "status": "unreachable"
+  }
+ ],
+ "source_id": "s-67091ec3de8b",
+ "url": "https://sistemasssl.senasica.gob.mx/sinacertwebWeb/pages/publico/consultaRequisitosExportacion.xhtml",
+ "v": 1
+}

@@ -1,0 +1,23 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: error:gateway-timeout",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:27:37Z",
+   "http_status": 200,
+   "payload_sha256": "e1031c24fa519d51bc59079d580c9395cbc8b16b862147f0498da3becfc03f57",
+   "quotes": [
+    "Mexico لا يوجد مسالخ معتمدة All the slaughterhouses are not approved"
+   ],
+   "ref": "cosecha/s-6af878b75ecf/2026-11-22T18:27:37Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "02f9974280f7ea9e0cab52d7743359fa3ed0442fa5320d3676f0c33e88687b00",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-6af878b75ecf",
+ "url": "https://moccae.gov.ae/assets/7378c2e7/approved-slaughterhouses.aspx",
+ "v": 1
+}

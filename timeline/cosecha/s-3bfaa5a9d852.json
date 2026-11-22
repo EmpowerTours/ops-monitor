@@ -1,0 +1,26 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "archived",
+   "archive_url": "https://web.archive.org/web/20261122184335/https://gd.eppo.int/taxon/ANSTOB/hosts",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:27:11Z",
+   "http_status": 200,
+   "payload_sha256": "4676db48337c4e828b36b1e6b9f50b0cd89d253131fdeb712018b80af35f21a0",
+   "quotes": [
+    "Citrus x aurantium var. paradisi (CIDPA)",
+    "Psidium guajava (PSIGU)",
+    "Mangifera indica (MNGIN)",
+    "Selenicereus undatus (HCRUN)"
+   ],
+   "ref": "cosecha/s-3bfaa5a9d852/2026-11-22T18:27:11Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "805394ac0e8ff4651226ea47726d15b5e1ce07d07ccf654947bb630be7d84a43",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-3bfaa5a9d852",
+ "url": "https://gd.eppo.int/taxon/ANSTOB/hosts",
+ "v": 1
+}

@@ -1,0 +1,26 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: URLError",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:28:04Z",
+   "http_status": 200,
+   "payload_sha256": "8e1c72b01c10cf9b1c1a03481aa9ebf1ddd9dcacc955543520558acedcdd47b7",
+   "quotes": [
+    "Test Report from accredited and recognized laboratory as per the technical requirements mentioned under: UAE.S GSO 147:2019",
+    "Validity of Test report should be less than 3 Year.",
+    "The Honey is not heated or treated to the limit that changes its formulation or reduce its Quality",
+    "Product Sampling according to UAE.S GSO 126:1990"
+   ],
+   "ref": "cosecha/s-f09ff5ede60a/2026-11-22T18:28:04Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "c66999bb80e8e8b7e6746f9bca3042d3aca70994dbe657c272cce5a5dc371740",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-f09ff5ede60a",
+ "url": "https://moiat.gov.ae/-/media/site/moiat/document/services-user-manual/cad-regulated-sheet.ashx",
+ "v": 1
+}

@@ -1,0 +1,23 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: URLError",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:27:39Z",
+   "http_status": 200,
+   "payload_sha256": "060d19670f5039ceacd072ab8faa7dfae2e7fbf2d5718e5b01c073bae9a2e3ba",
+   "quotes": [
+    "approval is obtained to import an agricultural consignment including (seeds & tubers, seedlings & plants & palm seedlings, and honey bees)"
+   ],
+   "ref": "cosecha/s-39c675a9cc88/2026-11-22T18:27:39Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "241afddd6608fcdfb9cfd38543c7d6d3f125d26e2954007ea168f8b3a3c79a18",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-39c675a9cc88",
+ "url": "https://moccae.gov.ae/en/services/import-permit",
+ "v": 1
+}

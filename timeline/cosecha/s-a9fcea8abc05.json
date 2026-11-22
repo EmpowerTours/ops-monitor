@@ -1,0 +1,26 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: URLError",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:24:37Z",
+   "http_status": 200,
+   "payload_sha256": "286197985109703e30693d9bd67b1390b3b06ae5dbe9bacad97f8a602050538a",
+   "quotes": [
+    "Food product registration in ZAD, coupled with import inspection procedures",
+    "UAE.S 9:2019 requires a production date or harvest year and packing date",
+    "Health certificate issued by a governmental health authority in the country of origin",
+    "The UAE's national halal mark or logo (see right) is voluntary but no other halal marks are permitted in the UAE"
+   ],
+   "ref": "cosecha/s-a9fcea8abc05/2026-11-22T18:24:37Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "76f13317d0a0e2d4eab19ab673495aa0f6ce6e6254bbb73b46ab1adbebcd71f7",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-a9fcea8abc05",
+ "url": "https://agriexchange.apeda.gov.in/ImportRegulations/1141920251222142541207.pdf",
+ "v": 1
+}

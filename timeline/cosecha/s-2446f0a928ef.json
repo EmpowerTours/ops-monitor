@@ -1,0 +1,23 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: URLError",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:27:19Z",
+   "http_status": 200,
+   "payload_sha256": "0ef513c2b505279f728101f89b65fa8626027b695730fc157790f69cb7ff8c17",
+   "quotes": [
+    "Countries in the Near East and North Africa (NENA) region are accelerating efforts to adopt the IPPC ePhyto Solution"
+   ],
+   "ref": "cosecha/s-2446f0a928ef/2026-11-22T18:27:19Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "5c0133b48f8551084720bc970fbd68753860086c2b4b66253a30f4781384df74",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-2446f0a928ef",
+ "url": "https://ippc.int/en/news/near-east-and-north-africa-countries-step-up-efforts-to-expand-digitalization-of-phytosanitary-certifications/",
+ "v": 1
+}

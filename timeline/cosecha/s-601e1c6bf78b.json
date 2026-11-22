@@ -1,0 +1,23 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: URLError",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:28:24Z",
+   "http_status": 200,
+   "payload_sha256": "e0565401f49a9c21659d37bb87fa6302d8a7d3cc1094164a1888831f3e4e94c4",
+   "quotes": [
+    "Registered Halal Certification Bodies"
+   ],
+   "ref": "cosecha/s-601e1c6bf78b/2026-11-22T18:28:24Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "4f70ce45c785a4c8e6eda3f97de8b43703dcccb1b14aea91e569cf7a3a6d4466",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-601e1c6bf78b",
+ "url": "https://moiat.gov.ae/en/programs/halal/registered-halal-certification-bodies",
+ "v": 1
+}

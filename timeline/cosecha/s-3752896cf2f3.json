@@ -1,0 +1,23 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: per-run cap of 40 reached",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:28:58Z",
+   "http_status": 200,
+   "payload_sha256": "394bd526b7603d1bea931a6689b4bdd8ae23fecf56599b02dfeaf8f79f4bf397",
+   "quotes": [
+    "Apply to Register and Assess a Food Item"
+   ],
+   "ref": "cosecha/s-3752896cf2f3/2026-11-22T18:28:58Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "c1d4c9da55e1c71e5d11954e2eb572e85df4d41bb33b674bdb4c6f7c5c9bf90a",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-3752896cf2f3",
+ "url": "https://www.dm.gov.ae/municipality-business/food-safety-department-2/important-information-to-food-establishment/",
+ "v": 1
+}

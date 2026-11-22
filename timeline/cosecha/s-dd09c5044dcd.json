@@ -1,0 +1,25 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: per-run cap of 40 reached",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:30:11Z",
+   "http_status": 200,
+   "payload_sha256": "767a88f0c646d6c5ae1f47aa6f280e73c712ef82469b1fe2694cdbbdf01bb045",
+   "quotes": [
+    "de las consideradas en las fracciones arancelarias listadas en la fracción II del Anexo 10 de las Reglas Generales de Comercio Exterior vigentes",
+    "Estar inscrito y activo en el RFC.",
+    "Contar con e.firma vigente."
+   ],
+   "ref": "cosecha/s-dd09c5044dcd/2026-11-22T18:30:11Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "0503c4c90efdd7afac773d31e7c91adfaf42e11175d23992955744203ff536fd",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-dd09c5044dcd",
+ "url": "https://www.sat.gob.mx/minisitio/PadronImportadoresExportadores/pes_inscripcion.html",
+ "v": 1
+}

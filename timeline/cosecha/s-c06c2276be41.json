@@ -1,0 +1,24 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: per-run cap of 40 reached",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:28:29Z",
+   "http_status": 200,
+   "payload_sha256": "6cca84c1e12438c4cc0a0c4547661106a20bb7cfb848878e8ee9c980c3c3329e",
+   "quotes": [
+    "operar 27.3 millones de toneladas al cierre de 2025",
+    "alcanzó un movimiento de 2 millones, 616 mil 770 TEU's"
+   ],
+   "ref": "cosecha/s-c06c2276be41/2026-11-22T18:28:29Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "d6fba9ef815232ed7e8eac5fb69db0c0b0146e6ec941d3751b1037c24e01cf1a",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-c06c2276be41",
+ "url": "https://puertointerior.guanajuato.gob.mx/blog/2026/01/21/resultados-2025-reafirman-papel-estrategico-del-puerto-lazaro-cardenas-en-logistica/",
+ "v": 1
+}

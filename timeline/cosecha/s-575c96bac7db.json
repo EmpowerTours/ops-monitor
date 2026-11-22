@@ -1,0 +1,24 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: per-run cap of 40 reached",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:30:14Z",
+   "http_status": 200,
+   "payload_sha256": "1ab2b7e0ee0cd39a2f670d76293445407ee1b66f4f58275e6ea9cacff6bf69fb",
+   "quotes": [
+    "List of Members recognised as FMD-free where vaccination is not practised",
+    "Mexico"
+   ],
+   "ref": "cosecha/s-575c96bac7db/2026-11-22T18:30:14Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "c490713e18976191bd4b1541344def1d6c04fc29e369f778a7aa596d7676cab6",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-575c96bac7db",
+ "url": "https://www.woah.org/app/uploads/2026/06/gs93-2026-res-19-tech-fmd-status-en.pdf",
+ "v": 1
+}

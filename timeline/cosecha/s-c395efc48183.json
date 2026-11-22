@@ -1,0 +1,24 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: per-run cap of 40 reached",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:28:49Z",
+   "http_status": 200,
+   "payload_sha256": "c2862b5bee2b72a9692833662b1544e8f9c29c11e6dec599764fca389014ff1e",
+   "quotes": [
+    "Obtención del certificado zoosanitario para exportación",
+    "MXN 717"
+   ],
+   "ref": "cosecha/s-c395efc48183/2026-11-22T18:28:49Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "48bf51ef4906ccca5fcc15e1027ca14c4fe514e264f10f507a443c811133bd16",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-c395efc48183",
+ "url": "https://ventanillaunica.economia.gob.mx/procedure/1039?l=en",
+ "v": 1
+}

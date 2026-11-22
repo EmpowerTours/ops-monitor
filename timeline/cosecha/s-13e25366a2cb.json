@@ -1,0 +1,23 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: per-run cap of 40 reached",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:28:34Z",
+   "http_status": 403,
+   "payload_sha256": "332ecd59e27348e3cbc3cfff77c8448f5b3ea32aef65c29368478cf969a00a1d",
+   "quotes": [
+    "Exportan desde Cuajinicuilapa a Canadá y EU 500 toneladas al año de mango Ataúlfo"
+   ],
+   "ref": "cosecha/s-13e25366a2cb/2026-11-22T18:28:34Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "",
+   "status": "unreachable"
+  }
+ ],
+ "source_id": "s-13e25366a2cb",
+ "url": "https://suracapulco.mx/impreso/5/exportan-desde-cuajinicuilapa-a-canada-y-eu-500-toneladas-al-ano-de-mango-ataulfo/",
+ "v": 1
+}

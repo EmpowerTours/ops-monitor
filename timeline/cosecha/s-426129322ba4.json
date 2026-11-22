@@ -1,0 +1,21 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: per-run cap of 40 reached",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:28:44Z",
+   "http_status": 0,
+   "payload_sha256": "07ed6e63c9c3081e2a1f359eb5b3d9597287d25456145ece20c578dccaecb927",
+   "quotes": [],
+   "ref": "cosecha/s-426129322ba4/2026-11-22T18:28:44Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "",
+   "status": "unreachable"
+  }
+ ],
+ "source_id": "s-426129322ba4",
+ "url": "https://uaelegislation.gov.ae/en/legislations/2688",
+ "v": 1
+}

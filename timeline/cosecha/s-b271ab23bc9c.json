@@ -1,0 +1,21 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: URLError",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:28:17Z",
+   "http_status": 200,
+   "payload_sha256": "46107d23e7f91931721efcd969fb14255ee7143e5fff492f965f9ecb4bd830e7",
+   "quotes": [],
+   "ref": "cosecha/s-b271ab23bc9c/2026-11-22T18:28:17Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "9c0ed7dd2ccee931083ec15ae34fe805760ce13fe7a04fe56a135ddde07843a6",
+   "status": "no_quotes"
+  }
+ ],
+ "source_id": "s-b271ab23bc9c",
+ "url": "https://moiat.gov.ae/en/open-data/product-conformity-data?search=honey",
+ "v": 1
+}

@@ -1,0 +1,21 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "archived",
+   "archive_url": "https://web.archive.org/web/20261122183256/https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=784&partnerCode=0&period=2023&flowCode=M&cmdCode=090111",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:25:02Z",
+   "http_status": 200,
+   "payload_sha256": "5e7cbf97d05c887eec2eb59ed434962d7d616efe0b2116ee77d55c439a61f51e",
+   "quotes": [],
+   "ref": "cosecha/s-0135cf0596f5/2026-11-22T18:25:02Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "938c050314b2b581a8ed779c4a3567a8e0897aa2865d5bc0cb2be9f31c2c4457",
+   "status": "changed_quote_ok"
+  }
+ ],
+ "source_id": "s-0135cf0596f5",
+ "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=784&partnerCode=0&period=2023&flowCode=M&cmdCode=090111",
+ "v": 1
+}

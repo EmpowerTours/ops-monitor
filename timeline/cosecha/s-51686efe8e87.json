@@ -1,0 +1,23 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "archived",
+   "archive_url": "https://web.archive.org/web/20261122185155/https://mof.gov.ae/en/public-finance/tax/value-added-tax-vat/",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:27:53Z",
+   "http_status": 200,
+   "payload_sha256": "8639c22be6c50e6b1149cd52be679129a16aee151fd86d6d07e1778c3069f349",
+   "quotes": [
+    "Value Added Tax (VAT) was introduced across the UAE on 1st January 2018 at a standard rate of 5%."
+   ],
+   "ref": "cosecha/s-51686efe8e87/2026-11-22T18:27:53Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "6e082f21cc40f754e9c19fcceadfaeec6f1ce6686ea35cb8add8e34b6e1e1a42",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-51686efe8e87",
+ "url": "https://mof.gov.ae/en/public-finance/tax/value-added-tax-vat/",
+ "v": 1
+}

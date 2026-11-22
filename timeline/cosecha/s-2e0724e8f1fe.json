@@ -1,0 +1,25 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: URLError",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:27:24Z",
+   "http_status": 200,
+   "payload_sha256": "b0e906e6c949d60e6e6c2f54910f4a6cdb90f3966fbda12f421d06dcd794340c",
+   "quotes": [
+    "The time to obtain the service : 1 working day",
+    "122-003-026-000",
+    "200Payment Method: Cards"
+   ],
+   "ref": "cosecha/s-2e0724e8f1fe/2026-11-22T18:27:24Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "304e10c41aa9a81a87792f51acdb4f263c270efc4d01db6a6d8d19e84b39beca",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-2e0724e8f1fe",
+ "url": "https://moccae.gov.ae/Handlers/DownloadPDF.ashx?id=67415",
+ "v": 1
+}

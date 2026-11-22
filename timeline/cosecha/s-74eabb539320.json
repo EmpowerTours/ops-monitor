@@ -1,0 +1,36 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: URLError",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:27:09Z",
+   "http_status": 200,
+   "payload_sha256": "18430d262b644587a781ef3f35e033cc495006c97f0465f1c46e9d6098d0381d",
+   "quotes": [
+    "Malus domestica (MABSD)",
+    "Citrus x aurantium var. paradisi (CIDPA)",
+    "Psidium guajava (PSIGU)",
+    "Citrus x limon var. meyerii (CIDMY)",
+    "Citrus x aurantiifolia (CIDAF)",
+    "Citrus x aurantiifolia (CIDAF)",
+    "Citrus reticulata (CIDRE)",
+    "Mangifera indica (MNGIN)",
+    "Citrus x aurantium var. sinensis (CIDSI)",
+    "Passiflora edulis (PAQED)",
+    "Prunus persica (PRNPS)",
+    "Pyrus communis (PYUCO)",
+    "Diospyros kaki (DOSKA)",
+    "Punica granatum (PUNGR)"
+   ],
+   "ref": "cosecha/s-74eabb539320/2026-11-22T18:27:09Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "c9bea0451a608c24ac3da5cfa769f8a875741d4656b02ef30bf4ea630286ded7",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-74eabb539320",
+ "url": "https://gd.eppo.int/taxon/ANSTLU/hosts",
+ "v": 1
+}

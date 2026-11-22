@@ -1,0 +1,23 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: per-run cap of 40 reached",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:30:11Z",
+   "http_status": 200,
+   "payload_sha256": "c69439dbf5cedd21194c9187b64e6094e367f2d4ed9ff923ce29b49aa47dd8ec",
+   "quotes": [
+    "You will receive the payment receipt and the attestation on the data of your invoice or Certificate of Origin (COO)"
+   ],
+   "ref": "cosecha/s-2506ed595036/2026-11-22T18:30:11Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "2a5327f464711cd92b08b558d1bb2b4c2d21abfeae1c6beddb3ae4adbec67e6f",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-2506ed595036",
+ "url": "https://www.mofa.gov.ae/en/services/edas-attestation-v2",
+ "v": 1
+}

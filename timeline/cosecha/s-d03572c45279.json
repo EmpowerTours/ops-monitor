@@ -1,0 +1,23 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "archived",
+   "archive_url": "https://web.archive.org/web/20261122183045/http://omawww.sat.gob.mx/PadronImportadoresExportadores/Paginas/documentos/Guia_Padron_Exportadores_Sectorial.pdf",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:24:25Z",
+   "http_status": 200,
+   "payload_sha256": "910468beb03ce3c9e5efb159f0973c379ce1e388dde8aa13fd5edd19c2039928",
+   "quotes": [
+    "del Apartado B del Anexo 10 de las Reglas Generales de Comercio"
+   ],
+   "ref": "cosecha/s-d03572c45279/2026-11-22T18:24:25Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "7684fcde7267ae45c0acc869caff0114ed94ee6b5baac6ddfbd3c8b8ecf8b10b",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-d03572c45279",
+ "url": "http://omawww.sat.gob.mx/PadronImportadoresExportadores/Paginas/documentos/Guia_Padron_Exportadores_Sectorial.pdf",
+ "v": 1
+}

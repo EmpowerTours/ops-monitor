@@ -1,0 +1,21 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: per-run cap of 40 reached",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:28:33Z",
+   "http_status": 0,
+   "payload_sha256": "97be0de5c3c8b68ba5f8763cac870c60352c2082f489a4824d7af5f13def7d6d",
+   "quotes": [],
+   "ref": "cosecha/s-36e99a506776/2026-11-22T18:28:33Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "",
+   "status": "unreachable"
+  }
+ ],
+ "source_id": "s-36e99a506776",
+ "url": "https://sistemasssl.senasica.gob.mx/WebMod/Publico.jsp?v=",
+ "v": 1
+}

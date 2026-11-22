@@ -1,0 +1,24 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "archived",
+   "archive_url": "https://web.archive.org/web/20261122184548/https://legal-wires.com/uae/cabinet-resolution-on-the-technical-regulations-for-maximum-residue-limits-for-pesticides-in-agricultural-and-food-products/",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:27:21Z",
+   "http_status": 200,
+   "payload_sha256": "b0e2120bfd0e1e72964c1b8dce78707d15812ede42c2916e4b2b525a4d27a5e0",
+   "quotes": [
+    "Law Number: No. (116) of 2024",
+    "This Cabinet Resolution repeals the previous Technical Regulation No. (UAES MRL1:2019)"
+   ],
+   "ref": "cosecha/s-6e2e45853238/2026-11-22T18:27:21Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "7f5da26c504a353f4dc43e6a9902e7440588c64c0ea7f6f58e93fc630486a9f1",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-6e2e45853238",
+ "url": "https://legal-wires.com/uae/cabinet-resolution-on-the-technical-regulations-for-maximum-residue-limits-for-pesticides-in-agricultural-and-food-products",
+ "v": 1
+}

@@ -1,0 +1,24 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: per-run cap of 40 reached",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:28:53Z",
+   "http_status": 200,
+   "payload_sha256": "7368b3f6bbf0f9fdc2332db172b3e2d36bafab3fd6a1438028d13296bfe3d10f",
+   "quotes": [
+    "0409 - Natural honey",
+    "Health certificate from the country of origin"
+   ],
+   "ref": "cosecha/s-5d5d4b596594/2026-11-22T18:28:53Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "90f6ffb79e67bf00c3258414a4f01011a3d0c9b13c015abcc2ef3899093b6d98",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-5d5d4b596594",
+ "url": "https://www.crate.ae/en/import/honey",
+ "v": 1
+}

@@ -1,0 +1,25 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: URLError",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:28:28Z",
+   "http_status": 200,
+   "payload_sha256": "8ad2a9d8cc8bf2ead8f3b06b184574d9b81030792aeb20e7351841032ae0c3b0",
+   "quotes": [
+    "temperatura promedio anual es de 28.6oC; se presentan lluvias en verano y una precipitación pluvial anual promedio de 1,168 mm.",
+    "promedio anual de 25.4oC, con lluvias en verano y una precipitación pluvial anual de 1,400 mm.",
+    "con temperatura promedio anual de 20.5o C, lluvias en verano y una precipitación pluvial anual de 1,161 mm."
+   ],
+   "ref": "cosecha/s-c7e4036e81ec/2026-11-22T18:28:28Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "92b70752cc67fbe0e482b46717886a96bc53907647b67174868c7a0752ac1aff",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-c7e4036e81ec",
+ "url": "https://portalanterior.ine.mx/documentos/DEOE/MemoriasProcesos/memorias2006/12/00/cap01.pdf",
+ "v": 1
+}

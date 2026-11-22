@@ -1,0 +1,21 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: URLError",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:27:21Z",
+   "http_status": 0,
+   "payload_sha256": "44a372618336be16025ff37ca29e301340def436c1f635bec46b75231be6895b",
+   "quotes": [],
+   "ref": "cosecha/s-50701cc2c8f5/2026-11-22T18:27:21Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "",
+   "status": "unreachable"
+  }
+ ],
+ "source_id": "s-50701cc2c8f5",
+ "url": "https://micor.agriculture.gov.au/Plants/Pages/United_Arab_Emirates_AE/Mangoes.aspx",
+ "v": 1
+}

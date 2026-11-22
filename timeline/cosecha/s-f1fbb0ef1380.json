@@ -1,0 +1,26 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "not archived: URLError",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-22T18:27:41Z",
+   "http_status": 200,
+   "payload_sha256": "060acc2aa928efd1499f58546e6c339d2329e9f2ccb78a7f2f9ccdb23987b49d",
+   "quotes": [
+    "obtain a permit valid for 30 days from the date of issuance",
+    "The consignment from a country or region where FMD has not been recorded for at least 12 months prior the collection of the product.",
+    "The consignment from a country or region where Blue Tongue has not been recorded for at least 12 months prior the collection of the product.",
+    "Sperm donor animals were protected from mosquito bites (Culicoids) for at least 60 days before and during collection of semen, eggs or embryos."
+   ],
+   "ref": "cosecha/s-f1fbb0ef1380/2026-11-22T18:27:41Z",
+   "run_id": "20261122T182422Z",
+   "sha256": "d61874a35c998e8f60207ef1ba6532d050069a92890984db9335162c93e5d4f0",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-f1fbb0ef1380",
+ "url": "https://moccae.gov.ae/en/services/importpermitsemen",
+ "v": 1
+}
