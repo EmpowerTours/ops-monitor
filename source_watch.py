@@ -3,8 +3,10 @@
 
 For each app in source-watch.json it reads the app's manifest (GET /.well-known/sources.json), fetches
 every source with a plain GET, extracts the text (HTML or PDF), and checks each quote, and each value
-next to its quote, deterministically. No model is involved in any check. It saves every capture
-(text + sha256 + fetched_at) for the audit trail and replay, reports the results to the app's
+next to its quote, deterministically. No model is involved in any check. Full page captures (text,
+diffs) go only to a private store (--captures, the SOURCE_CAPTURES_REPO checkout in CI) for the audit
+trail and replay; the public side (--state, this public repo) keeps only url, sha256, fetched_at and
+status, because official pages may not be reproduced (u.ae copyright notice). It reports the results to the app's
 POST /internal/sources/verify, opens an issue per source whose words went missing or that has a new
 edition, and posts one summary to the ops-monitor alert channel (the pinned "Source watch" issue).
 
@@ -594,10 +596,74 @@ def post_json(url: str, token: str, payload: dict, ua: str, timeout: float = 30)
 
 
 # ---------------------------------------------------------------------------------------------
-# Captures (audit trail and replay)
+# Public state and private captures
+#
+# ops-monitor is a public repository and official pages may not be reproduced (u.ae copyright
+# notice), so page text never goes to the public side: not to the state branch, not to an issue,
+# not to the run log. The public state keeps only these keys per source; the app's own short quotes
+# are already public in its manifest. Full captures, diffs and excerpts go to the private store
+# only, and are not saved at all when none is configured.
+
+QUOTE_MAX_CHARS = 400  # a draft quote is published in an issue: a short quote, never a passage
+PUBLIC_STATE_KEYS = frozenset({"id", "url", "status", "fetched_at", "last_read_fetched_at", "sha256", "url_ar",
+                               "sha256_ar", "manifest_fingerprint", "run_id"})
+PUBLIC_STATE_MAX_STR = 2048
+NO_PRIVATE_STORE = ("no private capture store configured (SOURCE_CAPTURES_REPO): page captures, diffs and excerpts "
+                    "are not saved; only url, sha256, fetched_at and status are kept")
+
+
+def save_state(root: str, app: str, run_id: str, outcomes: list[Outcome], manifest: list[dict]) -> None:
+    """The public record of a run: per source only PUBLIC_STATE_KEYS, never page text."""
+    d = os.path.join(root, app)
+    os.makedirs(d, exist_ok=True)
+    by_id = {s["id"]: s for s in manifest}
+    for o in outcomes:
+        prev = load_json(os.path.join(d, o.id + ".json")) or {}
+        meta = {"id": o.id, "url": o.url, "status": o.status, "fetched_at": o.fetched_at,
+                "manifest_fingerprint": by_id[o.id]["fingerprint"], "run_id": run_id}
+        if o.text:
+            meta.update(sha256=o.capture_sha256, last_read_fetched_at=o.fetched_at)
+        else:  # not read this time: keep the last real reading's hash and date
+            meta.update(sha256=prev.get("sha256", ""), last_read_fetched_at=prev.get("last_read_fetched_at", ""))
+        if o.url_ar:
+            meta.update(url_ar=o.url_ar, sha256_ar=o.capture_sha256_ar or prev.get("sha256_ar", ""))
+        with open(os.path.join(d, o.id + ".json"), "w", encoding="utf-8") as fh:
+            json.dump(meta, fh, indent=1, ensure_ascii=False, sort_keys=True)
+            fh.write("\n")
+
+
+def check_public_state(root: str) -> list[str]:
+    """Everything wrong with a public state tree (empty: safe to commit). Allowed: <app>/<id>.json
+    objects with PUBLIC_STATE_KEYS only, short single-line string values."""
+    problems = []
+    for dirpath, dirnames, files in os.walk(root):
+        dirnames[:] = [x for x in dirnames if x != ".git"]
+        for fn in files:
+            path = os.path.join(dirpath, fn)
+            rel = os.path.relpath(path, root)
+            if rel == ".git" or rel.startswith(".git" + os.sep):
+                continue
+            problems += check_public_file(rel, path)
+    return problems
+
+
+def check_public_file(rel: str, path: str) -> list[str]:
+    if not rel.endswith(".json") or rel.count(os.sep) != 1:
+        return [f"{rel}: only <app>/<id>.json files may be public"]
+    doc = load_json(path)
+    if not isinstance(doc, dict):
+        return [f"{rel}: not a JSON object"]
+    out = [f"{rel}: key {k!r} may not be public" for k in sorted(set(doc) - PUBLIC_STATE_KEYS)]
+    for k, v in doc.items():
+        if not isinstance(v, str) or len(v) > PUBLIC_STATE_MAX_STR or "\n" in v:
+            out.append(f"{rel}: {k!r} must be a short single-line string")
+    return out
 
 
 def save_captures(root: str, app: str, run_id: str, outcomes: list[Outcome], manifest: list[dict], report: dict) -> None:
+    """The full captures, PRIVATE store only (never call this with a public directory)."""
+
+
     d = os.path.join(root, app)
     os.makedirs(d, exist_ok=True)
     by_id = {s["id"]: s for s in manifest}
@@ -682,18 +748,37 @@ def text_diff(old: str | None, new: str, limit: int = 120) -> str:
         return "(no earlier capture to diff against)"
     lines = list(difflib.unified_diff(old.splitlines(), new.splitlines(), "previous capture", "this capture", lineterm="", n=1))
     if len(lines) > limit:
-        lines = lines[:limit] + [f"... ({len(lines) - limit} more diff lines in the captures branch)"]
+        lines = lines[:limit] + [f"... ({len(lines) - limit} more diff lines)"]
     return "\n".join(lines) or "(no line changed)"
 
 
-def issue_body(app: str, src: dict, o: Outcome, old_text: str | None, draft: dict | None, run_url: str) -> str:
+def review_md(app: str, src: dict, o: Outcome, old_text: str | None) -> str:
+    """What the page says now next to each missing quote, and the diff against the previous capture.
+    This is page text: it goes to the PRIVATE capture store only, never to an issue or the log."""
+    parts = [f"# {app} {src['id']}: {o.status}", f"Page: {o.url}", f"Fetched: {o.fetched_at}", ""]
+    quotes, quotes_ar = src.get("quotes") or [], src.get("quotes_ar") or []
+    for m in o.missing:
+        if o.text and m["index"] < len(quotes):
+            parts += [f"## Quote {m['index'] + 1}: closest text on the page now", "```", best_window(o.text, quotes[m["index"]]["text"])[:1500], "```", ""]
+    for m in o.missing_ar:
+        if o.text_ar and m["index"] < len(quotes_ar):
+            parts += [f"## Arabic quote {m['index'] + 1}: closest text on the page now", "```", best_window(o.text_ar, quotes_ar[m["index"]]["text"])[:1500], "```", ""]
+    if o.text:
+        parts += ["## Diff against the previous capture", "```diff", text_diff(old_text, o.text), "```", ""]
+    return "\n".join(parts)
+
+
+def issue_body(app: str, src: dict, o: Outcome, review_ref: str, draft: dict | None, run_url: str) -> str:
+    """Public-safe: page url, hashes, the app's own quotes (already public in its manifest) and
+    the missing values. Never page text: the excerpts and the diff are at review_ref (private)."""
     quotes = src.get("quotes") or []
     parts = [
         f"**{o.status if o.status != 'verified' or not o.edition else o.edition}** for `{src['id']}` in **{app}**",
         f"- Page: {o.url}",
         f"- Facts that depend on it: {', '.join('`'+f+'`' for f in src.get('facts', [])) or '(none listed)'}",
         f"- App read it on {src.get('read_at', '?')}; this check fetched it {o.fetched_at or '(not fetched)'}",
-        f"- Capture sha256 `{o.capture_sha256 or '-'}` (saved on the `captures` branch: `{app}/{o.id}.txt`)",
+        f"- Capture sha256 `{o.capture_sha256 or '-'}`",
+        f"- Page text, closest text to each missing quote and the diff: {review_ref}",
         f"- Run: {run_url}" if run_url else "",
         "",
         "Nothing in the app changes from this issue. A source whose quote is missing on two daily checks in a row, "
@@ -709,21 +794,15 @@ def issue_body(app: str, src: dict, o: Outcome, old_text: str | None, draft: dic
                   "Old quote:", "```", q.get("text", ""), "```"]
         if m.get("value"):
             parts += [f"Missing value: `{m['value']}`"]
-        if o.text:
-            parts += ["Closest text on the page now:", "```", best_window(o.text, q.get("text", ""))[:1500], "```"]
         parts.append("")
     quotes_ar = src.get("quotes_ar") or []
     for m in o.missing_ar:
         q = quotes_ar[m["index"]] if m["index"] < len(quotes_ar) else {"text": "?"}
         parts += [f"### Arabic quote {m['index'] + 1}: {'the quote' if m['reason'] == 'quote' else 'a value next to it'} is missing",
                   f"Page: {o.url_ar}", "Old quote:", "```", q.get("text", ""), "```"]
-        if o.text_ar:
-            parts += ["Closest text on the page now:", "```", best_window(o.text_ar, q.get("text", ""))[:1500], "```"]
         parts.append("")
     if o.languages_disagree:
         parts += ["### Language versions disagree", o.ar_detail, ""]
-    if o.text:
-        parts += ["### Diff against the previous capture", "```diff", text_diff(old_text, o.text), "```", ""]
     if draft:
         if draft.get("ok"):
             parts += ["### Unreviewed draft (model output, checked only for the points below)",
@@ -818,6 +897,8 @@ def verify_draft(model_text: str, new_text: str) -> dict:
     fact, quote = d["proposed_fact"].strip(), d["quote"].strip()
     if not fact or not quote:
         return {"ok": False, "why": "model found no support on the new page"}
+    if len(norm_line(quote)) > QUOTE_MAX_CHARS:
+        return {"ok": False, "why": f"draft quote is longer than {QUOTE_MAX_CHARS} characters, more than a short quote; discarded"}
     if len(norm_line(quote)) < 20 or find_quote(new_text, quote) is None:
         return {"ok": False, "why": "draft quote is not verbatim in the new capture; discarded"}
     nums_q = set(re.findall(r"\d+(?:[.,]\d+)*", norm_line(quote)))
@@ -1081,6 +1162,13 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
     gh_alert = GitHub(env["GITHUB_TOKEN"], ua) if env.get("GITHUB_TOKEN") and not args.dry_run else None
     gh_apps = GitHub(env["SOURCE_WATCH_ISSUES_TOKEN"], ua) if env.get("SOURCE_WATCH_ISSUES_TOKEN") and not args.dry_run else None
     alert_repo = env.get("GITHUB_REPOSITORY", "EmpowerTours/ops-monitor")
+    private = getattr(args, "captures", None) or ""
+    state = getattr(args, "state", None) or ""
+    if not private:
+        print(f"WARNING: {NO_PRIVATE_STORE}", file=sys.stderr, flush=True)
+        if args.offline:
+            print("--offline replays the private captures: pass --captures", file=sys.stderr)
+            return 2
     canary = run_canary(clock, ua)
     print(f"canary: {'ok' if canary['ok'] else 'FAILED'} ({canary['cases']} cases, {canary['day']} day) {canary['failures']}", flush=True)
     collected: dict[str, tuple[list[dict], list[Outcome]]] = {}
@@ -1109,12 +1197,12 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
         if args.offline:
             offline = {}
             for s in manifest:
-                t = load_text(os.path.join(args.captures, name, s["id"] + ".txt"))
-                meta = load_json(os.path.join(args.captures, name, s["id"] + ".json")) or {}
+                t = load_text(os.path.join(private, name, s["id"] + ".txt"))
+                meta = load_json(os.path.join(private, name, s["id"] + ".json")) or {}
                 if t is not None:
                     offline[s["id"]] = t
                     s["_kind"], s["_fetched_at"] = meta.get("kind", "html"), meta.get("fetched_at", "")
-                ta = load_text(os.path.join(args.captures, name, s["id"] + ".ar.txt"))
+                ta = load_text(os.path.join(private, name, s["id"] + ".ar.txt"))
                 if ta is not None:
                     offline[s["id"] + ".ar"] = ta
         outcomes = []
@@ -1155,12 +1243,19 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
                                          "url": o.url, "detail": o.detail})
                 continue
             src = by_id[o.id]
-            old = load_text(os.path.join(args.captures, name, o.id + ".txt"))
+            old = load_text(os.path.join(private, name, o.id + ".txt")) if private else None
+            if private and not args.offline:
+                os.makedirs(os.path.join(private, name), exist_ok=True)
+                with open(os.path.join(private, name, o.id + ".review.md"), "w", encoding="utf-8") as fh:
+                    fh.write(review_md(name, src, o, old))
+                review_ref = f"private capture store, `{name}/{o.id}.review.md` (run {run_id})"
+            else:
+                review_ref = "not saved (no private capture store configured)" if not private else "offline replay"
             draft = None
             if o.missing and o.text:
                 q0 = (src.get("quotes") or [{}])[o.missing[0]["index"]] if src.get("quotes") else {}
                 draft = drafter.draft(q0.get("text", ""), src.get("facts", []), best_window(o.text, q0.get("text", ""), 400), o.text)
-            body = issue_body(name, src, o, old, draft, run_url)
+            body = issue_body(name, src, o, review_ref, draft, run_url)
             title = f"Source watch: {name} {o.id} {'new edition' if o.edition and o.status not in ('quote_missing', 'gone', 'manifest_error') else 'changed'}"
             item = {"id": o.id, "status": o.status if o.status != "verified" else o.edition, "url": o.url, "detail": o.detail or o.edition_detail}
             try:
@@ -1176,7 +1271,10 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
         report = {"run_id": run_id, "app": name, "payload": payload, "counts": rec["counts"], "sent": rec.get("sent"),
                   "verify_response": rec.get("verify_response"), "draft_spent_usd": round(drafter.spent, 6)}
         if not args.offline:
-            save_captures(args.captures, name, run_id, outcomes, manifest, report)
+            if private:
+                save_captures(private, name, run_id, outcomes, manifest, report)
+            if state:
+                save_state(state, name, run_id, outcomes, manifest)
     shared = shared_pages(collected)
     md = summary_markdown(run_id, per_app, run_url, canary, shared, fetcher.hits)
     print(md)
@@ -1208,7 +1306,10 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     p.add_argument("--config", default=os.path.join(HERE, "source-watch.json"))
-    p.add_argument("--captures", default=os.path.join(HERE, ".captures"), help="captures directory (the captures branch in CI)")
+    p.add_argument("--captures", default="", help="PRIVATE capture store directory (the SOURCE_CAPTURES_REPO checkout in CI); "
+                   "unset: page captures are not saved")
+    p.add_argument("--state", default="", help="public state directory (url, sha256, fetched_at, status only)")
+    p.add_argument("--check-public-state", metavar="DIR", help="only check that DIR holds nothing but public-safe state; exit 1 if not")
     p.add_argument("--only", action="append", help="check only this app (repeatable)")
     p.add_argument("--manifest", action="append", metavar="APP=URL_OR_FILE", help="read this app's manifest from elsewhere (local runs)")
     p.add_argument("--verify-url", action="append", metavar="APP=URL", help="report to this verify URL instead (local runs)")
@@ -1217,6 +1318,11 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--offline", action="store_true", help="replay the checks on the saved captures, no network")
     p.add_argument("--report", help="write the per-app results as JSON here")
     args = p.parse_args(argv)
+    if args.check_public_state:
+        problems = check_public_state(args.check_public_state)
+        for x in problems:
+            print(f"NOT PUBLIC-SAFE: {x}", file=sys.stderr)
+        return 1 if problems else 0
     return run(args, dict(os.environ))
 
 

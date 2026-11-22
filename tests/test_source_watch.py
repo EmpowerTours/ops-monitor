@@ -191,6 +191,14 @@ class Draft(unittest.TestCase):
         self.assertIn("300", sw.verify_draft(new_number, self.NEW)["why"])
         self.assertFalse(sw.verify_draft("no json here", self.NEW)["ok"])
 
+    def test_draft_quote_stays_short(self):
+        # The draft quote is published in an issue: a passage of the page is refused even if verbatim.
+        long_page = "Release fee. " + "The importer applies to release a consignment of agricultural products. " * 12
+        long_quote = sw.norm_line(long_page)[: sw.QUOTE_MAX_CHARS + 40]
+        r = sw.verify_draft(json.dumps({"proposed_fact": "Release fee.", "quote": long_quote}), long_page)
+        self.assertFalse(r["ok"])
+        self.assertIn("short quote", r["why"])
+
     def test_off_by_default_and_capped(self):
         self.assertFalse(sw.Drafter({}).on)
         self.assertFalse(sw.Drafter({"SOURCE_WATCH_LLM": "on"}).on, "no key: off")
@@ -284,7 +292,7 @@ class Canary(unittest.TestCase):
             orig_post = sw.post_json
             sw.post_json = lambda *a, **k: posted.append(a) or (200, {})
             try:
-                args = argparse.Namespace(config=cp, captures=os.path.join(d, "cap"), only=None, manifest=None, verify_url=None,
+                args = argparse.Namespace(config=cp, captures=os.path.join(d, "cap"), state=os.path.join(d, "state"), only=None, manifest=None, verify_url=None,
                                           run_id="r1", dry_run=False, offline=False, report=os.path.join(d, "rep.json"))
                 self.assertEqual(sw.run(args, {"TOK": "x"}, CLOCK), 1)
             finally:
@@ -337,6 +345,98 @@ class Arabic(unittest.TestCase):
         self.assertEqual((r["missing_ar"], r["languages_disagree"]), ([0], True))
 
 
+class PublicSide(unittest.TestCase):
+    """ops-monitor is public and official pages may not be reproduced: page text never reaches the
+    public state, an issue or the log; only the private capture store holds it."""
+
+    PAGE_SENTENCES = ["Through this service the importer applies", "Release of cut flowers", "The time to obtain the service"]
+
+    def outcome(self):
+        q = [{"text": "Release a consignment of agricultural products", "values": ["AED 200"]}, {"text": "Fees are waived for farmers"}]
+        s = src(quotes=q, sha256="0" * 64)
+        o = sw.check_source(s, fetcher({"https://a.gov.ae/release": (200, PAGE, "text/html")}), set(), CLOCK)
+        self.assertEqual(o.status, "quote_missing")
+        return s, o
+
+    def assertNoPageText(self, text):
+        for sentence in self.PAGE_SENTENCES:
+            self.assertNotIn(sentence, text)
+
+    def test_issue_body_has_no_page_text(self):
+        s, o = self.outcome()
+        body = sw.issue_body("demo", s, o, "private capture store, `demo/x.review.md`", None, "")
+        self.assertNoPageText(body)
+        self.assertIn("Fees are waived for farmers", body, "the app's own quote (public in its manifest) is shown")
+        self.assertIn("demo/x.review.md", body)
+        # The excerpts and the diff exist, but only in the private review file.
+        review = sw.review_md("demo", s, o, "an older version of the page")
+        self.assertIn("Through this service the importer applies", review)
+        self.assertIn("```diff", review)
+
+    def test_state_is_public_safe_and_the_checker_bites(self):
+        s, o = self.outcome()
+        with tempfile.TemporaryDirectory() as d:
+            sw.save_state(d, "demo", "r1", [o], [s])
+            self.assertEqual(sw.check_public_state(d), [])
+            meta = json.load(open(os.path.join(d, "demo", s["id"] + ".json")))
+            self.assertEqual(meta["sha256"], o.capture_sha256)
+            self.assertLessEqual(set(meta), sw.PUBLIC_STATE_KEYS)
+            self.assertNoPageText(json.dumps(meta))
+            # What a leak would look like: each is refused.
+            open(os.path.join(d, "demo", s["id"] + ".txt"), "w").write(o.text)
+            json.dump({**meta, "text": o.text}, open(os.path.join(d, "demo", "leak.json"), "w"))
+            json.dump({**meta, "detail": "x" * 3000}, open(os.path.join(d, "demo", "long.json"), "w"))
+            problems = sw.check_public_state(d)
+            self.assertTrue(any(".txt" in x for x in problems), problems)
+            self.assertTrue(any("'text'" in x for x in problems), problems)
+            self.assertTrue(any("long.json" in x for x in problems), problems)
+            err, old_err = io.StringIO(), sys.stderr
+            sys.stderr = err
+            try:
+                self.assertEqual(sw.main(["--check-public-state", d]), 1)
+            finally:
+                sys.stderr = old_err
+
+    def test_no_private_store_saves_no_text_warns_and_does_not_fail(self):
+        text, *_ = sw.extract(PAGE, "text/html", "")
+        with tempfile.TemporaryDirectory() as d:
+            man = {"v": 1, "app": "demo", "sources": [src(quotes=[{"text": "Fees are waived for farmers"}], sha256="0" * 64)]}
+            mp, cp = os.path.join(d, "m.json"), os.path.join(d, "cfg.json")
+            json.dump(man, open(mp, "w"))
+            json.dump({"user_agent": "t/1", "per_host_delay_s": 0, "apps": [{"app": "demo", "manifest": mp, "token_env": "NONE"}]}, open(cp, "w"))
+            orig = sw.Fetcher.get
+
+            def fake(self_, url, accept="", fresh=False):
+                if url.startswith("http://127.0.0.1"):
+                    return orig(self_, url, accept, fresh)
+                return sw.Fetched(url=url, status=200, content_type="text/html", body=PAGE, final_url=url)
+
+            sw.Fetcher.get = fake
+            err, out = io.StringIO(), io.StringIO()
+            old_err, old_out = sys.stderr, sys.stdout
+            sys.stderr, sys.stdout = err, out
+            try:
+                args = argparse.Namespace(config=cp, captures="", state=os.path.join(d, "state"), only=None, manifest=None, verify_url=None,
+                                          run_id="r1", dry_run=True, offline=False, report=os.path.join(d, "rep.json"))
+                code = sw.run(args, {}, CLOCK)
+                args.offline = True
+                code_offline = sw.run(args, {}, CLOCK)
+            finally:
+                sys.stderr, sys.stdout = old_err, old_out
+                sw.Fetcher.get = orig
+            self.assertEqual(code, 0)
+            self.assertEqual(code_offline, 2, "a replay needs the private captures")
+            self.assertIn("no private capture store configured", err.getvalue())
+            self.assertIn("not saved (no private capture store configured)", out.getvalue())
+            self.assertNoPageText(out.getvalue())  # the dry-run issue printed to the (public) log
+            self.assertEqual(sw.check_public_state(os.path.join(d, "state")), [])
+            for dirpath, _, files in os.walk(d):
+                for fn in files:
+                    if fn in ("m.json", "cfg.json"):
+                        continue
+                    self.assertNotIn(text[:60], open(os.path.join(dirpath, fn), encoding="utf-8").read(), fn)
+
+
 class EndToEnd(unittest.TestCase):
     """A dry run over a manifest file, then an offline replay of the saved captures."""
 
@@ -357,7 +457,7 @@ class EndToEnd(unittest.TestCase):
 
             sw.Fetcher.get = fake
             try:
-                args = argparse.Namespace(config=cp, captures=os.path.join(d, "cap"), only=None, manifest=None, verify_url=None,
+                args = argparse.Namespace(config=cp, captures=os.path.join(d, "cap"), state=os.path.join(d, "state"), only=None, manifest=None, verify_url=None,
                                           run_id="r1", dry_run=True, offline=False, report=os.path.join(d, "rep.json"))
                 self.assertEqual(sw.run(args, {}, CLOCK), 0)
             finally:
@@ -368,6 +468,9 @@ class EndToEnd(unittest.TestCase):
             meta = json.load(open(os.path.join(d, "cap", "demo", "s-000000000001.json")))
             self.assertEqual(meta["sha256"], sw.sha256_text(text))
             self.assertTrue(os.path.exists(os.path.join(d, "cap", "runs", "r1-demo.json")))
+            self.assertTrue(os.path.exists(os.path.join(d, "cap", "demo", "s-000000000001.txt")), "full text: private store")
+            self.assertEqual(sw.check_public_state(os.path.join(d, "state")), [])
+            self.assertEqual(json.load(open(os.path.join(d, "state", "demo", "s-000000000001.json")))["sha256"], sw.sha256_text(text))
             # Replay: no network, same answer from the saved capture.
             args.offline, args.run_id = True, "r2"
             def no_fetch(self_, url, accept="", fresh=False):
