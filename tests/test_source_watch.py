@@ -345,6 +345,46 @@ class Arabic(unittest.TestCase):
         self.assertEqual((r["missing_ar"], r["languages_disagree"]), ([0], True))
 
 
+class Radar(unittest.TestCase):
+    LIST1 = b"""<html><body><a href="/en/news/1">MOIAT updates the technical regulation for honey products</a>
+<a href="/en/about">About us</a><a href="/en/news/2">Honeywell opens a new factory in Abu Dhabi industrial city</a></body></html>"""
+    LIST2 = LIST1.replace(b"</body>", "<a href='/en/news/3'>قرار جديد بشأن استيراد العسل من الخارج</a></body>".encode())
+    RSS = b"""<?xml version="1.0"?><rss><channel><item><title>Green visa fee changes for investors</title><link>https://icp.gov.ae/n/9</link></item></channel></rss>"""
+
+    def test_items_and_whole_word_matching(self):
+        items = sw.feed_items("https://moiat.gov.ae/en/media-center/news", self.LIST1, "text/html")
+        self.assertEqual([i["url"] for i in items], ["https://moiat.gov.ae/en/news/1", "https://moiat.gov.ae/en/news/2"])
+        self.assertEqual(sw.keyword_hits(items[0]["title"], ["honey"]), ["honey"])
+        self.assertEqual(sw.keyword_hits(items[1]["title"], ["honey"]), [], "Honeywell is not honey")
+        self.assertEqual(sw.keyword_hits("استيراد عسل", ["عسل"]), ["عسل"])
+        rss = sw.feed_items("https://icp.gov.ae/rss", self.RSS, "application/rss+xml")
+        self.assertEqual(rss, [{"title": "Green visa fee changes for investors", "url": "https://icp.gov.ae/n/9"}])
+        self.assertEqual(sw.keyword_hits(rss[0]["title"], ["green visa", "bid bond"]), ["green visa"])
+
+    def test_first_read_seeds_then_new_items_match(self):
+        feeds = [{"name": "MOIAT news", "url": "https://moiat.gov.ae/en/media-center/news"}]
+        seen: dict = {}
+        r = sw.run_radar(feeds, {"cosecha": ["honey", "العسل"]}, fetcher({feeds[0]["url"]: (200, self.LIST1, "text/html")}), seen, CLOCK)
+        self.assertEqual(r["matches"]["cosecha"], [], "a first read only seeds")
+        self.assertIn("seeded", r["feeds"][0]["status"])
+        r = sw.run_radar(feeds, {"cosecha": ["honey", "العسل"]}, fetcher({feeds[0]["url"]: (200, self.LIST2, "text/html")}), seen, CLOCK)
+        self.assertEqual([m["url"] for m in r["matches"]["cosecha"]], ["https://moiat.gov.ae/en/news/3"])
+        empty = sw.run_radar([{"name": "x", "url": "https://x.gov.ae/"}], {"cosecha": ["honey"]},
+                             fetcher({"https://x.gov.ae/": (200, b"<html><div id=app></div></html>", "text/html")}), {}, CLOCK)
+        self.assertIn("no items read", empty["feeds"][0]["status"])
+
+    def test_seen_list_is_public_safe(self):
+        feeds = [{"name": "MOIAT news", "url": "https://moiat.gov.ae/en/media-center/news"}]
+        seen: dict = {}
+        sw.run_radar(feeds, {"cosecha": ["honey"]}, fetcher({feeds[0]["url"]: (200, self.LIST1, "text/html")}), seen, CLOCK)
+        with tempfile.TemporaryDirectory() as d:
+            os.makedirs(os.path.join(d, "radar"))
+            json.dump(seen, open(os.path.join(d, "radar", "seen.json"), "w"))
+            self.assertEqual(sw.check_public_state(d), [])
+            json.dump({feeds[0]["url"]: ["MOIAT updates the technical regulation for honey products"]}, open(os.path.join(d, "radar", "seen.json"), "w"))
+            self.assertEqual(len(sw.check_public_state(d)), 1, "a title is not a URL")
+
+
 class PublicSide(unittest.TestCase):
     """ops-monitor is public and official pages may not be reproduced: page text never reaches the
     public state, an issue or the log; only the private capture store holds it."""
@@ -435,6 +475,63 @@ class PublicSide(unittest.TestCase):
                     if fn in ("m.json", "cfg.json"):
                         continue
                     self.assertNotIn(text[:60], open(os.path.join(dirpath, fn), encoding="utf-8").read(), fn)
+
+
+class FixPR(unittest.TestCase):
+    URL = "https://a.gov.ae/release"
+    NEW = (b"<html><body><p>" + b"Filler text that makes the page long enough to count as read. " * 4 +
+           b"</p><table><tr><td>Release a consignment of farm products</td><td>AED 200</td></tr></table></body></html>")
+
+    def outcome(self, status, missing):
+        text = sw.extract(self.NEW, "text/html", "")[0]
+        return sw.Outcome(id="s-1", url=self.URL, status=status, text=text, kind="html", capture_sha256=sw.sha256_text(text), missing=missing)
+
+    def store(self):
+        return {self.URL: {"sha256": "0" * 64, "quotes": [{"text": "Release a consignment of agricultural products", "values": ["AED 200"]}]}}
+
+    def test_sha_refresh_and_quote_swap_keep_values(self):
+        new, why = sw.propose_fix(self.store(), {}, self.outcome("changed_quote_ok", []), None)
+        self.assertIn("sha256", why)
+        self.assertEqual(new[self.URL]["quotes"], self.store()[self.URL]["quotes"])
+        o = self.outcome("quote_missing", [{"index": 0, "reason": "quote"}])
+        draft = {"ok": True, "quote": "Release a consignment of farm products", "proposed_fact": "x"}
+        new, why = sw.propose_fix(self.store(), {}, o, draft)
+        q = new[self.URL]["quotes"][0]
+        self.assertEqual((q["text"], q["values"]), ("Release a consignment of farm products", ["AED 200"]))
+        self.assertEqual(new[self.URL]["sha256"], o.capture_sha256)
+
+    def test_no_fix_for_numbers_or_without_a_verified_draft(self):
+        o = self.outcome("quote_missing", [{"index": 0, "reason": "value", "value": "AED 200"}])
+        self.assertIsNone(sw.propose_fix(self.store(), {}, o, {"ok": True, "quote": "Release a consignment of farm products"}))
+        o = self.outcome("quote_missing", [{"index": 0, "reason": "quote"}])
+        self.assertIsNone(sw.propose_fix(self.store(), {}, o, None), "no model draft, no PR")
+        self.assertIsNone(sw.propose_fix(self.store(), {}, o, {"ok": False}))
+        st = self.store()
+        st[self.URL]["quotes"][0]["values"] = ["AED 999"]  # the old value is not next to the new words
+        self.assertIsNone(sw.propose_fix(st, {}, o, {"ok": True, "quote": "Release a consignment of farm products"}))
+
+    def test_open_fix_pr_is_a_draft(self):
+        calls = []
+
+        class GH:
+            def call(self, method, path, body=None):
+                calls.append((method, path, body))
+                if method == "GET" and "/pulls?" in path:
+                    return []
+                if "/git/ref/heads/" in path:
+                    return {"object": {"sha": "abc"}}
+                if method == "GET" and "/contents/" in path:
+                    return {"sha": "filesha"}
+                if method == "POST" and path.endswith("/pulls"):
+                    return {"html_url": "https://github.com/EmpowerTours/cosecha/pull/99"}
+                return {}
+
+        url = sw.open_fix_pr(GH(), "EmpowerTours/cosecha", "main", "internal/sources/quotes.json", "source-watch/s-1", "{}\n", "t", "b")
+        self.assertTrue(url.endswith("/pull/99"))
+        pr = [c for c in calls if c[0] == "POST" and c[1].endswith("/pulls")][0][2]
+        self.assertTrue(pr["draft"])
+        self.assertEqual((pr["head"], pr["base"]), ("source-watch/s-1", "main"))
+        self.assertFalse(any("merge" in c[1] for c in calls), "never merges")
 
 
 class EndToEnd(unittest.TestCase):

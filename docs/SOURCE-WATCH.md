@@ -19,7 +19,7 @@ Contents: [Manifest](#1-manifest-get-well-knownsourcesjson) ·
 [Status and judge-facing Sources data](#4-status-get-well-knownsources-statusjson) ·
 [The watcher](#5-the-watcher) · [Canary](#6-canary-the-verifier-checks-itself) ·
 [Dead-man switch](#7-dead-man-switch) · [Shared pages](#8-shared-source-registry) ·
-[New-rule radar](#9-new-rule-radar) · [Fix proposals](#fix-proposals) ·
+[New-rule radar](#9-new-rule-radar) · [Public timeline](#10-public-timeline-of-readings) · [Fix proposals](#fix-proposals) ·
 [Owner setup](#owner-setup) · [Adopting it in the other apps](#adopting-it-in-the-other-apps) ·
 [Prior art](#prior-art-why-our-own-fetcher)
 
@@ -189,7 +189,9 @@ are on, the pinned `anthropic` SDK.
   not to a branch, an issue, the run log or an artifact. Two stores:
   - **Public state** (`--state`, the `source-watch-state` branch here): per source only `id`,
     `url`, `status`, `fetched_at`, `last_read_fetched_at`, `sha256`, `url_ar`, `sha256_ar`,
-    `manifest_fingerprint`, `run_id` (`PUBLIC_STATE_KEYS`). `--check-public-state DIR` refuses
+    `manifest_fingerprint`, `run_id` (`PUBLIC_STATE_KEYS`), plus the radar's seen list
+    (`radar/seen.json`, item URLs only), the proof queue and the timelines
+    ([10](#10-public-timeline-of-readings)). `--check-public-state DIR` refuses
     any other file or key, or a long or multi-line value, and the workflow runs it before every
     commit, so a leak fails the run instead of being published.
   - **Private captures** (`--captures`, a checkout of the PRIVATE repository named by
@@ -269,6 +271,55 @@ Legislation Portal home lists categories, not new laws; Dubai DET news answers 4
 stay in the list so their state shows in every summary; they need an official feed or API (see
 Prior art) to become useful.
 
+## 10. Public timeline of readings
+
+F2 in `dubai-docs/MONAD-RECORDS.md` §12. Each real run (not `--dry-run`, not `--offline`, canary
+passed), for every page the watch actually fetched (`source_timeline.py`):
+
+1. **Save Page Now.** The Internet Archive is asked to keep its own copy, from its own network
+   and with its own timestamp: an independent witness that we did not invent the page. SPN2
+   (`POST https://web.archive.org/save`, then `GET /save/status/<job_id>`) with only the page URL
+   and `if_not_archived_within=20h`, user agent `source-watch/1.0`, no cookies and no personal
+   data. Polite: one capture request per 21 s (anonymous SPN2 allows about 3 per minute and 200 per
+   day), at most 40 per run, each URL once per run even when several apps cite it, and the first
+   HTTP 429 stops archiving for the run. A refusal or error is recorded as
+   `not archived: <reason>`, never raised. **Needs the `SOURCE_WATCH_SPN_KEY` secret** (SPN2 S3
+   key `access:secret` from a free archive.org account): an anonymous API request was answered
+   HTTP 401 (checked 2026-11-22), so without the key no request is sent and every reading says
+   `not archived: no Save Page Now key`. `SOURCE_WATCH_SPN=off` (variable) or
+   `archive.enabled: false` in `source-watch.json` switch it off.
+   Limits are from the SPN2 API document (a Google Doc copy, read 2026-11-21, MEDIUM): 7 captures
+   per minute and 30k per day with a key, 5 per URL per day; the 21 s spacing stays under 3 per
+   minute either way.
+2. **`source_read` record, public mode** (MONAD-RECORDS §3.1 and §3.3), one per app and source,
+   appended to `proof-queue/source_read.jsonl` on the public `source-watch-state` branch:
+   ```json
+   {"v": 1, "mode": "public", "app": "ops", "kind": "source_read",
+    "ref": "cosecha/s-13d73aaae1e2/2026-11-22T05:17:09Z",
+    "payload": {"source_id": "s-13d73aaae1e2", "cited_by": "cosecha", "url": "https://...",
+                "sha256": "<hex>", "hash_of": "normalised-text-v1", "fetched_at": "...",
+                "status": "verified", "http_status": 200, "quotes": ["<the app's short quote>"],
+                "archive_url": "https://web.archive.org/web/<14 digits>/https://...",
+                "archive_status": "archived", "run_id": "..."},
+    "payload_sha256": "<sha256 of the canonical payload>", "queued_at": "...", "anchor": null}
+   ```
+   Canonical payload = JSON with sorted keys, no spaces, UTF-8. `sha256` is over the watcher's
+   normal form of the page text (empty when the page was not read). Quotes are the app's own,
+   from its manifest, and only those of 400 characters or fewer. A ref is queued once (a
+   re-dispatched run adds nothing). **Anchoring is not wired yet**: `Anchorer` is the interface
+   the proof batcher implements (`anchor(records) -> receipts`); today `NotWiredAnchorer` anchors
+   nothing and `anchor` stays `null`. The batcher computes the public leaf from app, kind, ref and
+   payload when the proof module's public mode exists.
+3. **Timeline**, one public JSON file per source: `timeline/<app>/<id>.json` on the same branch,
+   with `url`, `url_ar` and one entry per reading (`fetched_at`, `status`, `http_status`,
+   `sha256`, `sha256_ar`, `quotes`, `archive_url`, `archive_status`, `run_id`, `ref`,
+   `payload_sha256`, `changed_since_previous` = the text hash differs from the last read one).
+   It shows what the page said (its hash, its archived copy and whether our quotes were on it),
+   never our reading of it.
+
+`--check-public-state` validates the queue and every timeline before each commit: only the keys
+above, quotes of at most 400 characters, short single-line strings. Nothing else may be public.
+
 ## Fix proposals
 
 When a source changes, the issue carries the evidence. Optionally the watcher also opens a
@@ -307,6 +358,8 @@ Nothing below is set by this change.
 | GitHub, new **private** repository (optional) | e.g. `EmpowerTours/source-captures` | holds the full page captures; created by the owner, not by this change. Must stay private. |
 | ops-monitor, Actions variable or secret (optional) | `SOURCE_CAPTURES_REPO` | `owner/name` of that private repository. Unset: captures, diffs and excerpts are not saved (warning only). |
 | ops-monitor, Actions secret (optional) | `SOURCE_CAPTURES_TOKEN` | fine-grained PAT, only that repository, **Contents: read and write** (and Metadata: read, for the private check). |
+| ops-monitor, Actions secret (needed for the archive copies) | `SOURCE_WATCH_SPN_KEY` | Internet Archive SPN2 S3 key `access:secret` (free archive.org account, https://archive.org/account/s3.php). Unset: no Save Page Now request; records and timeline are still written, with `not archived`. |
+| ops-monitor, Actions variable (optional) | `SOURCE_WATCH_SPN` = `off` | stops Save Page Now requests |
 | ops-monitor, Actions secret (optional) | `ANTHROPIC_API_KEY` | only for model drafts |
 | ops-monitor, Actions variables (optional) | `SOURCE_WATCH_LLM` = `on`, `SOURCE_WATCH_LLM_MAX_USD` | drafts on, per-run cap |
 | Cloudflare | redeploy `worker/` (`npx wrangler deploy`) | adds the daily cron. The existing `GH_DISPATCH_TOKEN` already has Actions read/write on ops-monitor, which covers the new workflow: **no new scope**. |
