@@ -6,6 +6,15 @@
     "comtradeapi.un.org": 12
   },
   "manual_hosts": [],
+  "archive": {
+    "enabled": true,
+    "user_agent": "source-watch/1.0",
+    "min_interval_s": 21,
+    "max_per_run": 40,
+    "not_within": "20h",
+    "poll_s": 10,
+    "poll_rounds": 12
+  },
   "apps": [
     {
       "app": "cosecha",
@@ -13,7 +22,11 @@
       "verify": "https://cosecha.empowertours.xyz/internal/sources/verify",
       "token_env": "SOURCE_VERIFY_TOKEN_COSECHA",
       "repo": "EmpowerTours/cosecha",
-      "radar_keywords": []
+      "radar_keywords": [],
+      "fix": {
+        "quotes_path": "internal/sources/quotes.json",
+        "base": "main"
+      }
     }
   ],
   "radar_feeds": [

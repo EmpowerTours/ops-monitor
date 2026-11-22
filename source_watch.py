@@ -35,6 +35,9 @@ import urllib.request
 from dataclasses import dataclass, field
 from typing import Any, Callable
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import source_timeline as timeline  # noqa: E402  (F2: public timeline of readings)
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 STATUSES_SENT = ("verified", "changed_quote_ok", "quote_missing", "gone", "unreachable", "new_edition")
 MIN_TEXT_CHARS = 200  # a page with less text than this was not really read (shell page, challenge)
@@ -613,7 +616,7 @@ def post_json(url: str, token: str, payload: dict, ua: str, timeout: float = 30)
 # are already public in its manifest. Full captures, diffs and excerpts go to the private store
 # only, and are not saved at all when none is configured.
 
-QUOTE_MAX_CHARS = 400  # a draft quote is published in an issue: a short quote, never a passage
+QUOTE_MAX_CHARS = timeline.QUOTE_MAX_CHARS  # a published quote (issue, timeline) stays short, never a passage
 PUBLIC_STATE_KEYS = frozenset({"id", "url", "status", "fetched_at", "last_read_fetched_at", "sha256", "url_ar",
                                "sha256_ar", "manifest_fingerprint", "run_id"})
 PUBLIC_STATE_MAX_STR = 2048
@@ -664,6 +667,11 @@ def check_public_file(rel: str, path: str) -> list[str]:
             isinstance(k, str) and isinstance(v, list) and all(isinstance(u, str) and re.fullmatch(r"https?://\S{1,2040}", u) for u in v)
             for k, v in doc.items())
         return [] if ok else [f"{rel}: the seen list may hold item URLs only"]
+    parts = rel.split(os.sep)
+    if len(parts) == 3 and parts[0] == "timeline" and parts[2].endswith(".json"):
+        return [f"{rel}: {x}" for x in timeline.validate_timeline(load_json(path))]
+    if rel == os.path.join("proof-queue", "source_read.jsonl"):
+        return [f"{rel}: {x}" for x in timeline.validate_queue_file(path)]
     if not rel.endswith(".json") or rel.count(os.sep) != 1:
         return [f"{rel}: only <app>/<id>.json files may be public"]
     doc = load_json(path)
@@ -1207,6 +1215,104 @@ def radar_digest(app: str, matches: list[dict], run_url: str) -> str:
         lines += ["", f"Run: {run_url}"]
     return "\n".join(lines)
 
+
+# ---------------------------------------------------------------------------------------------
+# Fix PRs: a draft PR in the app repo that updates the app's quote store, which the app's own CI
+# then tests (tests and evals on the PR branch and on its base, before/after in a PR comment).
+# Never merged here, and never a number: values are carried over untouched, and a PR is offered
+# only when the change is about words, not values.
+#   - changed_quote_ok: every quote is still on the page; the PR refreshes the saved-copy sha256.
+#   - quote_missing, one quote, missing as a whole (not a value), with a model draft that passed
+#     the deterministic gate: the PR replaces that quote's words with the draft's verbatim quote,
+#     keeps its values, and only if those values stand next to the new words on the new capture.
+
+
+def propose_fix(store: dict, src: dict, o: Outcome, draft: dict | None) -> tuple[dict, str] | None:
+    """The updated quote store and a one-line reason, or None when no safe fix exists. store is
+    the app's quote file: {page url: {"sha256", "quotes": [{"text", "values"?}], "sha256_ar"?}}."""
+    e = store.get(o.url)
+    if not isinstance(e, dict) or o.kind == "" or not o.text:
+        return None
+    new = json.loads(json.dumps(store))
+    ne = new[o.url]
+    if o.status == "changed_quote_ok" and not o.missing_ar:
+        if ne.get("sha256") == o.capture_sha256 and (not o.capture_sha256_ar or ne.get("sha256_ar") == o.capture_sha256_ar):
+            return None
+        ne["sha256"] = o.capture_sha256
+        if o.capture_sha256_ar and ne.get("url_ar"):
+            ne["sha256_ar"] = o.capture_sha256_ar
+        return new, "refresh the saved-copy sha256: the page changed and every quote is still on it"
+    if o.status != "quote_missing" or o.missing_ar or len(o.missing) != 1 or o.missing[0]["reason"] != "quote":
+        return None
+    if not draft or not draft.get("ok"):
+        return None
+    i = o.missing[0]["index"]
+    quotes = ne.get("quotes") or []
+    if i >= len(quotes):
+        return None
+    q = dict(quotes[i])
+    q["text"] = draft["quote"]
+    if check_quotes(o.text, [q], o.kind == "pdf"):  # the old values must stand next to the new words
+        return None
+    quotes[i] = q
+    ne["quotes"], ne["sha256"] = quotes, o.capture_sha256
+    return new, f"replace quote {i + 1} with words found verbatim on the new page (values unchanged)"
+
+
+def dump_store(store: dict) -> str:
+    return json.dumps(store, indent=1, ensure_ascii=False) + "\n"
+
+
+def fetch_store(gh: "GitHub", repo: str, fix_cfg: dict) -> dict | None:
+    """The app's quote store on its base branch."""
+    import base64
+
+    q = urllib.parse.quote
+    doc = gh.call("GET", f"/repos/{repo}/contents/{q(fix_cfg['quotes_path'])}?ref={q(fix_cfg.get('base', 'main'))}")
+    data = json.loads(base64.b64decode(doc["content"]).decode("utf-8"))
+    return data if isinstance(data, dict) else None
+
+
+def open_fix_pr(gh: "GitHub", repo: str, base: str, path: str, branch: str, content: str, title: str, body: str) -> str:
+    """Create or update branch with the new file content and open (or comment on) a draft PR."""
+    import base64
+
+    q = urllib.parse.quote
+    owner = repo.split("/")[0]
+    prs = gh.call("GET", f"/repos/{repo}/pulls?state=open&head={q(owner + ':' + branch)}") or []
+    base_sha = gh.call("GET", f"/repos/{repo}/git/ref/heads/{q(base)}")["object"]["sha"]
+    if not prs:
+        try:
+            gh.call("POST", f"/repos/{repo}/git/refs", {"ref": f"refs/heads/{branch}", "sha": base_sha})
+        except urllib.error.HTTPError as e:
+            if e.code != 422:  # 422: the branch exists already (an earlier, closed proposal)
+                raise
+            gh.call("PATCH", f"/repos/{repo}/git/refs/heads/{q(branch)}", {"sha": base_sha, "force": True})
+    cur = gh.call("GET", f"/repos/{repo}/contents/{q(path)}?ref={q(branch)}")
+    gh.call("PUT", f"/repos/{repo}/contents/{q(path)}", {
+        "message": title, "branch": branch, "sha": cur["sha"],
+        "content": base64.b64encode(content.encode("utf-8")).decode()})
+    if prs:
+        gh.call("POST", f"/repos/{repo}/issues/{prs[0]['number']}/comments", {"body": "Updated by a new run.\n\n" + body[:60000]})
+        return prs[0]["html_url"]
+    pr = gh.call("POST", f"/repos/{repo}/pulls", {"title": title, "head": branch, "base": base, "body": body[:60000], "draft": True})
+    return pr["html_url"]
+
+
+def fix_pr_body(app: str, src: dict, o: Outcome, why: str, old_entry: dict, new_entry: dict, issue_md: str) -> str:
+    diff = "\n".join(difflib.unified_diff(json.dumps(old_entry, indent=1, ensure_ascii=False).splitlines(),
+                                          json.dumps(new_entry, indent=1, ensure_ascii=False).splitlines(),
+                                          "before", "after", lineterm=""))
+    return "\n".join([
+        f"Proposed by the source watch for **{app}**: {why}.", "",
+        f"Page: {o.url}", "",
+        "**Draft. Do not merge without reading.** Nothing here changes a number: values are carried over as they were. "
+        "The app's CI runs its tests and evals on this branch and on its base and posts the before/after as a comment; "
+        "approve only with that evidence in front of you.", "",
+        "### Change to the quote store", "```diff", diff, "```", "",
+        "### What the watch saw", issue_md])
+
+
 # ---------------------------------------------------------------------------------------------
 # Run
 
@@ -1262,7 +1368,46 @@ def count(outcomes: list[Outcome]) -> dict[str, int]:
     return c
 
 
-def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.datetime] = lambda: dt.datetime.now(dt.timezone.utc)) -> int:
+def archiver_from(cfg: dict, env: dict[str, str]) -> tuple[timeline.Archiver | None, str]:
+    """Save Page Now, or (None, why not). SPN2 answers 401 to anonymous API requests (checked
+    2026-11-22), so without SOURCE_WATCH_SPN_KEY no request is sent at all."""
+    a = cfg.get("archive") or {}
+    if not a.get("enabled", False) or env.get("SOURCE_WATCH_SPN", "").lower() == "off":
+        return None, "Save Page Now is off"
+    if not env.get("SOURCE_WATCH_SPN_KEY"):
+        return None, "no Save Page Now key (SOURCE_WATCH_SPN_KEY)"
+    return timeline.Archiver(user_agent=a.get("user_agent", "source-watch/1.0"), auth=env["SOURCE_WATCH_SPN_KEY"],
+                             min_interval_s=float(a.get("min_interval_s", 21)), max_per_run=int(a.get("max_per_run", 40)),
+                             poll_s=float(a.get("poll_s", 10)), poll_rounds=int(a.get("poll_rounds", 12)),
+                             not_within=str(a.get("not_within", "20h"))), ""
+
+
+def record_readings(state: str, collected: dict, archiver: timeline.Archiver | None, run_id: str, now: str,
+                    why_off: str = "Save Page Now is off") -> dict:
+    """F2: one Save Page Now request per page read this run (once per URL across apps), one public
+    source_read record per (app, source) queued for the proof batcher, one timeline entry each.
+    Only pages the watch actually fetched; never page text."""
+    readings = [(app, s, o) for app, (manifest, outcomes) in collected.items() for s, o in zip(manifest, outcomes) if o.fetched_at]
+    urls = [u for _, _, o in readings for u in (o.url, o.url_ar) if u]
+    archived = archiver.archive(urls) if archiver else {}
+    off = {"archive_url": "", "archive_status": "not archived: " + why_off}
+    queue = timeline.ProofQueue(os.path.join(state, "proof-queue", "source_read.jsonl"))
+    counts = {"records": 0, "archived": 0}
+    for app, s, o in readings:
+        reading = {"source_id": o.id, "url": o.url, "url_ar": o.url_ar, "status": o.status, "fetched_at": o.fetched_at,
+                   "http_status": o.http_status, "sha256": o.capture_sha256 if o.text else "",
+                   "sha256_ar": o.capture_sha256_ar if o.text_ar else ""}
+        arch = archived.get(o.url, off)
+        rec = timeline.source_read_record(app, reading, s.get("quotes"), s.get("quotes_ar"), arch, run_id, now)
+        if queue.enqueue(rec):
+            counts["records"] += 1
+        timeline.update_timeline(os.path.join(state, "timeline", app, o.id + ".json"), rec)
+        counts["archived"] += arch.get("archive_status") == "archived"
+    return counts
+
+
+def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.datetime] = lambda: dt.datetime.now(dt.timezone.utc),
+        archiver: timeline.Archiver | None = None) -> int:
     cfg = load_json(args.config)
     if not cfg:
         print(f"cannot read {args.config}", file=sys.stderr)
@@ -1360,6 +1505,18 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
         rec["attention"] = []
         for o in outcomes:
             if o.status in ("verified", "changed_quote_ok", "no_quotes") and not o.edition and not o.languages_disagree:
+                if o.status == "changed_quote_ok" and gh_apps and (app.get("fix") or {}).get("quotes_path") and canary["ok"]:
+                    try:  # quotes all present: offer the sha refresh as a draft PR, no issue
+                        fix_cfg = app["fix"]
+                        store_doc = fetch_store(gh_apps, app["repo"], fix_cfg)
+                        prop = propose_fix(store_doc, by_id[o.id], o, None) if store_doc else None
+                        if prop:
+                            new_store, why = prop
+                            open_fix_pr(gh_apps, app["repo"], fix_cfg.get("base", "main"), fix_cfg["quotes_path"], f"source-watch/{o.id}",
+                                        dump_store(new_store), f"Source watch: refresh saved copy of {urllib.parse.urlsplit(o.url).netloc} ({o.id})",
+                                        fix_pr_body(name, by_id[o.id], o, why, store_doc[o.url], new_store[o.url], o.detail))
+                    except Exception as e:
+                        print(f"sha refresh PR not opened for {o.id}: {type(e).__name__}", file=sys.stderr)
                 if o.status == "changed_quote_ok":
                     rec["attention"].append({"id": o.id, "status": o.status, "url": o.url, "detail": "flagged for a look"})
                 continue
@@ -1381,6 +1538,20 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
                 q0 = (src.get("quotes") or [{}])[o.missing[0]["index"]] if src.get("quotes") else {}
                 draft = drafter.draft(q0.get("text", ""), src.get("facts", []), best_window(o.text, q0.get("text", ""), 400), o.text)
             body = issue_body(name, src, o, review_ref, draft, run_url)
+            fix_cfg = app.get("fix") or {}
+            if gh_apps and app.get("repo") and fix_cfg.get("quotes_path") and canary["ok"]:
+                try:
+                    store_doc = fetch_store(gh_apps, app["repo"], fix_cfg)
+                    prop = propose_fix(store_doc, src, o, draft) if store_doc else None
+                    if prop:
+                        new_store, why = prop
+                        pr_title = f"Source watch: {why.split(':')[0]} for {urllib.parse.urlsplit(o.url).netloc} ({o.id})"
+                        item_pr = open_fix_pr(gh_apps, app["repo"], fix_cfg.get("base", "main"), fix_cfg["quotes_path"],
+                                              f"source-watch/{o.id}", dump_store(new_store), pr_title,
+                                              fix_pr_body(name, src, o, why, store_doc[o.url], new_store[o.url], body))
+                        body += f"\n\nFix proposed as a draft PR: {item_pr}"
+                except Exception as e:
+                    body += f"\n\n(No fix PR: {type(e).__name__})"
             title = f"Source watch: {name} {o.id} {'new edition' if o.edition and o.status not in ('quote_missing', 'gone', 'manifest_error') else 'changed'}"
             item = {"id": o.id, "status": o.status if o.status != "verified" else o.edition, "url": o.url, "detail": o.detail or o.edition_detail}
             try:
@@ -1400,6 +1571,12 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
                 save_captures(private, name, run_id, outcomes, manifest, report)
             if state:
                 save_state(state, name, run_id, outcomes, manifest)
+    if state and canary["ok"] and not args.offline and not args.dry_run and collected:
+        arch, why_off = (archiver, "") if archiver else archiver_from(cfg, env)
+        if not arch:
+            print(f"WARNING: Save Page Now not used: {why_off}", file=sys.stderr, flush=True)
+        tl_counts = record_readings(state, collected, arch, run_id, clock().strftime("%Y-%m-%dT%H:%M:%SZ"), why_off or "Save Page Now is off")
+        print(f"timeline: {tl_counts['records']} source_read records queued, {tl_counts['archived']} pages archived", flush=True)
     radar = None
     if cfg.get("radar_feeds") and not args.offline:
         # The seen list is item URLs only, so it lives in the public state (check_public_file allows it).
