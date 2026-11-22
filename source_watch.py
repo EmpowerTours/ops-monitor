@@ -35,6 +35,9 @@ import urllib.request
 from dataclasses import dataclass, field
 from typing import Any, Callable
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import source_timeline as timeline  # noqa: E402  (F2: public timeline of readings)
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 STATUSES_SENT = ("verified", "changed_quote_ok", "quote_missing", "gone", "unreachable", "new_edition")
 MIN_TEXT_CHARS = 200  # a page with less text than this was not really read (shell page, challenge)
@@ -613,7 +616,7 @@ def post_json(url: str, token: str, payload: dict, ua: str, timeout: float = 30)
 # are already public in its manifest. Full captures, diffs and excerpts go to the private store
 # only, and are not saved at all when none is configured.
 
-QUOTE_MAX_CHARS = 400  # a draft quote is published in an issue: a short quote, never a passage
+QUOTE_MAX_CHARS = timeline.QUOTE_MAX_CHARS  # a published quote (issue, timeline) stays short, never a passage
 PUBLIC_STATE_KEYS = frozenset({"id", "url", "status", "fetched_at", "last_read_fetched_at", "sha256", "url_ar",
                                "sha256_ar", "manifest_fingerprint", "run_id"})
 PUBLIC_STATE_MAX_STR = 2048
@@ -664,6 +667,11 @@ def check_public_file(rel: str, path: str) -> list[str]:
             isinstance(k, str) and isinstance(v, list) and all(isinstance(u, str) and re.fullmatch(r"https?://\S{1,2040}", u) for u in v)
             for k, v in doc.items())
         return [] if ok else [f"{rel}: the seen list may hold item URLs only"]
+    parts = rel.split(os.sep)
+    if len(parts) == 3 and parts[0] == "timeline" and parts[2].endswith(".json"):
+        return [f"{rel}: {x}" for x in timeline.validate_timeline(load_json(path))]
+    if rel == os.path.join("proof-queue", "source_read.jsonl"):
+        return [f"{rel}: {x}" for x in timeline.validate_queue_file(path)]
     if not rel.endswith(".json") or rel.count(os.sep) != 1:
         return [f"{rel}: only <app>/<id>.json files may be public"]
     doc = load_json(path)
@@ -1360,7 +1368,46 @@ def count(outcomes: list[Outcome]) -> dict[str, int]:
     return c
 
 
-def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.datetime] = lambda: dt.datetime.now(dt.timezone.utc)) -> int:
+def archiver_from(cfg: dict, env: dict[str, str]) -> tuple[timeline.Archiver | None, str]:
+    """Save Page Now, or (None, why not). SPN2 answers 401 to anonymous API requests (checked
+    2026-11-22), so without SOURCE_WATCH_SPN_KEY no request is sent at all."""
+    a = cfg.get("archive") or {}
+    if not a.get("enabled", False) or env.get("SOURCE_WATCH_SPN", "").lower() == "off":
+        return None, "Save Page Now is off"
+    if not env.get("SOURCE_WATCH_SPN_KEY"):
+        return None, "no Save Page Now key (SOURCE_WATCH_SPN_KEY)"
+    return timeline.Archiver(user_agent=a.get("user_agent", "source-watch/1.0"), auth=env["SOURCE_WATCH_SPN_KEY"],
+                             min_interval_s=float(a.get("min_interval_s", 21)), max_per_run=int(a.get("max_per_run", 40)),
+                             poll_s=float(a.get("poll_s", 10)), poll_rounds=int(a.get("poll_rounds", 12)),
+                             not_within=str(a.get("not_within", "20h"))), ""
+
+
+def record_readings(state: str, collected: dict, archiver: timeline.Archiver | None, run_id: str, now: str,
+                    why_off: str = "Save Page Now is off") -> dict:
+    """F2: one Save Page Now request per page read this run (once per URL across apps), one public
+    source_read record per (app, source) queued for the proof batcher, one timeline entry each.
+    Only pages the watch actually fetched; never page text."""
+    readings = [(app, s, o) for app, (manifest, outcomes) in collected.items() for s, o in zip(manifest, outcomes) if o.fetched_at]
+    urls = [u for _, _, o in readings for u in (o.url, o.url_ar) if u]
+    archived = archiver.archive(urls) if archiver else {}
+    off = {"archive_url": "", "archive_status": "not archived: " + why_off}
+    queue = timeline.ProofQueue(os.path.join(state, "proof-queue", "source_read.jsonl"))
+    counts = {"records": 0, "archived": 0}
+    for app, s, o in readings:
+        reading = {"source_id": o.id, "url": o.url, "url_ar": o.url_ar, "status": o.status, "fetched_at": o.fetched_at,
+                   "http_status": o.http_status, "sha256": o.capture_sha256 if o.text else "",
+                   "sha256_ar": o.capture_sha256_ar if o.text_ar else ""}
+        arch = archived.get(o.url, off)
+        rec = timeline.source_read_record(app, reading, s.get("quotes"), s.get("quotes_ar"), arch, run_id, now)
+        if queue.enqueue(rec):
+            counts["records"] += 1
+        timeline.update_timeline(os.path.join(state, "timeline", app, o.id + ".json"), rec)
+        counts["archived"] += arch.get("archive_status") == "archived"
+    return counts
+
+
+def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.datetime] = lambda: dt.datetime.now(dt.timezone.utc),
+        archiver: timeline.Archiver | None = None) -> int:
     cfg = load_json(args.config)
     if not cfg:
         print(f"cannot read {args.config}", file=sys.stderr)
@@ -1524,6 +1571,12 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
                 save_captures(private, name, run_id, outcomes, manifest, report)
             if state:
                 save_state(state, name, run_id, outcomes, manifest)
+    if state and canary["ok"] and not args.offline and not args.dry_run and collected:
+        arch, why_off = (archiver, "") if archiver else archiver_from(cfg, env)
+        if not arch:
+            print(f"WARNING: Save Page Now not used: {why_off}", file=sys.stderr, flush=True)
+        tl_counts = record_readings(state, collected, arch, run_id, clock().strftime("%Y-%m-%dT%H:%M:%SZ"), why_off or "Save Page Now is off")
+        print(f"timeline: {tl_counts['records']} source_read records queued, {tl_counts['archived']} pages archived", flush=True)
     radar = None
     if cfg.get("radar_feeds") and not args.offline:
         # The seen list is item URLs only, so it lives in the public state (check_public_file allows it).
