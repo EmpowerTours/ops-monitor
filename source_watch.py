@@ -172,6 +172,23 @@ def pdf_to_text(body: bytes) -> str:
     return normalize_text("\n".join(pages))
 
 
+# Top-level keys of an API answer that change on every call without the data changing (UN Comtrade
+# reports how long the query took). They are left out of the text, so of its hash.
+JSON_VOLATILE_KEYS = frozenset({"elapsedTime"})
+
+
+def canonical_json(raw: str) -> str:
+    """An API answer in one form: sorted keys, no spaces, volatile keys dropped. Two answers with the
+    same data hash the same. Text that is not JSON is returned as read (it is then not read as data)."""
+    try:
+        doc = json.loads(raw)
+    except ValueError:
+        return raw
+    if isinstance(doc, dict):
+        doc = {k: v for k, v in doc.items() if k not in JSON_VOLATILE_KEYS}
+    return json.dumps(doc, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+
+
 def extract(body: bytes, content_type: str, url: str) -> tuple[str, list[str], str, str]:
     """(text, links, title, kind) for a fetched body. kind is html, pdf, json or text."""
     ct = (content_type or "").split(";")[0].strip().lower()
@@ -182,7 +199,7 @@ def extract(body: bytes, content_type: str, url: str) -> tuple[str, list[str], s
     if ct == "application/pdf" or body[:5] == b"%PDF-":
         return pdf_to_text(body), [], "", "pdf"
     if ct in ("application/json", "text/json") or ct.endswith("+json"):
-        return body.decode(charset or "utf-8", errors="replace"), [], "", "json"
+        return canonical_json(body.decode(charset or "utf-8", errors="replace")), [], "", "json"
     if ct in ("text/plain", "text/csv"):
         return normalize_text(body.decode(charset or "utf-8", errors="replace")), [], "", "text"
     text, links, title = html_to_text(body, charset)
