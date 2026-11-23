@@ -31,6 +31,34 @@
         "quotes_path": "internal/sources/quotes.json",
         "base": "main"
       }
+    },
+    {
+      "app": "hunt",
+      "manifest": "https://hunt-dubai.empowertours.xyz/.well-known/sources.json",
+      "verify": "https://hunt-dubai.empowertours.xyz/internal/sources/verify",
+      "token_env": "SOURCE_VERIFY_TOKEN_HUNT",
+      "repo": "EmpowerTours/hunt-dubai",
+      "radar_keywords": [],
+      "fix": {
+        "quotes_path": "go/internal/sources/quotes.json",
+        "base": "main"
+      }
+    },
+    {
+      "app": "trips",
+      "manifest": "https://sawweeli.empowertours.xyz/.well-known/sources.json",
+      "verify": "https://sawweeli.empowertours.xyz/internal/sources/verify",
+      "token_env": "SOURCE_VERIFY_TOKEN_TRIPS",
+      "repo": "EmpowerTours/landing-dubai",
+      "radar_keywords": []
+    },
+    {
+      "app": "sawweeli-agent",
+      "manifest": "https://sawweeli-agent.empowertours.xyz/.well-known/sources.json",
+      "verify": "https://sawweeli-agent.empowertours.xyz/internal/sources/verify",
+      "token_env": "SOURCE_VERIFY_TOKEN_SAWWEELI_AGENT",
+      "repo": "EmpowerTours/sawweeli-agent",
+      "radar_keywords": []
     }
   ],
   "radar_feeds": [

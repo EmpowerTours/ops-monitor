@@ -90,6 +90,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # One verify token per app (each equals that app's SOURCES_VERIFY_TOKEN). Unset: results not sent.
           SOURCE_VERIFY_TOKEN_COSECHA: ${{ secrets.SOURCE_VERIFY_TOKEN_COSECHA }}
+          SOURCE_VERIFY_TOKEN_HUNT: ${{ secrets.SOURCE_VERIFY_TOKEN_HUNT }}
+          SOURCE_VERIFY_TOKEN_TRIPS: ${{ secrets.SOURCE_VERIFY_TOKEN_TRIPS }}
+          SOURCE_VERIFY_TOKEN_SAWWEELI_AGENT: ${{ secrets.SOURCE_VERIFY_TOKEN_SAWWEELI_AGENT }}
+          SOURCE_VERIFY_TOKEN_ASAS: ${{ secrets.SOURCE_VERIFY_TOKEN_ASAS }}
+          SOURCE_VERIFY_TOKEN_FAEZ: ${{ secrets.SOURCE_VERIFY_TOKEN_FAEZ }}
+          SOURCE_VERIFY_TOKEN_HAQIQI: ${{ secrets.SOURCE_VERIFY_TOKEN_HAQIQI }}
+          SOURCE_VERIFY_TOKEN_RELOCATEDUBAI: ${{ secrets.SOURCE_VERIFY_TOKEN_RELOCATEDUBAI }}
           # Optional: fine-grained token with Issues read/write on the app repos. Unset: issues go here.
           SOURCE_WATCH_ISSUES_TOKEN: ${{ secrets.SOURCE_WATCH_ISSUES_TOKEN }}
           # Optional model drafts: off unless the repository variable SOURCE_WATCH_LLM is "on".

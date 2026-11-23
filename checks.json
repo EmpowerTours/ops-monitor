@@ -46,7 +46,8 @@
     "judge_path": "/judge",
     "healthz": "/healthz",
     "keyword": "Hunt Dubai",
-    "readyz": "/readyz"
+    "readyz": "/readyz",
+    "sources_status": "/.well-known/sources-status.json"
   },
   {
     "app": "sawweeli-trips",
@@ -54,7 +55,8 @@
     "judge_path": "/try",
     "healthz": "/healthz",
     "keyword": "Sawweeli Trips",
-    "readyz": "/readyz"
+    "readyz": "/readyz",
+    "sources_status": "/.well-known/sources-status.json"
   },
   {
     "app": "sawweeli-hub",
@@ -62,7 +64,8 @@
     "judge_path": "/",
     "healthz": "/healthz",
     "healthz_keyword": "\"ok\":true",
-    "keyword": "Sawweeli"
+    "keyword": "Sawweeli",
+    "sources_status": "/.well-known/sources-status.json"
   },
   {
     "app": "demo-studio",
