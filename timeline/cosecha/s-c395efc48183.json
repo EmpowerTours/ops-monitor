@@ -34,12 +34,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "5d2394fc6a6c0cf2a3251f57c646436745ebdeb3813988066946e8428c989e89",
+   "payload_sha256": "76ae0e829f26a0fcbeb7895c587140bfc9878e89a58b0bb0f1d2d495efd37135",
    "quotes": [
     "Obtención del certificado zoosanitario para exportación",
     "MXN 717"
@@ -50,12 +50,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "e94627f92083747638d3b9c71b169f3cc14ad61e171ed1be77a3001cdfd6f895",
+   "payload_sha256": "58946d4d503858665dd2f32429c34e9de798c2da45311d9b3b147a293fdeff52",
    "quotes": [
     "Obtención del certificado zoosanitario para exportación",
     "MXN 717"

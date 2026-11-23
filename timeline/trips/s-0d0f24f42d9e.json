@@ -20,12 +20,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:12:08Z",
    "http_status": 200,
-   "payload_sha256": "ea63059de7193f83b0f90cf4bd1ddbc1935655d70e94072b6f5b9e72d0885c99",
+   "payload_sha256": "f4b0ef95cb466653d3cee2d9a24753cb3fb27a96271e7474a1c935bcd3caf2c8",
    "quotes": [
     "Universal link: https://m.uber.com/looking",
     "Encoded pickup Location JSON object.",
@@ -38,12 +38,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:56:08Z",
    "http_status": 200,
-   "payload_sha256": "75de8fae2da6745dd5f4c8d02dd9ba7b26ff057fc7ca0e2d0d9a46d860faeb47",
+   "payload_sha256": "6fdd816e569a3d957fe6af5ab2fb039a70efc66bf0f30dc349dfc89e0c1ee098",
    "quotes": [
     "Universal link: https://m.uber.com/looking",
     "Encoded pickup Location JSON object.",

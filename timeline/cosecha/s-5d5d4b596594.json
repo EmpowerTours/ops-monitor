@@ -34,12 +34,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "68fb31c8183a57ce71db8695426e63c516c7b91d0d64cce3c4ac733d013dd045",
+   "payload_sha256": "c6e7ac5c124db667c6e40cca5ec5d47b6e950c884d2d33577fa169ed0538b05e",
    "quotes": [
     "0409 - Natural honey",
     "Health certificate from the country of origin"
@@ -50,12 +50,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "bbf77b0459035180b8967297c349450d2d2da96bf7a9b4591957c907603dd85c",
+   "payload_sha256": "778a529c1cd526900a164099da588f3a069c3367bdff5f5dad2ec0a2eafcccbd",
    "quotes": [
     "0409 - Natural honey",
     "Health certificate from the country of origin"

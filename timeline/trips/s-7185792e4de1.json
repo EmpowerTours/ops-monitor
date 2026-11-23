@@ -18,12 +18,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:12:08Z",
    "http_status": 200,
-   "payload_sha256": "9b56d8570feea2674d29ce7c18ad769fe6f18647f8987faea9569411171b30b5",
+   "payload_sha256": "c8f387e285722c8b64770deabeeb7394b11eb387fd9d35ee40675b909c08605e",
    "quotes": [
     "for a maximum of thirty (30) consecutive nights, be charged the Tourism Dirham Fee",
     "The fee will not apply to hotel room nights beyond thirty (30) consecutive nights."
@@ -34,12 +34,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:56:08Z",
    "http_status": 200,
-   "payload_sha256": "22c7928e33bda057c5feee8b4110a139896a639a8a9248cf2a548b29a30e8044",
+   "payload_sha256": "136a1acb3ce94938bb945afe8fac6106c30346aa786b38906556bf87af163155",
    "quotes": [
     "for a maximum of thirty (30) consecutive nights, be charged the Tourism Dirham Fee",
     "The fee will not apply to hotel room nights beyond thirty (30) consecutive nights."

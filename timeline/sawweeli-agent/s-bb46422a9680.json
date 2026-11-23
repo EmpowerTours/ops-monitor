@@ -17,12 +17,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:12:25Z",
    "http_status": 200,
-   "payload_sha256": "a992705410bdb852fcb7ed23c3a5ae38e4595741f4ba1e0229ab01f82bd3215c",
+   "payload_sha256": "e0e8a1201efdc276ee3b92f590a7670dd0465745d02add3b7179280845db9ab8",
    "quotes": [
     "حقوق النسخ مؤسسة حكومة دبي الذكية"
    ],
@@ -32,12 +32,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:56:36Z",
    "http_status": 200,
-   "payload_sha256": "d17d8b1915c41d5be3d3e56316e0b1fc0b2f2dad569994639a23e96b30dd51be",
+   "payload_sha256": "67323d4cb33d3d58ae1c9912ceb95595ed3a7e6f6fe50c3b389a24f84c41fda9",
    "quotes": [
     "حقوق النسخ مؤسسة حكومة دبي الذكية"
    ],

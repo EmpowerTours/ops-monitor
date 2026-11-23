@@ -2,12 +2,12 @@
  "cited_by": "hunt",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T02:55:56Z",
    "http_status": 200,
-   "payload_sha256": "30ca9b5a2a5e6cc04ed182d7840981fe39672ce5f70e3deba4a338d0385ec4b5",
+   "payload_sha256": "c4298cb0749e7384e51b3729242bd4c8fbcc64f4cb3b57ae9f14221936e5d642",
    "quotes": [
     "حق طلب نقل البيانات الشخصية",
     "وذلك بشكل منظم وقابل للقراءة آليًا",

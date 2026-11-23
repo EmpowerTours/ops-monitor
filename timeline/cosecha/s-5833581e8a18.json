@@ -34,12 +34,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "207f5acd5dd26d2fa7d16e7bd552e4c824255a434818ed47927fb5a85d4d20b2",
+   "payload_sha256": "922664b6a89311535d106ccc186d5ce8f70a438483dedbd40089a0cc6c347825",
    "quotes": [
     "registered by Dubai Municipality prior to being placed in the Emirate of Dubai market",
     "Copy of valid Trade License."
@@ -50,12 +50,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "c45275e1be2450505edbfdcc2e31e998e27dd39f7641960fd8b3b761caa9b456",
+   "payload_sha256": "22d78ee8c1d4f5e5400de7e2e916a4a2824bcbb0024e17f76bf1ac1d02b5e9ec",
    "quotes": [
     "registered by Dubai Municipality prior to being placed in the Emirate of Dubai market",
     "Copy of valid Trade License."

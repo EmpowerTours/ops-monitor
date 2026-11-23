@@ -34,12 +34,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "f6e1b0fdb4ffb1d678ff7bdb20de4424cd2be6be0dcd1a876ab8a46f5e93adc6",
+   "payload_sha256": "b9b5638ca023dcaa175f4b50027c1ba0580cf3921bd8905a6e19e6205cfaa47c",
    "quotes": [
     "Labels must be in Arabic only or Arabic/English.",
     "The minimum information requirements for the Arabic label or sticker are:"
@@ -50,12 +50,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "a355a1a506f49d7be35ae0d5afb5c59dfcc67f3879e467dc3584bbad0fc8f495",
+   "payload_sha256": "f429cc07a7d5df43b7b6d9dfee926aadf45b557ab5172f4d6f23cfba426de7ee",
    "quotes": [
     "Labels must be in Arabic only or Arabic/English.",
     "The minimum information requirements for the Arabic label or sticker are:"

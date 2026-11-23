@@ -19,12 +19,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:12:08Z",
    "http_status": 200,
-   "payload_sha256": "481ac439090bf7468a2c05144e5e72f8d235c9fcfe2180ff4ec9850b324d188d",
+   "payload_sha256": "357d846617961b0a6785fd35147ac98270217d5a6a7f767aab16b19344e6d6e7",
    "quotes": [
     "Trips starting at Dubai International Airport (DXB) have a higher flagfall of Dh25",
     "The per-kilometer rate stays within Dh2.14 - 2.26, depending on monthly fuel adjustments.",

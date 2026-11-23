@@ -34,12 +34,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "dceb3ddabbda227aa2b71203d80daf26c2610bd75952afe3366c0288c5f718b1",
+   "payload_sha256": "043c94df20170129ac5894d31836ee5963ac5c13a0aba82bba71e596732f096e",
    "quotes": [
     "A(w) 64.75",
     "ACw 17.61"
@@ -50,12 +50,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "8fac46369337bed0c5795159f824354042f03ff2511fc1c347c40d669a8ca4e0",
+   "payload_sha256": "8ced6cf65372e5ab569cc92b6b44b9cfddda58c3d321b8bf8cdf0e8743279608",
    "quotes": [
     "A(w) 64.75",
     "ACw 17.61"

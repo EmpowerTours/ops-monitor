@@ -51,12 +51,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:12:25Z",
    "http_status": 200,
-   "payload_sha256": "bf32c7ba5aba1129df0823e54bb7d23e1e4a81d28fd863560b7b868742b02761",
+   "payload_sha256": "2e7181799700828ee1fbf27660d561e09251f73ad73ed1254c282be45c1fe14a",
    "quotes": [
     "Centrepoint سنتربوينت",
     "Emirates طيران الإمارات",
@@ -100,12 +100,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:56:36Z",
    "http_status": 200,
-   "payload_sha256": "109ea0f5c01d02196e7c768120181f0d39d824ebb5d443cffd98ac2a6eb982cd",
+   "payload_sha256": "41418feb32a15d3a26d305c18d2a6c171cb1d702808becf18211089c88149365",
    "quotes": [
     "Centrepoint سنتربوينت",
     "Emirates طيران الإمارات",

@@ -20,12 +20,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:12:08Z",
    "http_status": 200,
-   "payload_sha256": "8171f8c82722434cb511395fe00de7dca782b5f31a4888993c1fb2bc6a84acbc",
+   "payload_sha256": "1a5ab1a33b267fd49d26aa1f2ba81bc44c238ed5f1a643067c1a8697674c2ece",
    "quotes": [
     "The Silver nol Card is ideal for tourists. It costs Dh25 with Dh19 credit",
     "Within One Zone Silver Card: Dh3",

@@ -2,12 +2,12 @@
  "cited_by": "trips",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T02:56:08Z",
    "http_status": 200,
-   "payload_sha256": "b828c3f1d1ea76698b9ed9abe45651b0a23028dad0c1647646806b550f075650",
+   "payload_sha256": "e69be951e5225d828706d5d2b02dd3e8f595ea34e11f339acc5652241f59f661",
    "quotes": [
     "Passports must be valid for at least 6 months from the date of entry into the UAE."
    ],

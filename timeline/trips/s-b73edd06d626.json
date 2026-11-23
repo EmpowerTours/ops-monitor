@@ -17,12 +17,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:12:08Z",
    "http_status": 200,
-   "payload_sha256": "d7fd3ffdaa26a36a5c262485e82ef17c17e5e9243a05b1a7123274ee6123778d",
+   "payload_sha256": "12e196ede1f96baea521e6508fe5ab16544339beb9d831494ea4fe25eebf1780",
    "quotes": [
     "No natural or legal person may conduct the Activity in the Emirate unless that person is licensed to do so by the DTCM."
    ],
@@ -32,12 +32,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:56:08Z",
    "http_status": 200,
-   "payload_sha256": "f061c0013df4e09ef91125687820c1aef8461d50731c3f24ffaa2bb374031638",
+   "payload_sha256": "6b2bda5bf982c869c8f843f40ff8206ca2b7471231a2aff61c67e4f3eb16577c",
    "quotes": [
     "No natural or legal person may conduct the Activity in the Emirate unless that person is licensed to do so by the DTCM."
    ],

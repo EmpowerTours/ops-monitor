@@ -38,12 +38,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "1ddc54808fec74e65f0a228abda35a7dccf0285c3de5f5297d5fd4a74a39948e",
+   "payload_sha256": "729904bc27439ee3e8638cf8f4e8128968781a1ec5c64a5f6b2ed91127888dda",
    "quotes": [
     "Food product registration in ZAD, coupled with import inspection procedures",
     "UAE.S 9:2019 requires a production date or harvest year and packing date",
@@ -56,12 +56,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "147d6f4a10f17ec8b7b231f08469ab3b4f326719380513f7bdfec31deb6c0591",
+   "payload_sha256": "e15fca06cbac300516d245b2227d226d37640564bd24de10e4f91a980965c7bb",
    "quotes": [
     "Food product registration in ZAD, coupled with import inspection procedures",
     "UAE.S 9:2019 requires a production date or harvest year and packing date",

@@ -32,12 +32,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 403,
-   "payload_sha256": "b1e9a9d8fcb3fe56970631f0e71d82c112246e6ea8044dca0914fb9f55a37039",
+   "payload_sha256": "981715c1572686956079f2e8247e35f80278b28bffd4e0eacb22c21e5d852a5b",
    "quotes": [
     "Exportan desde Cuajinicuilapa a Canadá y EU 500 toneladas al año de mango Ataúlfo"
    ],
@@ -47,12 +47,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 403,
-   "payload_sha256": "ab841061e956e0b97084d45893cfdfed9e74d8b6c8a05a41265845e5905bcb85",
+   "payload_sha256": "ab81107d4c18c323b48a308db27ccfefdd1b1c6c1b46498c94013ef7ac329404",
    "quotes": [
     "Exportan desde Cuajinicuilapa a Canadá y EU 500 toneladas al año de mango Ataúlfo"
    ],

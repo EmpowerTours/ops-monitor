@@ -34,12 +34,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "e1310627b4f93a7e5343ae7d3fe6a3993ba91072d81a9fce6c1412f7c1f0ec62",
+   "payload_sha256": "efb0c23647db4e3231fd843887d1cce4a2bc6408efe7c3075c4008df24c54b3e",
    "quotes": [
     "2025: Present, widespread",
     "Pest status declared by NPPO: Transitory pest, actionable and under eradication (2018-09)"
@@ -50,12 +50,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "4a3bad12f5fc894d98c00eb2ff343e5d3d37e30e9dfbdedd5b9c95c09dda4098",
+   "payload_sha256": "870937e8a3180fe44a1bfa6ae985168c86376f298216da8cbc7e9c0331611215",
    "quotes": [
     "2025: Present, widespread",
     "Pest status declared by NPPO: Transitory pest, actionable and under eradication (2018-09)"

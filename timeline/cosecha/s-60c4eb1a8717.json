@@ -32,12 +32,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "4d6f5465edeb04bcf9a22011230a2ed90d1b0679faa070d5fbc2a523cd18f333",
+   "payload_sha256": "14ca24ef0e69d07abe2718117f52cbab96459cd1aae444cd34eb490ec3f907ae",
    "quotes": [
     "Health certificate issued or endorsed by the competent authority in the country of origin (imported food)"
    ],
@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "f0e8b718b4da975438ce6c909926d7324acfa983a1ee2aec9774fdb43c5b2eda",
+   "payload_sha256": "343c7f270daac32434af4f62fbf9f59fe04713c27720f3fd12408bee571e048a",
    "quotes": [
     "Health certificate issued or endorsed by the competent authority in the country of origin (imported food)"
    ],

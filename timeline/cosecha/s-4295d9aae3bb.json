@@ -35,12 +35,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "09ad8471a500c5c7f2b8a6b916ac1759f18da66f6aa1b2b275d41b2abe64272d",
+   "payload_sha256": "3c283e6885ef7d68121e8f63bcf69bdd76dd65de066a96a972e8bb818350d91e",
    "quotes": [
     "Issue accreditation for a slaughterhouse outside the UAE",
     "Service Fees No fees",
@@ -53,12 +53,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "1730144b80f8cd3113ee070b1ff663955740fbad8bf9a5280205cde91d6be9b2",
+   "payload_sha256": "2dbe0fbfaac06549f129e449ebcb00bc2babaf5bc0155d12b328148251091399",
    "quotes": [
     "Issue accreditation for a slaughterhouse outside the UAE",
     "Service Fees No fees",

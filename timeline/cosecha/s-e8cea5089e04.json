@@ -34,12 +34,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "47b77f4c84118a5d405cd035d494a779fd38ec30575a41f40d053e9da2d4b9d8",
+   "payload_sha256": "c4f2eb926f291d59d052e4c196dd4d65d606dc3a3278aa4352b43ba4c2a285f0",
    "quotes": [
     "Items do not need label assessment",
     "ZAD Certification"
@@ -50,12 +50,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "bf637856e9e759d53cacafa2ef2c462b8c6ec96a66c6ab27683bef98c412b45b",
+   "payload_sha256": "7ea1c87e7b51a6f9f4d021c62f4274e701fdc4827a6510b2ef094b74395bacf3",
    "quotes": [
     "Items do not need label assessment",
     "ZAD Certification"

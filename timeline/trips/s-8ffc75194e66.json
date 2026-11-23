@@ -2,12 +2,12 @@
  "cited_by": "trips",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T02:56:08Z",
    "http_status": 200,
-   "payload_sha256": "2a04175dd1fab99f1acf3a6e427cc4f59de5f7f1aa9c1620488859cd32335ae4",
+   "payload_sha256": "85c8b35196b80eac7abe03f5b81040fa940700169d9635bc0eb343815c036f59",
    "quotes": [
     "6:00 AM - 10:00PM → AED 5",
     "10:00 PM - 6:00 AM → AED 5.5",

@@ -19,12 +19,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:12:08Z",
    "http_status": 200,
-   "payload_sha256": "804395c7994e44b0d3fbcb47d430bb955398ef9a71a219142217b30dc34813f4",
+   "payload_sha256": "4d563da6af66349e92ca01122e750310100d953090a48ca78d54e08ec849fe9a",
    "quotes": [
     "A document issued by the DTCM stating that the DTCM approves that a furnished real property unit be designated as a Holiday Home",
     "A Permit will be valid for a term of one (1) year",
@@ -36,12 +36,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:56:08Z",
    "http_status": 200,
-   "payload_sha256": "788ac41a734644333b7deff1a70193bb91ebe7085b862f5e320bbe3499836f7a",
+   "payload_sha256": "bed1a4fe03298a7c820dcb01985946865e51f305fc6b73e95679fedeba38179d",
    "quotes": [
     "A document issued by the DTCM stating that the DTCM approves that a furnished real property unit be designated as a Holiday Home",
     "A Permit will be valid for a term of one (1) year",

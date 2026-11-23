@@ -32,12 +32,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "b54d7b4de974c81843256f93cf88cf141758fa483dd327cbc7f9cc606bc83234",
+   "payload_sha256": "4c3381136764c047f8628088ba4cf33304136e953817fc8cd114a037efc919ca",
    "quotes": [
     "List of Approved Slaughterhouses"
    ],
@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "04e30329265e48412d024bb94ea45a5d6d85d21e211ea26d04e0b21f1d571ee9",
+   "payload_sha256": "c210332a4084c7e1594672f0feb08b98a7fe307165f7dbbda041057700442ae6",
    "quotes": [
     "List of Approved Slaughterhouses"
    ],

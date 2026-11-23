@@ -36,12 +36,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:12:25Z",
    "http_status": 200,
-   "payload_sha256": "7c1c454a75b5efb30c07891691634ce59e18842e8c966645265e28ed621bde31",
+   "payload_sha256": "fe59abe233f030fd2e47b07145dcbe6e0bd0dfa68e7ff91662671922d2495be8",
    "quotes": [
     "E& إي إند",
     "Al Qusais القصيص",
@@ -70,12 +70,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:56:36Z",
    "http_status": 200,
-   "payload_sha256": "cb83410bb69ea97f0d3eeffda918665b4aa87f3f38ad5ae281b469d6f8507162",
+   "payload_sha256": "56459ba59f328ac127c0f249a7d215de90fb44c76cef48051c601c4394406959",
    "quotes": [
     "E& إي إند",
     "Al Qusais القصيص",

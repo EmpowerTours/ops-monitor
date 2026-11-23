@@ -15,12 +15,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T02:10:57Z",
    "http_status": 200,
-   "payload_sha256": "8ec4323cd4bbcd2f5fa7bcbd85eda50333a079ad5a25a8eb07a879c5c5c2ccff",
+   "payload_sha256": "304833ab67a46bd9513622d1f8aeffabf31ce029b09d64aa50cad4dd621050a1",
    "quotes": [],
    "ref": "hunt/s-164c7530e902/2026-11-23T02:10:57Z",
    "run_id": "20261123T021013Z",
@@ -28,12 +28,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T02:55:56Z",
    "http_status": 200,
-   "payload_sha256": "3ed85ae92e17d03d204118d4de33fb96c9566e4280242335981634c22e26c52a",
+   "payload_sha256": "271737e8e76304727f8549b4202657850dcd3c571e7ffb8fe3aa38455c60980a",
    "quotes": [],
    "ref": "hunt/s-164c7530e902/2026-11-23T02:55:56Z",
    "run_id": "20261123T025424Z",

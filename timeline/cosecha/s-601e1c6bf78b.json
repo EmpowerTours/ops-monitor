@@ -32,12 +32,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "d31bf2540c6c893db87d6f290e5071403960a0c6ecc1d59b624fbff105bb3bc3",
+   "payload_sha256": "98243c7e4b9b8bd0aa44a98748399b837cb8d90d50aa46a2ecb70ac63eaf0d6a",
    "quotes": [
     "Registered Halal Certification Bodies"
    ],
@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "702f3202f30422ba0787b8519ce457940bfebe453ad593b4c1a96e399b1faacc",
+   "payload_sha256": "f26c3b56506d0b61fa84914282dcf3cc31a6f706d15620c0567be6a66a700735",
    "quotes": [
     "Registered Halal Certification Bodies"
    ],

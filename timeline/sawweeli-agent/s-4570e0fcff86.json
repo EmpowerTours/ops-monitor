@@ -22,12 +22,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T02:12:25Z",
    "http_status": 200,
-   "payload_sha256": "6aa5caf894dda7ce3bba6404e923f8511bf579ded1797ffe329bf1be8693ad55",
+   "payload_sha256": "6439dab2a96e2be76de63700c3719e75e98e437fe0942920eacbce971e4e8a54",
    "quotes": [
     "Government job portals:",
     "Dubai Careers - Dubai Government job portal",
@@ -42,12 +42,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T02:56:36Z",
    "http_status": 200,
-   "payload_sha256": "35954cd888e4620528eeabde57864437eeef2970224db380bd5a29e2b4683ab0",
+   "payload_sha256": "902977e07989b9e7b18ddb211b98d4ea3f36f3687a21d7048cf6e637d3b4b432",
    "quotes": [
     "Government job portals:",
     "Dubai Careers - Dubai Government job portal",

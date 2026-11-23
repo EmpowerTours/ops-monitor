@@ -32,12 +32,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "1613f4590375bdb6577384403e10bd38cdaedc5920bc545047fb4f8650154da9",
+   "payload_sha256": "fa8217ddc34e27700b705bacf4863836a5214f82d9b22add078bd76556d271e0",
    "quotes": [
     "del Apartado B del Anexo 10 de las Reglas Generales de Comercio"
    ],
@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "33414f68936c045efb89168a69c91470d983222decc98cf54963a7388a46f46f",
+   "payload_sha256": "1dbcd97b5cdb74faaaa271d9b4c0728345742e6a1b3a581cf946cc07a89abcbc",
    "quotes": [
     "del Apartado B del Anexo 10 de las Reglas Generales de Comercio"
    ],

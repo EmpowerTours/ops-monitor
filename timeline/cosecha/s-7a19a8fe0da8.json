@@ -32,12 +32,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "dd91ccde73555aa6509bdf3d1ec31b33f6cc0c1242e9e9e7d643950893b2f5d9",
+   "payload_sha256": "b8ae53b87b1d3afe4fc80cd3a4c349bee54c9a8801d5cc70d3485ab7f7f4d593",
    "quotes": [
     "يحظر استيراد النبات ات أو جزء منها ما عدا الثمار من الدول التي سجل بها مرض الاصفرار المميت"
    ],
@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "c334e46b45a6ad238061a042489c95676b144268039892fcfe8793871de98874",
+   "payload_sha256": "d1af7f6f6323dae417ee063add3f2261c532357e809eb34fe88274c82108fed6",
    "quotes": [
     "يحظر استيراد النبات ات أو جزء منها ما عدا الثمار من الدول التي سجل بها مرض الاصفرار المميت"
    ],

@@ -2,12 +2,12 @@
  "cited_by": "trips",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T02:56:08Z",
    "http_status": 200,
-   "payload_sha256": "1633831e2414b7b0beb6fd538ff6881a2219b822a32a1128dfacee9a930ca48e",
+   "payload_sha256": "9d615ff52e972cca1a8400044dba4f59ed7bb31f06da4eb38e502ae9d14a8689",
    "quotes": [
     "AED 20 (Normal)",
     "AED 25 (Van)",

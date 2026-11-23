@@ -32,12 +32,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "e04cbfdebf50cec0bb2021460838190ab32bb0f01cb2cdcc5090cd1beec23b82",
+   "payload_sha256": "96b128371a941a1bca8fa43160da883e2bb9a227c5a9d91aa9b6c155b48d0add",
    "quotes": [
     "(Tuta absoluta)"
    ],
@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "1171d0a3296bc80356f9fc68de81a1f820572af78fb10c9ffe609f8e089602cb",
+   "payload_sha256": "5cecaf230114506e61f8e64215b75d153bdb8683c32ddf8acd67121937be23cb",
    "quotes": [
     "(Tuta absoluta)"
    ],

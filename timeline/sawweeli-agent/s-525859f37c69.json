@@ -18,12 +18,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:12:25Z",
    "http_status": 200,
-   "payload_sha256": "95ba715e8e3baeb8133572b93ee3c8c7e23fa935af288e808a64df4bbba346bd",
+   "payload_sha256": "2295b9910d603cdda967acc79c4d9777002144289f281855389fde5b95d63907",
    "quotes": [
     "Job offer - عرض عمل",
     "Search By Transaction Number"
@@ -34,12 +34,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:56:36Z",
    "http_status": 200,
-   "payload_sha256": "dff717f3e80896b72b833128836753f34e99258f050beda2b0e4bb7843a78299",
+   "payload_sha256": "f0ee3e530dceb975d564ea1d0a2c18e291440a5e8096236bfbf17e10f5237c66",
    "quotes": [
     "Job offer - عرض عمل",
     "Search By Transaction Number"

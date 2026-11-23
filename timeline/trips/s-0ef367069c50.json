@@ -21,12 +21,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:12:08Z",
    "http_status": 200,
-   "payload_sha256": "8b10bbbb569cad7d1c33114037e061cd86f2caeff4127199b69c5bbebe17c58e",
+   "payload_sha256": "359fa6a31890a8474fdcf4f61bd1d074393e825121bd429c42ed5c981fa61cbc",
    "quotes": [
     "Luxury Hotel Apartment 20.00",
     "Deluxe Hotel Apartment 15.00",
@@ -40,12 +40,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:56:08Z",
    "http_status": 200,
-   "payload_sha256": "92cb70f00d6d9ebe47576c0349bafab523fd0329bf968de1a5f02d6034eb82f3",
+   "payload_sha256": "f1e014efda653e341e8543be2cce4ff477a887d681c9552fc667f3d33b92c01e",
    "quotes": [
     "Luxury Hotel Apartment 20.00",
     "Deluxe Hotel Apartment 15.00",

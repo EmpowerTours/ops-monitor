@@ -17,12 +17,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:12:25Z",
    "http_status": 200,
-   "payload_sha256": "365ae434ec8ae72eec9139a6374a851deb36855b72e5862243a6aea3e077102a",
+   "payload_sha256": "02f946c35ce4d994eb6889653801f53715cf1b407e5bc9b4d637c6cbb5420016",
    "quotes": [
     "Smart Dubai Government Est, Government Of Dubai"
    ],
@@ -32,12 +32,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:56:36Z",
    "http_status": 200,
-   "payload_sha256": "9ac33f3670b26d6089970765abfde9862d167c8b79b6e54f11e43fc2143edafa",
+   "payload_sha256": "bea002e5c2ffd72f36888c8c4ec346438caa50823abc5ba5e0e17c2f706a2d6e",
    "quotes": [
     "Smart Dubai Government Est, Government Of Dubai"
    ],

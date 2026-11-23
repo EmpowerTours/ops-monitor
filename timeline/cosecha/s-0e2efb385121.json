@@ -33,12 +33,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "f2e157b66b99a4d60535d7be9dd57aa43c7e1d2d9b022d7bda0ed198c84010f7",
+   "payload_sha256": "be7fc4e68b1c8c0b7b727a26993df52ad41ca749fa96f916cd02d80667864463",
    "quotes": [
     "Halal Certification Services",
     "While the Halal National Mark is optional"
@@ -49,12 +49,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "4a75318765ff6ea6d4823d8ea28bd958399123da214bfc78f6fa8bae5ea05680",
+   "payload_sha256": "f0dd9e453e1a9989760dcfb723776f65cc071ffc8cd4a6506fee3508fac3b3a1",
    "quotes": [
     "Halal Certification Services",
     "While the Halal National Mark is optional"

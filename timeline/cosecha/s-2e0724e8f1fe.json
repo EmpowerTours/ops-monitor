@@ -36,12 +36,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "0f61319468e4f881d29d0d2709f919c59959a225771c35b57f725af2f223a257",
+   "payload_sha256": "2eb0da87bb8b7187af3cc1189855551ddf653c7824329440c79a51e41be4bee2",
    "quotes": [
     "The time to obtain the service : 1 working day",
     "122-003-026-000",
@@ -53,12 +53,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "6d3e616e6bef859d147d13732c66373ff0cddacb970bdf4b9336b795bf62b07a",
+   "payload_sha256": "ffb4d4c3c5ef86dcf923cdc3a1116308edc6875cd478d0502a22e5848652c456",
    "quotes": [
     "The time to obtain the service : 1 working day",
     "122-003-026-000",
