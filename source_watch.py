@@ -1968,7 +1968,8 @@ def main(argv: list[str] | None = None) -> int:
         if arch:  # finish inside the step: no capture starts that could not be polled in time
             arch.deadline = time.monotonic() + float(args.budget_s or (cfg.get("archive") or {}).get("budget_s", 600))
         n = timeline.resolve_pending(args.state, arch, why_off)
-        print(f"Save Page Now: {n['archived']} readings archived, {n['deferred']} deferred" + (f" ({why_off})" if not arch else ""), flush=True)
+        print(f"Save Page Now: {n['archived']} readings archived, {n['pointed']} point to an unchanged copy, "
+              f"{n['superseded']} superseded, {n['deferred']} deferred" + (f" ({why_off})" if not arch else ""), flush=True)
         return 0
     if args.check_public_state:
         problems = check_public_state(args.check_public_state)

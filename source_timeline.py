@@ -15,6 +15,7 @@ validate_timeline, validate_queue_file). Standard library only.
 
 from __future__ import annotations
 
+import datetime as dt
 import hashlib
 import json
 import os
@@ -290,40 +291,115 @@ def validate_queue_file(path: str) -> list[str]:
 # Public JSON timeline per source
 
 
+POINTER = "unchanged since the archived copy"  # archive_url then names that earlier copy
+SUPERSEDED = "not archived: the page changed before it could be archived"
+REARCHIVE_DAYS = 30
+
+
+def _archived_at(url: str) -> dt.datetime | None:
+    m = re.search(r"/web/(\d{14})/", url or "")
+    return dt.datetime.strptime(m.group(1), "%Y%m%d%H%M%S").replace(tzinfo=dt.timezone.utc) if m else None
+
+
+def _read_at(p: dict) -> dt.datetime | None:
+    try:
+        return dt.datetime.fromisoformat(p.get("fetched_at", "").replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
 def resolve_pending(state: str, archiver: Any, why_off: str = "") -> dict[str, int]:
-    """The Save Page Now step, after the reports: archive the readings queued as PENDING (at most
-    archiver.max_per_run pages, each URL once), then write the archive URL into each record and its
-    timeline entry and recompute payload_sha256. A record already anchored is sealed and never
-    touched. Over the cap: "deferred", nothing lost. No archiver: the reason, why_off."""
+    """The Save Page Now step, after the reports. For every reading still pending or deferred
+    (never one already anchored), per URL:
+    - only the newest reading can still be archived: the Archive copies what the page says now. An
+      older reading whose text differs from the newest is SUPERSEDED;
+    - if the newest text equals the URL's last archived copy and that copy is at most 30 days old
+      (or the page was not read, so there is nothing to compare), the readings point to that copy
+      (POINTER), with no new capture;
+    - otherwise the URL is archived: changed text first, then never archived, then copies over 30
+      days old, at most archiver.max_per_run URLs; the rest stays deferred. Readings of the same
+      text share the new copy.
+    Each record's payload_sha256 and its timeline entry follow. No archiver: the reason, why_off."""
     q = ProofQueue(os.path.join(state, "proof-queue", "source_read.jsonl"))
     recs = q._all()
-    todo = [r for r in recs if r.get("anchor") is None and r.get("payload", {}).get("archive_status") == PENDING]
+    open_status = {PENDING, DEFERRED}
+    todo = [r for r in recs if r.get("anchor") is None and r.get("payload", {}).get("archive_status") in open_status]
+    n = {"archived": 0, "deferred": 0, "pointed": 0, "superseded": 0}
     if not todo:
-        return {"archived": 0, "deferred": 0}
-    urls = list(dict.fromkeys(r["payload"]["url"] for r in todo))
+        return n
+    # The last archived copy of each URL: (archived at, text sha256 when archived, archive URL).
+    last: dict[str, tuple[dt.datetime, str, str]] = {}
+    for r in recs:
+        p = r.get("payload", {})
+        if p.get("archive_status") == "archived" and p.get("archive_url"):
+            at = _archived_at(p["archive_url"]) or _read_at(p)
+            if at and (p["url"] not in last or at > last[p["url"]][0]):
+                last[p["url"]] = (at, p.get("sha256", ""), p["archive_url"])
+    by_url: dict[str, list[dict]] = {}
+    for r in todo:
+        by_url.setdefault(r["payload"]["url"], []).append(r)
+    decision: dict[int, dict] = {}  # id(record) -> {"archive_url", "archive_status"}
+    want: list[tuple[int, str]] = []  # (priority, url): 0 changed, 1 never archived, 2 stale copy
+    for url, rs in by_url.items():
+        rs.sort(key=lambda r: r["payload"].get("fetched_at", ""))
+        newest = rs[-1]["payload"]
+        sha = newest.get("sha256", "")
+        for r in rs[:-1]:
+            if r["payload"].get("sha256", "") != sha and r["payload"].get("sha256", ""):
+                decision[id(r)] = {"archive_url": "", "archive_status": SUPERSEDED}
+        prev = last.get(url)
+        read = _read_at(newest)
+        fresh = prev is not None and read is not None and (read - prev[0]).days <= REARCHIVE_DAYS
+        if prev and fresh and (not sha or sha == prev[1]):
+            for r in rs:
+                decision.setdefault(id(r), {"archive_url": prev[2], "archive_status": POINTER})
+            continue
+        want.append((0 if prev and sha and sha != prev[1] else 1 if not prev else 2, url))
+    want.sort()
     cap = int(getattr(archiver, "max_per_run", 0)) if archiver else 0
-    got = archiver.archive(urls[:cap]) if archiver and cap else {}
-    n = {"archived": 0, "deferred": 0}
+    chosen = [u for _, u in want[:cap]]
+    got = archiver.archive(chosen) if archiver and chosen else {}
+    for _, url in want:
+        rs = by_url[url]
+        a = got.get(url)
+        if a is None:
+            a = {"archive_url": "", "archive_status": DEFERRED if archiver else "not archived: " + (why_off or "Save Page Now is off")}
+        newest_sha = rs[-1]["payload"].get("sha256", "")
+        for r in rs:
+            if id(r) in decision:
+                continue
+            same = r["payload"].get("sha256", "") in ("", newest_sha)
+            newest = r["payload"].get("fetched_at", "") == rs[-1]["payload"].get("fetched_at", "")
+            if newest or not (a.get("archive_status") == "archived" and same):
+                decision[id(r)] = a
+            else:  # an older reading of the same text: it points to the copy just made
+                decision[id(r)] = {"archive_url": a["archive_url"], "archive_status": POINTER}
     for r in todo:
         p = r["payload"]
-        a = got.get(p["url"]) or {"archive_url": "", "archive_status": DEFERRED if archiver else "not archived: " + (why_off or "Save Page Now is off")}
+        a = decision[id(r)]
         p["archive_url"], p["archive_status"] = a.get("archive_url", ""), a.get("archive_status", "")[:200]
         r["payload_sha256"] = hashlib.sha256(canonical(p)).hexdigest()
         n["archived"] += p["archive_status"] == "archived"
         n["deferred"] += p["archive_status"] == DEFERRED
-        path = os.path.join(state, "timeline", p["cited_by"], p["source_id"] + ".json")
-        try:
-            doc = json.load(open(path, encoding="utf-8"))
-        except (OSError, ValueError):
-            continue
-        for e in doc.get("entries", []):
-            if e.get("ref") == r["ref"]:
-                e.update(archive_url=p["archive_url"], archive_status=p["archive_status"], payload_sha256=r["payload_sha256"])
-        with open(path, "w", encoding="utf-8") as fh:
-            json.dump(doc, fh, indent=1, ensure_ascii=False, sort_keys=True)
-            fh.write("\n")
+        n["pointed"] += p["archive_status"] == POINTER
+        n["superseded"] += p["archive_status"] == SUPERSEDED
+        _update_entry(state, p, r)
     q.rewrite(recs)
     return n
+
+
+def _update_entry(state: str, p: dict, r: dict) -> None:
+    path = os.path.join(state, "timeline", p["cited_by"], p["source_id"] + ".json")
+    try:
+        doc = json.load(open(path, encoding="utf-8"))
+    except (OSError, ValueError):
+        return
+    for e in doc.get("entries", []):
+        if e.get("ref") == r["ref"]:
+            e.update(archive_url=p["archive_url"], archive_status=p["archive_status"], payload_sha256=r["payload_sha256"])
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(doc, fh, indent=1, ensure_ascii=False, sort_keys=True)
+        fh.write("\n")
 
 
 def update_timeline(path: str, record: dict) -> dict:

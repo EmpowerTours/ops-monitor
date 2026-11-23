@@ -249,6 +249,16 @@ limit and never lose a result:
   (recomputing `payload_sha256`; an anchored record is never touched). Over the cap a reading is
   "deferred"; a killed archive step leaves readings pending for the next run. A slow archive never
   holds up verification.
+- **What gets archived (owner decision 2026-11-23).** Each run queues ~185 readings and the step
+  completes 20-30, so archiving every reading only grew the backlog (run 45102813992: 4 archived,
+  344 deferred). Per URL, only its newest reading can still be archived (the Archive copies what
+  the page says now). If that text equals the URL's last archived copy and the copy is at most 30
+  days old, or the page was not read, the reading points to that copy
+  ("unchanged since the archived copy", archive_url = the earlier copy): no new capture. Otherwise
+  the URL is archived, changed text first, then never archived, then copies over 30 days old.
+  Readings of the same text share the copy; an older reading whose text differs from the newest
+  is "not archived: the page changed before it could be archived". Pending and deferred readings
+  (the backlog) are resolved the same way on every run.
 
 ## 6. Canary: the verifier checks itself
 
