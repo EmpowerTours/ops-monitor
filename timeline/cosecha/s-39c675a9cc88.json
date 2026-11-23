@@ -45,6 +45,21 @@
    "run_id": "20261123T021013Z",
    "sha256": "241afddd6608fcdfb9cfd38543c7d6d3f125d26e2954007ea168f8b3a3c79a18",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T03:10:18Z",
+   "http_status": 200,
+   "payload_sha256": "bd954a05ea663151d8fe08b3a5d2a270f8611457e1645aba5911306d2aeafc89",
+   "quotes": [
+    "approval is obtained to import an agricultural consignment including (seeds & tubers, seedlings & plants & palm seedlings, and honey bees)"
+   ],
+   "ref": "cosecha/s-39c675a9cc88/2026-11-23T03:10:18Z",
+   "run_id": "20261123T025424Z",
+   "sha256": "241afddd6608fcdfb9cfd38543c7d6d3f125d26e2954007ea168f8b3a3c79a18",
+   "status": "verified"
   }
  ],
  "source_id": "s-39c675a9cc88",

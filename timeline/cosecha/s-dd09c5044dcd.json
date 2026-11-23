@@ -51,6 +51,23 @@
    "run_id": "20261123T021013Z",
    "sha256": "0503c4c90efdd7afac773d31e7c91adfaf42e11175d23992955744203ff536fd",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T03:10:18Z",
+   "http_status": 200,
+   "payload_sha256": "0d921d82e6f190b12c4b15a380c31d66a3de5c99e7840f99425905ee144d2b26",
+   "quotes": [
+    "de las consideradas en las fracciones arancelarias listadas en la fracción II del Anexo 10 de las Reglas Generales de Comercio Exterior vigentes",
+    "Estar inscrito y activo en el RFC.",
+    "Contar con e.firma vigente."
+   ],
+   "ref": "cosecha/s-dd09c5044dcd/2026-11-23T03:10:18Z",
+   "run_id": "20261123T025424Z",
+   "sha256": "0503c4c90efdd7afac773d31e7c91adfaf42e11175d23992955744203ff536fd",
+   "status": "verified"
   }
  ],
  "source_id": "s-dd09c5044dcd",

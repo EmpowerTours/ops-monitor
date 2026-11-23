@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-23T02:12:25Z",
+ "fetched_at": "2026-11-23T02:56:36Z",
  "id": "s-ffab9f2d9e74",
- "last_read_fetched_at": "2026-11-23T02:12:25Z",
- "manifest_fingerprint": "baa15231c13899c1944500f9d2fbed3b159aaca230478005401f87460dc4fa3b",
- "run_id": "20261123T021013Z",
+ "last_read_fetched_at": "2026-11-23T02:56:36Z",
+ "manifest_fingerprint": "a166479b36f74f8551f94beb00037a532756d8ae3d6bc6d486e9056593bf5efe",
+ "run_id": "20261123T025424Z",
  "sha256": "fe3d5d1a3f9a45523d06239702aa90ae5963db3035d58d8dc63b151f1ab879e7",
- "status": "changed_quote_ok",
+ "status": "verified",
  "url": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/residence-visa-for-working-in-the-uae"
 }

@@ -38,6 +38,25 @@
    "run_id": "20261123T021013Z",
    "sha256": "e120386976ecaaace755a701b10453c5cd06941f92427531ed632cf550706bff",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T02:56:08Z",
+   "http_status": 200,
+   "payload_sha256": "92cb70f00d6d9ebe47576c0349bafab523fd0329bf968de1a5f02d6034eb82f3",
+   "quotes": [
+    "Luxury Hotel Apartment 20.00",
+    "Deluxe Hotel Apartment 15.00",
+    "Standard Hotel Apartment 10.00",
+    "Luxury Holiday Home 15.00",
+    "Standard Holiday Home 10.00"
+   ],
+   "ref": "trips/s-0ef367069c50/2026-11-23T02:56:08Z",
+   "run_id": "20261123T025424Z",
+   "sha256": "e120386976ecaaace755a701b10453c5cd06941f92427531ed632cf550706bff",
+   "status": "verified"
   }
  ],
  "source_id": "s-0ef367069c50",

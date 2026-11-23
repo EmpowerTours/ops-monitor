@@ -45,6 +45,21 @@
    "run_id": "20261123T021013Z",
    "sha256": "f64760e9c66e38c1b26c75836ddf9be913e6fe69e3ffd6c8a39ab5743a9feafd",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T03:10:18Z",
+   "http_status": 200,
+   "payload_sha256": "04e30329265e48412d024bb94ea45a5d6d85d21e211ea26d04e0b21f1d571ee9",
+   "quotes": [
+    "List of Approved Slaughterhouses"
+   ],
+   "ref": "cosecha/s-d8bd2d86d33b/2026-11-23T03:10:18Z",
+   "run_id": "20261123T025424Z",
+   "sha256": "f64760e9c66e38c1b26c75836ddf9be913e6fe69e3ffd6c8a39ab5743a9feafd",
+   "status": "verified"
   }
  ],
  "source_id": "s-d8bd2d86d33b",

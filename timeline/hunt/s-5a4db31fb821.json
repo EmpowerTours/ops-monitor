@@ -1,0 +1,25 @@
+{
+ "cited_by": "hunt",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T02:55:56Z",
+   "http_status": 200,
+   "payload_sha256": "3f378db7a6307e2d957c82a8696306d51ee2211647756017b56486012241caaa",
+   "quotes": [
+    "Federal Decree Law No. 45 of 2021 Regarding the Protection of Personal Data, also known as the Personal Data Protection Law",
+    "The law gives the owner of the data the right to request for corrections of inaccurate personal data and to restrict or stop the processing of his personal data.",
+    "It came into force on 2 January 2022."
+   ],
+   "ref": "hunt/s-5a4db31fb821/2026-11-23T02:55:56Z",
+   "run_id": "20261123T025424Z",
+   "sha256": "86344bcd0709ad07d0ef548786a4cf7fa18fa7dff1a2b362f8f63cbcb81babcf",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-5a4db31fb821",
+ "url": "https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws",
+ "v": 1
+}

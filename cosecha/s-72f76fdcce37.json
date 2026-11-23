@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T02:27:05Z",
+ "fetched_at": "2026-11-23T03:10:18Z",
  "id": "s-72f76fdcce37",
- "last_read_fetched_at": "2026-11-23T02:27:05Z",
+ "last_read_fetched_at": "2026-11-23T03:10:18Z",
  "manifest_fingerprint": "3b08c6f53ae890981b2e87ebae6e3b0dab01e0e32c0feb9bcd968c95348ed306",
- "run_id": "20261123T021013Z",
+ "run_id": "20261123T025424Z",
  "sha256": "86acc97985d9107bb127146ec193938d163f9ad8c2c45f5f91057c8b31158d27",
  "status": "verified",
  "url": "https://gd.eppo.int/taxon/HETDRO/distribution/MX"

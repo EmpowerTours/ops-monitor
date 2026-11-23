@@ -45,6 +45,21 @@
    "run_id": "20261123T021013Z",
    "sha256": "1cafd4ca6a4889daa7f05c096d0aff0182a253ff404c0d24353ab2acf436b3d1",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T03:10:18Z",
+   "http_status": 200,
+   "payload_sha256": "1171d0a3296bc80356f9fc68de81a1f820572af78fb10c9ffe609f8e089602cb",
+   "quotes": [
+    "(Tuta absoluta)"
+   ],
+   "ref": "cosecha/s-5cfc7803ffd2/2026-11-23T03:10:18Z",
+   "run_id": "20261123T025424Z",
+   "sha256": "1cafd4ca6a4889daa7f05c096d0aff0182a253ff404c0d24353ab2acf436b3d1",
+   "status": "verified"
   }
  ],
  "source_id": "s-5cfc7803ffd2",

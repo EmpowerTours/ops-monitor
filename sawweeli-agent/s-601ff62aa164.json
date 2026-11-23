@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-23T02:12:25Z",
+ "fetched_at": "2026-11-23T02:56:36Z",
  "id": "s-601ff62aa164",
- "last_read_fetched_at": "2026-11-23T02:12:25Z",
+ "last_read_fetched_at": "2026-11-23T02:56:36Z",
  "manifest_fingerprint": "fff4f8d3620deeaad1cb85b26feb47a0f686b0576552a07a8b6ee3866d91ce32",
- "run_id": "20261123T021013Z",
- "sha256": "67bc70e0da91df41ba7bbe8549b27e727dba9d97ab173513155056f1a25a7dd9",
- "status": "verified",
+ "run_id": "20261123T025424Z",
+ "sha256": "af4531afb06753418608e150a394807e28db3f5333355314017b9ef4bd301289",
+ "status": "changed_quote_ok",
  "url": "https://u.ae/en"
 }

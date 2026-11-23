@@ -1,0 +1,23 @@
+{
+ "cited_by": "trips",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T02:56:08Z",
+   "http_status": 200,
+   "payload_sha256": "2d0caae418f32352504354f7e6429ab89efd334e321c90a9ae2f8b6c4030a850",
+   "quotes": [
+    "Expiry of the permitted stay period for the foreigner in the State, or the cancellation or expiration of the (entry visa / residence permit / exit permit / newborn registration), per day. - 50 AED"
+   ],
+   "ref": "trips/s-69ba789cc043/2026-11-23T02:56:08Z",
+   "run_id": "20261123T025424Z",
+   "sha256": "0c5514a0f0cc579422ad3a958d565a4a18465ede00ad63d749e570af7978b395",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-69ba789cc043",
+ "url": "https://icp.gov.ae/en/services-details/?serviceid=68e73faf5ae59b00117389f1",
+ "v": 1
+}
