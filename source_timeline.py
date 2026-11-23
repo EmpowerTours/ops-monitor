@@ -30,6 +30,10 @@ QUOTE_MAX_CHARS = 400  # a published quote stays a short quote, never a passage
 MAX_STR = 2048
 HASH_OF = "normalised-text-v1"  # sha256 over the watcher's normal form of the page text
 
+# A reading queued before Save Page Now ran: the archive step after the reports resolves it.
+PENDING = "pending: Save Page Now runs after the reports"
+DEFERRED = "not archived: deferred (per-run cap)"
+
 SAVE_URL = "https://web.archive.org/save"
 STATUS_URL = "https://web.archive.org/save/status/"
 WEB_URL = "https://web.archive.org/web/"
@@ -76,10 +80,14 @@ class Archiver:
 
     def __init__(self, opener: Callable[..., Any] | None = None, sleep: Callable[[float], None] = time.sleep,
                  user_agent: str = "source-watch/1.0", auth: str = "", min_interval_s: float = 21.0, max_per_run: int = 40,
-                 poll_s: float = 10.0, poll_rounds: int = 12, not_within: str = "20h", timeout_s: float = 60.0):
+                 poll_s: float = 10.0, poll_rounds: int = 12, not_within: str = "20h", timeout_s: float = 60.0,
+                 clock: Callable[[], float] = time.monotonic, deadline: float | None = None):
         self.opener, self.sleep = opener or urllib.request.urlopen, sleep
         self.ua, self.auth, self.min_interval, self.max_per_run = user_agent, auth, min_interval_s, max_per_run
         self.poll_s, self.poll_rounds, self.not_within, self.timeout = poll_s, poll_rounds, not_within, timeout_s
+        # By `deadline` (clock seconds) everything is done: no capture starts unless there is still
+        # time to poll for it; what is not started is "deferred" to a later run, not lost.
+        self.clock, self.deadline = clock, deadline
 
     def _call(self, url: str, data: dict | None = None) -> dict:
         headers = {"User-Agent": self.ua, "Accept": "application/json"}
@@ -109,6 +117,10 @@ class Archiver:
             if sent >= self.max_per_run:
                 out[url] = self._failed(f"per-run cap of {self.max_per_run} reached")
                 continue
+            if self.deadline is not None and \
+                    self.clock() + (self.min_interval if sent else 0) + self.poll_s * self.poll_rounds > self.deadline:
+                out[url] = {"archive_url": "", "archive_status": DEFERRED}
+                continue
             if sent:
                 self.sleep(self.min_interval)
             sent += 1
@@ -129,7 +141,7 @@ class Archiver:
             else:
                 out[url] = self._failed(str(doc.get("status_ext") or doc.get("message") or "no job id"))
         for rnd in range(self.poll_rounds):
-            if not jobs:
+            if not jobs or (self.deadline is not None and self.clock() + self.poll_s > self.deadline):
                 break
             self.sleep(self.poll_s)
             for url, job in list(jobs.items()):
@@ -248,6 +260,13 @@ class ProofQueue:
     def pending(self) -> list[dict]:
         return [x for x in self._all() if x.get("anchor") is None]
 
+    def rewrite(self, records: list[dict]) -> None:
+        tmp = self.path + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as fh:
+            for r in records:
+                fh.write(json.dumps(r, sort_keys=True, ensure_ascii=False) + "\n")
+        os.replace(tmp, self.path)
+
 
 def validate_queue_file(path: str) -> list[str]:
     out = []
@@ -269,6 +288,42 @@ def validate_queue_file(path: str) -> list[str]:
 
 # ---------------------------------------------------------------------------------------------
 # Public JSON timeline per source
+
+
+def resolve_pending(state: str, archiver: Any, why_off: str = "") -> dict[str, int]:
+    """The Save Page Now step, after the reports: archive the readings queued as PENDING (at most
+    archiver.max_per_run pages, each URL once), then write the archive URL into each record and its
+    timeline entry and recompute payload_sha256. A record already anchored is sealed and never
+    touched. Over the cap: "deferred", nothing lost. No archiver: the reason, why_off."""
+    q = ProofQueue(os.path.join(state, "proof-queue", "source_read.jsonl"))
+    recs = q._all()
+    todo = [r for r in recs if r.get("anchor") is None and r.get("payload", {}).get("archive_status") == PENDING]
+    if not todo:
+        return {"archived": 0, "deferred": 0}
+    urls = list(dict.fromkeys(r["payload"]["url"] for r in todo))
+    cap = int(getattr(archiver, "max_per_run", 0)) if archiver else 0
+    got = archiver.archive(urls[:cap]) if archiver and cap else {}
+    n = {"archived": 0, "deferred": 0}
+    for r in todo:
+        p = r["payload"]
+        a = got.get(p["url"]) or {"archive_url": "", "archive_status": DEFERRED if archiver else "not archived: " + (why_off or "Save Page Now is off")}
+        p["archive_url"], p["archive_status"] = a.get("archive_url", ""), a.get("archive_status", "")[:200]
+        r["payload_sha256"] = hashlib.sha256(canonical(p)).hexdigest()
+        n["archived"] += p["archive_status"] == "archived"
+        n["deferred"] += p["archive_status"] == DEFERRED
+        path = os.path.join(state, "timeline", p["cited_by"], p["source_id"] + ".json")
+        try:
+            doc = json.load(open(path, encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        for e in doc.get("entries", []):
+            if e.get("ref") == r["ref"]:
+                e.update(archive_url=p["archive_url"], archive_status=p["archive_status"], payload_sha256=r["payload_sha256"])
+        with open(path, "w", encoding="utf-8") as fh:
+            json.dump(doc, fh, indent=1, ensure_ascii=False, sort_keys=True)
+            fh.write("\n")
+    q.rewrite(recs)
+    return n
 
 
 def update_timeline(path: str, record: dict) -> dict:

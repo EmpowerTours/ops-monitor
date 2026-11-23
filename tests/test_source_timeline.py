@@ -127,6 +127,21 @@ class SavePageNow(unittest.TestCase):
         self.assertEqual(got["https://b.gov.ae/y"]["archive_status"], "not archived: per-run cap of 1 reached")
         self.assertLessEqual(fake.polls["https://a.gov.ae/x"], 3)
 
+    def test_deadline_stops_submitting_and_defers_the_rest(self):
+        # Run 45098623502: 30 captures at 21 s plus polling overran the step's 15 minutes and
+        # nothing was written. With a deadline the archiver stops submitting in time to poll.
+        now = [0.0]
+        fake = FakeArchive(pending_rounds=0)
+        a = tl.Archiver(opener=fake, sleep=lambda s: now.__setitem__(0, now[0] + s), user_agent="source-watch/1.0", auth="a:b",
+                        min_interval_s=21, poll_s=10, poll_rounds=3, clock=lambda: now[0], deadline=100.0)
+        got = a.archive([f"https://a.gov.ae/p{i}" for i in range(10)])
+        archived = [u for u, v in got.items() if v["archive_status"] == "archived"]
+        deferred = [u for u, v in got.items() if v["archive_status"] == tl.DEFERRED]
+        self.assertGreaterEqual(len(archived), 1)
+        self.assertEqual(len(archived) + len(deferred), 10, "every URL gets a status")
+        self.assertLessEqual(now[0], 100.0 + 1e-9, "the archiver ends by its deadline")
+        self.assertEqual(len([r for r in fake.requests if r["method"] == "POST"]), len(archived), "no capture started that could not finish")
+
     def test_only_http_urls(self):
         fake = FakeArchive()
         got = archiver(fake).archive(["file:///etc/passwd", "javascript:alert(1)"])

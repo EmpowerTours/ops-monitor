@@ -30,7 +30,9 @@ concurrency:
 jobs:
   watch:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    # Reading pages: run_budget_s (30 min) inside the watch step's 40 min; Save Page Now has its own
+    # 15 min step after the reports; commits and setup take the rest.
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
@@ -86,6 +88,7 @@ jobs:
           if [ "$SOURCE_WATCH_LLM" = "on" ]; then .venv/bin/pip install -q anthropic==2.4.0; fi
 
       - name: Run the source watch
+        timeout-minutes: 40
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # One verify token per app (each equals that app's SOURCES_VERIFY_TOKEN). Unset: results not sent.
@@ -103,8 +106,7 @@ jobs:
           SOURCE_WATCH_LLM: ${{ vars.SOURCE_WATCH_LLM }}
           SOURCE_WATCH_LLM_MAX_USD: ${{ vars.SOURCE_WATCH_LLM_MAX_USD }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          # Save Page Now per reading (public timeline). SPN2 key "access:secret"; unset: no request is sent
-          # (the API refuses anonymous calls). The code waits 21 s between requests. SOURCE_WATCH_SPN=off stops it.
+          # Save Page Now runs in its own step below; this one only queues the readings as pending.
           SOURCE_WATCH_SPN_KEY: ${{ secrets.SOURCE_WATCH_SPN_KEY }}
           SOURCE_WATCH_SPN: ${{ vars.SOURCE_WATCH_SPN }}
           DRY_RUN: ${{ inputs.dry_run }}
@@ -116,6 +118,35 @@ jobs:
           .venv/bin/python source_watch.py $args
 
       - name: Commit the public state (refused if anything but metadata is in it)
+        if: always()
+        run: |
+          .venv/bin/python source_watch.py --check-public-state .state
+          cd .state
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A .
+          if git diff --cached --quiet; then echo "no state changed"; exit 0; fi
+          git commit -q -m "state: $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git push -q origin HEAD:source-watch-state && exit 0
+            sleep 5
+          done
+          echo "state push failed after 3 attempts" >&2
+          exit 1
+
+      - name: Save Page Now for this run's readings (after the reports; never blocks them)
+        if: always() && inputs.dry_run != true
+        timeout-minutes: 15
+        continue-on-error: true
+        env:
+          # SPN2 key "access:secret"; unset: no request is sent (the API refuses anonymous calls) and
+          # the readings say why. 21 s between requests, at most archive.max_per_run per run; the rest
+          # is "deferred", never lost. SOURCE_WATCH_SPN=off stops it.
+          SOURCE_WATCH_SPN_KEY: ${{ secrets.SOURCE_WATCH_SPN_KEY }}
+          SOURCE_WATCH_SPN: ${{ vars.SOURCE_WATCH_SPN }}
+        run: .venv/bin/python source_watch.py --archive-pending --state .state
+
+      - name: Commit the archive URLs (same check)
         if: always()
         run: |
           .venv/bin/python source_watch.py --check-public-state .state
