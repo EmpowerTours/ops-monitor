@@ -5,7 +5,8 @@
     "judge_path": "/judge",
     "healthz": "/healthz",
     "keyword": "Asas",
-    "readyz": "/readyz"
+    "readyz": "/readyz",
+    "sources_status": "/.well-known/sources-status.json"
   },
   {
     "app": "faez",
@@ -13,7 +14,8 @@
     "judge_path": "/try",
     "healthz": "/healthz",
     "keyword": "Faez",
-    "readyz": "/readyz"
+    "readyz": "/readyz",
+    "sources_status": "/.well-known/sources-status.json"
   },
   {
     "app": "cosecha",
@@ -30,7 +32,8 @@
     "judge_path": "/",
     "healthz": "/healthz",
     "keyword": "Haqiqi",
-    "readyz": "/readyz"
+    "readyz": "/readyz",
+    "sources_status": "/.well-known/sources-status.json"
   },
   {
     "app": "relocatedubai",
@@ -38,7 +41,8 @@
     "judge_path": "/judge",
     "healthz": "/healthz",
     "keyword": "RelocateDubai",
-    "readyz": "/readyz"
+    "readyz": "/readyz",
+    "sources_status": "/.well-known/sources-status.json"
   },
   {
     "app": "hunt-dubai",
