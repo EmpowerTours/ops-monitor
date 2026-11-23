@@ -2,12 +2,12 @@
  "cited_by": "trips",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
-   "archive_url": "",
+   "archive_status": "archived",
+   "archive_url": "https://web.archive.org/web/20261123014451/https://www.airbnb.com/s/Dubai/homes",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T01:20:58Z",
    "http_status": 200,
-   "payload_sha256": "92704e4cb24436a945cd932633d94d5ef8b90633d9c3da78a72a1f358581f377",
+   "payload_sha256": "ea6c0cd04c3d1cfae0d04f076439cc8cf27abddd7003b4bb176a0f08737cafce",
    "quotes": [],
    "ref": "trips/s-e19247eefbc6/2026-11-23T01:20:58Z",
    "run_id": "20261123T011605Z",

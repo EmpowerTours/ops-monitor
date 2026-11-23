@@ -18,12 +18,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T01:32:05Z",
    "http_status": 200,
-   "payload_sha256": "323730bc0bf1f44e966c85d36980a18a1963bd77665b3843240c14469c47cc21",
+   "payload_sha256": "f86a89e5c0aeb0d52f176f3b266f1a58899ef759f31449156c8a14b573631ee0",
    "quotes": [
     "Obtención del certificado zoosanitario para exportación",
     "MXN 717"

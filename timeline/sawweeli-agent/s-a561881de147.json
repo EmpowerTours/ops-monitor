@@ -2,12 +2,12 @@
  "cited_by": "sawweeli-agent",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T01:22:59Z",
    "http_status": 200,
-   "payload_sha256": "5dd46409727944f76511effff33baef13e669ae8b3997e7b011e4f919308554a",
+   "payload_sha256": "e99d9e654a66e0c5642c1b4acbb6d8be17949a8735bbd7b57a3b5d965540b37a",
    "quotes": [
     "Smart Dubai Government Est, Government Of Dubai"
    ],

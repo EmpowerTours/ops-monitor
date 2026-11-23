@@ -2,12 +2,12 @@
  "cited_by": "cosecha",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T01:32:05Z",
    "http_status": 0,
-   "payload_sha256": "70fb8a7afff76763e4bd0ee7c75d83ebf400d22ea414e69766e4c1c957a0af03",
+   "payload_sha256": "68f889cee40ce76d5ac2f1badd7d9acc3b3cb4b63887dc6979c155aad2d4122f",
    "quotes": [
     "ECAS Product Type Honey"
    ],

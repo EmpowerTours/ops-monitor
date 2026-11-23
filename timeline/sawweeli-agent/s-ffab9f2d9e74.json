@@ -2,12 +2,12 @@
  "cited_by": "sawweeli-agent",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T01:22:59Z",
    "http_status": 0,
-   "payload_sha256": "393bcd9d41c51b4761e9260c1f5fa384f39432bdca231334b830253c10c53e33",
+   "payload_sha256": "0888e6d61268cfe5daeb491d6793574d2ff9eba6954cca2dd2cafe1d85c3802e",
    "quotes": [
     "The employer must apply for the standard work visa."
    ],

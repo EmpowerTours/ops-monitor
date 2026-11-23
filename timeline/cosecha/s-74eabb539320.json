@@ -30,12 +30,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T01:32:05Z",
    "http_status": 200,
-   "payload_sha256": "3b18e38481cc19d1fa3179558986c659fc797c0186ae62e566cbd8a3a73d5f7d",
+   "payload_sha256": "0323f173b1f14529b2bcbd0651b182eabcdc47a92eec4b56818a4cd34ea8c64d",
    "quotes": [
     "Malus domestica (MABSD)",
     "Citrus x aurantium var. paradisi (CIDPA)",

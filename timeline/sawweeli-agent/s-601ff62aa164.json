@@ -2,12 +2,12 @@
  "cited_by": "sawweeli-agent",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T01:22:59Z",
    "http_status": 0,
-   "payload_sha256": "8c305993cba63ff8dc3a099e27e67e3af47a55587bcf27f2ce1a952dab69f17c",
+   "payload_sha256": "4f9e0889e789b1f2c6f9bcb218e3aaa6d41766938a8dc1d095e86fd81871d745",
    "quotes": [
     "The United Arab Emirates' Government Platform"
    ],

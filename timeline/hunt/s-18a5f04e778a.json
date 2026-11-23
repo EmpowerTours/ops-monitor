@@ -2,12 +2,12 @@
  "cited_by": "hunt",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: The same snapshot had been made 56 minutes ago. You can make new capture of this URL after 20 hours.",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T01:17:07Z",
    "http_status": 200,
-   "payload_sha256": "fa35851766799958d2673c8e85d1a114ac26eb6d2692ab792c2f4ee854b73057",
+   "payload_sha256": "f5c43b9a592ace59b0a623129bb1ef52f93f2e05a425ae1161de25443a5ccfd8",
    "quotes": [
     "OpenStreetMap is open data, licensed under the Open Data Commons Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF).",
     "You are free to copy, distribute, transmit and adapt our data, as long as you credit OpenStreetMap and its contributors.",

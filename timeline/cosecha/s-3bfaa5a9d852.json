@@ -20,12 +20,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T01:32:05Z",
    "http_status": 200,
-   "payload_sha256": "dc3bb49af2f51e80ede29914415e6c9e06f0a5f75ff95e0139e82778d1d48db9",
+   "payload_sha256": "2c7ea30c1382fe78ada9a9d6abfda298178dcf978eda3eaaac8ec715c1d4c334",
    "quotes": [
     "Citrus x aurantium var. paradisi (CIDPA)",
     "Psidium guajava (PSIGU)",

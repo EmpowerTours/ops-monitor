@@ -2,12 +2,12 @@
  "cited_by": "sawweeli-agent",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T01:22:59Z",
    "http_status": 200,
-   "payload_sha256": "3a008778756b607af91f02211909b41a2835541b661ce8ab67d63a46ab3bc0b3",
+   "payload_sha256": "d17641e25d3127d398144ba99563fe444655784f0fe291b4d57cd9ec878226a6",
    "quotes": [
     "E& إي إند",
     "Al Qusais القصيص",

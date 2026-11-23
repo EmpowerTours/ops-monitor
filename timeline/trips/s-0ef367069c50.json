@@ -2,12 +2,12 @@
  "cited_by": "trips",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
-   "archive_url": "",
+   "archive_status": "archived",
+   "archive_url": "https://web.archive.org/web/20261123014037/https://dlp.dubai.gov.ae/Legislation%20Reference/2014/Executive%20Council%20Resolution%20No.%20(2)%20of%202014.html",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T01:20:58Z",
    "http_status": 200,
-   "payload_sha256": "783139f858af525518b4f6ca61665d519a917cf70f909f6844065846d561cc2b",
+   "payload_sha256": "e13e1c6d598b44e79159feed279ab086185c978e2c7c700acb0a41602891c47b",
    "quotes": [
     "Luxury Hotel Apartment 20.00",
     "Deluxe Hotel Apartment 15.00",

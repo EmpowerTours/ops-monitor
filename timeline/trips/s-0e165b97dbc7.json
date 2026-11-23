@@ -2,12 +2,12 @@
  "cited_by": "trips",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
-   "archive_url": "",
+   "archive_status": "archived",
+   "archive_url": "https://web.archive.org/web/20261123014342/https://u.ae/",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T01:20:58Z",
    "http_status": 0,
-   "payload_sha256": "a0cfec629425182494011b07bf0df6f5ad24dafc7c36ae94c4792352602e3f89",
+   "payload_sha256": "c845aef783eb98fa49f8ad0f1e0522cd9b6f181dee3059cb2f5dbebdb7960a35",
    "quotes": [],
    "ref": "trips/s-0e165b97dbc7/2026-11-23T01:20:58Z",
    "run_id": "20261123T011605Z",

@@ -18,12 +18,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T01:32:05Z",
    "http_status": 200,
-   "payload_sha256": "4f3cf4d2a5bf3877b2f46be218602c59fc1e2f7d085444671b70037baf2bdde6",
+   "payload_sha256": "267e4fada7ece3d61302a58adaa3552e6584d5e7bf0d56315016a6232356e152",
    "quotes": [
     "0409 - Natural honey",
     "Health certificate from the country of origin"

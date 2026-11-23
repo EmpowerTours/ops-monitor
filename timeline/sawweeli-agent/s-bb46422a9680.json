@@ -2,12 +2,12 @@
  "cited_by": "sawweeli-agent",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T01:22:59Z",
    "http_status": 200,
-   "payload_sha256": "f7f36f08488f77538af3b9b0964e8ba5067e98cec266a81caca52c95ecabd4b6",
+   "payload_sha256": "6e08387406d5c43ac9796b9466b13f969442a9fd2b4542a0c4be50dc73acb09f",
    "quotes": [
     "حقوق النسخ مؤسسة حكومة دبي الذكية"
    ],

@@ -2,12 +2,12 @@
  "cited_by": "sawweeli-agent",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T01:22:59Z",
    "http_status": 0,
-   "payload_sha256": "0c4391b07931c3d776bc3083328427a515239e24f466997d5ed1d37dfa74653b",
+   "payload_sha256": "a7b571a0f149f2e186402af891907af9a7fd26555581fb650a4585254e2f6b2c",
    "quotes": [
     "Government job portals:",
     "Dubai Careers - Dubai Government job portal",

@@ -18,12 +18,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T01:32:05Z",
    "http_status": 200,
-   "payload_sha256": "21cdee14f1dd9ba5a1328edfbd9f9bd7560f4cad068dd83a7a629143dfbdd40f",
+   "payload_sha256": "1da1b6056b7b0bdd22cc7ec1e73a7ddcb79ea75d620fc15b11a5d64367b9c8c6",
    "quotes": [
     "registered by Dubai Municipality prior to being placed in the Emirate of Dubai market",
     "Copy of valid Trade License."
