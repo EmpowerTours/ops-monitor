@@ -72,6 +72,24 @@
    "run_id": "20261123T025424Z",
    "sha256": "76f13317d0a0e2d4eab19ab673495aa0f6ce6e6254bbb73b46ab1adbebcd71f7",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T18:15:38Z",
+   "http_status": 200,
+   "payload_sha256": "fc1972bcf5fa75da79e149ef55801929a77398276ee3f1da830c22e7120d9557",
+   "quotes": [
+    "Food product registration in ZAD, coupled with import inspection procedures",
+    "UAE.S 9:2019 requires a production date or harvest year and packing date",
+    "Health certificate issued by a governmental health authority in the country of origin",
+    "The UAE's national halal mark or logo (see right) is voluntary but no other halal marks are permitted in the UAE"
+   ],
+   "ref": "cosecha/s-a9fcea8abc05/2026-11-23T18:15:38Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "76f13317d0a0e2d4eab19ab673495aa0f6ce6e6254bbb73b46ab1adbebcd71f7",
+   "status": "verified"
   }
  ],
  "source_id": "s-a9fcea8abc05",

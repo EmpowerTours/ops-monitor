@@ -1,0 +1,23 @@
+{
+ "cited_by": "relocatedubai",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:04:09Z",
+   "http_status": 200,
+   "payload_sha256": "09ebb624a6550db3b47ead8ca149add7337bd6951e595f47fbe3abcf1008cf1f",
+   "quotes": [
+    "The Index Rate (IR) band is set at AED 550 - 750/- per member per year plus VAT"
+   ],
+   "ref": "relocatedubai/s-cc15506e2dd5/2026-11-23T18:04:09Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "6428d3d17ebd08bd157223b94dab604b58660f55593d38bdae5029c6433e6722",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-cc15506e2dd5",
+ "url": "https://assets.april.fr/april-international/Resources/pdf-resources-dha-essential-benefits-plan.pdf",
+ "v": 1
+}

@@ -1,0 +1,25 @@
+{
+ "cited_by": "relocatedubai",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:04:09Z",
+   "http_status": 200,
+   "payload_sha256": "8a79b70ff0935e4cb53383920a6225f73687ac2757a6544ecc354c85b26bae25",
+   "quotes": [
+    "It is granted for a period of five years, with the option of renewal",
+    "Provide proof of investment or contribution to a business venture within the UAE.",
+    "Obtain the necessary licences and approvals from the relevant authorities."
+   ],
+   "ref": "relocatedubai/s-fe28501a5d28/2026-11-23T18:04:09Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "a93bb313960d01bc769ab557f61a96c59052262d5f6af45871fc14d14df8f5c9",
+   "status": "changed_quote_ok"
+  }
+ ],
+ "source_id": "s-fe28501a5d28",
+ "url": "https://icp.gov.ae/en/services/uae-green-residency/",
+ "v": 1
+}

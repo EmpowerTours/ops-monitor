@@ -1,0 +1,27 @@
+{
+ "cited_by": "relocatedubai",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:04:09Z",
+   "http_status": 200,
+   "payload_sha256": "b4ba8e617f4b9a44ab77646d74e420f078de669e098f8c15d0d2699fc0591a61",
+   "quotes": [
+    "Studio apartment AED 40K",
+    "1-bed apartment AED 58K",
+    "2-bed apartment AED 76K",
+    "3-bed apartment AED 120K",
+    "Median Ejari rent, the 12 months to 19 November 2026"
+   ],
+   "ref": "relocatedubai/s-864e7a6ca4b3/2026-11-23T18:04:09Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "74d89b9703469e5f641e31d94d4b31a5153c7847c82a87c53f4c18d7cc510b4e",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-864e7a6ca4b3",
+ "url": "https://www.brickdxb.com/dubai-rent-by-area",
+ "v": 1
+}

@@ -1,0 +1,25 @@
+{
+ "cited_by": "relocatedubai",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:04:09Z",
+   "http_status": 200,
+   "payload_sha256": "58a4bc49fa446130806fd556ddeb51d419980b7488979ba38b9e64cb9b2a8989",
+   "quotes": [
+    "Search By Transaction Number",
+    "Passport Number (*)",
+    "Nationality (*)"
+   ],
+   "ref": "relocatedubai/s-525859f37c69/2026-11-23T18:04:09Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "ed1404c683abffcd574a44bc7cac2494f27912b2686e2e0bca52529db9299197",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-525859f37c69",
+ "url": "https://receipts.mohre.gov.ae/OfferInquiry/Index?langid=2",
+ "v": 1
+}

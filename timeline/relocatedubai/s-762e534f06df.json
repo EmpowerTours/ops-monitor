@@ -1,0 +1,25 @@
+{
+ "cited_by": "relocatedubai",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:04:09Z",
+   "http_status": 200,
+   "payload_sha256": "ad84e097416fc56b87f88f7750afb50495b73b1aaf1ac4d0f6eef1429f857db0",
+   "quotes": [
+    "Studio AED 40,000/year",
+    "1 bedroom AED 58,000/year",
+    "from 664,309 Ejari contracts"
+   ],
+   "ref": "relocatedubai/s-762e534f06df/2026-11-23T18:04:09Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "35eb5d111dcb0180fc6fdbc17ec21f5dd7994e0562b2462d4bec3fec76f11464",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-762e534f06df",
+ "url": "https://bayutapi.dev/blog/dubai-rental-market-report-2026",
+ "v": 1
+}

@@ -1,0 +1,24 @@
+{
+ "cited_by": "relocatedubai",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:04:09Z",
+   "http_status": 200,
+   "payload_sha256": "cd7719bfc4e7249cb7b0a767e96db94f4c2f8cce5710325a74eaddb618319ac1",
+   "quotes": [
+    "Provide evidence that he works for an entity outside the UAE and that the work is being done remotely.",
+    "Submit proof that he has a monthly income of no less than (3,500) US dollars or the equivalent in foreign currencies."
+   ],
+   "ref": "relocatedubai/s-36a82effff90/2026-11-23T18:04:09Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "f5677aab420245a0c218be2f6ae0bdd94c74cacdce5ef9f972cf9c5d773e78e9",
+   "status": "changed_quote_ok"
+  }
+ ],
+ "source_id": "s-36a82effff90",
+ "url": "https://www.gdrfad.gov.ae/en/services/64154a31-ec6d-11ec-140b-0050569629e8",
+ "v": 1
+}

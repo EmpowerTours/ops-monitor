@@ -20,6 +20,26 @@
    "run_id": "20261123T025424Z",
    "sha256": "cfbad153aa88300c828b90aad53d655b998f7fc21cd8f9a52ab52733338708fe",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T18:01:46Z",
+   "http_status": 200,
+   "payload_sha256": "659a7a2f9961840189fa3d2c65c3ccd413fba96be164a949d4aaf61d7ecbb528",
+   "quotes": [
+    "حق طلب نقل البيانات الشخصية",
+    "وذلك بشكل منظم وقابل للقراءة آليًا",
+    "يجوز لصاحب البيانات العدول في أي وقت عن موافقته على معالجة بياناته الشخصية",
+    "حق تصحيح أو محو البيانات الشخصية",
+    "طلب محو بياناته الشخصية الخاصة لدى المتحكم في أي من الحالات الآتية",
+    "عدول صاحب البيانات عن الموافقة التي بُنيت عليها المعالجة"
+   ],
+   "ref": "hunt/s-557cdbf089a1/2026-11-23T18:01:46Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "cfbad153aa88300c828b90aad53d655b998f7fc21cd8f9a52ab52733338708fe",
+   "status": "verified"
   }
  ],
  "source_id": "s-557cdbf089a1",

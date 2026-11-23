@@ -45,6 +45,21 @@
    "run_id": "20261123T025424Z",
    "sha256": "fe3d5d1a3f9a45523d06239702aa90ae5963db3035d58d8dc63b151f1ab879e7",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": true,
+   "fetched_at": "2026-11-23T18:02:57Z",
+   "http_status": 200,
+   "payload_sha256": "2df759279a0042519a39d3fdb9bc9dbd0e2233312770766c4a6e840967758782",
+   "quotes": [
+    "The employer must apply for the standard work visa."
+   ],
+   "ref": "sawweeli-agent/s-ffab9f2d9e74/2026-11-23T18:02:57Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "dfd5c09017c05d405fc057250d46a236bfcaaf2d5777f4c538fee3ddef86c376",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-ffab9f2d9e74",

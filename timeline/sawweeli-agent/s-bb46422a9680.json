@@ -45,6 +45,21 @@
    "run_id": "20261123T025424Z",
    "sha256": "8bf9445ca72413c2bb853dde2e2993bd0a5b4660ee65d085cabd58b83c6dbce0",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T18:02:57Z",
+   "http_status": 200,
+   "payload_sha256": "c0c1314a2adbd9e7afbbecee7056ec198b80120535d77dba3e3ee1a4a537f5de",
+   "quotes": [
+    "حقوق النسخ مؤسسة حكومة دبي الذكية"
+   ],
+   "ref": "sawweeli-agent/s-bb46422a9680/2026-11-23T18:02:57Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "8bf9445ca72413c2bb853dde2e2993bd0a5b4660ee65d085cabd58b83c6dbce0",
+   "status": "verified"
   }
  ],
  "source_id": "s-bb46422a9680",

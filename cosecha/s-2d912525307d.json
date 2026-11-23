@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T03:10:18Z",
+ "fetched_at": "2026-11-23T18:15:38Z",
  "id": "s-2d912525307d",
- "last_read_fetched_at": "2026-11-23T03:10:18Z",
+ "last_read_fetched_at": "2026-11-23T18:15:38Z",
  "manifest_fingerprint": "f3785ccc467755d215a9ee0de855664e72a30d7e5dfbaf0671f62ddf690c60af",
- "run_id": "20261123T025424Z",
+ "run_id": "20261123T175943Z",
  "sha256": "2bf5dddeaa015c63b0f3e6092241ef1487968d2dbf2949c80f0bc8914ad542d7",
  "status": "verified",
  "url": "https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/anuarios_2017/702825094690.pdf"

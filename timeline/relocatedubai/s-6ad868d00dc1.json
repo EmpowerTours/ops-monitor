@@ -1,0 +1,24 @@
+{
+ "cited_by": "relocatedubai",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:04:09Z",
+   "http_status": 200,
+   "payload_sha256": "7a3568d5531e03f383fa87e86793ee51e11236258f2e6760a7dd8ee25d241be2",
+   "quotes": [
+    "The marriage contract is certified.",
+    "In addition to housing, the resident's salary must be AED4,000 or AED3,000"
+   ],
+   "ref": "relocatedubai/s-6ad868d00dc1/2026-11-23T18:04:09Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "070ab4dba48f49523f15114ca01e55e72f6d97c114b94419977b9bf46fca5fc4",
+   "status": "changed_quote_ok"
+  }
+ ],
+ "source_id": "s-6ad868d00dc1",
+ "url": "https://www.gdrfad.gov.ae/en/services/d551ce7b-52e8-11ea-0320-0050569629e8",
+ "v": 1
+}

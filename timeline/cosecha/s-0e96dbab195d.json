@@ -13,6 +13,19 @@
    "run_id": "20261123T011605Z",
    "sha256": "2b4efba1f544ad3df8ef5b9cf76c029e6d48f52c23cea7079ea215cc1fbbc8cd",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T18:15:38Z",
+   "http_status": 200,
+   "payload_sha256": "2f5da1d0e6383551cad4e7a7f6f28ca058868eb57ab98f3945568ea46f776d16",
+   "quotes": [],
+   "ref": "cosecha/s-0e96dbab195d/2026-11-23T18:15:38Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "2b4efba1f544ad3df8ef5b9cf76c029e6d48f52c23cea7079ea215cc1fbbc8cd",
+   "status": "verified"
   }
  ],
  "source_id": "s-0e96dbab195d",

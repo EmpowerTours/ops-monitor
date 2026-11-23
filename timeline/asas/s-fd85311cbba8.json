@@ -1,0 +1,25 @@
+{
+ "cited_by": "asas",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:03:41Z",
+   "http_status": 200,
+   "payload_sha256": "a2065c80d971271a39ed46645fb7aa9cc9303d4ef99bcc0aeced902fd59ac90f",
+   "quotes": [
+    "The full incorporation takes 3-4 weeks.",
+    "Please note the license will only be issued with an active lease.",
+    "The full incorporation takes 3"
+   ],
+   "ref": "asas/s-fd85311cbba8/2026-11-23T18:03:41Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "fd68e3707dcef2f24247fe15de5243235c909bf036292222dced8affe6ff552a",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-fd85311cbba8",
+ "url": "https://dubaiaicampus.com/files/Dubai%20AI%20License%20Setup%20Guide.pdf",
+ "v": 1
+}

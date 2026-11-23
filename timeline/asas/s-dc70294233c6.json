@@ -1,0 +1,27 @@
+{
+ "cited_by": "asas",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:03:41Z",
+   "http_status": 200,
+   "payload_sha256": "54b6115ac559e5313bd508fee45367639fd3e690dffb2411ae54bd0f2c2896bf",
+   "quotes": [
+    "Please note the license will only be issued with an active lease.",
+    "New Establishment Card 1,900 1,990",
+    "Renewal Establishment Card 1,950 2,010",
+    "New Employment Package(Outside) 2,950 3,900",
+    "The Required PSA deposit will be AED 1000/visa instead of 2500/visa:"
+   ],
+   "ref": "asas/s-dc70294233c6/2026-11-23T18:03:41Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "60c1950346e2ff4ff72fa37192c64d3e2f8c5cf7344c1774937a268d033da53f",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-dc70294233c6",
+ "url": "https://assets.difc.com/v1/media/edge/images/dubaiintern0078-difcexperie96c5-production-3253/media/project/difcexperiences/difc/difcwebsite/documents/business-section-documents/documents-for-spaces-and-offices/difc-innovation-licence-setup-guide.pdf",
+ "v": 1
+}

@@ -1,0 +1,25 @@
+{
+ "cited_by": "asas",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:03:41Z",
+   "http_status": 200,
+   "payload_sha256": "6e030ecea16aa03825fb436da6a1375e10b2e4050e5bac0b596801fa752fe362",
+   "quotes": [
+    "A foodstuff trading license starts from AED 12,500 at Meydan Free Zone.",
+    "You need a foodstuff trading license that lists your specific activities, such as importing, exporting, or re-exporting food products.",
+    "Additional costs may apply for Dubai Municipality approvals, food label registrations, and FIT analyses depending on your products."
+   ],
+   "ref": "asas/s-723000bb4d60/2026-11-23T18:03:41Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "c3b0e985ee47f6093dd79807d745831642bc878aeb1539cff373ad6b1f555a03",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-723000bb4d60",
+ "url": "https://www.meydanfz.ae/blog/start-a-foodstuff-trading-business-in-dubai-uae",
+ "v": 1
+}

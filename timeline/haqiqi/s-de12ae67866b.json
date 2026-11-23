@@ -1,0 +1,24 @@
+{
+ "cited_by": "haqiqi",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:02:57Z",
+   "http_status": 200,
+   "payload_sha256": "0786132a2388c1560af5466ee51e050181adee3f594e6aafb0d01c800460ed55",
+   "quotes": [
+    "License Status",
+    "Agency List"
+   ],
+   "ref": "haqiqi/s-de12ae67866b/2026-11-23T18:02:57Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "071cfc915c667a9d273eee9c53fb7594795ec924f2349c313f3783225f3bcd63",
+   "status": "changed_quote_ok"
+  }
+ ],
+ "source_id": "s-de12ae67866b",
+ "url": "https://www.oep.gov.bd/agencies",
+ "v": 1
+}

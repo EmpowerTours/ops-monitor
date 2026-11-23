@@ -1,0 +1,33 @@
+{
+ "cited_by": "asas",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:03:41Z",
+   "http_status": 200,
+   "payload_sha256": "6e63fa7a7fc6888b4efdc9b619eba52eb5013d85d742d51fac4a628a06925ed3",
+   "quotes": [
+    "Innovation Licence USD 1,500 PER ANNUM",
+    "Registration Fee USD 100 ONE TIME",
+    "Coworking Space USD 250 PER MONTH/ BILLED ANNUALLY",
+    "a commercial licence with a 90% subsidised fee structure open to all technology and innovation firms",
+    "No, the DIFC client on-boarding system is fully digital, and the process is done online.",
+    "the in-principle approval from the registration review committee, which can take around 5-7 working days.",
+    "once the licence is obtained, you will be allowed to operate from the DIFC innovation hub premises",
+    "Up to 4 visas on the first desk with up to 50% discount on visa fee.",
+    "Avail 50 per cent subsidised flexi desks, visas and much more.",
+    "Eligible Start-ups: AI/ML",
+    "Data Protection USD 0 ONE TIME"
+   ],
+   "ref": "asas/s-320d972361d4/2026-11-23T18:03:41Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "12ded39552db2318ac0ac5eb1d617778870350ae52cc676ef3593cc5effafe13",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-320d972361d4",
+ "url": "https://landing.difc.ae/innovation-license-offer",
+ "v": 1
+}

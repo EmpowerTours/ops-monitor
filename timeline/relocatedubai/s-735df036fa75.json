@@ -1,0 +1,23 @@
+{
+ "cited_by": "relocatedubai",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:04:09Z",
+   "http_status": 200,
+   "payload_sha256": "41c543fe097c440d2b0e19f66104e69e74e02f3d09e44a92dc0c0d0f55a98dca",
+   "quotes": [
+    "DSBH redefines company formation by combining same-day licensing"
+   ],
+   "ref": "relocatedubai/s-735df036fa75/2026-11-23T18:04:09Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "2a324ddeda8d5d1484fd9c8f4a220ea9cacd67ba940e8e22ae2493a69b0348e4",
+   "status": "changed_quote_ok"
+  }
+ ],
+ "source_id": "s-735df036fa75",
+ "url": "https://www.dubaisouth.ae/en/newsroom/dubai-south-launches-dsbh-a-digital-first-freezone-platform-for-the-next-generation-of-entrepreneurs",
+ "v": 1
+}

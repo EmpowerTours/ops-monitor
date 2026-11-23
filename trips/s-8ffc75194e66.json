@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T02:56:08Z",
+ "fetched_at": "2026-11-23T18:01:57Z",
  "id": "s-8ffc75194e66",
- "last_read_fetched_at": "2026-11-23T02:56:08Z",
+ "last_read_fetched_at": "2026-11-23T18:01:57Z",
  "manifest_fingerprint": "4cc1e9b24acef2ecbfae01f74c4c8b0a8333a33c69a51198bd9689d9697e3abc",
- "run_id": "20261123T025424Z",
+ "run_id": "20261123T175943Z",
  "sha256": "ee77d44ac86afdc58f7907bfa1953df31474c1c325d3f71616e0a4317e303669",
  "status": "verified",
  "url": "https://www.dubaitaxi.ae/en/our-services/taxi"

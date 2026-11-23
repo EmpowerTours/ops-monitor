@@ -81,6 +81,28 @@
    "sha256": "2a5327f464711cd92b08b558d1bb2b4c2d21abfeae1c6beddb3ae4adbec67e6f",
    "sha256_ar": "358f09f292033639cc38e39a2c19a1b31ec2629fe919c74128f1eddf46d13601",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T18:15:38Z",
+   "http_status": 200,
+   "payload_sha256": "fe6b54e41cd07f5e1dbf419efc87ec7d3b502cde2f5cbfa19dcda2f9656e57b4",
+   "quotes": [
+    "You will receive the payment receipt and the attestation on the data of your invoice or Certificate of Origin (COO)",
+    "150 per invoice/COO",
+    "Businesses registered in eDAS 2.0",
+    "Create the company's primary account with the Trade License. Once approved, you can create user accounts using UAE Pass."
+   ],
+   "quotes_ar": [
+    "150 درهماً لكل فاتورة/شهادة منشأ"
+   ],
+   "ref": "cosecha/s-2506ed595036/2026-11-23T18:15:38Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "2a5327f464711cd92b08b558d1bb2b4c2d21abfeae1c6beddb3ae4adbec67e6f",
+   "sha256_ar": "358f09f292033639cc38e39a2c19a1b31ec2629fe919c74128f1eddf46d13601",
+   "status": "verified"
   }
  ],
  "source_id": "s-2506ed595036",

@@ -1,0 +1,21 @@
+{
+ "cited_by": "faez",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:02:00Z",
+   "http_status": 0,
+   "payload_sha256": "6c6c666713dd8672ac0bb3b8bdd4ca5d9fbee95499baaa0dd187dee2ff87c5fb",
+   "quotes": [],
+   "ref": "faez/s-837bc54859c1/2026-11-23T18:02:00Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "",
+   "status": "unreachable"
+  }
+ ],
+ "source_id": "s-837bc54859c1",
+ "url": "https://esupply.dubai.gov.ae/esop/guest/go/public/opportunity/current",
+ "v": 1
+}

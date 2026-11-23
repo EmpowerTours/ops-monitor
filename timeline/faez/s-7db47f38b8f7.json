@@ -1,0 +1,23 @@
+{
+ "cited_by": "faez",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:02:00Z",
+   "http_status": 200,
+   "payload_sha256": "caea99b6553a123cd47f04354306afbaf0eab4c072dbb666e5affc5da4686af0",
+   "quotes": [
+    "Public register Search our register of DMCC entities"
+   ],
+   "ref": "faez/s-7db47f38b8f7/2026-11-23T18:02:00Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "1e3144426efac738375930d854c4f0d52dd743e035edc97444f50346f02cbc32",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-7db47f38b8f7",
+ "url": "https://dmcc.ae/public-register",
+ "v": 1
+}

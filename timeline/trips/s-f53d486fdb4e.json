@@ -45,6 +45,21 @@
    "run_id": "20261123T025424Z",
    "sha256": "2ad72ba68126882ece9a12aa7036e8918ca36aa83c83ce94feb61e7ecce560c8",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": true,
+   "fetched_at": "2026-11-23T18:01:57Z",
+   "http_status": 200,
+   "payload_sha256": "17321c6fcefb1efa82494b43fbf9fed90eb95e41186c2be31f12ef4b53442bb1",
+   "quotes": [
+    "VAT 5% (AED)"
+   ],
+   "ref": "trips/s-f53d486fdb4e/2026-11-23T18:01:57Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "3cc1ce31e66302ed317644cb320526df373c1bdae7b203ca5ecb4e8964429a80",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-f53d486fdb4e",

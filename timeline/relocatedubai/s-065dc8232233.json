@@ -1,0 +1,24 @@
+{
+ "cited_by": "relocatedubai",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:04:09Z",
+   "http_status": 200,
+   "payload_sha256": "a57e23100f2e5ea68bb5c2afb391e4a6758e6cd6d33465105ee14d5dad6f4ec5",
+   "quotes": [
+    "Open your business in Dubai online within 24 hours, starting from AED 12,500.",
+    "low cost Dubai trade license with flexi desk office solution"
+   ],
+   "ref": "relocatedubai/s-065dc8232233/2026-11-23T18:04:09Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "854ad12ee80e5b3421fd871e1ad447b271d550ff1884572dd416c919f53409ce",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-065dc8232233",
+ "url": "https://www.meydanfz.ae/dubai-trade-license-aed-12500",
+ "v": 1
+}

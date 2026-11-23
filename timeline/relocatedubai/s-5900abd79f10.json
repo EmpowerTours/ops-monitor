@@ -1,0 +1,24 @@
+{
+ "cited_by": "relocatedubai",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:04:09Z",
+   "http_status": 200,
+   "payload_sha256": "a7ca79bd672185857ed7cad8a0d7b6cfbfd0062f1f7638ceafbd364d227e854c",
+   "quotes": [
+    "Ajman Free Zone offers a dedicated E-Commerce License package starting from AED 5555.",
+    "Unlimited access to coworking space"
+   ],
+   "ref": "relocatedubai/s-5900abd79f10/2026-11-23T18:04:09Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "1f1192417f79312d188b23a54d58846766bba401cc74d0bad94e4e109400f5bc",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-5900abd79f10",
+ "url": "https://afz.gov.ae/en/resources/blogs/2025/the-future-of-e-commerce-in-the-uae-why-entrepreneurs-choose-ajman-free-zone.html",
+ "v": 1
+}

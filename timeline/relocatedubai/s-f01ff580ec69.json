@@ -1,0 +1,28 @@
+{
+ "cited_by": "relocatedubai",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:04:09Z",
+   "http_status": 200,
+   "payload_sha256": "a3207a362276d58cfd5fd3c0239266bf4e9ba0943903aacfb2e320ffc4ac8cd4",
+   "quotes": [
+    "This service enables parties to review the rental case history of the other party within the Rental Disputes Center system prior to drawing a lease contract."
+   ],
+   "quotes_ar": [
+    "تمكن هذه الخدمة الأطراف قبل الشروع في تحرير عقد الإيجار من الاستعلام عن صحيفة الحالة الإيجارية للطرف الآخر في نظام مركز فض المنازعات الإيجارية."
+   ],
+   "ref": "relocatedubai/s-f01ff580ec69/2026-11-23T18:04:09Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "487588a691b206a59f16627655a61847d01b6416dd75a49525a02c95858289dd",
+   "sha256_ar": "bed918fee3e5d08cbe522bd342d37a315232094a5da5c7ff74018b8d6c1c63ce",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-f01ff580ec69",
+ "url": "https://rdc.gov.ae/en/services/rental-good-conduct-certificate/",
+ "url_ar": "https://rdc.gov.ae/ar/services/rental-good-conduct-certificate/",
+ "v": 1
+}

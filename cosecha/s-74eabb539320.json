@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T03:10:18Z",
+ "fetched_at": "2026-11-23T18:15:38Z",
  "id": "s-74eabb539320",
- "last_read_fetched_at": "2026-11-23T03:10:18Z",
+ "last_read_fetched_at": "2026-11-23T18:15:38Z",
  "manifest_fingerprint": "6c5012bea6c80899b8910351a7121fe6f5f2dfd0a732575219e91e79f56be483",
- "run_id": "20261123T025424Z",
+ "run_id": "20261123T175943Z",
  "sha256": "c9bea0451a608c24ac3da5cfa769f8a875741d4656b02ef30bf4ea630286ded7",
  "status": "verified",
  "url": "https://gd.eppo.int/taxon/ANSTLU/hosts"

@@ -1,0 +1,24 @@
+{
+ "cited_by": "relocatedubai",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:04:09Z",
+   "http_status": 200,
+   "payload_sha256": "e9cf9c0d68d2d3a72079cc0710c2f5374e7ae0f7d3f846aafb10802f13e2f41a",
+   "quotes": [
+    "Open your account in just a few days.",
+    "Minimum average monthly balance of just 25,000"
+   ],
+   "ref": "relocatedubai/s-a6d7168d6422/2026-11-23T18:04:09Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "e000a421e2c00b743de930a566d28e08c0235dd14b4cbd12b43fd1c2f9c0e203",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-a6d7168d6422",
+ "url": "https://www.rakbank.ae/en/business/everyday-banking/accounts/business-current-account",
+ "v": 1
+}

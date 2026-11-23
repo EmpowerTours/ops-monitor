@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-23T02:56:36Z",
+ "fetched_at": "2026-11-23T18:02:57Z",
  "id": "s-18b6de8947c2",
  "last_read_fetched_at": "2026-11-23T02:56:36Z",
  "manifest_fingerprint": "e959b0787be7f30916410982c6609e9eed54cb37d4dd59708f3bc597b074d3dc",
- "run_id": "20261123T025424Z",
+ "run_id": "20261123T175943Z",
  "sha256": "7b0d69dd1278e9311073ba624ba99c4f6c61974de887b85a309bc749ad89caea",
- "status": "changed_quote_ok",
+ "status": "unreachable",
  "url": "https://u.ae/en/information-and-services/jobs/sector-of-employment/employment-in-the-private-sector/employment-laws-and-regulations-in-the-private-sector"
 }

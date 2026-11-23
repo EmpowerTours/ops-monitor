@@ -1,0 +1,21 @@
+{
+ "cited_by": "haqiqi",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:02:57Z",
+   "http_status": 200,
+   "payload_sha256": "fede9943b327a4ee75b10ee5d484322139a84f143f660927d01b120471788f6e",
+   "quotes": [],
+   "ref": "haqiqi/s-7b861c133b5e/2026-11-23T18:02:57Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "c9967d94e788455667fc5d9d3a9496caba54da7b7b7b66960674b1cbf6de682a",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-7b861c133b5e",
+ "url": "https://www.dubaipolice.gov.ae/dpcms/api/news/v9f1uxqhty8epi2trdscgm06?mode=dp&locale=en",
+ "v": 1
+}

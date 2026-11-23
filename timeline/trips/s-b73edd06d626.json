@@ -45,6 +45,21 @@
    "run_id": "20261123T025424Z",
    "sha256": "c1420e3d5080ce7aefc9a54e478b8362a0d5d49f6f6ee892372bbbef26a2aadd",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T18:01:57Z",
+   "http_status": 200,
+   "payload_sha256": "74a31cc02eb343192d42d60a46b5b7e1c71ecf912a0d049ad983af51596fbdb3",
+   "quotes": [
+    "No natural or legal person may conduct the Activity in the Emirate unless that person is licensed to do so by the DTCM."
+   ],
+   "ref": "trips/s-b73edd06d626/2026-11-23T18:01:57Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "c1420e3d5080ce7aefc9a54e478b8362a0d5d49f6f6ee892372bbbef26a2aadd",
+   "status": "verified"
   }
  ],
  "source_id": "s-b73edd06d626",

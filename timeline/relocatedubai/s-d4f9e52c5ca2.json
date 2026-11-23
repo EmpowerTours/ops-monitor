@@ -1,0 +1,33 @@
+{
+ "cited_by": "relocatedubai",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T18:04:09Z",
+   "http_status": 200,
+   "payload_sha256": "52d62f3d32d6105e5b151e0a0f2787856e8c3cf01c80874e552f093db68de45c",
+   "quotes": [
+    "entitles the holder to remain in the country for (60) sixty days from entry until the necessary processes for issuing residency have been completed.",
+    "2. A passport copy, valid for at least 6 months.",
+    "3. Partnership or investment contract.",
+    "4. Trade license.",
+    "- (a public shareholding company).",
+    "A private joint stock company.",
+    "- A limited liability company.",
+    "- Simple recommendation company.",
+    "Solidarity Company.",
+    "Upon incorporation or contribution, the investor's or partner's share cannot be less than one million paid Dirhams or its equivalent in other currencies.",
+    "48.0 Hour(s)"
+   ],
+   "ref": "relocatedubai/s-d4f9e52c5ca2/2026-11-23T18:04:09Z",
+   "run_id": "20261123T175943Z",
+   "sha256": "8e684f5d6f34e1fa20bb9392a8eedb7ae88d4c35420eefbd9d717d8faac8fd92",
+   "status": "changed_quote_ok"
+  }
+ ],
+ "source_id": "s-d4f9e52c5ca2",
+ "url": "https://www.gdrfad.gov.ae/en/services/2b2f69af-408c-11ed-4fe5-0050569629e8",
+ "v": 1
+}
