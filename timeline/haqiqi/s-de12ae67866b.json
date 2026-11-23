@@ -18,12 +18,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:06Z",
    "http_status": 200,
-   "payload_sha256": "c7c13447f120e74826d3f0209407a7ae227950d4e3871bcbc6f43d5d28ce8123",
+   "payload_sha256": "bf5ae95edfdce7bbb16b4b3ed5368b521517a24f78e7910606b9a28ac1d540ba",
    "quotes": [
     "License Status",
     "Agency List"

@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:45:47Z",
    "http_status": 200,
-   "payload_sha256": "10112978382a923c9006b08392853d50a31e8ed679bc5fdf0d7cd08e5139b730",
+   "payload_sha256": "d81965f7d7dfaa8a671041f4ec05089a3f0c82e0ff8966a0ebd18d63203c925b",
    "quotes": [
     "No natural or legal person may conduct the Activity in the Emirate unless that person is licensed to do so by the DTCM."
    ],

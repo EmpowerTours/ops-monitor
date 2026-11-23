@@ -89,12 +89,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T19:00:07Z",
    "http_status": 200,
-   "payload_sha256": "550392fc885ce74100102c8cf49113059f440c3daa5581fd08c619fed2afa1ba",
+   "payload_sha256": "526d86e2e1c595996b53fdb3260d463041c75be5071496aaa0ab4889e98f87de",
    "quotes": [
     "Issue accreditation for a slaughterhouse outside the UAE",
     "Service Fees No fees",

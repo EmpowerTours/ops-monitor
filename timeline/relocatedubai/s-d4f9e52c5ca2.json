@@ -27,12 +27,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:36Z",
    "http_status": 200,
-   "payload_sha256": "3a525c111dc89c02242111e0929728243ad76a2191502b7aa747be7719bffc2c",
+   "payload_sha256": "799f09dc55c5ca3b8285b2beb8188df8421aa9e11f1263edf230a0d7dc9df83b",
    "quotes": [
     "entitles the holder to remain in the country for (60) sixty days from entry until the necessary processes for issuing residency have been completed.",
     "2. A passport copy, valid for at least 6 months.",

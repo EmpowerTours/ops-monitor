@@ -82,12 +82,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T19:00:07Z",
    "http_status": 200,
-   "payload_sha256": "cdfe7c6137acfe316e2e4beb3fbfec9be01e760bc5494d05909e20021f53374c",
+   "payload_sha256": "58535bbb1d5006ff499ea508d57cb7d1fa7adabef5b3b602dd74918e95d47324",
    "quotes": [
     "2025: Present, widespread",
     "Pest status declared by NPPO: Transitory pest, actionable and under eradication (2018-09)"

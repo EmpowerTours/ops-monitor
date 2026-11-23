@@ -17,12 +17,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:36Z",
    "http_status": 200,
-   "payload_sha256": "f6af4085dfaabe993c7994b2c4e8a6eeb28b93490ef8d241fe06387959590660",
+   "payload_sha256": "73d5b932fcb8d01a2cd46298e2925af6f8e724f76668091ec4e7c0f07fcc2847",
    "quotes": [
     "Current EBP rates are about AED 643 to AED 826 a year."
    ],

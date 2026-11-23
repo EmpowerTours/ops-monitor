@@ -74,12 +74,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:45:47Z",
    "http_status": 200,
-   "payload_sha256": "f96e947f1513d7d00d623b581989a1771598b018cdb8c72da3e1e0363b28ca2b",
+   "payload_sha256": "d22fea99bf779a91b2b42e823245baabdd75174bf609dace4eac015b4c35f626",
    "quotes": [
     "Universal link: https://m.uber.com/looking",
     "Encoded pickup Location JSON object.",

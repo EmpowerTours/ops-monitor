@@ -66,12 +66,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:45:47Z",
    "http_status": 200,
-   "payload_sha256": "df6c9cbc533497f03494ea59c7539ff19d40c490b93d40ffcbf39f2518fd8a0c",
+   "payload_sha256": "3abb0d981f525a98ec9242cc4c692df6b4b41aef61496673c30ef01bdde48a53",
    "quotes": [
     "for a maximum of thirty (30) consecutive nights, be charged the Tourism Dirham Fee",
     "The fee will not apply to hotel room nights beyond thirty (30) consecutive nights."

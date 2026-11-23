@@ -19,12 +19,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:09Z",
    "http_status": 200,
-   "payload_sha256": "e02e2a2d789cb966fd52afb3561ed6777be129709d71fd77c1c0c632c3545578",
+   "payload_sha256": "93ce2936b9d69858f8ff3ed8a10b5449a0e192d977b29f0c8a04726c22eb390d",
    "quotes": [
     "This service is free of charge",
     "who operate legally in Dubai submit their information",

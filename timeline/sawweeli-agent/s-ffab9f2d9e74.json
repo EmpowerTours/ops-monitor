@@ -62,12 +62,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:06Z",
    "http_status": 200,
-   "payload_sha256": "6f9cd2607eff86fcd3a963ed2e155d8b093b27ff32f4bea771f12ef3d3e55a79",
+   "payload_sha256": "ad0eb22c15db03d26f716b3c0e946ef26175260f0331e53b7fce4702b820aed4",
    "quotes": [
     "The employer must apply for the standard work visa."
    ],

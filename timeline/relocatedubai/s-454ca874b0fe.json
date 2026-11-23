@@ -30,12 +30,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:36Z",
    "http_status": 200,
-   "payload_sha256": "1552fa2eb36ce2e21dab4819ae2f1cdba397c365fcfefb3e12fe630a3079368a",
+   "payload_sha256": "2efa9cc9bb8d1830da9b3a05fcc7face9c84d1482866027131541ece85babb41",
    "quotes": [
     "The residence permit is valid for 10 years and can be extended if the same conditions are met.",
     "The applicant must own a property or a group of properties with a total value of no less than AED 2 million.",

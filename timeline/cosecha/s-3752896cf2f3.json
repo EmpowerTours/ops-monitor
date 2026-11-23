@@ -77,12 +77,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T19:00:07Z",
    "http_status": 200,
-   "payload_sha256": "3b060bf80529d38f0ba3840df1696ede8ecf84e3c833dd5c7c3dc9e932e49ae4",
+   "payload_sha256": "ef8eba927a5bdfd83c05f445592b0054f0cbfeb11a05081f25bf9c469540708c",
    "quotes": [
     "Apply to Register and Assess a Food Item"
    ],

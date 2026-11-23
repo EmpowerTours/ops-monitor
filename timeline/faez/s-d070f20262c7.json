@@ -18,12 +18,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:45:50Z",
    "http_status": 200,
-   "payload_sha256": "948f8defb92020ae8a2cc2d97558d97eeb55808c6899e40bc76b02726a609784",
+   "payload_sha256": "d3cb454ce2c7430f465969d869c24987e03e2394a9ef8ab6c95a71058e2d2513",
    "quotes": [
     "Home / Contact",
     "Contact Customer Service"
