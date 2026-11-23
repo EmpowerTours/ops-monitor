@@ -80,6 +80,46 @@
       "token_env": "SOURCE_VERIFY_TOKEN_SAWWEELI_AGENT",
       "repo": "EmpowerTours/sawweeli-agent",
       "radar_keywords": []
+    },
+    {
+      "app": "asas",
+      "manifest": "https://asas.empowertours.xyz/.well-known/sources.json",
+      "verify": "https://asas.empowertours.xyz/internal/sources/verify",
+      "token_env": "SOURCE_VERIFY_TOKEN_ASAS",
+      "repo": "EmpowerTours/asas",
+      "radar_keywords": [],
+      "fix": {
+        "quotes_path": "go/internal/sources/quotes.json",
+        "base": "main"
+      }
+    },
+    {
+      "app": "faez",
+      "manifest": "https://faez.empowertours.xyz/.well-known/sources.json",
+      "verify": "https://faez.empowertours.xyz/internal/sources/verify",
+      "token_env": "SOURCE_VERIFY_TOKEN_FAEZ",
+      "repo": "EmpowerTours/faez",
+      "radar_keywords": [],
+      "fix": {
+        "quotes_path": "go/internal/sources/quotes.json",
+        "base": "main"
+      }
+    },
+    {
+      "app": "haqiqi",
+      "manifest": "https://haqiqi.empowertours.xyz/.well-known/sources.json",
+      "verify": "https://haqiqi.empowertours.xyz/internal/sources/verify",
+      "token_env": "SOURCE_VERIFY_TOKEN_HAQIQI",
+      "repo": "EmpowerTours/haqiqi",
+      "radar_keywords": []
+    },
+    {
+      "app": "relocatedubai",
+      "manifest": "https://relocatedubai.empowertours.xyz/.well-known/sources.json",
+      "verify": "https://relocatedubai.empowertours.xyz/internal/sources/verify",
+      "token_env": "SOURCE_VERIFY_TOKEN_RELOCATEDUBAI",
+      "repo": "EmpowerTours/relocatedubai",
+      "radar_keywords": []
     }
   ],
   "radar_feeds": [
