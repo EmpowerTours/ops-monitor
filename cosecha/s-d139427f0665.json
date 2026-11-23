@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T18:15:38Z",
+ "fetched_at": "2026-11-23T19:00:07Z",
  "id": "s-d139427f0665",
- "last_read_fetched_at": "2026-11-23T18:15:38Z",
+ "last_read_fetched_at": "2026-11-23T19:00:07Z",
  "manifest_fingerprint": "a863f411e3f5b7c9e1eeef055a617fb473d8fb47d0dbf812e7e7f9dfdbc5a843",
- "run_id": "20261123T175943Z",
+ "run_id": "20261123T184346Z",
  "sha256": "b64600772dcdec6c8d2bacb6db5ee454a26ddf671d9102e51c5cb0b5dd6a38bf",
  "status": "changed_quote_ok",
  "url": "https://www.dubaicustoms.gov.ae/en/mobile/Pages/faq.aspx"

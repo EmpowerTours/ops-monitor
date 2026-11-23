@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T18:15:38Z",
+ "fetched_at": "2026-11-23T19:00:07Z",
  "id": "s-4295d9aae3bb",
- "last_read_fetched_at": "2026-11-23T18:15:38Z",
+ "last_read_fetched_at": "2026-11-23T19:00:07Z",
  "manifest_fingerprint": "1c90e16a582801ac025d277004963f5667b1c694cf4ccf248ccaf7d8c56c4e65",
- "run_id": "20261123T175943Z",
+ "run_id": "20261123T184346Z",
  "sha256": "633c4431e16dcf851c7a98e7984f28a2fdcbf4a14a0f2cd7e8f7d69cff31f971",
  "status": "changed_quote_ok",
  "url": "https://www.moccae.gov.ae/en/services/newislamicabattoire"

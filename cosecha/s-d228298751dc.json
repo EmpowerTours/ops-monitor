@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T18:15:38Z",
+ "fetched_at": "2026-11-23T19:00:07Z",
  "id": "s-d228298751dc",
- "last_read_fetched_at": "2026-11-23T18:15:38Z",
+ "last_read_fetched_at": "2026-11-23T19:00:07Z",
  "manifest_fingerprint": "c6b13dbbb014b84808fb0067ef646b42fd2ed54b1ae75258cf087c570fcf9a5e",
- "run_id": "20261123T175943Z",
+ "run_id": "20261123T184346Z",
  "sha256": "62c560adc4587ae96d9cc2d04d057f09a3ce5a1a7a6cd0fdcaa46407229748f7",
  "status": "verified",
  "url": "https://www.moccae.gov.ae/assets/download/2022/M322_18.pdf.aspx"

@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T18:04:09Z",
+ "fetched_at": "2026-11-23T18:46:36Z",
  "id": "s-525859f37c69",
- "last_read_fetched_at": "2026-11-23T18:04:09Z",
+ "last_read_fetched_at": "2026-11-23T18:46:36Z",
  "manifest_fingerprint": "ac809460cbde6a2cdb3ea25c02134b7e28fb16c70f8913ab3085dadc29ed70db",
- "run_id": "20261123T175943Z",
+ "run_id": "20261123T184346Z",
  "sha256": "ed1404c683abffcd574a44bc7cac2494f27912b2686e2e0bca52529db9299197",
  "status": "verified",
  "url": "https://receipts.mohre.gov.ae/OfferInquiry/Index?langid=2"

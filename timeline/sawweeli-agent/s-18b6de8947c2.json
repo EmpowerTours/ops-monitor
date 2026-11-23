@@ -30,6 +30,21 @@
    "run_id": "20261123T175943Z",
    "sha256": "",
    "status": "unreachable"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": true,
+   "fetched_at": "2026-11-23T18:46:06Z",
+   "http_status": 200,
+   "payload_sha256": "97d42e39fdb1c8cf8dc2422b6cdf88963b6d11c3589e42733c5d54842132296a",
+   "quotes": [
+    "Federal Decree Law No. 33 of 2021 Regarding the Regulation of Employment Relationship and its amendments, known as the 'UAE Labour law', governs the labour rights of employees in the private sector."
+   ],
+   "ref": "sawweeli-agent/s-18b6de8947c2/2026-11-23T18:46:06Z",
+   "run_id": "20261123T184346Z",
+   "sha256": "7b866a2236087589e2a6586c2d012fd8ff23f649a4d48684c3adf83025099abc",
+   "status": "verified"
   }
  ],
  "source_id": "s-18b6de8947c2",

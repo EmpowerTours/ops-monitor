@@ -75,6 +75,21 @@
    "run_id": "20261123T175943Z",
    "sha256": "7684fcde7267ae45c0acc869caff0114ed94ee6b5baac6ddfbd3c8b8ecf8b10b",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T19:00:07Z",
+   "http_status": 200,
+   "payload_sha256": "5dbddfd84baac821a0272d58206cb295b2b828b1bf5afc0484f48211c55e023e",
+   "quotes": [
+    "del Apartado B del Anexo 10 de las Reglas Generales de Comercio"
+   ],
+   "ref": "cosecha/s-d03572c45279/2026-11-23T19:00:07Z",
+   "run_id": "20261123T184346Z",
+   "sha256": "7684fcde7267ae45c0acc869caff0114ed94ee6b5baac6ddfbd3c8b8ecf8b10b",
+   "status": "verified"
   }
  ],
  "source_id": "s-d03572c45279",

@@ -23,6 +23,29 @@
    "run_id": "20261123T175943Z",
    "sha256": "c59e852af63831cc348288c449e59f06cf5760e4069679f22db07bf3248e3622",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T18:46:36Z",
+   "http_status": 200,
+   "payload_sha256": "70222d54737e82cfc1a0a4d179503cc8be698f94ab1044eec937930ea5253501",
+   "quotes": [
+    "A green residence permit allows an investor or partner in a commercial project to reside in the country for up to five years without needing a guarantor or employer.",
+    "It is renewable under the same terms as when it was first issued.",
+    "1. Personal Photograph.",
+    "2. A copy of the passport, and its validity is not less than 6 months.",
+    "3. Partnership/ memorandum of association or investment contract.",
+    "4. Trade license.",
+    "The competent authorities' approval and the applicant's authorisation to practice the activity.",
+    "48.0 Hour(s)",
+    "The grace period to stay inside the country after the expiration of the residence permit or its cancellation is (180) days."
+   ],
+   "ref": "relocatedubai/s-611b3688b48d/2026-11-23T18:46:36Z",
+   "run_id": "20261123T184346Z",
+   "sha256": "c59e852af63831cc348288c449e59f06cf5760e4069679f22db07bf3248e3622",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-611b3688b48d",

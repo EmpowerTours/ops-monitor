@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T18:15:38Z",
+ "fetched_at": "2026-11-23T19:00:07Z",
  "id": "s-a9fcea8abc05",
- "last_read_fetched_at": "2026-11-23T18:15:38Z",
+ "last_read_fetched_at": "2026-11-23T19:00:07Z",
  "manifest_fingerprint": "5431a6bd8191d515a563525b01898a7f99e5977d6d926e585e80f7e545575d3d",
- "run_id": "20261123T175943Z",
+ "run_id": "20261123T184346Z",
  "sha256": "76f13317d0a0e2d4eab19ab673495aa0f6ce6e6254bbb73b46ab1adbebcd71f7",
  "status": "verified",
  "url": "https://agriexchange.apeda.gov.in/ImportRegulations/1141920251222142541207.pdf"

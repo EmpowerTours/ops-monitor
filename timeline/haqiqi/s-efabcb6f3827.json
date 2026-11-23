@@ -18,6 +18,24 @@
    "run_id": "20261123T175943Z",
    "sha256": "2e75a787c9736f2c834461ed3edce3dd3e942f364709295e90c17aa39e6bd4c0",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T18:46:06Z",
+   "http_status": 200,
+   "payload_sha256": "4687b56feb8ab6f736e443d4ce8af0c497388e4dc5a3c02ca660b992aa29c79b",
+   "quotes": [
+    "After you sign the offer letter, the employer will send you an electronic entry permit for employment to allow you to enter the country.",
+    "Visit or tourist entry permit/visa does not give you right to work in the UAE. Working under visit or tourist visa will result in fines and legal liability.",
+    "You should know that the employer is responsible for payment of recruitment expenses as per the UAE’s Labour Law.",
+    "you may contact MoHRE by phone on 009716-802-7666"
+   ],
+   "ref": "haqiqi/s-efabcb6f3827/2026-11-23T18:46:06Z",
+   "run_id": "20261123T184346Z",
+   "sha256": "2e75a787c9736f2c834461ed3edce3dd3e942f364709295e90c17aa39e6bd4c0",
+   "status": "verified"
   }
  ],
  "source_id": "s-efabcb6f3827",

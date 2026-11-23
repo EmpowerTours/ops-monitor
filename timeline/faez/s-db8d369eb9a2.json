@@ -17,6 +17,23 @@
    "run_id": "20261123T175943Z",
    "sha256": "21c0ea32571ed53810d1ce9cb4b8e9e41104d5bf8fc3bd71f5a52690a3be764b",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T18:45:50Z",
+   "http_status": 200,
+   "payload_sha256": "2fe4b6809a5969774f636c3da1731fb4bc9939f454e4a8748328dcf577745413",
+   "quotes": [
+    "Law No. (12) of 2020 Concerning Contracts and Warehouse Management in the Government of Dubai",
+    "Bid Bond Article (31) a. A Bid must be accompanied by a Bid Bond",
+    "The Bid Bond amount will be prescribed by the Government Entity, but must not exceed two percent (2%) of the estimated value of the public tender."
+   ],
+   "ref": "faez/s-db8d369eb9a2/2026-11-23T18:45:50Z",
+   "run_id": "20261123T184346Z",
+   "sha256": "21c0ea32571ed53810d1ce9cb4b8e9e41104d5bf8fc3bd71f5a52690a3be764b",
+   "status": "verified"
   }
  ],
  "source_id": "s-db8d369eb9a2",

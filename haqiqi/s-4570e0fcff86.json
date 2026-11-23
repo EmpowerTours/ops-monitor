@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T18:02:57Z",
+ "fetched_at": "2026-11-23T18:46:06Z",
  "id": "s-4570e0fcff86",
- "last_read_fetched_at": "2026-11-23T18:02:57Z",
+ "last_read_fetched_at": "2026-11-23T18:46:06Z",
  "manifest_fingerprint": "899e65bb6b6d50e4489189545d35313d1112cf3bf52788f50afdb0140f10e2ef",
- "run_id": "20261123T175943Z",
+ "run_id": "20261123T184346Z",
  "sha256": "122ce01133573dfeb824a6411763c9b841e5c7d88ec29f1b4338359c0f6f9105",
  "status": "changed_quote_ok",
  "url": "https://u.ae/en/information-and-services/jobs/Find-a-job/searching-for-a-job"

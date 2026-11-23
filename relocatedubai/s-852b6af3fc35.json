@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T18:04:09Z",
+ "fetched_at": "2026-11-23T18:46:36Z",
  "id": "s-852b6af3fc35",
- "last_read_fetched_at": "2026-11-23T18:04:09Z",
+ "last_read_fetched_at": "2026-11-23T18:46:36Z",
  "manifest_fingerprint": "15d0724a1be97aaab826a3bd9fc1444f8ad4f8e4e555a2eb83b6afbcf3dd5aea",
- "run_id": "20261123T175943Z",
+ "run_id": "20261123T184346Z",
  "sha256": "9c813bc39e98bd451a0282a292f611de25ff3576827f7d46a35d1f5b23fa9716",
  "status": "verified",
  "url": "https://startwith.shams.ae/cost-calculator/"

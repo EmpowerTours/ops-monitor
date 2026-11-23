@@ -15,6 +15,21 @@
    "run_id": "20261123T175943Z",
    "sha256": "c92aa4ea58fcbafead91d722f70ade618975c0f28b021ff0fdb8a12057d2bde0",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T18:46:36Z",
+   "http_status": 200,
+   "payload_sha256": "94a1b4dd26697b49f6560a92db2f4eda5d0d2adb595f42d68beee56324b14e43",
+   "quotes": [
+    "Monthly car cost all-in: AED 1,200 to AED 2,500."
+   ],
+   "ref": "relocatedubai/s-9664b144022b/2026-11-23T18:46:36Z",
+   "run_id": "20261123T184346Z",
+   "sha256": "c92aa4ea58fcbafead91d722f70ade618975c0f28b021ff0fdb8a12057d2bde0",
+   "status": "verified"
   }
  ],
  "source_id": "s-9664b144022b",

@@ -16,6 +16,22 @@
    "run_id": "20261123T175943Z",
    "sha256": "0faa8435d92d24e5f2e626e2c855827f6434b3e35566477663643cc9dd1b4901",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T18:46:36Z",
+   "http_status": 200,
+   "payload_sha256": "eb72d608386705c4e49f07149335d2d6da7980fae5e5c4d0d85d72bde587106d",
+   "quotes": [
+    "Proof of remote employment outside the United Arab Emirates.",
+    "Salary certificate (USD 3,500) or its equivalent in foreign currencies."
+   ],
+   "ref": "relocatedubai/s-e4bbbfe713f0/2026-11-23T18:46:36Z",
+   "run_id": "20261123T184346Z",
+   "sha256": "0faa8435d92d24e5f2e626e2c855827f6434b3e35566477663643cc9dd1b4901",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-e4bbbfe713f0",

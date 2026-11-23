@@ -24,6 +24,30 @@
    "run_id": "20261123T175943Z",
    "sha256": "cd4e3c53e2a4d9809c58dece7873ac59df6604263f84f42b6730444a90569bf2",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T18:46:36Z",
+   "http_status": 200,
+   "payload_sha256": "a9a8c186d0bd9a7b5a128aa400d27963c45d30d2cd4806428879ad21f6ec1315",
+   "quotes": [
+    "The investor must be a partner in an existing or newly established establishment or company, with a financial share of at least AED 2,000,000.",
+    "The invested capital must be fully owned by the investor and must not be derived from a loan.",
+    "The investor must have a financial deposit of at least AED 2,000,000 with an investment fund or one of the national banks operating in the UAE.",
+    "The investor must own an establishment or company that is committed to paying the taxes due to the Federal Government, amounting to at least AED 250,000 annually.",
+    "The investor must own one or more properties in the UAE with a total value of at least AED 2,000,000, with full ownership of the property registered in the investor's name.",
+    "The property may be financed through a loan, provided that the financing is obtained from an approved local bank.",
+    "The investor must have purchased one or more off-plan property units with a total value of at least AED 2,000,000, provided that the purchase is made from an approved local real estate company",
+    "The investor and their family members must have comprehensive and valid health insurance coverage throughout the validity period of the residency.",
+    "Eligible applicants for Golden Residency who are outside the UAE are granted a six-month, multiple-entry entry visa",
+    "10 years for investors in the UAE's real estate sector."
+   ],
+   "ref": "relocatedubai/s-729b55faafe1/2026-11-23T18:46:36Z",
+   "run_id": "20261123T184346Z",
+   "sha256": "cd4e3c53e2a4d9809c58dece7873ac59df6604263f84f42b6730444a90569bf2",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-729b55faafe1",

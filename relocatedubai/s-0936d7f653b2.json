@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T18:04:09Z",
+ "fetched_at": "2026-11-23T18:46:36Z",
  "id": "s-0936d7f653b2",
- "last_read_fetched_at": "2026-11-23T18:04:09Z",
+ "last_read_fetched_at": "2026-11-23T18:46:36Z",
  "manifest_fingerprint": "c4e3f20cad77e468aa4a2ebfa42582876d90afcee34ca61919d387602053aeba",
- "run_id": "20261123T175943Z",
+ "run_id": "20261123T184346Z",
  "sha256": "94a9205e63a927876dbacac9c9dd504c3ed1150cb3d0edb3cc58390309c3cf27",
  "status": "verified",
  "url": "https://dubaicv.app/cost-of-living"

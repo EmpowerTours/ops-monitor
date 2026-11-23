@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T18:04:09Z",
+ "fetched_at": "2026-11-23T18:46:36Z",
  "id": "s-010e7cbc49cb",
- "last_read_fetched_at": "2026-11-23T18:04:09Z",
+ "last_read_fetched_at": "2026-11-23T18:46:36Z",
  "manifest_fingerprint": "f6aa12c3765a961d173c980874bba64d59872775ae776506b584868c23a2eca7",
- "run_id": "20261123T175943Z",
+ "run_id": "20261123T184346Z",
  "sha256": "979cd20e6df989ef4fc14136366e2dc39d92daf0ec6120ef5512f69cb302d87e",
  "status": "verified",
  "url": "https://spcfz.ae/pay-as-you-go"

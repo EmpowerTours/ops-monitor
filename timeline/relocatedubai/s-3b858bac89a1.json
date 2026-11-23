@@ -19,6 +19,25 @@
    "sha256": "52ec5391612970039a4abc9a687806665986dbd8114f3c1a6a37a5d6bb61029e",
    "sha256_ar": "7ae958f8c0a6d3642cde11089eeefb42fc80e7f47c926b9b6c433bdde372dc8c",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T18:46:36Z",
+   "http_status": 200,
+   "payload_sha256": "3567db9312e1c813f67f9b7e7dc9610f378d6c0a6c8e3e37ce677f4a909fb401",
+   "quotes": [
+    "DLD Customers can scan the QR code on each real estate advertisement to get a glimpse of the property's authorised details and establish if it has been sold or rented."
+   ],
+   "quotes_ar": [
+    "وبإمكان المتعاملين مسح رمز الاستجابة السريعة المرفق مع كل إعلان عقاري للاطلاع على كافة المعلومات المصرّح بنشرها ضمن الإعلان."
+   ],
+   "ref": "relocatedubai/s-3b858bac89a1/2026-11-23T18:46:36Z",
+   "run_id": "20261123T184346Z",
+   "sha256": "52ec5391612970039a4abc9a687806665986dbd8114f3c1a6a37a5d6bb61029e",
+   "sha256_ar": "7ae958f8c0a6d3642cde11089eeefb42fc80e7f47c926b9b6c433bdde372dc8c",
+   "status": "verified"
   }
  ],
  "source_id": "s-3b858bac89a1",

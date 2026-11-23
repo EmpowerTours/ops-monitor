@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-23T18:15:38Z",
+ "fetched_at": "2026-11-23T19:00:07Z",
  "id": "s-90dcede6863e",
  "last_read_fetched_at": "2026-11-23T18:15:38Z",
  "manifest_fingerprint": "1b23bd65e3f0d6f325966fb8936dcade6e4cae7f649c9311f04b6ebe89f210ab",
- "run_id": "20261123T175943Z",
+ "run_id": "20261123T184346Z",
  "sha256": "2784d49e037136bc81047643c22f70bc42daed2514a51933c7916e29fc6b7579",
- "status": "changed_quote_ok",
+ "status": "unreachable",
  "url": "https://www.tierrafuerte.mx/archivos/66222"
 }

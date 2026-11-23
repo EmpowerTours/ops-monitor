@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T18:02:57Z",
+ "fetched_at": "2026-11-23T18:46:06Z",
  "id": "s-b424719fc44f",
- "last_read_fetched_at": "2026-11-23T18:02:57Z",
+ "last_read_fetched_at": "2026-11-23T18:46:06Z",
  "manifest_fingerprint": "86c74004c905b642d729cafe41816699201f0aa6cdfbaa3534ee70f164b95284",
- "run_id": "20261123T175943Z",
+ "run_id": "20261123T184346Z",
  "sha256": "8da09ba63a72a3306c77475a4fb6606e84bd18f3d91fac3384f9111607a24bec",
  "status": "verified",
  "url": "https://en.wikipedia.org/wiki/Red_Line_(Dubai_Metro)"

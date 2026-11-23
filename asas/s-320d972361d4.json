@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T18:03:41Z",
+ "fetched_at": "2026-11-23T18:46:09Z",
  "id": "s-320d972361d4",
- "last_read_fetched_at": "2026-11-23T18:03:41Z",
+ "last_read_fetched_at": "2026-11-23T18:46:09Z",
  "manifest_fingerprint": "b4cd30179746aab93db23eeabf30a03524e213afcdf571c31b7ce0efd4105ed2",
- "run_id": "20261123T175943Z",
+ "run_id": "20261123T184346Z",
  "sha256": "12ded39552db2318ac0ac5eb1d617778870350ae52cc676ef3593cc5effafe13",
  "status": "verified",
  "url": "https://landing.difc.ae/innovation-license-offer"
