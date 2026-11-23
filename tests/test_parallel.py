@@ -123,6 +123,35 @@ class Pool(unittest.TestCase):
         self.assertEqual(op.calls, ["https://x.gov.ae/p"])
 
 
+class Groups(unittest.TestCase):
+    """Run 45093562592: read at the same time, every MOCCAE (moccae.gov.ae and www.), MOIAT and
+    u.ae page timed out, though read one by one at 18:24Z they all verified. www. is the same site,
+    and a configured group of hosts is read by one worker with one delay clock."""
+
+    def test_www_and_a_group_are_one_host(self):
+        groups = {"uae-federal": ["moccae.gov.ae", "u.ae", "moiat.gov.ae"]}
+        f = sw.Fetcher("t/1", 5, 0.12, opener=SlowOpener({"moccae.gov.ae": 0.05, "www.moccae.gov.ae": 0.05, "u.ae": 0.05, "x.gov.ae": 0.05}),
+                       host_groups=groups)
+        self.assertEqual(f.group("www.moccae.gov.ae"), f.group("moccae.gov.ae"))
+        self.assertEqual(f.group("u.ae"), "uae-federal")
+        self.assertEqual(f.group("www.x.gov.ae"), "x.gov.ae", "www. folds into the site")
+        op = f.opener
+        plan = {"app": [("https://moccae.gov.ae/a", False), ("https://www.moccae.gov.ae/b", False), ("https://u.ae/c", False),
+                        ("https://x.gov.ae/d", False)]}
+        t0 = time.monotonic()
+        sw.prefetch(plan, f, workers=4, on_app_done=lambda app: None)
+        group_starts = sorted(op.starts["moccae.gov.ae"] + op.starts["www.moccae.gov.ae"] + op.starts["u.ae"])
+        gaps = [b - a for a, b in zip(group_starts, group_starts[1:])]
+        self.assertTrue(all(g >= 0.11 for g in gaps), f"one group, one request at a time and its delay: {gaps}")
+        self.assertLess(op.starts["x.gov.ae"][0] - t0, 0.1, "another host does not wait for the group")
+
+    def test_retry_budget_is_per_group(self):
+        f = sw.Fetcher("t/1", 5, 0, opener=SlowOpener({}), retry_budget_s=10)
+        f.spend_retry("https://slow.gov.ae/a", 10)
+        self.assertFalse(f.retry_allowed(5, "https://slow.gov.ae/b"))
+        self.assertTrue(f.retry_allowed(5, "https://other.gov.ae/a"), "one slow host does not use up the others' retries")
+
+
 class Budget(unittest.TestCase):
     def test_spent_budget_reads_nothing_more_and_never_verifies(self):
         op = SlowOpener({"a.gov.ae": 0.3})
@@ -139,7 +168,7 @@ class Budget(unittest.TestCase):
     def test_retries_stop_at_the_deadline(self):
         f = fetcher(SlowOpener({}))
         f.deadline = time.monotonic() + 5
-        self.assertFalse(f.retry_allowed(30), "a retry that would end after the deadline is not made")
+        self.assertFalse(f.retry_allowed(30, "https://a.gov.ae/p"), "a retry that would end after the deadline is not made")
 
 
 class Rotation(unittest.TestCase):

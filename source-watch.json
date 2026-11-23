@@ -11,6 +11,20 @@
   "host_max_per_run": {
     "comtradeapi.un.org": 80
   },
+  "host_groups_note": "Read together (run 45093562592), every MOCCAE, MOIAT and u.ae page timed out; read one by one (run 45054870454) they verified. UAE federal sites share one worker and one delay clock; www. always folds into its site.",
+  "host_groups": {
+    "uae-federal": [
+      "moccae.gov.ae",
+      "moiat.gov.ae",
+      "u.ae",
+      "mofa.gov.ae",
+      "mof.gov.ae",
+      "tax.gov.ae",
+      "uaelegislation.gov.ae",
+      "icp.gov.ae",
+      "mohre.gov.ae"
+    ]
+  },
   "manual_hosts_note": "No answer within 120 s on 3 tries, from GitHub runners (run 44974248996) and from a residential connection (2026-11-22): a manual re-check, not a daily 4-minute wait.",
   "manual_hosts": [
     "micor.agriculture.gov.au",
@@ -101,5 +115,6 @@
       "url": "https://www.dubaidet.gov.ae/en/news",
       "note": "HTTP 403 to plain GETs (2026-11-21)"
     }
-  ]
+  ],
+  "retry_budget_s": 300
 }

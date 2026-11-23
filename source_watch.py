@@ -357,13 +357,18 @@ class Fetcher:
 
     def __init__(self, user_agent: str, timeout: float, per_host_delay: float, sleep: Callable[[float], None] = time.sleep,
                  opener: Callable[..., Any] | None = None, host_delay: dict[str, float] | None = None,
-                 pdf_timeout: float = 90.0, max_timeout: float = 120.0, retry_budget_s: float = 900.0):
+                 pdf_timeout: float = 90.0, max_timeout: float = 120.0, retry_budget_s: float = 900.0,
+                 host_groups: dict[str, list[str]] | None = None):
         self.ua, self.timeout, self.delay, self.sleep = user_agent, timeout, per_host_delay, sleep
         # PDFs are large and some official hosts are slow: a longer first timeout, and every retry
         # after a timeout doubles it up to max_timeout. Retries share one run-wide budget (seconds
         # waited plus seconds spent on retry requests) so the job stays inside its time limit.
         self.pdf_timeout, self.max_timeout = pdf_timeout, max_timeout
-        self.retry_budget_s, self.retry_spent = retry_budget_s, 0.0
+        # Retries are budgeted per host group: a slow host cannot use up the others' retries.
+        self.retry_budget_s, self.retry_spent = retry_budget_s, {}  # group -> seconds
+        # Politeness groups: hosts that are one site or one infrastructure are read by one worker,
+        # with one delay clock. www. always folds into its site.
+        self.groups = {h.lower().removeprefix("www."): g for g, hs in (host_groups or {}).items() for h in hs}
         self.host_delay = {k.lower(): float(v) for k, v in (host_delay or {}).items()}
         # Shared source registry: a page cited by several apps (or twice by one) is fetched once
         # per run; the cache lives as long as this Fetcher, i.e. one run.
@@ -378,10 +383,18 @@ class Fetcher:
         # Hard run budget (monotonic seconds): past it nothing more is fetched and no retry starts.
         self.deadline: float | None = None
 
+    def group(self, host: str) -> str:
+        h = host.lower().removeprefix("www.")
+        for k, g in self.groups.items():
+            if h == k or h.endswith("." + k):
+                return g
+        return h
+
     def _wait(self, url: str) -> None:
-        host = urllib.parse.urlsplit(url).netloc.lower()
+        host = self.group(urllib.parse.urlsplit(url).hostname or "")
         prev = self.last.get(host)
-        delay = self.host_delay.get(host, self.delay)
+        raw = (urllib.parse.urlsplit(url).hostname or "").lower()
+        delay = self.host_delay.get(raw, self.host_delay.get(host, self.delay))
         if prev is not None:
             gap = time.monotonic() - prev
             if gap < delay:
@@ -391,11 +404,16 @@ class Fetcher:
     def timeout_for(self, url: str) -> float:
         return max(self.timeout, self.pdf_timeout) if urllib.parse.urlsplit(url).path.lower().endswith(".pdf") else self.timeout
 
-    def retry_allowed(self, wait: float) -> bool:
+    def retry_allowed(self, wait: float, url: str = "") -> bool:
         if self.deadline is not None and time.monotonic() + wait >= self.deadline:
             return False
         with self.lock:
-            return self.retry_spent + wait <= self.retry_budget_s
+            return self.retry_spent.get(self.group(host_of(url)), 0.0) + wait <= self.retry_budget_s
+
+    def spend_retry(self, url: str, seconds: float) -> None:
+        with self.lock:
+            g = self.group(host_of(url))
+            self.retry_spent[g] = self.retry_spent.get(g, 0.0) + seconds
 
     def out_of_time(self) -> bool:
         return self.deadline is not None and time.monotonic() >= self.deadline
@@ -531,7 +549,7 @@ def _read_page(url: str, fetcher: Fetcher, api: bool = False) -> Read:
         timeout, attempt = fetcher.timeout_for(url), 0
         while transient(f) and attempt < len(RETRY_BACKOFF_S):
             wait = retry_wait(f, attempt)
-            if not fetcher.retry_allowed(wait):
+            if not fetcher.retry_allowed(wait, url):
                 note = " (run retry budget spent; not retried)"
                 break
             if not f.status and "timed out" in f.error.lower():
@@ -539,8 +557,7 @@ def _read_page(url: str, fetcher: Fetcher, api: bool = False) -> Read:
             fetcher.sleep(wait)
             t0 = time.monotonic()
             f = fetcher.get(url, fresh=True, timeout=timeout)
-            with fetcher.lock:
-                fetcher.retry_spent += wait + (time.monotonic() - t0)
+            fetcher.spend_retry(url, wait + (time.monotonic() - t0))
             attempt += 1
         if attempt and transient(f):
             note = f" (after {attempt} retries)"
@@ -676,7 +693,7 @@ def prefetch(plan: dict[str, list[tuple[str, bool]]], fetcher: Fetcher, workers:
     by_host: dict[str, list[tuple[str, bool]]] = {}
     for items in plan.values():
         for it in items:
-            lst = by_host.setdefault(host_of(it[0]), [])
+            lst = by_host.setdefault(fetcher.group(host_of(it[0])), [])
             if it not in lst:
                 lst.append(it)
     for app in [a for a, n in need.items() if not n]:
@@ -1666,7 +1683,7 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
     ua = cfg["user_agent"]
     fetcher = Fetcher(ua, float(cfg.get("timeout_s", 30)), float(cfg.get("per_host_delay_s", 3)), host_delay=cfg.get("host_delay_s"),
                       pdf_timeout=float(cfg.get("pdf_timeout_s", 90)), max_timeout=float(cfg.get("max_timeout_s", 120)),
-                      retry_budget_s=float(cfg.get("retry_budget_s", 900)))
+                      retry_budget_s=float(cfg.get("retry_budget_s", 300)), host_groups=cfg.get("host_groups"))
     manual = {h.lower() for h in cfg.get("manual_hosts", [])}
     # Hard budget for reading pages; reports, state and the summary come after it, inside the step
     # timeout (workflow). Past it nothing more is fetched and the rest is "not read", never verified.

@@ -226,7 +226,11 @@ limit and never lose a result:
 
 - **Concurrent hosts.** All manifests are read first, then every page is read once by a pool of
   `workers` (8) threads, one host per worker: different hosts at the same time, one host never
-  twice at once, so its per-host delay (`per_host_delay_s`, `host_delay_s`) holds.
+  twice at once, so its per-host delay (`per_host_delay_s`, `host_delay_s`) holds. `www.` folds
+  into its site, and `host_groups` puts sites that share one infrastructure on one worker with one
+  delay clock (UAE federal: MOCCAE, MOIAT, u.ae, MoFA, MoF, FTA, legislation portal, ICP, MOHRE:
+  read together in run 45093562592 they all timed out, read one by one they verified). Retries
+  are budgeted per group (`retry_budget_s`, 300 s), so a slow site cannot use up the others'.
 - **Early reports.** As soon as all of one app's pages are read, that app is checked and reported
   to its verify endpoint, and its public state is written, while the other hosts go on. A later
   failure or timeout cannot take an earlier app's results with it.
