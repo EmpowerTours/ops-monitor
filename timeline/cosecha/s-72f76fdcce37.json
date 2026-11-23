@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "2bba1c3413a68c3f0a508ee79e64fddef648aa62ad1657d39e4f909de42c8dec",
+   "payload_sha256": "3831776bd0dc9a24f426c89eef779b6207a911c43141e7e371c6aa6f59bddb6a",
    "quotes": [
     "Present in Coahuila, Guanajuato, Hidalgo, México, Nuevo León, Puebla, Tlaxcala, Veracruz. Under official control"
    ],

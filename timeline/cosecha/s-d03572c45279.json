@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "4eea1d77465728661ba45f838c9abd680575ca1c75b74f6a16303dbea8e1fcf5",
+   "payload_sha256": "13410e147f1b6553635c9ac205cf42cfea3f5c585ee641558132ab741a48d3fc",
    "quotes": [
     "del Apartado B del Anexo 10 de las Reglas Generales de Comercio"
    ],

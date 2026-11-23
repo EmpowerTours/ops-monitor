@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "a3207a362276d58cfd5fd3c0239266bf4e9ba0943903aacfb2e320ffc4ac8cd4",
+   "payload_sha256": "df3e25fb17628c52deac8a38e8a53e57714492927d8fea19cc206f06b8e612d0",
    "quotes": [
     "This service enables parties to review the rental case history of the other party within the Rental Disputes Center system prior to drawing a lease contract."
    ],

@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "6f2b48b1d738cafdc086cb5fe91091dd2460d2ce4212441cbd214504cf535f03",
+   "payload_sha256": "83f5c243c244a2606b2286cf152831ca9dfa0a7fece8a6c5fdc3d4089c6c14b6",
    "quotes": [
     "This service allows customers to verify the validity of the Certificate of Title / Title deed issued by the Land Department."
    ],

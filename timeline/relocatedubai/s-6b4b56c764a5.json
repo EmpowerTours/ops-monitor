@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 0,
-   "payload_sha256": "0df5c2bfff463e539f064c082b6ec8832159a1b61c60a37e277096508afb81fe",
+   "payload_sha256": "8b5bcbd1649f05735b698f377a0af6f142a67ddc56081466581828d0d11a299d",
    "quotes": [],
    "ref": "relocatedubai/s-6b4b56c764a5/2026-11-23T18:04:09Z",
    "run_id": "20261123T175943Z",

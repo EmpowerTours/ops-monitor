@@ -69,12 +69,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T18:02:57Z",
    "http_status": 200,
-   "payload_sha256": "1073982a35b370945bb9b7274b87e32de14c8da4d6c0501990abd267fbf97ea7",
+   "payload_sha256": "a1214a08df42ce23a0f98a4adcdcecb9d89dd0ac4c8f8ecef80fc33437354013",
    "quotes": [
     "Government job portals:",
     "Dubai Careers - Dubai Government job portal",

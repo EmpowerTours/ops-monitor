@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:02:57Z",
    "http_status": 200,
-   "payload_sha256": "c0c1314a2adbd9e7afbbecee7056ec198b80120535d77dba3e3ee1a4a537f5de",
+   "payload_sha256": "40e9d25d79792fb5f95301e0e5e2b48535995b6fc86f89a8ffd935aceb6c29c6",
    "quotes": [
     "حقوق النسخ مؤسسة حكومة دبي الذكية"
    ],

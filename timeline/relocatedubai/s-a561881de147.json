@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "5af9ef141f11fb3af055675bf244334e929b55d72fafab3e2ef453c1a9f12b8a",
+   "payload_sha256": "b8f68f3cc48b0c88ca8318f25dc0e44f2e03f5925cf9a46cbeaa015732d522bc",
    "quotes": [
     "Dubai Government Human Resource Department"
    ],

@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "81057d2a3df553724e4679f369c00033a271ac011d754fccf2835eb623665f9a",
+   "payload_sha256": "a636d16e3e0e7e2c8664f9456f88a5b106ec38e2ef8a37eb79dc6213ab565734",
    "quotes": [
     "SmartStart Business Account (AED Only)",
     "Monthly Service Fee 125.00",

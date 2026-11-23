@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "0014ad4abb202e971b6f030350617e9bc8a96f8fd1d3db7429c21b090abfbb6d",
+   "payload_sha256": "64470bc1c0e7af10d4e250b620457fd1b7f41b085032ac5da780ef261f31d6e8",
    "quotes": [
     "Basic Package AED 6,000",
     "Lite Package AED 12,000",

@@ -2,12 +2,12 @@
  "cited_by": "faez",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:02:00Z",
    "http_status": 200,
-   "payload_sha256": "61e852e2e9543cff3835abb898611e0e4461c4fd9dead7490af1991be6a05e2a",
+   "payload_sha256": "ac12c68e8a9457cefa341bea82906a14008d3e10a0a053d9c3eab7739f953552",
    "quotes": [
     "Home / Contact",
     "Contact Customer Service"

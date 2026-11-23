@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "d8e707f423c8eb0cddcbc19b90a63624723f38b9ab29e8d32a58b1a1817234c8",
+   "payload_sha256": "0d13cd88e5bfd20f30ee9e58ce207446a7e8f13ff6e79cc6a9fb4153e8aef381",
    "quotes": [
     "\"Personal savings\" with no bank statements cannot be verified.",
     "Without it, the application stalled for over a month.",

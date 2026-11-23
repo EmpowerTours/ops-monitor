@@ -2,12 +2,12 @@
  "cited_by": "faez",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:02:00Z",
    "http_status": 401,
-   "payload_sha256": "08710ad76f3ae0ed0f83df5be7bd94af94e600807e147c8e395b0e543dc14b93",
+   "payload_sha256": "b866eef8156284bcf91622d9bb77de7a3be6684d6f908035a6aa4020e1c98787",
    "quotes": [],
    "ref": "faez/s-a5fa244b94a7/2026-11-23T18:02:00Z",
    "run_id": "20261123T175943Z",

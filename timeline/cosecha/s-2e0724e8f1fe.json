@@ -70,12 +70,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "f8726f28303116c972a033fd4aaa1d5491a5076042a08caa4601649d84f149f9",
+   "payload_sha256": "7433a2073fbcdc48078af9fbdda296dd4a8c94cb08fd8226761cde6bf7b72a8b",
    "quotes": [
     "The time to obtain the service : 1 working day",
     "122-003-026-000",

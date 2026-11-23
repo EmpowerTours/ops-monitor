@@ -59,12 +59,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:01:57Z",
    "http_status": 200,
-   "payload_sha256": "082089d0500ed7e291cc9c141c2630ecb3a3a4831318702c82a74a0ff5ace357",
+   "payload_sha256": "b57d694ee6ad8d4a6b0aa323497cd7c4acf3c8207e07e5a31c98e2be3140476f",
    "quotes": [
     "Luxury Hotel Apartment 20.00",
     "Deluxe Hotel Apartment 15.00",

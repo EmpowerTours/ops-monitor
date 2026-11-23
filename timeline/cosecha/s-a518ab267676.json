@@ -86,12 +86,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "1d7eb1da3d6ac15c8241a691a6f45a23c220c2308a62e616a881110692c94965",
+   "payload_sha256": "f2cf9d513bcadcfa80aaf1e537f0517550e02e717e2fab67a55e3e3133c39f3b",
    "quotes": [
     "Fee Type : Federalfor request to release a consignment of agricultural products transferred to the Ministry 200",
     "The time to obtain the service : 1 working day"

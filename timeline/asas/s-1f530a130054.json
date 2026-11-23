@@ -2,12 +2,12 @@
  "cited_by": "asas",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:03:41Z",
    "http_status": 0,
-   "payload_sha256": "471ff099790749d94b3843d8df88c32a529eb42b2f034f91aeb48b829fa3b6e5",
+   "payload_sha256": "21b867955e334a187fa3484f493cdd6a6fefd9f5ceff13dd2854bf4289c5e3f9",
    "quotes": [],
    "ref": "asas/s-1f530a130054/2026-11-23T18:03:41Z",
    "run_id": "20261123T175943Z",

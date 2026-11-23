@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "db17f4b6e50e87078bc848bdfbfd5bf908d02dc5a6187f0a6525b6b43930cc01",
+   "payload_sha256": "a8ef788aa7d97abafeed0cf2011aaf9be8cf48ee9a61ea4a2696e7e14531ff92",
    "quotes": [
     "the median annual rent was AED 40,000 for a studio, AED 58,324 for a 1-bedroom and AED 77,175 for a 2-bedroom flat.",
     "With the 5% housing fee"

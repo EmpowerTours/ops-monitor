@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "0b3baabd766044ad0f9fe36481555320452dcf66b8320954dcb1e0611afa9cda",
+   "payload_sha256": "4bd931b557c56ddfa0c96ce8501e390453b923e64998ca1ec0a4e89bdb16ec1e",
    "quotes": [
     "Current EBP rates are about AED 643 to AED 826 a year."
    ],

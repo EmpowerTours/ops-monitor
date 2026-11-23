@@ -19,12 +19,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:01:46Z",
    "http_status": 200,
-   "payload_sha256": "83b42ebf036366b6bd487368cd41274f6b21ac2a097ba31f91db384fa3be0c8e",
+   "payload_sha256": "cf52cc7c44bed2b509722f5709bbea1e2edb71299f47e4ba23497a93b152e9dc",
    "quotes": [
     "Federal Decree Law No. 45 of 2021 Regarding the Protection of Personal Data, also known as the Personal Data Protection Law",
     "The law gives the owner of the data the right to request for corrections of inaccurate personal data and to restrict or stop the processing of his personal data.",

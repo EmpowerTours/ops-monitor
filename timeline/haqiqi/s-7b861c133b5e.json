@@ -2,12 +2,12 @@
  "cited_by": "haqiqi",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:02:57Z",
    "http_status": 200,
-   "payload_sha256": "fede9943b327a4ee75b10ee5d484322139a84f143f660927d01b120471788f6e",
+   "payload_sha256": "526635b1b14d95d62ecab75d6787d704a3a755f26178af29fa058cd393abaa1b",
    "quotes": [],
    "ref": "haqiqi/s-7b861c133b5e/2026-11-23T18:02:57Z",
    "run_id": "20261123T175943Z",

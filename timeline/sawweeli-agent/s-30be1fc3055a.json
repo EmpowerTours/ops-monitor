@@ -21,12 +21,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:02:57Z",
    "http_status": 200,
-   "payload_sha256": "1b4531de2a9eaf479c26cd306e546034e1710f43f579960d4aa6b5dc5798756f",
+   "payload_sha256": "ecd8c2cf196d376230104d6a7ed44b4420f03362878beae0221e235ccce0eece",
    "quotes": [
     "مرسوم بقانون اتحادي رقم (33 ) لسنة2021 بشأن تنظيم علاقات العمل",
     "الوزارة : وزارة الموارد البشرية والتوطين.",

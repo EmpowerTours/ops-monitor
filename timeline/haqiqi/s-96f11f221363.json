@@ -2,12 +2,12 @@
  "cited_by": "haqiqi",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:02:57Z",
    "http_status": 200,
-   "payload_sha256": "b093fb082a8246d700ee3f8a053b26d49021f227983d03f78312b9cab97a8c7b",
+   "payload_sha256": "f4a0dacb59cee88525e3e5d29df66be6175331fd3f8d143765d70169a698a1dc",
    "quotes": [
     "Search Pre Permission Detail"
    ],

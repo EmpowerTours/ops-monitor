@@ -66,12 +66,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "8f7cadef6def3eaaff93795a1c7e975d7ba557921d8208849182f5de64d85bf0",
+   "payload_sha256": "bb050f9872c6378b260e7a46b2e15444cbdd89c7beeb958f7330e848f5a7ffc8",
    "quotes": [
     "Issue Conformity Certificates for Regulated Products (ECAS)",
     "List of technical requirements for regulated products"

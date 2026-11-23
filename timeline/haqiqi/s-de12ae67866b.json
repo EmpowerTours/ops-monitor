@@ -2,12 +2,12 @@
  "cited_by": "haqiqi",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:02:57Z",
    "http_status": 200,
-   "payload_sha256": "0786132a2388c1560af5466ee51e050181adee3f594e6aafb0d01c800460ed55",
+   "payload_sha256": "b89c862244fadd369b6e1586d39086b8d3a629c76bc587370981827abc469ba2",
    "quotes": [
     "License Status",
     "Agency List"

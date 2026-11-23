@@ -2,12 +2,12 @@
  "cited_by": "faez",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:02:00Z",
    "http_status": 200,
-   "payload_sha256": "caea99b6553a123cd47f04354306afbaf0eab4c072dbb666e5affc5da4686af0",
+   "payload_sha256": "9ae59ad0cea03e9b60707c29808ac2edd7a07fb83dbb867cdb9f12dd40d4f4f5",
    "quotes": [
     "Public register Search our register of DMCC entities"
    ],

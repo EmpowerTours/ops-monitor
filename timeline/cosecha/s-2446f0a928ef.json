@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "4d6d0fa6c6d8548841430274e9f93232e08c80c861545288ccb3525222cc6e70",
+   "payload_sha256": "6b8234bf1f1eb1f9a2e9b7cfc08f21e6eab4258aa71f07289c92d24cb05b52a7",
    "quotes": [
     "Countries in the Near East and North Africa (NENA) region are accelerating efforts to adopt the IPPC ePhyto Solution"
    ],

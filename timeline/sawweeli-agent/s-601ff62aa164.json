@@ -47,12 +47,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T18:02:57Z",
    "http_status": 200,
-   "payload_sha256": "35a48acf925f8d20113b4a9e8a717623fadc74fff9214c16b894dd7688273d14",
+   "payload_sha256": "49994e33dfe20842d4f1da2ef39c1fabd962ae64858f7393397c688657608191",
    "quotes": [
     "The United Arab Emirates' Government Platform"
    ],

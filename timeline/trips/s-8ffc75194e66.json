@@ -20,12 +20,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:01:57Z",
    "http_status": 200,
-   "payload_sha256": "50aacf0c79a16c50ed3d24914315139c5c790cf2c5df75559046f759368bd25a",
+   "payload_sha256": "5f708cbccf29bbaaa2f765fad512e0e983db908225c04bf271ca4311650822ce",
    "quotes": [
     "6:00 AM - 10:00PM → AED 5",
     "10:00 PM - 6:00 AM → AED 5.5",

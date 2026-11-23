@@ -2,12 +2,12 @@
  "cited_by": "asas",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:03:41Z",
    "http_status": 200,
-   "payload_sha256": "f792236966a38c8453db1d1231b2a30ad502de30c9bafdde0badf3124ad27f18",
+   "payload_sha256": "a294e62de122b9b8acd766ec86181a0caa602ab7a3d6b56f3058f17dd4923c65",
    "quotes": [
     "Entity Structure",
     "This section confirms the type of entity being registered in DIFC.",

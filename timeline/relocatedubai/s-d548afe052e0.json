@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "aeea4c05d0e596dcd78e3c72ed6208a5c49ecb0b4f3dec955ed00653d1abec9d",
+   "payload_sha256": "be4adef8c01c97d443365cbfe5c3ee7c9c05cc2486ac68b68c60e76c72fa3bd9",
    "quotes": [
     "Grade 4 118 12,172 24,890 45,730",
     "KG 1 115 9,679 19,662 37,368"

@@ -47,12 +47,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T18:01:57Z",
    "http_status": 200,
-   "payload_sha256": "17321c6fcefb1efa82494b43fbf9fed90eb95e41186c2be31f12ef4b53442bb1",
+   "payload_sha256": "823ea53f24c5d50d35d7d228ade50c7b10e1bdd7577f945dd2f184200025c43b",
    "quotes": [
     "VAT 5% (AED)"
    ],

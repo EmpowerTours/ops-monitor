@@ -83,12 +83,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "fe6b54e41cd07f5e1dbf419efc87ec7d3b502cde2f5cbfa19dcda2f9656e57b4",
+   "payload_sha256": "f7faa9d5b9b2bf262633f0e85635e0861c18367c400a5880c4f9f3b34f543868",
    "quotes": [
     "You will receive the payment receipt and the attestation on the data of your invoice or Certificate of Origin (COO)",
     "150 per invoice/COO",

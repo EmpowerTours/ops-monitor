@@ -2,12 +2,12 @@
  "cited_by": "asas",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:03:41Z",
    "http_status": 200,
-   "payload_sha256": "7c2abc3397bda6bdc94a4a410490bebd61902720b8d3bff98ede4e50a7e744a4",
+   "payload_sha256": "b223e634767ae13fa003148e23168d87614a1b8633ace6b393858b5e39c9eaa9",
    "quotes": [
     "Activity 4721.81 covers the trading of honey and apiary accessories"
    ],
