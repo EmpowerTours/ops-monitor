@@ -32,6 +32,22 @@
    "run_id": "20261123T011605Z",
    "sha256": "42c7ca2f84e02482bb76887c5d423fa862ce3193d71988aee3fe07459f8d14a3",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T02:27:05Z",
+   "http_status": 200,
+   "payload_sha256": "207f5acd5dd26d2fa7d16e7bd552e4c824255a434818ed47927fb5a85d4d20b2",
+   "quotes": [
+    "registered by Dubai Municipality prior to being placed in the Emirate of Dubai market",
+    "Copy of valid Trade License."
+   ],
+   "ref": "cosecha/s-5833581e8a18/2026-11-23T02:27:05Z",
+   "run_id": "20261123T021013Z",
+   "sha256": "42c7ca2f84e02482bb76887c5d423fa862ce3193d71988aee3fe07459f8d14a3",
+   "status": "verified"
   }
  ],
  "source_id": "s-5833581e8a18",

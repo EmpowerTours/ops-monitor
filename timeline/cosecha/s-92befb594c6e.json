@@ -1,0 +1,21 @@
+{
+ "cited_by": "cosecha",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T02:27:05Z",
+   "http_status": 200,
+   "payload_sha256": "649f4a5c9265268079467eebe413228869688dcd4847abc1900b2f97120d3ad3",
+   "quotes": [],
+   "ref": "cosecha/s-92befb594c6e/2026-11-23T02:27:05Z",
+   "run_id": "20261123T021013Z",
+   "sha256": "55db15700bec3616d7c103565bc3b9d5c667ba2f55e56068bdf65951bb07d281",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-92befb594c6e",
+ "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=784&partnerCode=0&period=2023&flowCode=M&cmdCode=070993",
+ "v": 1
+}

@@ -1,0 +1,10 @@
+{
+ "fetched_at": "2026-11-23T02:27:05Z",
+ "id": "s-504932308e85",
+ "last_read_fetched_at": "2026-11-23T02:27:05Z",
+ "manifest_fingerprint": "32e42366ff7dd0e70b4f3e84fa5bc30e3f4f59491ff610596ff3b5b46cddac7c",
+ "run_id": "20261123T021013Z",
+ "sha256": "88562d276a6182e02d6c5862c2702b641bdadf0ef889637096cae59e87a0a700",
+ "status": "verified",
+ "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=784&partnerCode=0&period=2023&flowCode=M&cmdCode=080440"
+}

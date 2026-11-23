@@ -16,6 +16,22 @@
    "run_id": "20261123T011605Z",
    "sha256": "ed1404c683abffcd574a44bc7cac2494f27912b2686e2e0bca52529db9299197",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T02:12:25Z",
+   "http_status": 200,
+   "payload_sha256": "95ba715e8e3baeb8133572b93ee3c8c7e23fa935af288e808a64df4bbba346bd",
+   "quotes": [
+    "Job offer - عرض عمل",
+    "Search By Transaction Number"
+   ],
+   "ref": "sawweeli-agent/s-525859f37c69/2026-11-23T02:12:25Z",
+   "run_id": "20261123T021013Z",
+   "sha256": "ed1404c683abffcd574a44bc7cac2494f27912b2686e2e0bca52529db9299197",
+   "status": "verified"
   }
  ],
  "source_id": "s-525859f37c69",

@@ -30,6 +30,21 @@
    "run_id": "20261123T011605Z",
    "sha256": "c1d4c9da55e1c71e5d11954e2eb572e85df4d41bb33b674bdb4c6f7c5c9bf90a",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T02:27:05Z",
+   "http_status": 200,
+   "payload_sha256": "7510b2a80d4c48b4263fa6be73d27e8436398dfd6910bdf84c0927a682c3a6af",
+   "quotes": [
+    "Apply to Register and Assess a Food Item"
+   ],
+   "ref": "cosecha/s-3752896cf2f3/2026-11-23T02:27:05Z",
+   "run_id": "20261123T021013Z",
+   "sha256": "c1d4c9da55e1c71e5d11954e2eb572e85df4d41bb33b674bdb4c6f7c5c9bf90a",
+   "status": "verified"
   }
  ],
  "source_id": "s-3752896cf2f3",

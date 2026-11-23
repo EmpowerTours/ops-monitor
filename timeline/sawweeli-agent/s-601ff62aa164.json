@@ -15,6 +15,21 @@
    "run_id": "20261123T011605Z",
    "sha256": "",
    "status": "unreachable"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T02:12:25Z",
+   "http_status": 200,
+   "payload_sha256": "66d18ce72de4e0191598abc5093940c50b4f91b6ef9a5b1bc3926fe5d0e75055",
+   "quotes": [
+    "The United Arab Emirates' Government Platform"
+   ],
+   "ref": "sawweeli-agent/s-601ff62aa164/2026-11-23T02:12:25Z",
+   "run_id": "20261123T021013Z",
+   "sha256": "67bc70e0da91df41ba7bbe8549b27e727dba9d97ab173513155056f1a25a7dd9",
+   "status": "verified"
   }
  ],
  "source_id": "s-601ff62aa164",
