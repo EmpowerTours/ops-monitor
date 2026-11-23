@@ -243,7 +243,9 @@ limit and never lose a result:
   public state); the others are not reported that run and keep their last result in the app.
 - **Save Page Now after the reports.** The watch step only queues each reading as
   `pending`; a separate step (`--archive-pending`, 15 minutes, `continue-on-error`) archives up to
-  `archive.max_per_run` (30) pages and writes the archive URLs into the queue and the timelines
+  `archive.max_per_run` (30) pages within `archive.budget_s` (600 s: no capture starts unless it can
+  still be polled in time, so the step never overruns; run 45098623502 overran without it) and
+  writes the archive URLs into the queue and the timelines
   (recomputing `payload_sha256`; an anchored record is never touched). Over the cap a reading is
   "deferred"; a killed archive step leaves readings pending for the next run. A slow archive never
   holds up verification.

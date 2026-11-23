@@ -37,7 +37,8 @@
     "max_per_run": 30,
     "not_within": "20h",
     "poll_s": 10,
-    "poll_rounds": 12
+    "poll_rounds": 12,
+    "budget_s": 600
   },
   "apps": [
     {

@@ -80,10 +80,14 @@ class Archiver:
 
     def __init__(self, opener: Callable[..., Any] | None = None, sleep: Callable[[float], None] = time.sleep,
                  user_agent: str = "source-watch/1.0", auth: str = "", min_interval_s: float = 21.0, max_per_run: int = 40,
-                 poll_s: float = 10.0, poll_rounds: int = 12, not_within: str = "20h", timeout_s: float = 60.0):
+                 poll_s: float = 10.0, poll_rounds: int = 12, not_within: str = "20h", timeout_s: float = 60.0,
+                 clock: Callable[[], float] = time.monotonic, deadline: float | None = None):
         self.opener, self.sleep = opener or urllib.request.urlopen, sleep
         self.ua, self.auth, self.min_interval, self.max_per_run = user_agent, auth, min_interval_s, max_per_run
         self.poll_s, self.poll_rounds, self.not_within, self.timeout = poll_s, poll_rounds, not_within, timeout_s
+        # By `deadline` (clock seconds) everything is done: no capture starts unless there is still
+        # time to poll for it; what is not started is "deferred" to a later run, not lost.
+        self.clock, self.deadline = clock, deadline
 
     def _call(self, url: str, data: dict | None = None) -> dict:
         headers = {"User-Agent": self.ua, "Accept": "application/json"}
@@ -113,6 +117,10 @@ class Archiver:
             if sent >= self.max_per_run:
                 out[url] = self._failed(f"per-run cap of {self.max_per_run} reached")
                 continue
+            if self.deadline is not None and \
+                    self.clock() + (self.min_interval if sent else 0) + self.poll_s * self.poll_rounds > self.deadline:
+                out[url] = {"archive_url": "", "archive_status": DEFERRED}
+                continue
             if sent:
                 self.sleep(self.min_interval)
             sent += 1
@@ -133,7 +141,7 @@ class Archiver:
             else:
                 out[url] = self._failed(str(doc.get("status_ext") or doc.get("message") or "no job id"))
         for rnd in range(self.poll_rounds):
-            if not jobs:
+            if not jobs or (self.deadline is not None and self.clock() + self.poll_s > self.deadline):
                 break
             self.sleep(self.poll_s)
             for url, job in list(jobs.items()):

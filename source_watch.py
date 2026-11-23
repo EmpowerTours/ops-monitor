@@ -1965,6 +1965,8 @@ def main(argv: list[str] | None = None) -> int:
             return 2
         cfg = load_json(args.config) or {}
         arch, why_off = archiver_from(cfg, dict(os.environ))
+        if arch:  # finish inside the step: no capture starts that could not be polled in time
+            arch.deadline = time.monotonic() + float(args.budget_s or (cfg.get("archive") or {}).get("budget_s", 600))
         n = timeline.resolve_pending(args.state, arch, why_off)
         print(f"Save Page Now: {n['archived']} readings archived, {n['deferred']} deferred" + (f" ({why_off})" if not arch else ""), flush=True)
         return 0
