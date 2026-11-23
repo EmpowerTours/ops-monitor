@@ -19,7 +19,8 @@ Contents: [Manifest](#1-manifest-get-well-knownsourcesjson) ·
 [Status and judge-facing Sources data](#4-status-get-well-knownsources-statusjson) ·
 [The watcher](#5-the-watcher) · [Canary](#6-canary-the-verifier-checks-itself) ·
 [Dead-man switch](#7-dead-man-switch) · [Shared pages](#8-shared-source-registry) ·
-[New-rule radar](#9-new-rule-radar) · [Public timeline](#10-public-timeline-of-readings) · [Fix proposals](#fix-proposals) ·
+[New-rule radar](#9-new-rule-radar) · [Public timeline](#10-public-timeline-of-readings) ·
+[Pinned copies](#11-pinned-copies-of-every-version-an-app-relies-on) · [Fix proposals](#fix-proposals) ·
 [Owner setup](#owner-setup) · [Adopting it in the other apps](#adopting-it-in-the-other-apps) ·
 [Prior art](#prior-art-why-our-own-fetcher)
 
@@ -203,8 +204,10 @@ are on, the pinned `anthropic` SDK.
     `SOURCE_CAPTURES_REPO`): each page's normalised text (`<app>/<id>.txt`, Arabic `<id>.ar.txt`),
     its full metadata, `<id>.review.md` (closest text to each missing quote and the diff against
     the previous capture), the manifest it checked against, and the run report
-    (`runs/<run_id>-<app>.json`). The workflow writes only after `GET /repos/<repo>` says
-    `private: true`. `--offline` replays the checks on these captures without the network.
+    (`runs/<run_id>-<app>.json`), plus a pinned copy of every version an app's manifest records
+    (`pinned/<sha256>.txt`, see [11](#11-pinned-copies-of-every-version-an-app-relies-on)). The
+    workflow writes only after `GET /repos/<repo>` says `private: true`. `--offline` replays the
+    checks on these captures without the network.
   - **No private store configured** (variable unset, token unset, repository not private or not
     reachable): captures, diffs and excerpts are not saved, a warning is logged, nothing fails, and
     the public state is still kept. Workflow artifacts are not used as a fallback: on a public
@@ -365,6 +368,44 @@ passed), for every page the watch actually fetched (`source_timeline.py`):
 
 `--check-public-state` names the file, the key and (in a list) the item position of anything it refuses, never the value, and validates the queue and every timeline before each commit: only the keys
 above, quotes of at most 400 characters, short single-line strings. Nothing else may be public.
+
+## 11. Pinned copies of every version an app relies on
+
+Owner decision 2026-11-23. Each run overwrites a page's capture at `<app>/<id>.txt`, so for a page
+whose wording shifts (u.ae, tax.gov.ae) the version matching the `sha256` an app records in its
+manifest would survive only in git history. The private store therefore also keeps, content-addressed:
+
+| file | content |
+|---|---|
+| `pinned/<sha256>.txt` | the capture whose text hashes to that sha256 (normal form; for a `volatile` host, its stable part hashes to it and the whole capture is kept) |
+| `pinned/<sha256>.json` | `sha256`, `url`, `fetched_at` (when the watcher read that version; empty if unknown, the commit time for a copy recovered from history), `hash_of`, `origin` (`capture:<path>` or `history:<commit>:<path>`), `refs` (`[{app, id, lang}]`, `lang` `en` or `ar`), `pinned_at`, `unreferenced_since` |
+
+The latest copy stays at its path as before; pinned copies are in addition to it. Code:
+`source_pins.py`, called by `source_watch.py`.
+
+- **Each run**, after the captures are saved, for every source in every manifest read that run
+  (`sha256` and `sha256_ar`; an empty hash is not a reference): if `pinned/<sha256>.txt` exists and
+  hashes to its name, only its `refs` are brought up to date; otherwise a current capture whose text
+  hashes to it (at any app's path: a page cited by several apps is one copy with several refs) is
+  pinned. A hash with no copy is reported **missing** in `runs/<run_id>-pins.json`, in `--report`
+  (`pins`) and in the run summary (app, id, hash: never page text). A missing copy does not fail
+  the watch; the check below does.
+- **References** of an app whose manifest was not read this run are kept as they were.
+- **Pruning:** a copy any manifest references is never deleted. When its last reference goes,
+  `unreferenced_since` is set; the copy is deleted only once that date is more than 18 months
+  (548 days) old. A copy referenced again clears the date.
+- **`--verify-pins --captures DIR`** reads every app's manifest and exits 1 if any recorded hash has
+  no `pinned/<sha256>.txt`, if a copy does not hash to its name, or if a manifest other than a
+  not-adopted 404 could not be read. The workflow runs it as the last step of the daily job, so the
+  run goes red while any version an app relies on has no copy.
+- **Migration (once):** `--pin-history --captures DIR [--dry-run]` does the same as a run (no page
+  is fetched) and also searches the store's whole git history (every `<app>/<id>.txt` and
+  `.ar.txt` ever committed, newest first) for versions no current capture holds. It refuses a
+  shallow clone. In CI it is the `pins-migration` job of `source-watch.yml`
+  (`workflow_dispatch`, input `pins_migration`: `dry-run` counts only; `commit` pushes
+  `pinned/` and the run report to a branch `pins-migration-<run id>` of the capture store, merged
+  by the owner through a PR, never to main). The step summary gives the counts and the missing
+  hashes.
 
 ## Fix proposals
 

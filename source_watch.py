@@ -27,6 +27,7 @@ import json
 import os
 import queue
 import re
+import subprocess
 import sys
 import threading
 import time
@@ -40,6 +41,7 @@ from typing import Any, Callable
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import source_timeline as timeline  # noqa: E402  (F2: public timeline of readings)
+import source_pins as pins  # noqa: E402  (pinned copies of every version an app relies on; private store only)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 STATUSES_SENT = ("verified", "changed_quote_ok", "quote_missing", "gone", "unreachable", "new_edition")
@@ -828,6 +830,23 @@ def validate_manifest(m: Any, app: str) -> list[dict]:
 
 # ---------------------------------------------------------------------------------------------
 # Reporting to the app
+
+
+NOT_ADOPTED = "no manifest served yet (404): app has not adopted source watch"
+
+
+def read_manifest(name: str, src_m: str, fetcher: "Fetcher") -> tuple[dict, list[dict]]:
+    """One app's manifest from its URL (or a local file): (document, validated sources)."""
+    if src_m.startswith("http"):
+        f = fetcher.get(src_m, accept="application/json")
+        if f.status == 404:
+            raise ManifestError(NOT_ADOPTED)
+        if f.status != 200 or f.error:
+            raise ManifestError(f"manifest not read ({f.error or f.status})")
+        manifest_doc = json.loads(f.body)
+    else:
+        manifest_doc = load_json(src_m)
+    return manifest_doc, validate_manifest(manifest_doc, name)
 
 
 def verify_payload(app: str, run_id: str, outcomes: list[Outcome], manifest: list[dict]) -> dict:
@@ -1738,18 +1757,8 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
             continue
         rec: dict[str, Any] = {"app": name}
         per_app.append(rec)
-        src_m = overrides_m.get(name, app["manifest"])
         try:
-            if src_m.startswith("http"):
-                f = fetcher.get(src_m, accept="application/json")
-                if f.status == 404:
-                    raise ManifestError("no manifest served yet (404): app has not adopted source watch")
-                if f.status != 200 or f.error:
-                    raise ManifestError(f"manifest not read ({f.error or f.status})")
-                manifest_doc = json.loads(f.body)
-            else:
-                manifest_doc = load_json(src_m)
-            manifest = validate_manifest(manifest_doc, name)
+            manifest_doc, manifest = read_manifest(name, overrides_m.get(name, app["manifest"]), fetcher)
         except (ManifestError, ValueError, re.error) as e:
             rec["error"] = f"manifest: {e}"
             continue
@@ -1893,6 +1902,9 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
         prefetch(plan, fetcher, int(cfg.get("workers", 8)), process)
         if fetcher.out_of_time():
             print("WARNING: the run's time budget was spent: pages not read yet are reported as not read", file=sys.stderr, flush=True)
+    pin_rep = None
+    if private and not args.offline and loaded:
+        pin_rep = pin_run(private, run_id, {n: v[2] for n, v in loaded.items()}, fetcher, clock())
     if state and canary["ok"] and not args.offline and not args.dry_run and collected:
         # Save Page Now never runs here: a slow archive must not hold up verification. Readings are
         # queued "pending" and the archive step after the reports resolves them (--archive-pending).
@@ -1931,7 +1943,7 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
             except Exception as e:
                 print(f"radar digest not filed: {type(e).__name__}", file=sys.stderr)
     shared = shared_pages(collected)
-    md = summary_markdown(run_id, per_app, run_url, canary, shared, fetcher.hits, radar)
+    md = summary_markdown(run_id, per_app, run_url, canary, shared, fetcher.hits, radar) + pins_markdown(pin_rep)
     print(md)
     if env.get("GITHUB_STEP_SUMMARY"):
         with open(env["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as fh:
@@ -1954,8 +1966,92 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
             print(f"canary issue not filed: {type(e).__name__}", file=sys.stderr)
     if args.report:
         with open(args.report, "w", encoding="utf-8") as fh:
-            json.dump({"canary": canary, "shared_pages": shared, "radar": radar, "apps": per_app}, fh, indent=1, ensure_ascii=False, default=str)
+            json.dump({"canary": canary, "shared_pages": shared, "radar": radar, "apps": per_app, "pins": pin_rep}, fh, indent=1, ensure_ascii=False, default=str)
     return 0 if canary["ok"] else 1
+
+
+# ---------------------------------------------------------------------------------------------
+# Pinned copies (source_pins.py): every version an app's manifest records, kept by its hash in
+# the private store. Reports carry ids, URLs and hashes only (already public), never page text.
+
+
+def pin_run(private: str, run_id: str, manifests: dict[str, list[dict]], fetcher: "Fetcher", now: dt.datetime,
+            history: bool = False, dry_run: bool = False) -> dict:
+    """Pin every recorded hash from the captures (and, for the migration, their git history), and
+    write the run report runs/<run_id>-pins.json. Never fails the run: an error is reported."""
+    try:
+        rep = pins.ensure_pins(private, manifests, fetcher.hash_form, now, history=history, dry_run=dry_run)
+    except (OSError, ValueError, subprocess.CalledProcessError, pins.HistoryError) as e:
+        rep = {"error": f"{type(e).__name__}: {e}" if isinstance(e, pins.HistoryError) else type(e).__name__, "missing": []}
+    rep.update(run_id=run_id, apps=sorted(manifests))
+    if not dry_run:
+        os.makedirs(os.path.join(private, "runs"), exist_ok=True)
+        with open(os.path.join(private, "runs", f"{run_id}-pins.json"), "w", encoding="utf-8") as fh:
+            json.dump(rep, fh, indent=1, ensure_ascii=False, sort_keys=True)
+            fh.write("\n")
+    for m in rep.get("missing", []):
+        who = ", ".join(f"{r['app']}/{r['id']} ({r['lang']})" for r in m["refs"])
+        print(f"pin missing: {who} {m['sha256']} {m['url']}", flush=True)
+    return rep
+
+
+def pins_markdown(rep: dict | None) -> str:
+    if not rep:
+        return ""
+    if rep.get("error"):
+        return f"\n\nPinned copies: not checked ({rep['error']})."
+    out = (f"\n\nPinned copies (private store): {rep['referenced']} versions referenced by the manifests, "
+           f"{rep['already_pinned']} already pinned, {rep['pinned_now']} pinned now"
+           + (f" ({rep['recovered_from_history']} from git history)" if rep.get("history_searched") else "")
+           + f", **{len(rep['missing'])} missing**" + (f", {len(rep['pruned'])} pruned" if rep.get("pruned") else "") + ".")
+    for m in rep["missing"][:30]:
+        out += "\n- missing: " + ", ".join(f"{r['app']}/`{r['id']}` ({r['lang']})" for r in m["refs"]) + f" `{m['sha256'][:16]}`"
+    return out
+
+
+def pins_main(args: argparse.Namespace) -> int:
+    """--verify-pins and --pin-history: read every app's manifest, then check or pin."""
+    if not args.captures or not os.path.isdir(args.captures):
+        print("--verify-pins and --pin-history need --captures (the private capture store)", file=sys.stderr)
+        return 2
+    cfg = load_json(args.config)
+    if not cfg:
+        print(f"cannot read {args.config}", file=sys.stderr)
+        return 2
+    fetcher = Fetcher(cfg["user_agent"], float(cfg.get("timeout_s", 30)), float(cfg.get("per_host_delay_s", 3)),
+                      volatile=cfg.get("volatile"))
+    overrides_m = dict(kv.split("=", 1) for kv in args.manifest or [])
+    manifests: dict[str, list[dict]] = {}
+    failed = []
+    for app in cfg["apps"]:
+        name = app["app"]
+        if args.only and name not in args.only:
+            continue
+        try:
+            manifests[name] = read_manifest(name, overrides_m.get(name, app["manifest"]), fetcher)[1]
+        except (ManifestError, ValueError, re.error) as e:
+            if str(e) != NOT_ADOPTED:
+                failed.append(name)
+            print(f"{name}: manifest: {e}", file=sys.stderr if str(e) != NOT_ADOPTED else sys.stdout, flush=True)
+    if args.verify_pins:
+        problems = pins.verify_pins(args.captures, manifests, fetcher.hash_form)
+        for x in problems:
+            print(f"PIN MISSING: {x}", file=sys.stderr)
+        n = len(pins.referenced(manifests))
+        print(f"pins: {n} versions referenced by {len(manifests)} manifests, {len(problems)} without a pinned copy"
+              + (f"; manifests not read: {', '.join(failed)}" if failed else ""), flush=True)
+        return 1 if problems or failed else 0
+    run_id = args.run_id or dt.datetime.now(dt.timezone.utc).strftime("pins-%Y%m%dT%H%M%SZ")
+    if not RUN_ID_RE.match(run_id):
+        print("bad run id", file=sys.stderr)
+        return 2
+    rep = pin_run(args.captures, run_id, manifests, fetcher, dt.datetime.now(dt.timezone.utc), history=True, dry_run=args.dry_run)
+    rep["manifests_not_read"] = failed
+    print(("DRY RUN, nothing written. " if args.dry_run else "") + pins_markdown(rep).strip(), flush=True)
+    if args.report:
+        with open(args.report, "w", encoding="utf-8") as fh:
+            json.dump({"pins": rep}, fh, indent=1, ensure_ascii=False)
+    return 1 if rep.get("error") else 0
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -1975,7 +2071,14 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--dry-run", action="store_true", help="fetch and check, but send nothing and file no issue")
     p.add_argument("--offline", action="store_true", help="replay the checks on the saved captures, no network")
     p.add_argument("--report", help="write the per-app results as JSON here")
+    p.add_argument("--verify-pins", action="store_true",
+                   help="only check that every sha256 in every app manifest has its pinned copy in --captures; exit 1 if not")
+    p.add_argument("--pin-history", action="store_true",
+                   help="only pin every manifest sha256, recovering versions from the --captures git history "
+                        "(one-time migration; needs a full clone; with --dry-run nothing is written)")
     args = p.parse_args(argv)
+    if args.verify_pins or args.pin_history:
+        return pins_main(args)
     if args.archive_pending:
         if not args.state:
             print("--archive-pending needs --state", file=sys.stderr)
