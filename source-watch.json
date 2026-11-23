@@ -5,6 +5,12 @@
   "host_delay_s": {
     "comtradeapi.un.org": 12
   },
+  "workers": 8,
+  "run_budget_s": 1800,
+  "host_max_per_run_note": "UN Comtrade answers one query per 12 s and Cosecha cites about 240 of them (annual data): 80 per run, least recently read first, so each is read every three days and the run stays short.",
+  "host_max_per_run": {
+    "comtradeapi.un.org": 80
+  },
   "manual_hosts_note": "No answer within 120 s on 3 tries, from GitHub runners (run 44974248996) and from a residential connection (2026-11-22): a manual re-check, not a daily 4-minute wait.",
   "manual_hosts": [
     "micor.agriculture.gov.au",
@@ -14,7 +20,7 @@
     "enabled": true,
     "user_agent": "source-watch/1.0",
     "min_interval_s": 21,
-    "max_per_run": 40,
+    "max_per_run": 30,
     "not_within": "20h",
     "poll_s": 10,
     "poll_rounds": 12

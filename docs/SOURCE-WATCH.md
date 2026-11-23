@@ -219,6 +219,31 @@ Run locally: `python3 source_watch.py --dry-run` (no issue, nothing sent), or ag
 `--manifest cosecha=http://localhost:8080/.well-known/sources.json --verify-url cosecha=http://localhost:8080/internal/sources/verify`
 with the token in `SOURCE_VERIFY_TOKEN_COSECHA`.
 
+### Run time: concurrency, early reports, budget
+
+One daily run covers every app (8 by the end of 2026-11). It must finish well inside the job
+limit and never lose a result:
+
+- **Concurrent hosts.** All manifests are read first, then every page is read once by a pool of
+  `workers` (8) threads, one host per worker: different hosts at the same time, one host never
+  twice at once, so its per-host delay (`per_host_delay_s`, `host_delay_s`) holds.
+- **Early reports.** As soon as all of one app's pages are read, that app is checked and reported
+  to its verify endpoint, and its public state is written, while the other hosts go on. A later
+  failure or timeout cannot take an earlier app's results with it.
+- **Budget.** Reading pages has `run_budget_s` (1800 s), counted from the first page read. Past
+  it no page is fetched and no retry starts; the pages not read yet are reported as `unreachable`
+  "not read: the run's time budget was spent" (never verified, nothing changes in the app).
+  Reports, issues, state and the summary come after it, inside the watch step's 40 minutes.
+- **Rotation.** `host_max_per_run` caps the reads of one host per run (UN Comtrade: 80 of about
+  240 annual queries, at its 12 s delay). Its pages rotate, least recently read first (from the
+  public state); the others are not reported that run and keep their last result in the app.
+- **Save Page Now after the reports.** The watch step only queues each reading as
+  `pending`; a separate step (`--archive-pending`, 15 minutes, `continue-on-error`) archives up to
+  `archive.max_per_run` (30) pages and writes the archive URLs into the queue and the timelines
+  (recomputing `payload_sha256`; an anchored record is never touched). Over the cap a reading is
+  "deferred"; a killed archive step leaves readings pending for the next run. A slow archive never
+  holds up verification.
+
 ## 6. Canary: the verifier checks itself
 
 Before any app is checked, the watcher serves a control site of its own on `127.0.0.1` and runs

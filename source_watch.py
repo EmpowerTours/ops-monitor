@@ -25,13 +25,16 @@ import html.parser
 import io
 import json
 import os
+import queue
 import re
 import sys
+import threading
 import time
 import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from typing import Any, Callable
 
@@ -368,6 +371,12 @@ class Fetcher:
         self.hits = 0
         self.opener = opener or urllib.request.urlopen
         self.last: dict[str, float] = {}
+        # Concurrency (prefetch): several hosts are read at once, one host by one worker only, so
+        # `last` per host needs no lock; the shared maps and counters do.
+        self.lock = threading.Lock()
+        self.reads: dict[tuple[str, bool], "Read"] = {}
+        # Hard run budget (monotonic seconds): past it nothing more is fetched and no retry starts.
+        self.deadline: float | None = None
 
     def _wait(self, url: str) -> None:
         host = urllib.parse.urlsplit(url).netloc.lower()
@@ -383,16 +392,24 @@ class Fetcher:
         return max(self.timeout, self.pdf_timeout) if urllib.parse.urlsplit(url).path.lower().endswith(".pdf") else self.timeout
 
     def retry_allowed(self, wait: float) -> bool:
-        return self.retry_spent + wait <= self.retry_budget_s
+        if self.deadline is not None and time.monotonic() + wait >= self.deadline:
+            return False
+        with self.lock:
+            return self.retry_spent + wait <= self.retry_budget_s
+
+    def out_of_time(self) -> bool:
+        return self.deadline is not None and time.monotonic() >= self.deadline
 
     def get(self, url: str, accept: str = "text/html,application/pdf,application/json;q=0.9,*/*;q=0.5", fresh: bool = False,
             timeout: float | None = None) -> Fetched:
         key = (url, accept)
-        if not fresh and key in self.cache:
-            self.hits += 1
-            return self.cache[key]
+        with self.lock:
+            if not fresh and key in self.cache:
+                self.hits += 1
+                return self.cache[key]
         f = self._get(url, accept, timeout or self.timeout_for(url))
-        self.cache[key] = f
+        with self.lock:
+            self.cache[key] = f
         return f
 
     def _get(self, url: str, accept: str, timeout: float | None = None) -> Fetched:
@@ -482,7 +499,23 @@ def retry_wait(f: Fetched, attempt: int) -> float:
     return float(RETRY_BACKOFF_S[attempt])
 
 
+BUDGET_SPENT = "not read: the run's time budget was spent"
+
+
 def read_page(url: str, fetcher: Fetcher, api: bool = False) -> Read:
+    """One page read per run: the result is kept, so the checks after a prefetch read nothing again."""
+    key = (url, api)
+    with fetcher.lock:
+        r = fetcher.reads.get(key)
+    if r is not None:
+        return r
+    r = Read(False, "unreachable", BUDGET_SPENT) if fetcher.out_of_time() else _read_page(url, fetcher, api)
+    with fetcher.lock:
+        fetcher.reads.setdefault(key, r)
+        return fetcher.reads[key]
+
+
+def _read_page(url: str, fetcher: Fetcher, api: bool = False) -> Read:
     """Fetch and extract one page. A transient failure (timeout, network error, 202, 429, 5xx) is
     retried up to twice with backoff (a 429 after its Retry-After, at most 120 s); each retry after
     a timeout doubles the timeout, and PDFs start with a longer one. A 404/410 needs a second answer
@@ -506,7 +539,8 @@ def read_page(url: str, fetcher: Fetcher, api: bool = False) -> Read:
             fetcher.sleep(wait)
             t0 = time.monotonic()
             f = fetcher.get(url, fresh=True, timeout=timeout)
-            fetcher.retry_spent += wait + (time.monotonic() - t0)
+            with fetcher.lock:
+                fetcher.retry_spent += wait + (time.monotonic() - t0)
             attempt += 1
         if attempt and transient(f):
             note = f" (after {attempt} retries)"
@@ -622,6 +656,107 @@ def check_source(src: dict, fetcher: Fetcher, manual_hosts: set[str], clock: Cal
         else:
             o.edition_detail = f"index not read ({g.detail})"
     return o
+
+
+# ---------------------------------------------------------------------------------------------
+# Concurrency, rotation and the run budget
+
+
+def host_of(url: str) -> str:
+    return (urllib.parse.urlsplit(url).hostname or "").lower()
+
+
+def prefetch(plan: dict[str, list[tuple[str, bool]]], fetcher: Fetcher, workers: int,
+             on_app_done: Callable[[str], None]) -> None:
+    """Read every planned page once, different hosts at the same time (at most `workers` hosts),
+    each host by one worker in turn so its delay holds. As soon as all of an app's pages are read,
+    on_app_done(app) runs in this thread (check, report, save) while the other hosts go on: a later
+    timeout cannot take an earlier app's results with it."""
+    need = {app: set(items) for app, items in plan.items()}
+    by_host: dict[str, list[tuple[str, bool]]] = {}
+    for items in plan.values():
+        for it in items:
+            lst = by_host.setdefault(host_of(it[0]), [])
+            if it not in lst:
+                lst.append(it)
+    for app in [a for a, n in need.items() if not n]:
+        del need[app]
+        on_app_done(app)
+    events: "queue.Queue[tuple[str, bool]]" = queue.Queue()
+
+    def work(host: str) -> None:
+        for it in by_host[host]:
+            try:
+                read_page(it[0], fetcher, it[1])
+            except Exception as e:  # a reader bug must not stall the run: the page is "not read"
+                with fetcher.lock:
+                    fetcher.reads.setdefault(it, Read(False, "unreachable", f"not read ({type(e).__name__})"))
+            finally:
+                events.put(it)
+
+    total = sum(len(v) for v in by_host.values())
+    with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
+        for host in sorted(by_host, key=lambda h: -len(by_host[h])):  # the longest queue starts first
+            pool.submit(work, host)
+        for _ in range(total):
+            it = events.get()
+            for app in list(need):
+                need[app].discard(it)
+                if not need[app]:
+                    del need[app]
+                    on_app_done(app)
+
+
+def source_urls(s: dict) -> list[tuple[str, bool]]:
+    out = [(s["url"], s.get("kind") == "api")]
+    if s.get("url_ar") and s.get("kind") != "api":
+        out.append((s["url_ar"], False))
+    if s.get("index_url") and s.get("link_pattern"):
+        out.append((s["index_url"], False))
+    return out
+
+
+def rotate(sources: list[dict], caps: dict[str, int], last: dict[str, str]) -> tuple[list[dict], list[dict]]:
+    """For a host capped at N reads per run, the N of its pages read least recently (never read
+    first); other hosts are read in full. Returns (read this run, left for a later run)."""
+    chosen, _ = rotate_apps({"": sources}, caps, last)
+    keep = {id(s) for s in chosen[""]}
+    return chosen[""], [s for s in sources if id(s) not in keep]
+
+
+def rotate_apps(apps: dict[str, list[dict]], caps: dict[str, int], last: dict[str, str]) -> tuple[dict[str, list[dict]], dict[str, list[dict]]]:
+    """rotate() with one cap per host for the whole run, counted in distinct URLs across apps."""
+    caps = {h.lower(): int(n) for h, n in caps.items()}
+    candidates: dict[str, dict[str, str]] = {}  # host -> url -> its oldest last read
+    for sources in apps.values():
+        for s in sources:
+            h = host_of(s["url"])
+            if h in caps:
+                seen = last.get(s["id"], "")
+                prev = candidates.setdefault(h, {}).get(s["url"])
+                candidates[h][s["url"]] = seen if prev is None else min(prev, seen)
+    allowed = set()
+    for h, urls in candidates.items():
+        allowed |= set(sorted(urls, key=lambda u: (urls[u], u))[: caps[h]])
+    chosen, skipped = {}, {}
+    for app, sources in apps.items():
+        chosen[app] = [s for s in sources if host_of(s["url"]) not in caps or s["url"] in allowed]
+        skipped[app] = [s for s in sources if not (host_of(s["url"]) not in caps or s["url"] in allowed)]
+    return chosen, skipped
+
+
+def last_reads(state: str, app: str) -> dict[str, str]:
+    """When each of an app's pages was last read, from the public state (empty: never)."""
+    out: dict[str, str] = {}
+    d = os.path.join(state, app) if state else ""
+    if not d or not os.path.isdir(d):
+        return out
+    for fn in os.listdir(d):
+        if fn.endswith(".json"):
+            meta = load_json(os.path.join(d, fn)) or {}
+            if isinstance(meta, dict) and meta.get("id"):
+                out[meta["id"]] = meta.get("last_read_fetched_at") or ""
+    return out
 
 
 # ---------------------------------------------------------------------------------------------
@@ -1499,14 +1634,14 @@ def archiver_from(cfg: dict, env: dict[str, str]) -> tuple[timeline.Archiver | N
 
 
 def record_readings(state: str, collected: dict, archiver: timeline.Archiver | None, run_id: str, now: str,
-                    why_off: str = "Save Page Now is off") -> dict:
+                    why_off: str = "Save Page Now is off", pending: bool = False) -> dict:
     """F2: one Save Page Now request per page read this run (once per URL across apps), one public
     source_read record per (app, source) queued for the proof batcher, one timeline entry each.
     Only pages the watch actually fetched; never page text."""
     readings = [(app, s, o) for app, (manifest, outcomes) in collected.items() for s, o in zip(manifest, outcomes) if o.fetched_at]
     urls = [u for _, _, o in readings for u in (o.url, o.url_ar) if u]
     archived = archiver.archive(urls) if archiver else {}
-    off = {"archive_url": "", "archive_status": "not archived: " + why_off}
+    off = {"archive_url": "", "archive_status": timeline.PENDING if pending else "not archived: " + why_off}
     queue = timeline.ProofQueue(os.path.join(state, "proof-queue", "source_read.jsonl"))
     counts = {"records": 0, "archived": 0}
     for app, s, o in readings:
@@ -1533,6 +1668,9 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
                       pdf_timeout=float(cfg.get("pdf_timeout_s", 90)), max_timeout=float(cfg.get("max_timeout_s", 120)),
                       retry_budget_s=float(cfg.get("retry_budget_s", 900)))
     manual = {h.lower() for h in cfg.get("manual_hosts", [])}
+    # Hard budget for reading pages; reports, state and the summary come after it, inside the step
+    # timeout (workflow). Past it nothing more is fetched and the rest is "not read", never verified.
+    budget = float(getattr(args, "budget_s", None) or cfg.get("run_budget_s", 2400))
     run_id = args.run_id or clock().strftime("%Y%m%dT%H%M%SZ")
     if not RUN_ID_RE.match(run_id):
         print("bad run id", file=sys.stderr)
@@ -1559,6 +1697,7 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
     radar_keywords: dict[str, list[str]] = {a["app"]: list(a.get("radar_keywords") or []) for a in cfg["apps"]
                                             if not args.only or a["app"] in args.only}
     per_app = []
+    loaded: dict[str, tuple[dict, dict, list[dict], dict]] = {}
     for app in cfg["apps"]:
         name = app["app"]
         if args.only and name not in args.only:
@@ -1580,6 +1719,24 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
         except (ManifestError, ValueError, re.error) as e:
             rec["error"] = f"manifest: {e}"
             continue
+        loaded[name] = (app, rec, manifest, manifest_doc)
+    # Which pages this run reads: a capped host rotates, least recently read first (the rest keep
+    # their last result in the app; they are read on a later run).
+    caps = cfg.get("host_max_per_run") or {}
+    chosen: dict[str, list[dict]] = {}
+    if not args.offline:
+        last: dict[str, str] = {}
+        for name in loaded:
+            last.update(last_reads(state, name))
+        chosen, rotated = rotate_apps({n: v[2] for n, v in loaded.items()}, caps, last)
+        for n, left in rotated.items():
+            if left:
+                loaded[n][1]["rotated_out"] = len(left)
+
+    def process(name: str) -> None:
+        """Check one app's pages (already read), report to the app at once, then save."""
+        app, rec, manifest, manifest_doc = loaded[name]
+        manifest = chosen.get(name, manifest)
         offline = None
         if args.offline:
             offline = {}
@@ -1689,14 +1846,33 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
                 save_captures(private, name, run_id, outcomes, manifest, report)
             if state:
                 save_state(state, name, run_id, outcomes, manifest)
+
+    if args.offline:
+        for name in loaded:
+            process(name)
+    else:
+        def manual_src(sd: dict) -> bool:
+            h = host_of(sd["url"])
+            return sd.get("check") == "manual" or h in manual or h.removeprefix("www.") in manual
+        plan = {n: [u for sd in chosen[n] if not manual_src(sd) for u in source_urls(sd)] for n in loaded}
+        fetcher.deadline = time.monotonic() + budget  # the budget covers reading pages, from here
+        prefetch(plan, fetcher, int(cfg.get("workers", 8)), process)
+        if fetcher.out_of_time():
+            print("WARNING: the run's time budget was spent: pages not read yet are reported as not read", file=sys.stderr, flush=True)
     if state and canary["ok"] and not args.offline and not args.dry_run and collected:
+        # Save Page Now never runs here: a slow archive must not hold up verification. Readings are
+        # queued "pending" and the archive step after the reports resolves them (--archive-pending).
         arch, why_off = (archiver, "") if archiver else archiver_from(cfg, env)
         if not arch:
             print(f"WARNING: Save Page Now not used: {why_off}", file=sys.stderr, flush=True)
-        tl_counts = record_readings(state, collected, arch, run_id, clock().strftime("%Y-%m-%dT%H:%M:%SZ"), why_off or "Save Page Now is off")
+        inline = archiver is not None  # tests pass a fake archiver to run it in line
+        tl_counts = record_readings(state, collected, archiver if inline else None, run_id, clock().strftime("%Y-%m-%dT%H:%M:%SZ"),
+                                    why_off or "Save Page Now is off", pending=bool(arch) and not inline)
         print(f"timeline: {tl_counts['records']} source_read records queued, {tl_counts['archived']} pages archived", flush=True)
     radar = None
-    if cfg.get("radar_feeds") and not args.offline:
+    if cfg.get("radar_feeds") and not args.offline and fetcher.out_of_time():
+        print("radar skipped: the run's time budget was spent", flush=True)
+    elif cfg.get("radar_feeds") and not args.offline:
         # The seen list is item URLs only, so it lives in the public state (check_public_file allows it).
         seen_path = os.path.join(state, "radar", "seen.json") if state else ""
         seen = (load_json(seen_path) if seen_path else None) or {}
@@ -1755,6 +1931,9 @@ def main(argv: list[str] | None = None) -> int:
                    "unset: page captures are not saved")
     p.add_argument("--state", default="", help="public state directory (url, sha256, fetched_at, status only)")
     p.add_argument("--check-public-state", metavar="DIR", help="only check that DIR holds nothing but public-safe state; exit 1 if not")
+    p.add_argument("--budget-s", type=float, help="seconds for reading pages (default: run_budget_s in the config)")
+    p.add_argument("--archive-pending", action="store_true",
+                   help="only run Save Page Now for the readings queued in --state, then write the archive URLs (after the reports)")
     p.add_argument("--only", action="append", help="check only this app (repeatable)")
     p.add_argument("--manifest", action="append", metavar="APP=URL_OR_FILE", help="read this app's manifest from elsewhere (local runs)")
     p.add_argument("--verify-url", action="append", metavar="APP=URL", help="report to this verify URL instead (local runs)")
@@ -1763,6 +1942,15 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--offline", action="store_true", help="replay the checks on the saved captures, no network")
     p.add_argument("--report", help="write the per-app results as JSON here")
     args = p.parse_args(argv)
+    if args.archive_pending:
+        if not args.state:
+            print("--archive-pending needs --state", file=sys.stderr)
+            return 2
+        cfg = load_json(args.config) or {}
+        arch, why_off = archiver_from(cfg, dict(os.environ))
+        n = timeline.resolve_pending(args.state, arch, why_off)
+        print(f"Save Page Now: {n['archived']} readings archived, {n['deferred']} deferred" + (f" ({why_off})" if not arch else ""), flush=True)
+        return 0
     if args.check_public_state:
         problems = check_public_state(args.check_public_state)
         for x in problems:
