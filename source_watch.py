@@ -358,7 +358,7 @@ class Fetcher:
     def __init__(self, user_agent: str, timeout: float, per_host_delay: float, sleep: Callable[[float], None] = time.sleep,
                  opener: Callable[..., Any] | None = None, host_delay: dict[str, float] | None = None,
                  pdf_timeout: float = 90.0, max_timeout: float = 120.0, retry_budget_s: float = 900.0,
-                 host_groups: dict[str, list[str]] | None = None):
+                 host_groups: dict[str, list[str]] | None = None, volatile: list[dict] | None = None):
         self.ua, self.timeout, self.delay, self.sleep = user_agent, timeout, per_host_delay, sleep
         # PDFs are large and some official hosts are slow: a longer first timeout, and every retry
         # after a timeout doubles it up to max_timeout. Retries share one run-wide budget (seconds
@@ -369,6 +369,11 @@ class Fetcher:
         # Politeness groups: hosts that are one site or one infrastructure are read by one worker,
         # with one delay clock. www. always folds into its site.
         self.groups = {h.lower().removeprefix("www."): g for g, hs in (host_groups or {}).items() for h in hs}
+        # Parts of a page that change on every load (a rotating "Related Services" block, usage
+        # counters): left out of the hash, never out of the quote check. Per host, from the config.
+        self.volatile = [(tuple(h.lower().removeprefix("www.") for h in v.get("hosts", [])), v.get("cut_from", ""),
+                          [re.compile(m) for m in v.get("mask", [])]) for v in (volatile or [])]
+
         self.host_delay = {k.lower(): float(v) for k, v in (host_delay or {}).items()}
         # Shared source registry: a page cited by several apps (or twice by one) is fetched once
         # per run; the cache lives as long as this Fetcher, i.e. one run.
@@ -382,6 +387,17 @@ class Fetcher:
         self.reads: dict[tuple[str, bool], "Read"] = {}
         # Hard run budget (monotonic seconds): past it nothing more is fetched and no retry starts.
         self.deadline: float | None = None
+
+    def hash_form(self, url: str, text: str) -> str:
+        """The text that is hashed: the page without its per-load parts (see `volatile`)."""
+        h = host_of(url).removeprefix("www.")
+        for hosts, cut, masks in self.volatile:
+            if any(h == x or h.endswith("." + x) for x in hosts):
+                if cut and cut in text:
+                    text = text[: text.index(cut)]
+                for m in masks:
+                    text = m.sub(lambda mo: (mo.group(1) if mo.groups() else "") + "#", text)
+        return text
 
     def group(self, host: str) -> str:
         h = host.lower().removeprefix("www.")
@@ -606,7 +622,7 @@ def check_source(src: dict, fetcher: Fetcher, manual_hosts: set[str], clock: Cal
     if not r.ok:
         o.status, o.detail = r.status, r.detail
         return o
-    o.text, o.kind, o.capture_sha256 = r.text, r.kind, sha256_text(r.text)
+    o.text, o.kind, o.capture_sha256 = r.text, r.kind, sha256_text(fetcher.hash_form(url, r.text))
 
     missing = _check(src, r.text, r.kind, "quotes")
     if missing is None:
@@ -624,7 +640,7 @@ def check_source(src: dict, fetcher: Fetcher, manual_hosts: set[str], clock: Cal
         else:
             ra = read_page(o.url_ar, fetcher)
         if ra.ok:
-            o.text_ar, o.capture_sha256_ar = ra.text, sha256_text(ra.text)
+            o.text_ar, o.capture_sha256_ar = ra.text, sha256_text(fetcher.hash_form(o.url_ar, ra.text))
             ar_missing = check_quotes(ra.text, src.get("quotes_ar") or [], ra.kind == "pdf")
             o.missing_ar = ar_missing
             if src.get("sha256_ar"):
@@ -1683,7 +1699,8 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
     ua = cfg["user_agent"]
     fetcher = Fetcher(ua, float(cfg.get("timeout_s", 30)), float(cfg.get("per_host_delay_s", 3)), host_delay=cfg.get("host_delay_s"),
                       pdf_timeout=float(cfg.get("pdf_timeout_s", 90)), max_timeout=float(cfg.get("max_timeout_s", 120)),
-                      retry_budget_s=float(cfg.get("retry_budget_s", 300)), host_groups=cfg.get("host_groups"))
+                      retry_budget_s=float(cfg.get("retry_budget_s", 300)), host_groups=cfg.get("host_groups"),
+                      volatile=cfg.get("volatile"))
     manual = {h.lower() for h in cfg.get("manual_hosts", [])}
     # Hard budget for reading pages; reports, state and the summary come after it, inside the step
     # timeout (workflow). Past it nothing more is fetched and the rest is "not read", never verified.
@@ -1968,7 +1985,8 @@ def main(argv: list[str] | None = None) -> int:
         if arch:  # finish inside the step: no capture starts that could not be polled in time
             arch.deadline = time.monotonic() + float(args.budget_s or (cfg.get("archive") or {}).get("budget_s", 600))
         n = timeline.resolve_pending(args.state, arch, why_off)
-        print(f"Save Page Now: {n['archived']} readings archived, {n['deferred']} deferred" + (f" ({why_off})" if not arch else ""), flush=True)
+        print(f"Save Page Now: {n['archived']} readings archived, {n['pointed']} point to an unchanged copy, "
+              f"{n['superseded']} superseded, {n['deferred']} deferred" + (f" ({why_off})" if not arch else ""), flush=True)
         return 0
     if args.check_public_state:
         problems = check_public_state(args.check_public_state)

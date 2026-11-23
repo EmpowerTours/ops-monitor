@@ -25,8 +25,21 @@
       "mohre.gov.ae"
     ]
   },
-  "manual_hosts_note": "No answer within 120 s on 3 tries, from GitHub runners (run 44974248996) and from a residential connection (2026-11-22): a manual re-check, not a daily 4-minute wait.",
+  "volatile_note": "Run 45233542202: MOCCAE service pages read as changed on every run, because their Related Services block differs on each load; they also show usage counters. Left out of the hash only; quotes are checked against the whole page.",
+  "volatile": [
+    {
+      "hosts": [
+        "moccae.gov.ae"
+      ],
+      "cut_from": "Related Services",
+      "mask": [
+        "(Number of (?:users|Transactions) - (?:Companies|Individuals)\\n(?:[^\\n]*\\n)?)[\\d,]+"
+      ]
+    }
+  ],
+  "manual_hosts_note": "No answer within 120 s on 3 tries, from GitHub runners (run 44974248996) and from a residential connection (2026-11-22): a manual re-check, not a daily 4-minute wait. apis.data.dubai: the /secure/ Dubai Pulse APIs answer 401 without a subscription key (run 45233542202).",
   "manual_hosts": [
+    "apis.data.dubai",
     "micor.agriculture.gov.au",
     "www.adafsa.gov.ae"
   ],

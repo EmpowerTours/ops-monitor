@@ -67,7 +67,7 @@ Public and read-only. No secrets in it: it lists pages the app already shows to 
 | `kind` | `page` (default) or `api`: an official API answer checked by `fields` instead of `quotes`. |
 | `check` | `auto` (default) or `manual`: the host blocks robots or needs a browser. A manual page is never fetched and is always reported as **manual re-check due**, never as verified. |
 | `read_at` | the day the app's maintainers read the page (`YYYY-MM-DD`). Never today's date. |
-| `sha256` | SHA-256 of the saved copy's text in the watcher's normal form (below; for an API answer: its JSON with sorted keys, no spaces and the per-call `elapsedTime` left out). Empty: the watcher cannot tell "changed" from "unchanged", so it says so. Copy it from the public state (`source-watch-state` branch, `<app>/<id>.json`, field `sha256`). |
+| `sha256` | SHA-256 of the saved copy's text in the watcher's normal form (below; for an API answer: its JSON with sorted keys, no spaces and the per-call `elapsedTime` left out; for a host listed in `volatile` in `source-watch.json`, without the parts that change on every load: MOCCAE's "Related Services" block and usage counters). Empty: the watcher cannot tell "changed" from "unchanged", so it says so. Copy it from the public state (`source-watch-state` branch, `<app>/<id>.json`, field `sha256`). |
 | `facts` | ids of the app's facts that rest on this page, in the app's own naming. |
 | `quotes[]` | exact words the app relies on. Optional `values[]`: exact strings (a fee, a date, a percentage) that must stand in the **same paragraph or table row** as the quote (for a PDF: within 300 characters). Optional `facts[]`: the subset of the page's facts this quote backs (default: all). |
 | `fields[]` | for `kind: "api"`: `{"path": "data.0.primaryValue", "equals": 220681.649, "facts"?: [...]}`; the JSON value at the dotted path must equal `equals` exactly. In an answer with many rows in no promised order, select the row by a key instead of its position: `data[cmdCode=080440].primaryValue` (exactly one row must match; zero or several = path missing, never a guess). |
@@ -249,6 +249,16 @@ limit and never lose a result:
   (recomputing `payload_sha256`; an anchored record is never touched). Over the cap a reading is
   "deferred"; a killed archive step leaves readings pending for the next run. A slow archive never
   holds up verification.
+- **What gets archived (owner decision 2026-11-23).** Each run queues ~185 readings and the step
+  completes 20-30, so archiving every reading only grew the backlog (run 45102813992: 4 archived,
+  344 deferred). Per URL, only its newest reading can still be archived (the Archive copies what
+  the page says now). If that text equals the URL's last archived copy and the copy is at most 30
+  days old, or the page was not read, the reading points to that copy
+  ("unchanged since the archived copy", archive_url = the earlier copy): no new capture. Otherwise
+  the URL is archived, changed text first, then never archived, then copies over 30 days old.
+  Readings of the same text share the copy; an older reading whose text differs from the newest
+  is "not archived: the page changed before it could be archived". Pending and deferred readings
+  (the backlog) are resolved the same way on every run.
 
 ## 6. Canary: the verifier checks itself
 

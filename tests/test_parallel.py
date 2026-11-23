@@ -212,7 +212,7 @@ class ArchiveAfter(unittest.TestCase):
                     return {u: {"archive_url": "https://web.archive.org/web/20261123052000/" + u, "archive_status": "archived"} for u in urls}
 
             n = tl.resolve_pending(d, FakeArchiver())
-            self.assertEqual(n, {"archived": 1, "deferred": 0})
+            self.assertEqual((n["archived"], n["deferred"]), (1, 0))
             q = tl.ProofQueue(os.path.join(d, "proof-queue", "source_read.jsonl")).pending()[0]
             self.assertEqual(q["payload"]["archive_status"], "archived")
             self.assertNotEqual(q["payload_sha256"], rec["payload_sha256"], "the payload hash follows the payload")
@@ -232,7 +232,7 @@ class ArchiveAfter(unittest.TestCase):
                     return {u: {"archive_url": "https://web.archive.org/web/20261123052000/" + u, "archive_status": "archived"} for u in urls}
 
             n = tl.resolve_pending(d, OneOnly())
-            self.assertEqual(n, {"archived": 1, "deferred": 1})
+            self.assertEqual((n["archived"], n["deferred"]), (1, 1))
             statuses = sorted(r["payload"]["archive_status"] for r in tl.ProofQueue(os.path.join(d, "proof-queue", "source_read.jsonl")).pending())
             self.assertEqual(statuses, ["archived", "not archived: deferred (per-run cap)"])
 
@@ -249,7 +249,8 @@ class ArchiveAfter(unittest.TestCase):
                 def archive(self, urls):
                     raise AssertionError("an anchored record is sealed")
 
-            self.assertEqual(tl.resolve_pending(d, Never()), {"archived": 0, "deferred": 0})
+            n = tl.resolve_pending(d, Never())
+            self.assertEqual((n["archived"], n["deferred"]), (0, 0))
 
 
 class WholeRun(unittest.TestCase):
