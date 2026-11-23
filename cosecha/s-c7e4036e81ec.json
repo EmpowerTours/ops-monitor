@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-22T18:28:28Z",
+ "fetched_at": "2026-11-23T01:32:05Z",
  "id": "s-c7e4036e81ec",
- "last_read_fetched_at": "2026-11-22T18:28:28Z",
- "manifest_fingerprint": "2caa551db2b06aff69ec68882e0f30ca1794201852cc491a81e31c35d28338d6",
- "run_id": "20261122T182422Z",
+ "last_read_fetched_at": "2026-11-23T01:32:05Z",
+ "manifest_fingerprint": "5192ae88ba159441ae1e8f3ace9120476b153c21a9043ce6488fc9de8def2d8b",
+ "run_id": "20261123T011605Z",
  "sha256": "92b70752cc67fbe0e482b46717886a96bc53907647b67174868c7a0752ac1aff",
  "status": "verified",
  "url": "https://portalanterior.ine.mx/documentos/DEOE/MemoriasProcesos/memorias2006/12/00/cap01.pdf"

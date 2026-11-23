@@ -1,0 +1,25 @@
+{
+ "cited_by": "hunt",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T01:17:07Z",
+   "http_status": 200,
+   "payload_sha256": "fa35851766799958d2673c8e85d1a114ac26eb6d2692ab792c2f4ee854b73057",
+   "quotes": [
+    "OpenStreetMap is open data, licensed under the Open Data Commons Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF).",
+    "You are free to copy, distribute, transmit and adapt our data, as long as you credit OpenStreetMap and its contributors.",
+    "Make clear that the data is available under the Open Database License."
+   ],
+   "ref": "hunt/s-18a5f04e778a/2026-11-23T01:17:07Z",
+   "run_id": "20261123T011605Z",
+   "sha256": "f5051e95e5a69b7f014a1a098031281093d835acffbfde651f4b6fb71811fdc0",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-18a5f04e778a",
+ "url": "https://www.openstreetmap.org/copyright",
+ "v": 1
+}

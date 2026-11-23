@@ -1,0 +1,23 @@
+{
+ "cited_by": "trips",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T01:20:58Z",
+   "http_status": 200,
+   "payload_sha256": "a20166b5a8483f209240af77032a05d8b0633726ed0887aa679305beac8110ff",
+   "quotes": [
+    "VAT 5% (AED)"
+   ],
+   "ref": "trips/s-f53d486fdb4e/2026-11-23T01:20:58Z",
+   "run_id": "20261123T011605Z",
+   "sha256": "5fe6016a2691bc45bed828312e892cab33d70e5c0eb5cbbd097f5f9cbe54f32b",
+   "status": "changed_quote_ok"
+  }
+ ],
+ "source_id": "s-f53d486fdb4e",
+ "url": "https://tax.gov.ae/en/taxes/vat.aspx",
+ "v": 1
+}

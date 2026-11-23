@@ -17,6 +17,23 @@
    "run_id": "20261122T182422Z",
    "sha256": "687bf9009f69feef726c142f0d58f22138fd5e30c48b9d570ceb228c0908c5fb",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T01:32:05Z",
+   "http_status": 200,
+   "payload_sha256": "7edaacb66550acb6db2bba4cb5b8dc2f610a679a48b7beb73f22fc0b479c81b4",
+   "quotes": [
+    "List (A 1 ): Quarantine Pests",
+    "Anastrepha ludens",
+    "Anastrepha obliqua"
+   ],
+   "ref": "cosecha/s-cd275bc124c1/2026-11-23T01:32:05Z",
+   "run_id": "20261123T011605Z",
+   "sha256": "687bf9009f69feef726c142f0d58f22138fd5e30c48b9d570ceb228c0908c5fb",
+   "status": "verified"
   }
  ],
  "source_id": "s-cd275bc124c1",

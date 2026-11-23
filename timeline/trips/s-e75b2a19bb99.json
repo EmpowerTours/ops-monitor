@@ -1,0 +1,25 @@
+{
+ "cited_by": "trips",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T01:20:58Z",
+   "http_status": 200,
+   "payload_sha256": "a4c3cefa5c0045203eab9cf8a50c28fedb45545615a59e41deec737a53b60e66",
+   "quotes": [
+    "Trips starting at Dubai International Airport (DXB) have a higher flagfall of Dh25",
+    "The per-kilometer rate stays within Dh2.14 - 2.26, depending on monthly fuel adjustments.",
+    "The minimum fare for street-hail rides is still Dh12"
+   ],
+   "ref": "trips/s-e75b2a19bb99/2026-11-23T01:20:58Z",
+   "run_id": "20261123T011605Z",
+   "sha256": "0f085bb94173477b9f371401206e1ad12612028f5cfc58e77a8d14e405a5715c",
+   "status": "changed_quote_ok"
+  }
+ ],
+ "source_id": "s-e75b2a19bb99",
+ "url": "https://gulfnews.com/uae/transport/rta-revises-dubai-taxi-fares-whats-changing-for-app-users-all-you-must-know-1.500335199",
+ "v": 1
+}

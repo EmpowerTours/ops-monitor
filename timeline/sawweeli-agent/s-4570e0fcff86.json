@@ -1,0 +1,28 @@
+{
+ "cited_by": "sawweeli-agent",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T01:22:59Z",
+   "http_status": 0,
+   "payload_sha256": "0c4391b07931c3d776bc3083328427a515239e24f466997d5ed1d37dfa74653b",
+   "quotes": [
+    "Government job portals:",
+    "Dubai Careers - Dubai Government job portal",
+    "Private job portals:",
+    "MoHRE grants licences of recruitment agencies to UAE citizens only.",
+    "Job seekers are not required to pay money to any recruitment agency as the onus to pay such fees lies with the employers.",
+    "If the hiring company or the agency asks you for money to process the visa or medical test, it is not a genuine company."
+   ],
+   "ref": "sawweeli-agent/s-4570e0fcff86/2026-11-23T01:22:59Z",
+   "run_id": "20261123T011605Z",
+   "sha256": "",
+   "status": "unreachable"
+  }
+ ],
+ "source_id": "s-4570e0fcff86",
+ "url": "https://u.ae/en/information-and-services/jobs/Find-a-job/searching-for-a-job",
+ "v": 1
+}

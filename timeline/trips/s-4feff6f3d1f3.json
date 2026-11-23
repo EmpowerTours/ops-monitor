@@ -1,0 +1,26 @@
+{
+ "cited_by": "trips",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T01:20:58Z",
+   "http_status": 200,
+   "payload_sha256": "1d428253a3ff5a27b07185296a74600ee0106aa139aca0d01caeb1158840c096",
+   "quotes": [
+    "The Silver nol Card is ideal for tourists. It costs Dh25 with Dh19 credit",
+    "Within One Zone Silver Card: Dh3",
+    "Two Adjacent Zones Silver Card: Dh5",
+    "More Than Two Zones Silver Card: Dh7.5"
+   ],
+   "ref": "trips/s-4feff6f3d1f3/2026-11-23T01:20:58Z",
+   "run_id": "20261123T011605Z",
+   "sha256": "e08c4b1c0c22c1e5d704940c4e4b12e01e65f2331cbde83d944d492f4ac14f76",
+   "status": "changed_quote_ok"
+  }
+ ],
+ "source_id": "s-4feff6f3d1f3",
+ "url": "https://gulfnews.com/living-in-uae/transport/dubai-nol-card-guide-for-tourists-how-to-save-money-and-travel-smart-1.500069063",
+ "v": 1
+}

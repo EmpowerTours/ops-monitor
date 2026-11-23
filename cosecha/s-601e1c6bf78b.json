@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-22T18:28:24Z",
+ "fetched_at": "2026-11-23T01:32:05Z",
  "id": "s-601e1c6bf78b",
  "last_read_fetched_at": "2026-11-22T18:28:24Z",
  "manifest_fingerprint": "48a06e253512b43752bc08887a3c4f3d84965299821c4e9ad45145648f414b26",
- "run_id": "20261122T182422Z",
+ "run_id": "20261123T011605Z",
  "sha256": "4f70ce45c785a4c8e6eda3f97de8b43703dcccb1b14aea91e569cf7a3a6d4466",
- "status": "verified",
+ "status": "unreachable",
  "url": "https://moiat.gov.ae/en/programs/halal/registered-halal-certification-bodies"
 }

@@ -15,6 +15,21 @@
    "run_id": "20261122T182422Z",
    "sha256": "02f9974280f7ea9e0cab52d7743359fa3ed0442fa5320d3676f0c33e88687b00",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T01:32:05Z",
+   "http_status": 0,
+   "payload_sha256": "325db1bc7a40363b28e6f136453a96f153452d40a6d35f9d908721d4aa739e81",
+   "quotes": [
+    "Mexico لا يوجد مسالخ معتمدة All the slaughterhouses are not approved"
+   ],
+   "ref": "cosecha/s-6af878b75ecf/2026-11-23T01:32:05Z",
+   "run_id": "20261123T011605Z",
+   "sha256": "",
+   "status": "unreachable"
   }
  ],
  "source_id": "s-6af878b75ecf",

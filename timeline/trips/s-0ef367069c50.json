@@ -1,0 +1,27 @@
+{
+ "cited_by": "trips",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T01:20:58Z",
+   "http_status": 200,
+   "payload_sha256": "783139f858af525518b4f6ca61665d519a917cf70f909f6844065846d561cc2b",
+   "quotes": [
+    "Luxury Hotel Apartment 20.00",
+    "Deluxe Hotel Apartment 15.00",
+    "Standard Hotel Apartment 10.00",
+    "Luxury Holiday Home 15.00",
+    "Standard Holiday Home 10.00"
+   ],
+   "ref": "trips/s-0ef367069c50/2026-11-23T01:20:58Z",
+   "run_id": "20261123T011605Z",
+   "sha256": "e120386976ecaaace755a701b10453c5cd06941f92427531ed632cf550706bff",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-0ef367069c50",
+ "url": "https://dlp.dubai.gov.ae/Legislation%20Reference/2014/Executive%20Council%20Resolution%20No.%20(2)%20of%202014.html",
+ "v": 1
+}

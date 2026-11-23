@@ -1,0 +1,10 @@
+{
+ "fetched_at": "2026-11-23T01:17:07Z",
+ "id": "s-d06f0de6a060",
+ "last_read_fetched_at": "2026-11-23T01:17:07Z",
+ "manifest_fingerprint": "0961721777d3a3551243dd6b2998f0139d70108cb0ef3b80eb052cb777330605",
+ "run_id": "20261123T011605Z",
+ "sha256": "24cf116fcd776d3b9bee75d406bfda198dddd3b404205814313582dc2e140829",
+ "status": "verified",
+ "url": "https://api.openstreetmap.org/api/0.6/node/1412984502.json"
+}

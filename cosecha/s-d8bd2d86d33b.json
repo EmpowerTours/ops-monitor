@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-22T18:29:57Z",
+ "fetched_at": "2026-11-23T01:32:05Z",
  "id": "s-d8bd2d86d33b",
  "last_read_fetched_at": "2026-11-22T18:29:57Z",
  "manifest_fingerprint": "0618b42e806e939e546b25eb1af7e490ee60ce46224a5dfc59dc98838f6f5223",
- "run_id": "20261122T182422Z",
+ "run_id": "20261123T011605Z",
  "sha256": "f64760e9c66e38c1b26c75836ddf9be913e6fe69e3ffd6c8a39ab5743a9feafd",
- "status": "verified",
+ "status": "unreachable",
  "url": "https://www.moccae.gov.ae/en/approved-slaughterhouses"
 }

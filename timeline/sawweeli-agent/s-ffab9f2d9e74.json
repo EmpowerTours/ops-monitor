@@ -1,0 +1,23 @@
+{
+ "cited_by": "sawweeli-agent",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T01:22:59Z",
+   "http_status": 0,
+   "payload_sha256": "393bcd9d41c51b4761e9260c1f5fa384f39432bdca231334b830253c10c53e33",
+   "quotes": [
+    "The employer must apply for the standard work visa."
+   ],
+   "ref": "sawweeli-agent/s-ffab9f2d9e74/2026-11-23T01:22:59Z",
+   "run_id": "20261123T011605Z",
+   "sha256": "",
+   "status": "unreachable"
+  }
+ ],
+ "source_id": "s-ffab9f2d9e74",
+ "url": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/residence-visa-for-working-in-the-uae",
+ "v": 1
+}

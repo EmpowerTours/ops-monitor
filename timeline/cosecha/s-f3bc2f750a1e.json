@@ -15,6 +15,21 @@
    "run_id": "20261122T182422Z",
    "sha256": "4253eeb4ceb82e11804c03448bfd8314eb2dd247376ede3d7e5eb57daa4d1fc7",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-23T01:32:05Z",
+   "http_status": 200,
+   "payload_sha256": "aac5d0d23a92e22668b480465cc9e2fc371bc92d79e3a663d5202d7e8bfa43d9",
+   "quotes": [
+    "120799 - Oil seeds and oleaginous fruits; n.e.c. in heading no. 1207, whether or not broken"
+   ],
+   "ref": "cosecha/s-f3bc2f750a1e/2026-11-23T01:32:05Z",
+   "run_id": "20261123T011605Z",
+   "sha256": "4253eeb4ceb82e11804c03448bfd8314eb2dd247376ede3d7e5eb57daa4d1fc7",
+   "status": "verified"
   }
  ],
  "source_id": "s-f3bc2f750a1e",

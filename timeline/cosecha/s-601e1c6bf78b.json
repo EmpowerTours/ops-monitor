@@ -15,6 +15,21 @@
    "run_id": "20261122T182422Z",
    "sha256": "4f70ce45c785a4c8e6eda3f97de8b43703dcccb1b14aea91e569cf7a3a6d4466",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-23T01:32:05Z",
+   "http_status": 0,
+   "payload_sha256": "a39a4fd69275d4d7d187b1a6db28bf35167c40dd1583d7ec07e52dd4b7a8412c",
+   "quotes": [
+    "Registered Halal Certification Bodies"
+   ],
+   "ref": "cosecha/s-601e1c6bf78b/2026-11-23T01:32:05Z",
+   "run_id": "20261123T011605Z",
+   "sha256": "",
+   "status": "unreachable"
   }
  ],
  "source_id": "s-601e1c6bf78b",
