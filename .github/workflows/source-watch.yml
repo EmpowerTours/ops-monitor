@@ -13,6 +13,11 @@ on:
         description: "Fetch and check only: send nothing to the apps, file no issue"
         type: boolean
         default: false
+      pins_migration:
+        description: "One-time pinned-copies migration instead of the watch: dry-run (count only) or commit (to a branch of the capture store)"
+        type: choice
+        options: [none, dry-run, commit]
+        default: none
 
 # Page text is never published here: this repository is public and official pages may not be
 # reproduced (u.ae copyright notice). The public source-watch-state branch holds only url, sha256,
@@ -29,6 +34,7 @@ concurrency:
 
 jobs:
   watch:
+    if: github.event_name != 'workflow_dispatch' || inputs.pins_migration == 'none' || inputs.pins_migration == ''
     runs-on: ubuntu-latest
     # Reading pages: run_budget_s (30 min) inside the watch step's 40 min; Save Page Now has its own
     # 15 min step after the reports; commits and setup take the rest.
@@ -70,7 +76,7 @@ jobs:
             exit 0
           fi
           auth="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$TOKEN" | base64 -w0)"
-          if ! git -c http.https://github.com/.extraheader="$auth" clone -q --depth=1 "https://github.com/$REPO.git" .captures; then
+          if ! git -c http.https://github.com/.extraheader="$auth" clone -q --depth=60 "https://github.com/$REPO.git" .captures; then
             echo "::warning::could not clone $REPO: page captures are not saved"
             rm -rf .captures
             exit 0
@@ -181,3 +187,78 @@ jobs:
             sleep 5
           done
           echo "::warning::captures push to the private store failed after 3 attempts"
+
+      # Every sha256 an app's manifest records must have its copy under pinned/ in the private store
+      # (docs/SOURCE-WATCH.md, "Pinned copies"). The watch pins what it can; this independent check
+      # goes red while any recorded version has no copy. It reads the manifests again, not the run.
+      - name: Check the pinned copies
+        if: always() && steps.private.outputs.dir != ''
+        run: .venv/bin/python source_watch.py --verify-pins --captures .captures
+
+  # One-time migration (owner decision 2026-11-23): pin every recorded version that survives only
+  # in the capture store's git history. Needs the full history, so it clones without --depth. It
+  # writes to a branch of the capture store, never to main: the owner merges it through a PR. Its
+  # log carries counts, ids, URLs and hashes only, never page text.
+  pins-migration:
+    if: github.event_name == 'workflow_dispatch' && (inputs.pins_migration == 'dry-run' || inputs.pins_migration == 'commit')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Check out the private capture store with its full history
+        env:
+          REPO: ${{ vars.SOURCE_CAPTURES_REPO || secrets.SOURCE_CAPTURES_REPO }}
+          TOKEN: ${{ secrets.SOURCE_CAPTURES_TOKEN }}
+          GH_TOKEN: ${{ secrets.SOURCE_CAPTURES_TOKEN }}
+        run: |
+          if [ -z "$REPO" ] || [ -z "$TOKEN" ]; then echo "::error::SOURCE_CAPTURES_REPO and SOURCE_CAPTURES_TOKEN are needed"; exit 1; fi
+          private=$(gh api "repos/$REPO" --jq .private 2>/dev/null || echo unknown)
+          if [ "$private" != "true" ]; then echo "::error::$REPO is not a private repository the token can read"; exit 1; fi
+          auth="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$TOKEN" | base64 -w0)"
+          git -c http.https://github.com/.extraheader="$auth" clone -q "https://github.com/$REPO.git" .captures
+
+      - name: Install the PDF reader
+        run: |
+          python3 -m venv .venv
+          .venv/bin/pip install -q pypdf==6.21.4 cryptography==50.0.2
+
+      - name: Pin every recorded version (current captures, then git history)
+        env:
+          MODE: ${{ inputs.pins_migration }}
+        run: |
+          args="--pin-history --captures .captures --run-id pins-migration-${{ github.run_id }} --report $RUNNER_TEMP/pins.json"
+          if [ "$MODE" = "dry-run" ]; then args="$args --dry-run"; fi
+          .venv/bin/python source_watch.py $args
+          .venv/bin/python - "$RUNNER_TEMP/pins.json" >> "$GITHUB_STEP_SUMMARY" <<'PY'
+          import json, sys
+          r = json.load(open(sys.argv[1]))["pins"]
+          print(f"## Pinned copies migration ({r.get('run_id')})\n")
+          for k in ("referenced", "already_pinned", "pinned_now", "recovered_from_history"):
+              print(f"- {k}: {r.get(k)}")
+          print(f"- missing: {len(r.get('missing', []))}")
+          print(f"- manifests read: {', '.join(r.get('apps', []))}; not read: {', '.join(r.get('manifests_not_read', [])) or 'none'}")
+          for m in r.get("missing", []):
+              print("  - " + ", ".join(f"{x['app']}/{x['id']} ({x['lang']})" for x in m["refs"]) + f" `{m['sha256']}`")
+          PY
+
+      - name: Push the pinned copies to a branch of the capture store
+        if: inputs.pins_migration == 'commit'
+        env:
+          TOKEN: ${{ secrets.SOURCE_CAPTURES_TOKEN }}
+        run: |
+          cd .captures
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -q -b "pins-migration-${{ github.run_id }}"
+          git add pinned runs
+          if git diff --cached --quiet; then echo "nothing to pin"; exit 0; fi
+          git commit -q -m "pinned copies: one-time migration (run ${{ github.run_id }})"
+          auth="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$TOKEN" | base64 -w0)"
+          git -c http.https://github.com/.extraheader="$auth" push -q origin "HEAD:refs/heads/pins-migration-${{ github.run_id }}"
+          echo "pushed branch pins-migration-${{ github.run_id }}" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Check the pinned copies on that branch
+        if: inputs.pins_migration == 'commit'
+        continue-on-error: true
+        run: .venv/bin/python source_watch.py --verify-pins --captures .captures
