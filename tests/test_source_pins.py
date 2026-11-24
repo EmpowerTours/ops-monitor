@@ -166,6 +166,19 @@ class History(unittest.TestCase):
             self.assertEqual((rep["pinned_now"], rep["recovered_from_history"]), (1, 0))
 
 
+    def test_shallow_clone_history_is_used_only_when_allowed(self):
+        with tempfile.TemporaryDirectory() as d:
+            src_repo, clone = os.path.join(d, "src"), os.path.join(d, "clone")
+            os.makedirs(src_repo)
+            self.repo(src_repo)
+            subprocess.run(["git", "clone", "-q", "--depth", "2", "file://" + src_repo, clone], check=True, capture_output=True)
+            man = {"asas": [src(sha=h(V1))]}
+            with self.assertRaises(pins.HistoryError):
+                pins.ensure_pins(clone, man, plain, NOW, history=True)
+            rep = pins.ensure_pins(clone, man, plain, NOW, history=True, allow_shallow=True)
+            self.assertEqual(rep["recovered_from_history"], 1)
+
+
 class Prune(unittest.TestCase):
     def pin(self, d: str, text: str, last: str, refs: list[dict]) -> None:
         os.makedirs(os.path.join(d, "pinned"), exist_ok=True)
@@ -267,6 +280,17 @@ class Wiring(unittest.TestCase):
             self.assertEqual((rep["pins"]["referenced"], rep["pins"]["missing"]), (1, []))
             self.assertTrue(os.path.exists(os.path.join(d, "cap", "runs", "r1-pins.json")))
             self.assertEqual(sw.main(["--config", cp, "--captures", os.path.join(d, "cap"), "--verify-pins"]), 0)
+
+    def test_run_pins_the_saved_copy_before_overwriting_it(self):
+        """The manifest records the version saved last run; today the page reads differently. The
+        copy must be pinned before the run overwrites it at its path."""
+        with tempfile.TemporaryDirectory() as d:
+            _, cp = self.setup_run(d, h(V1))
+            write_capture(os.path.join(d, "cap"), "demo", "s-000000000001", V1)
+            self.assertEqual(self.run_watch(d, cp), 0)
+            self.assertEqual(read_pin(os.path.join(d, "cap"), h(V1))[0], V1)
+            self.assertNotEqual(open(os.path.join(d, "cap", "demo", "s-000000000001.txt"), encoding="utf-8").read(), V1, "overwritten")
+            self.assertEqual(json.load(open(os.path.join(d, "rep.json")))["pins"]["missing"], [])
 
     def test_run_reports_a_missing_hash_and_verify_fails(self):
         with tempfile.TemporaryDirectory() as d:

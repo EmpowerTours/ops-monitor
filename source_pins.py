@@ -144,11 +144,12 @@ class HistoryError(Exception):
     pass
 
 
-def _history(root: str, cands: Candidates) -> None:
+def _history(root: str, cands: Candidates, allow_shallow: bool = False) -> None:
     """Every capture version in the store's git history (newest commit first; a version already
-    found keeps its first, i.e. newest, occurrence)."""
+    found keeps its first, i.e. newest, occurrence). A shallow clone is refused unless allowed (the
+    daily run searches what its clone holds; the migration needs everything)."""
     try:
-        if _git(root, "rev-parse", "--is-shallow-repository").strip() == b"true":
+        if not allow_shallow and _git(root, "rev-parse", "--is-shallow-repository").strip() == b"true":
             raise HistoryError("the capture store is a shallow clone: its history is incomplete (clone it in full)")
         log = _git(root, "log", "--format=%H %cI", "HEAD").decode().split("\n")
     except (subprocess.CalledProcessError, FileNotFoundError) as e:
@@ -217,11 +218,12 @@ def _write_json(path: str, doc: dict) -> None:
 
 
 def ensure_pins(root: str, manifests: dict[str, list[dict]], hash_form: HashForm, now: dt.datetime,
-                history: bool = False, dry_run: bool = False) -> dict:
+                history: bool = False, dry_run: bool = False, allow_shallow: bool = False) -> dict:
     """Make sure every hash the given manifests record has its pinned copy; keep the references
     current; prune copies unreferenced for 18 months. `manifests` holds the apps read this run:
     references from other apps are kept as they are. `history`: also search the store's git history
-    (the one-time migration; needs a full clone). `dry_run`: count, write nothing."""
+    (the one-time migration needs a full clone; `allow_shallow` searches whatever a shallow clone
+    holds, as the daily run does). `dry_run`: count, write nothing."""
     want = referenced(manifests)
     urls = {(r["app"], r["id"], r["lang"]): e["url"] for e in want.values() for r in e["refs"]}
     stamp = iso(now)
@@ -237,8 +239,13 @@ def ensure_pins(root: str, manifests: dict[str, list[dict]], hash_form: HashForm
         found = {sha: cands.index[sha] for sha in need if sha in cands.index}
         if history and len(found) < len(need):
             hist = Candidates(hash_form, urls)
-            _history(root, hist)
-            rep["history_searched"] = True
+            try:
+                _history(root, hist, allow_shallow)
+                rep["history_searched"] = True
+            except HistoryError as e:
+                if not allow_shallow:  # the migration: a history it cannot read is a failure
+                    raise
+                rep["history_error"] = str(e)  # the daily run: best effort, the missing list stands
             for sha in need:
                 if sha not in found and sha in hist.index:
                     found[sha] = hist.index[sha]

@@ -76,7 +76,7 @@ jobs:
             exit 0
           fi
           auth="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$TOKEN" | base64 -w0)"
-          if ! git -c http.https://github.com/.extraheader="$auth" clone -q --depth=1 "https://github.com/$REPO.git" .captures; then
+          if ! git -c http.https://github.com/.extraheader="$auth" clone -q --depth=60 "https://github.com/$REPO.git" .captures; then
             echo "::warning::could not clone $REPO: page captures are not saved"
             rm -rf .captures
             exit 0

@@ -383,11 +383,14 @@ manifest would survive only in git history. The private store therefore also kee
 The latest copy stays at its path as before; pinned copies are in addition to it. Code:
 `source_pins.py`, called by `source_watch.py`.
 
-- **Each run**, after the captures are saved, for every source in every manifest read that run
-  (`sha256` and `sha256_ar`; an empty hash is not a reference): if `pinned/<sha256>.txt` exists and
-  hashes to its name, only its `refs` are brought up to date; otherwise a current capture whose text
-  hashes to it (at any app's path: a page cited by several apps is one copy with several refs) is
-  pinned. A hash with no copy is reported **missing** in `runs/<run_id>-pins.json`, in `--report`
+- **Each run**, for every source in every manifest read that run (`sha256` and `sha256_ar`; an
+  empty hash is not a reference): if `pinned/<sha256>.txt` exists and hashes to its name, only its
+  `refs` are brought up to date; otherwise a capture whose text hashes to it (at any app's path: a
+  page cited by several apps is one copy with several refs) is pinned. This happens twice: once
+  before any page is read (the version a manifest records is usually the one the last run saved,
+  and today's read overwrites it at its path), and once after the captures are saved, then also
+  searching the history the workflow's clone holds (the last 60 commits; best effort, a shallow
+  clone is fine here). A hash with no copy is reported **missing** in `runs/<run_id>-pins.json`, in `--report`
   (`pins`) and in the run summary (app, id, hash: never page text). A missing copy does not fail
   the watch; the check below does.
 - **References** of an app whose manifest was not read this run are kept as they were.

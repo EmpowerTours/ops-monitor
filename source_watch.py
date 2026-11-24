@@ -1776,6 +1776,14 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
             if left:
                 loaded[n][1]["rotated_out"] = len(left)
 
+    if private and not args.offline and loaded:
+        # Before any capture is overwritten: the version a manifest records is usually the one saved
+        # by the last run, and today's read replaces it at its path.
+        try:
+            pins.ensure_pins(private, {n: v[2] for n, v in loaded.items()}, fetcher.hash_form, clock())
+        except (OSError, ValueError) as e:
+            print(f"WARNING: pinned copies not checked before the run: {type(e).__name__}", file=sys.stderr, flush=True)
+
     def process(name: str) -> None:
         """Check one app's pages (already read), report to the app at once, then save."""
         app, rec, manifest, manifest_doc = loaded[name]
@@ -1904,7 +1912,8 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
             print("WARNING: the run's time budget was spent: pages not read yet are reported as not read", file=sys.stderr, flush=True)
     pin_rep = None
     if private and not args.offline and loaded:
-        pin_rep = pin_run(private, run_id, {n: v[2] for n, v in loaded.items()}, fetcher, clock())
+        # After the run: today's captures, then whatever history the store's clone holds.
+        pin_rep = pin_run(private, run_id, {n: v[2] for n, v in loaded.items()}, fetcher, clock(), history=True, allow_shallow=True)
     if state and canary["ok"] and not args.offline and not args.dry_run and collected:
         # Save Page Now never runs here: a slow archive must not hold up verification. Readings are
         # queued "pending" and the archive step after the reports resolves them (--archive-pending).
@@ -1976,11 +1985,12 @@ def run(args: argparse.Namespace, env: dict[str, str], clock: Callable[[], dt.da
 
 
 def pin_run(private: str, run_id: str, manifests: dict[str, list[dict]], fetcher: "Fetcher", now: dt.datetime,
-            history: bool = False, dry_run: bool = False) -> dict:
+            history: bool = False, dry_run: bool = False, allow_shallow: bool = False) -> dict:
     """Pin every recorded hash from the captures (and, for the migration, their git history), and
     write the run report runs/<run_id>-pins.json. Never fails the run: an error is reported."""
     try:
-        rep = pins.ensure_pins(private, manifests, fetcher.hash_form, now, history=history, dry_run=dry_run)
+        rep = pins.ensure_pins(private, manifests, fetcher.hash_form, now, history=history, dry_run=dry_run,
+                               allow_shallow=allow_shallow)
     except (OSError, ValueError, subprocess.CalledProcessError, pins.HistoryError) as e:
         rep = {"error": f"{type(e).__name__}: {e}" if isinstance(e, pins.HistoryError) else type(e).__name__, "missing": []}
     rep.update(run_id=run_id, apps=sorted(manifests))
