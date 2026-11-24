@@ -1,88 +1,88 @@
 {
   "apps": {
     "asas": {
-      "cert_days": 74,
+      "cert_days": 73,
       "down_since": null,
       "issue": null,
-      "ms": 331,
+      "ms": 540,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "cosecha": {
-      "cert_days": 75,
+      "cert_days": 74,
       "down_since": null,
       "issue": null,
-      "ms": 214,
+      "ms": 292,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "demo-studio": {
-      "cert_days": 85,
+      "cert_days": 84,
       "down_since": null,
       "issue": null,
-      "ms": 186,
+      "ms": 267,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "faez": {
-      "cert_days": 61,
+      "cert_days": 60,
       "down_since": null,
       "issue": null,
-      "ms": 273,
+      "ms": 317,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "haqiqi": {
-      "cert_days": 73,
+      "cert_days": 72,
       "down_since": null,
       "issue": null,
-      "ms": 200,
+      "ms": 311,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "hunt-dubai": {
-      "cert_days": 66,
+      "cert_days": 65,
       "down_since": null,
       "issue": null,
-      "ms": 188,
+      "ms": 294,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "relocatedubai": {
-      "cert_days": 67,
+      "cert_days": 66,
       "down_since": null,
       "issue": null,
-      "ms": 283,
+      "ms": 344,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "sawweeli-hub": {
-      "cert_days": 82,
+      "cert_days": 81,
       "down_since": null,
       "issue": null,
-      "ms": 192,
+      "ms": 326,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "sawweeli-trips": {
-      "cert_days": 68,
+      "cert_days": 67,
       "down_since": null,
       "issue": null,
-      "ms": 202,
+      "ms": 302,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     }
   },
-  "last_summary": "2026-11-23",
+  "last_summary": "2026-11-24",
   "outages": [
     {
       "app": "alert-test",
@@ -91,6 +91,6 @@
     }
   ],
   "spend_alerts": {},
-  "updated": "2026-11-23T14:00:59Z",
+  "updated": "2026-11-24T14:00:58Z",
   "watch_alerts": {}
 }
