@@ -75,6 +75,33 @@ it.
   `OPS_TOKEN` both are skipped quietly. The token must equal the hub's
   `OPS_TOKEN` Railway variable.
 
+## Monad records (hub)
+
+With `OPS_TOKEN` set, the same `GET /api/ops/spend` response carries the hub's
+`records` section (ProofAnchor record layer, sawweeli-agent PR #26:
+`spent_mon`, `anchors`, `waiting`, `oldest_waiting_min`, `refill_alert`,
+`cap_alert`, `balance_mon`). Each condition gets one issue
+`RECORDS <KIND>: sawweeli-hub` labelled `records`, reused if already open, not
+commented on while it lasts, and closed when it clears:
+
+| kind | opens when |
+|---|---|
+| `REFILL` | the worker raised its refill alert (relayer under 15 MON) |
+| `RESERVE` | that alert's balance is within 0.1 MON of the 10 MON reserve and records are waiting: anchoring is paused |
+| `CAP` | the worker raised its daily-cap alert and records are waiting (they go out the next UTC day) |
+| `STUCK` | a record has waited more than 1 h, counted from `records_activated_at` |
+
+- No `records` section in the response: the record layer is not configured,
+  nothing opens, and open `RECORDS` issues close.
+- `records` unreadable (`{"error": ...}`, a bad shape, or the hub call failed):
+  nothing opens and nothing closes.
+- `records_activated_at` (on the `sawweeli-hub` entry in `checks.json`, an
+  RFC 3339 time) is when the hub relayer was activated on the contract. Until
+  it is set the `STUCK` alert is off, because records queue on purpose before
+  activation. Waiting time before activation does not count.
+- The hub reports the worker's refill and cap alerts for 24 h after the last
+  one, so `REFILL` can stay open up to a day after a refill.
+
 ## Source watch
 
 Daily, a second workflow (`source-watch.yml`, dispatched by the same Worker at 05:17 UTC) checks

@@ -69,7 +69,8 @@
     "healthz": "/healthz",
     "healthz_keyword": "\"ok\":true",
     "keyword": "Sawweeli",
-    "sources_status": "/.well-known/sources-status.json"
+    "sources_status": "/.well-known/sources-status.json",
+    "records_activated_at": null
   },
   {
     "app": "demo-studio",
