@@ -92,12 +92,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261123014016/https://dlp.dubai.gov.ae/Legislation%20Reference/2013/Decree%20No.%20(41)%20of%202013.html",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:18:50Z",
    "http_status": 200,
-   "payload_sha256": "e7ca4fbdd59c4678ac2071326ce6f7014509da0cbefa35d6572bab7c0bc6fd95",
+   "payload_sha256": "9022551610b3b8ca2ff7612423ba0f784254b6b1127b39fac69116d95349605f",
    "quotes": [
     "No natural or legal person may conduct the Activity in the Emirate unless that person is licensed to do so by the DTCM."
    ],

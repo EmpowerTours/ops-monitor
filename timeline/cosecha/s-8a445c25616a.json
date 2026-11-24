@@ -114,12 +114,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 200,
-   "payload_sha256": "9d099ab864863965cd288fa814ab9ee19176240f112704b7d1b70768daa0fe61",
+   "payload_sha256": "a4d3f18fd60cb3437bf424510e15e61d6776f63f85f73237ec9934316ead2fd6",
    "quotes": [
     "Labels must be in Arabic only or Arabic/English.",
     "The minimum information requirements for the Arabic label or sticker are:"

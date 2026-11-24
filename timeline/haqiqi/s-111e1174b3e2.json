@@ -47,12 +47,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:19:17Z",
    "http_status": 200,
-   "payload_sha256": "835cc4934f290f278bd9f14e97dbf7c06a126d77695480ad5dc08776d8b676b3",
+   "payload_sha256": "340f0e0399094a04ce011c7beb638fe62e1b993b3209445a9ef6a04a8946e5e9",
    "quotes": [
     "• Avoid untrustworthy websites to protect your data Do not enter your personal information on unofficial websites or applications, as these sites may be a source of manipulation or fraud."
    ],

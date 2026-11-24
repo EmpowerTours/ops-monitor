@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "64470bc1c0e7af10d4e250b620457fd1b7f41b085032ac5da780ef261f31d6e8",
+   "payload_sha256": "1fa1c75120c4ae10ca69ab749c0bde330bc6014527074f06c522cf6f1ef3ff52",
    "quotes": [
     "Basic Package AED 6,000",
     "Lite Package AED 12,000",
@@ -23,12 +23,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:36Z",
    "http_status": 200,
-   "payload_sha256": "2bbb6bb6530a44ac7ecc5658ce54af62fb66605625f786c8c900ae5b4307828a",
+   "payload_sha256": "33152a7a559fc7e38b9faf0f99dd356380cd17af5ef0b0f92b4dacd232f9b05c",
    "quotes": [
     "Basic Package AED 6,000",
     "Lite Package AED 12,000",
@@ -44,12 +44,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "03ad08fc00f4cb92a1fe5bf4e9c17a4bc271dff71d221eda04a699a3adea110c",
+   "payload_sha256": "680d3aa6ba84abed18bb10eb1f147f2fe02e33684b7b49ddf6db57d98226362c",
    "quotes": [
     "Basic Package AED 6,000",
     "Lite Package AED 12,000",
@@ -65,12 +65,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "9c73c328c7f89ea0c2eaaa0ddcec9393aee23b28e0d0fe4b17a8d3ecf69d79a7",
+   "payload_sha256": "ee6877d8bef93b757ffc15c644393df402313e4eff6732f32c487ff4fc13fa48",
    "quotes": [
     "Basic Package AED 6,000",
     "Lite Package AED 12,000",

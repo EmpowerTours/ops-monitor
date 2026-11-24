@@ -50,12 +50,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "c4650272cd0cc3735c9a4b6ce3de07984979437f4e53d847b551341172dc71b3",
+   "payload_sha256": "73adb8e64aafce064ea361bb95688c1c61aa50b75acfbe66aad3a9e0b4d0a53b",
    "quotes": [
     "Provide evidence that he works for an entity outside the UAE and that the work is being done remotely.",
     "Submit proof that he has a monthly income of no less than (3,500) US dollars or the equivalent in foreign currencies."

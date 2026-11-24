@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:19:19Z",
    "http_status": 200,
-   "payload_sha256": "382f2acd2aa283f96fa4abc1d376d951330c889c7c3b1e803c2be36614b499ce",
+   "payload_sha256": "3e0caea0660866d4480f3622824424c02a94ca954b4bce73374d2ded18a5fd1a",
    "quotes": [
     "Priority is given to companies holding the Dubai AI Seal"
    ],

@@ -50,12 +50,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "a30d99b1ae90b28696651956e29149d42dd0c7f58f78261e183000775d3bad24",
+   "payload_sha256": "c3d4e9d22ab63a99b8653b344a1a31dbbaca64277b7bfc3dc11ac230bdefd418",
    "quotes": [
     "the median annual rent was AED 40,000 for a studio, AED 58,324 for a 1-bedroom and AED 77,175 for a 2-bedroom flat.",
     "With the 5% housing fee"

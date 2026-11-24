@@ -308,12 +308,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:19:17Z",
    "http_status": 200,
-   "payload_sha256": "8ed033784d19cf8f0a5dbfd8d437108e7c610466582764106be047cdba56ce0f",
+   "payload_sha256": "a98ed264c77f42ec8397a4418c7bb61fa16824d1e5307182026ee4aee8463f24",
    "quotes": [
     "Centrepoint سنتربوينت",
     "Emirates طيران الإمارات",

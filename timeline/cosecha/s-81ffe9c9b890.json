@@ -80,12 +80,12 @@
    "status": "no_quotes"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:33:16Z",
    "http_status": 200,
-   "payload_sha256": "eb314b257b6e5536f11ddfa3b8a6b8c42dfb927360e677972bbbb86342e22cef",
+   "payload_sha256": "789fea8e7c910f9a185688a62ad4d402bf0bea4cf80f1e211f2fb589037dfc4f",
    "quotes": [],
    "ref": "cosecha/s-81ffe9c9b890/2026-11-24T05:33:16Z",
    "run_id": "20261124T051723Z",
@@ -93,12 +93,12 @@
    "status": "no_quotes"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 200,
-   "payload_sha256": "d183ce87205e94156b52f768fe6e1f7f26ca25a543d5939b30a17c481c525cd4",
+   "payload_sha256": "f97725a0b13f718baddca70120dc62a641154b1cc2f3f08f812a5f036cc2e3e4",
    "quotes": [],
    "ref": "cosecha/s-81ffe9c9b890/2026-11-24T18:32:37Z",
    "run_id": "20261124T181644Z",

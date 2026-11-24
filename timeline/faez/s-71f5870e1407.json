@@ -2,12 +2,12 @@
  "cited_by": "faez",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-24T05:20:07Z",
    "http_status": 200,
-   "payload_sha256": "422de32c06ad717b2ddddb36b8ee0954a07fbae1ab6b6721e1d5eb40a253ff0a",
+   "payload_sha256": "dea505c2c303bd8052c2034c5b910556c51bdefdcc1269b16fdc9d78bdd02c11",
    "quotes": [
     "https://www.difc.com/business/public-register"
    ],
@@ -17,12 +17,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T18:19:31Z",
    "http_status": 200,
-   "payload_sha256": "1d56959087d98e81d4dfefb86f9f27b89901e9627698aeaf9b3f9745b43329e8",
+   "payload_sha256": "9299b33cd305e440a4959cb2990b2581394d387496f856cd597fffa2c0679acd",
    "quotes": [
     "https://www.difc.com/business/public-register"
    ],

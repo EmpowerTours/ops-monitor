@@ -2,12 +2,12 @@
  "cited_by": "asas",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:03:41Z",
    "http_status": 200,
-   "payload_sha256": "dea95343f52b828c66548cddc7adebf20cd5830ca3c51be2ae75acbd9c104c69",
+   "payload_sha256": "b478df1c256dd708d08a3d435a5d940ea36b184398575694c4774f58f3340910",
    "quotes": [
     "Meydan Free Zone License: Starting from AED 12,500, depending on visa allocation and business structure.",
     "Always consult directly with Meydan Free Zone to get a custom quote based on your specific needs."
@@ -18,12 +18,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:09Z",
    "http_status": 200,
-   "payload_sha256": "8ab20437775fb464a35e5773853d1822d5e168b5edcf4232c9276caab308adee",
+   "payload_sha256": "b1de84004e7fe9efe595468169ee2f2eacb733c16e4b8983bfc630fd45ae8731",
    "quotes": [
     "Meydan Free Zone License: Starting from AED 12,500, depending on visa allocation and business structure.",
     "Always consult directly with Meydan Free Zone to get a custom quote based on your specific needs."
@@ -34,12 +34,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:19:59Z",
    "http_status": 200,
-   "payload_sha256": "bf3261c543d2831d589051e99397692b481797d8333eff907cfcc12f2333ac0b",
+   "payload_sha256": "1fe36d9bc1b3a02d2092761daf8cc23b40abeb3aeea1b03361a9060d3546cfc2",
    "quotes": [
     "Meydan Free Zone License: Starting from AED 12,500, depending on visa allocation and business structure.",
     "Always consult directly with Meydan Free Zone to get a custom quote based on your specific needs."
@@ -50,12 +50,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T18:19:19Z",
    "http_status": 200,
-   "payload_sha256": "0345c8e9d78bd4994e20796fbd1d6b62ed5172a69ac358e012a6dcd2e2f696f5",
+   "payload_sha256": "3253b1ef52765b5cf32c3b38c325aa7646b26646a706789eda19b1c8322c3705",
    "quotes": [
     "Meydan Free Zone License: Starting from AED 12,500, depending on visa allocation and business structure.",
     "Always consult directly with Meydan Free Zone to get a custom quote based on your specific needs."

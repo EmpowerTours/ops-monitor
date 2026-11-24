@@ -50,12 +50,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "91e7383f9647dc89fa8fd69e27232576cf0464f23de29f6a8e2326a8b141caed",
+   "payload_sha256": "e9dfdaf0ffa287313ee3ed1c537c93b2556ae636119f2720faecdfb9b98286f7",
    "quotes": [
     "Proof of remote employment outside the United Arab Emirates.",
     "Salary certificate (USD 3,500) or its equivalent in foreign currencies."

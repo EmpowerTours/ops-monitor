@@ -53,12 +53,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "a7cee47d2c00d22a6e88f831a093f1221c896fea3117b915b6cba3ea9182aecc",
+   "payload_sha256": "034d6507b0fdc3971c3243173353095ab72667b00be1710280c951b3254a3dfb",
    "quotes": [
     "Studio AED 40,000/year",
     "1 bedroom AED 58,000/year",

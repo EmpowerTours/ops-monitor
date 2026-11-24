@@ -368,12 +368,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:19:19Z",
    "http_status": 200,
-   "payload_sha256": "fe76389e63cc916be1bdf5bf9b06c58291f7526e7d5191eeac7e2acca7b83b26",
+   "payload_sha256": "790f09e232652d7ab680890536aea775d1b4fbf0b83dfd96c8f51f891bfbee82",
    "quotes": [
     "Entity Structure",
     "This section confirms the type of entity being registered in DIFC.",

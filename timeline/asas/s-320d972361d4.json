@@ -77,12 +77,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:19:19Z",
    "http_status": 200,
-   "payload_sha256": "d822a5b0dc90cb05c58f43933a49621f052b76beda5b91d79d944cc2e1d45a8d",
+   "payload_sha256": "d248060ced5ae04e01fe460f77acac5062e9a0c425fce269c6bcb44896da5231",
    "quotes": [
     "Innovation Licence USD 1,500 PER ANNUM",
     "Registration Fee USD 100 ONE TIME",

@@ -107,12 +107,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 200,
-   "payload_sha256": "1b6691ab5165fa1ab686f82c89630d332fa9af011cd1c10b758d10d02f0ef852",
+   "payload_sha256": "03c6df7cc3f4d9e364b8f093c583a5418aa31fe0e9db650baae66f37c9d7473f",
    "quotes": [
     "For consignment of non-treated animal products and by-products: certified veterinary health certificate issued by the competent veterinary authorities"
    ],

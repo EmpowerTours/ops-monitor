@@ -74,12 +74,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "3657048923b97a39f765324b0502c0fbbbf98adb5980cd7eac302af50f962dd8",
+   "payload_sha256": "3039af99af3575038acc703aac034c74267410e6d23ccab0ca941ae3232599bf",
    "quotes": [
     "The investor must be a partner in an existing or newly established establishment or company, with a financial share of at least AED 2,000,000.",
     "The invested capital must be fully owned by the investor and must not be derived from a loan.",

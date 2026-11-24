@@ -53,12 +53,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "f3eac8dbdbc9029809e5c6ae6ab4a8e97dca2e4791f434b1b199929d79bfb3e8",
+   "payload_sha256": "3c41de5ed5d2c19d38649afafa85d4034eb9b27f2428b9edec8e10f9077ccf22",
    "quotes": [
     "Basic Biz Package Perfect for entrepreneurs and smaller start-ups",
     "Save on office space costs with special flexi desk options (eligible for one UAE residency visa)",

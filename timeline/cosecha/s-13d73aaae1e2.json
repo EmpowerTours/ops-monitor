@@ -34,12 +34,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "d49ba8c3753607115a34c9e5083a6beaae731da009d2358c304b619d7880de76",
+   "payload_sha256": "82ba44a600e5ce9ad472aee6da4b2fc9a3858be5bd8f38baa8c29842aeab1ae1",
    "quotes": [
     "Issue Conformity Certificates for Regulated Products (ECAS)",
     "List of technical requirements for regulated products"
@@ -50,12 +50,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "9eecc699abe23eaa3483f51d9753107b23c77c628e0f9e0022976a101dbbacea",
+   "payload_sha256": "4471ef1c6094d4d998369f981e2062762cc2d2ab37a6bcc1f318caac2b64eca1",
    "quotes": [
     "Issue Conformity Certificates for Regulated Products (ECAS)",
     "List of technical requirements for regulated products"
@@ -66,12 +66,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "bb050f9872c6378b260e7a46b2e15444cbdd89c7beeb958f7330e848f5a7ffc8",
+   "payload_sha256": "d055042face6132ccc5dcf31a5c3f190583f59d1915bf9fcee06566d0f9be1b2",
    "quotes": [
     "Issue Conformity Certificates for Regulated Products (ECAS)",
     "List of technical requirements for regulated products"
@@ -82,12 +82,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T19:00:07Z",
    "http_status": 200,
-   "payload_sha256": "ab0518fafeeec74d38b48dcf7c4601692e530793d6d32ece164063106c108c4a",
+   "payload_sha256": "bb66ce8732850d8a820967f494d5a0115789f92b019e30474e7672631ca11924",
    "quotes": [
     "Issue Conformity Certificates for Regulated Products (ECAS)",
     "List of technical requirements for regulated products"
@@ -98,12 +98,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:33:16Z",
    "http_status": 200,
-   "payload_sha256": "674777eb8ac81c601f2c9116948e4e8eb230dcbc7aada130f4b6b7a1f32f3a2e",
+   "payload_sha256": "169f66f575048f82fabdeb8e8bb6dee15b434b586b622f3df6245e83f31f2176",
    "quotes": [
     "Issue Conformity Certificates for Regulated Products (ECAS)",
     "List of technical requirements for regulated products"
@@ -114,12 +114,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 200,
-   "payload_sha256": "d9256cde4e099d84bc003f0710dd877aab6b47e4cd1bba13f70a180efb0a66c1",
+   "payload_sha256": "d525493941a9c93e799308b7cf764ede536e9efc6072f0f09aa7a736cd03cc67",
    "quotes": [
     "Issue Conformity Certificates for Regulated Products (ECAS)",
     "List of technical requirements for regulated products"

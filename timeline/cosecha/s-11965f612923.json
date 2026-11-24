@@ -17,12 +17,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T01:32:05Z",
    "http_status": 200,
-   "payload_sha256": "cc6ba6f39a40aba26cb621f9bf735defc00753cd71eb7069a3ee5d4c3bfbc855",
+   "payload_sha256": "e9d645620480c1c4bad6a9fed3efaf8b489948e6a87d0f0e9a8e3b6777f5f8ef",
    "quotes": [
     "Additional declarations to be inserted on the reverse of the phytosanitary certificate for ware potatoes"
    ],
@@ -32,12 +32,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "f42ad6704da074a1d63c15c16d6eb544b61c511f995ae36c13872b1ca1260b78",
+   "payload_sha256": "72067754bb9d708661c0e162fec9fba76ed1e14a5792d485707edc3d224b168d",
    "quotes": [
     "Additional declarations to be inserted on the reverse of the phytosanitary certificate for ware potatoes"
    ],
@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "7890fb59def20c2e8864bd7a1c46e28b286e8551d3c07639f11cd2fa14b5c620",
+   "payload_sha256": "5697cf051b31d19caeddbd732f45a3291cdb02989a4c0dae386d29e7c5072435",
    "quotes": [
     "Additional declarations to be inserted on the reverse of the phytosanitary certificate for ware potatoes"
    ],
@@ -77,12 +77,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T19:00:07Z",
    "http_status": 200,
-   "payload_sha256": "94b7535c079f80a1be16a40fc09658bc4782a5156227951f24d4088aad3b22f1",
+   "payload_sha256": "4eff85f0906b8f659708f256c4aed79c0447c9d6abe3ef3a4bc6e4ad2e48123f",
    "quotes": [
     "Additional declarations to be inserted on the reverse of the phytosanitary certificate for ware potatoes"
    ],
@@ -92,12 +92,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:33:16Z",
    "http_status": 200,
-   "payload_sha256": "53b5de9d5cae7065e3549edd87e315c3e2702000f5f77663450a20d7b55b301e",
+   "payload_sha256": "5a1ad93347808fc921e31c40b9b346a8a1c0deee0a3547a9fff026c177068a0e",
    "quotes": [
     "Additional declarations to be inserted on the reverse of the phytosanitary certificate for ware potatoes"
    ],
@@ -107,12 +107,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 202,
-   "payload_sha256": "155d7228376151c108163ab7d941ea3d53692993435fc30c3e22c15ac13b5ca1",
+   "payload_sha256": "c9312ceb369c5be1d2754f9cb93628bb7ca6b8bda92284c9b5f90cba51c68d93",
    "quotes": [
     "Additional declarations to be inserted on the reverse of the phytosanitary certificate for ware potatoes"
    ],
