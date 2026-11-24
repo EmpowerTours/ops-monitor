@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T19:00:07Z",
+ "fetched_at": "2026-11-24T05:33:16Z",
  "id": "s-3bfaa5a9d852",
- "last_read_fetched_at": "2026-11-23T19:00:07Z",
+ "last_read_fetched_at": "2026-11-24T05:33:16Z",
  "manifest_fingerprint": "d411ec08c06f166a9d5604d05c9cecf3fc16e0e755c86c58f019b2da0ff8e09b",
- "run_id": "20261123T184346Z",
+ "run_id": "20261124T051723Z",
  "sha256": "805394ac0e8ff4651226ea47726d15b5e1ce07d07ccf654947bb630be7d84a43",
  "status": "verified",
  "url": "https://gd.eppo.int/taxon/ANSTOB/hosts"

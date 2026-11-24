@@ -85,6 +85,23 @@
    "run_id": "20261123T184346Z",
    "sha256": "2e75a787c9736f2c834461ed3edce3dd3e942f364709295e90c17aa39e6bd4c0",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-24T05:19:56Z",
+   "http_status": 200,
+   "payload_sha256": "378c83df44c95e6f2215c6b07b90d61e79f70aee85777639a09528244024452a",
+   "quotes": [
+    "If you are offered a job in the UAE, you must get an offer letter issued by the UAE's Ministry of Human Resources and Emiratisation (MOHRE), signed by the authorised manager.",
+    "You can verify the validity of the job offer using its reference number through the enquiry service",
+    "You should know that the employer is responsible for payment of recruitment expenses as per the UAE's Labour Law."
+   ],
+   "ref": "sawweeli-agent/s-efabcb6f3827/2026-11-24T05:19:56Z",
+   "run_id": "20261124T051723Z",
+   "sha256": "2e75a787c9736f2c834461ed3edce3dd3e942f364709295e90c17aa39e6bd4c0",
+   "status": "verified"
   }
  ],
  "source_id": "s-efabcb6f3827",

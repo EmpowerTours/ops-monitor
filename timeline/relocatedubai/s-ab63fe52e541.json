@@ -38,6 +38,25 @@
    "sha256": "5cf228dd2915c50b85f92a3aac5d77787e9710a9931fa1289b94742f111b74aa",
    "sha256_ar": "ad2037235bfada238d0e994a92f53ca395e80f1168bdb25dfcf64bc8618b63b5",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-24T05:20:48Z",
+   "http_status": 200,
+   "payload_sha256": "e4c50013582aa972706d9e4e73d14e9b957d01754cac3df30c04aefd32e13e09",
+   "quotes": [
+    "This service allows customers to verify the validity of the Certificate of Title / Title deed issued by the Land Department."
+   ],
+   "quotes_ar": [
+    "تتيح هذه الخدمة للمتعاملين التحقق من صحة شهادة الملكية الصادرة من دائرة الأراضي والاملاك."
+   ],
+   "ref": "relocatedubai/s-ab63fe52e541/2026-11-24T05:20:48Z",
+   "run_id": "20261124T051723Z",
+   "sha256": "5cf228dd2915c50b85f92a3aac5d77787e9710a9931fa1289b94742f111b74aa",
+   "sha256_ar": "ad2037235bfada238d0e994a92f53ca395e80f1168bdb25dfcf64bc8618b63b5",
+   "status": "verified"
   }
  ],
  "source_id": "s-ab63fe52e541",

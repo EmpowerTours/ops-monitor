@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T18:45:50Z",
+ "fetched_at": "2026-11-24T05:20:07Z",
  "id": "s-7db47f38b8f7",
- "last_read_fetched_at": "2026-11-23T18:45:50Z",
+ "last_read_fetched_at": "2026-11-24T05:20:07Z",
  "manifest_fingerprint": "4f52c7d0bec23915b5278426a06347c2969a2b2c2fd19b8ee60e585d13e7c56b",
- "run_id": "20261123T184346Z",
+ "run_id": "20261124T051723Z",
  "sha256": "1e3144426efac738375930d854c4f0d52dd743e035edc97444f50346f02cbc32",
  "status": "verified",
  "url": "https://dmcc.ae/public-register"

@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-23T18:46:36Z",
+ "fetched_at": "2026-11-24T05:20:48Z",
  "id": "s-454ca874b0fe",
- "last_read_fetched_at": "2026-11-23T18:46:36Z",
- "manifest_fingerprint": "50502c554c9dd604347a90a601dd81c682982daaeba99f8947732f7bfa99f79c",
- "run_id": "20261123T184346Z",
- "sha256": "5823165d053a34aaa4de0e7c9cd1bcb99331f8d40da52d756735fae755a9c998",
+ "last_read_fetched_at": "2026-11-24T05:20:48Z",
+ "manifest_fingerprint": "8b103ff79b20c66822f193dbadf3a991a6f79f1a945024969c7e698c66978210",
+ "run_id": "20261124T051723Z",
+ "sha256": "6790e04a69925ef2449d71761d8ea7ef27d5862acd93c8bc4fddbe6d70be8468",
  "status": "changed_quote_ok",
  "url": "https://gdrfad.gov.ae/en/services/8ea80da4-f43e-11eb-0320-0050569629e8"
 }

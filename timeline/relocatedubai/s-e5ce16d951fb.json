@@ -42,6 +42,27 @@
    "run_id": "20261123T184346Z",
    "sha256": "0518ed2094273ef87d7238eb197b288cf61754b30dfb4e78378fc152d589e82d",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-24T05:20:48Z",
+   "http_status": 200,
+   "payload_sha256": "a3b4309a26d42a4a61558c2486c2d98afa0e7007fd6ea317311f791a71247377",
+   "quotes": [
+    "Basic Package AED 6,000",
+    "Lite Package AED 12,000",
+    "Permission for one business activity",
+    "Access to a co-working facility",
+    "Up to 5 business activities",
+    "Provision of 1 residence visa",
+    "Get a Business License in UAE in 5 minutes!"
+   ],
+   "ref": "relocatedubai/s-e5ce16d951fb/2026-11-24T05:20:48Z",
+   "run_id": "20261124T051723Z",
+   "sha256": "0518ed2094273ef87d7238eb197b288cf61754b30dfb4e78378fc152d589e82d",
+   "status": "verified"
   }
  ],
  "source_id": "s-e5ce16d951fb",

@@ -1,0 +1,24 @@
+{
+ "cited_by": "faez",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-24T05:20:07Z",
+   "http_status": 200,
+   "payload_sha256": "2bae17d5b14af6341d29d1a6bcccdef0464fb043f998f3283fbaa13894c7cb3b",
+   "quotes": [
+    "Search for licence information - Dubai Economy and Tourism",
+    "Check business name - Invest in Dubai"
+   ],
+   "ref": "faez/s-c493ef118351/2026-11-24T05:20:07Z",
+   "run_id": "20261124T051723Z",
+   "sha256": "a621e94121131bdb4d078eebfe655e0838fa5a7eecf6f0480752bd37a14766ca",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-c493ef118351",
+ "url": "https://u.ae/en/information-and-services/business/important-digital-services/inquire-about-licences-names-and-activities",
+ "v": 1
+}

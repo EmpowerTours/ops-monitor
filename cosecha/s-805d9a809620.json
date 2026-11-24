@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T03:10:18Z",
+ "fetched_at": "2026-11-24T05:33:16Z",
  "id": "s-805d9a809620",
- "last_read_fetched_at": "2026-11-23T03:10:18Z",
+ "last_read_fetched_at": "2026-11-24T05:33:16Z",
  "manifest_fingerprint": "cce28acc0639f553465a9baa8e43634bde926738cc1b58774b31e46d5839e3eb",
- "run_id": "20261123T025424Z",
+ "run_id": "20261124T051723Z",
  "sha256": "0082e504af31648d02ed7cf7de7cd9111f3a6fc59880a7a67a14f8e14e1b500c",
  "status": "verified",
  "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=784&partnerCode=0&period=2023&flowCode=M&cmdCode=081040"

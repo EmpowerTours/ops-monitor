@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T19:00:07Z",
+ "fetched_at": "2026-11-24T05:33:16Z",
  "id": "s-0e2efb385121",
- "last_read_fetched_at": "2026-11-23T19:00:07Z",
+ "last_read_fetched_at": "2026-11-24T05:33:16Z",
  "manifest_fingerprint": "ca31baa1924ef52eb19e40bb11dd990235ed471c91246ca3a84cad663c2bef92",
- "run_id": "20261123T184346Z",
+ "run_id": "20261124T051723Z",
  "sha256": "e0a6cbd7edec6a20b592d8d49886112f867f08ae78b6832cf0ce766e6b61c09a",
  "status": "changed_quote_ok",
  "url": "https://moiat.gov.ae/en/programs/halal"

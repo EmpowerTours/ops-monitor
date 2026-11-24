@@ -90,6 +90,21 @@
    "run_id": "20261123T184346Z",
    "sha256": "cfd4454d403aae94b4f9fdcf0af9a8979c78c15ee5e49e75fdaede7f7b408ea1",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-24T05:33:16Z",
+   "http_status": 200,
+   "payload_sha256": "b58e28a554d5c51ce45adeb34bc1f65d62c93f24f1931bc02d31bab0ba9f359a",
+   "quotes": [
+    "يحظر استيراد النبات ات أو جزء منها ما عدا الثمار من الدول التي سجل بها مرض الاصفرار المميت"
+   ],
+   "ref": "cosecha/s-7a19a8fe0da8/2026-11-24T05:33:16Z",
+   "run_id": "20261124T051723Z",
+   "sha256": "cfd4454d403aae94b4f9fdcf0af9a8979c78c15ee5e49e75fdaede7f7b408ea1",
+   "status": "verified"
   }
  ],
  "source_id": "s-7a19a8fe0da8",

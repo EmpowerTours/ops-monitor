@@ -34,6 +34,23 @@
    "run_id": "20261123T184346Z",
    "sha256": "9f3de5edb8a6173b81a3062abe4a2d82a0eecbbb79020c58b8f6b0d889028d0c",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-24T05:19:59Z",
+   "http_status": 200,
+   "payload_sha256": "48e205a2327edbb75c23f3d86b308743573565eba05f0b2445f1a643a1a19f6f",
+   "quotes": [
+    "Simple and fully digital process",
+    "From trade license to a proof of address, it's straightforward.",
+    "Scan your ID, verify with a recording and add any other business partner."
+   ],
+   "ref": "asas/s-95d32da13e75/2026-11-24T05:19:59Z",
+   "run_id": "20261124T051723Z",
+   "sha256": "9f3de5edb8a6173b81a3062abe4a2d82a0eecbbb79020c58b8f6b0d889028d0c",
+   "status": "verified"
   }
  ],
  "source_id": "s-95d32da13e75",

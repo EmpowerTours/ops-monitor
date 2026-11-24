@@ -126,6 +126,27 @@
    "sha256": "803fe02b34e880c61a44476d7eb51ef4e1cf3855d850ccb2b69c3983acb9dc2f",
    "sha256_ar": "8987e902d7b48ec88f7fb9ac896c6075dd8a5386b5eea347d72f3d2ded5202a1",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": true,
+   "fetched_at": "2026-11-24T05:33:16Z",
+   "http_status": 200,
+   "payload_sha256": "b1c572f1914da463f80391f86191087ea9f290fa6db301a5526d1407c031e142",
+   "quotes": [
+    "Fee Type : Federalfor request to release a consignment of agricultural products transferred to the Ministry 200",
+    "The time to obtain the service : 1 working day"
+   ],
+   "quotes_ar": [
+    "طلب الإفراج عن إرسالية منتجات زراعية محالة للوزارة 200",
+    "زمن الحصول على الخدمة : 1 يوم عمل"
+   ],
+   "ref": "cosecha/s-a518ab267676/2026-11-24T05:33:16Z",
+   "run_id": "20261124T051723Z",
+   "sha256": "fab6f1c4118732ba35b4b0ffac3b0c22cdf67694df1d35c2d5422bf3a351bcdf",
+   "sha256_ar": "355f3c2d3585a0d0f16d260cc0154a252bf7dfb876867343e12f05a84e229b0d",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-a518ab267676",

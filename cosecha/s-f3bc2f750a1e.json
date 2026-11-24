@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T19:00:07Z",
+ "fetched_at": "2026-11-24T05:33:16Z",
  "id": "s-f3bc2f750a1e",
- "last_read_fetched_at": "2026-11-23T19:00:07Z",
+ "last_read_fetched_at": "2026-11-24T05:33:16Z",
  "manifest_fingerprint": "db6076874304c0ed168c4db15ce441ef903a5807d3000f88bfb777dc6c7c3baf",
- "run_id": "20261123T184346Z",
+ "run_id": "20261124T051723Z",
  "sha256": "4253eeb4ceb82e11804c03448bfd8314eb2dd247376ede3d7e5eb57daa4d1fc7",
  "status": "verified",
  "url": "https://unstats.un.org/unsd/classifications/Econ/Detail/EN/32/120799"

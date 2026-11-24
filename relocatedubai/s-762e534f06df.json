@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T18:46:36Z",
+ "fetched_at": "2026-11-24T05:20:48Z",
  "id": "s-762e534f06df",
- "last_read_fetched_at": "2026-11-23T18:46:36Z",
+ "last_read_fetched_at": "2026-11-24T05:20:48Z",
  "manifest_fingerprint": "ec93900dde5a43d9e68cd6cfbb8ab7dfbd3a08b56fc51855a41a0b39899129b1",
- "run_id": "20261123T184346Z",
+ "run_id": "20261124T051723Z",
  "sha256": "35eb5d111dcb0180fc6fdbc17ec21f5dd7994e0562b2462d4bec3fec76f11464",
  "status": "verified",
  "url": "https://bayutapi.dev/blog/dubai-rental-market-report-2026"

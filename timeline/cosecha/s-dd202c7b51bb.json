@@ -90,6 +90,21 @@
    "run_id": "20261123T184346Z",
    "sha256": "172a5a523a2c4d80c317536b18494c8d6d404be300eb48146c57e8d7d8d3de4d",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-24T05:33:16Z",
+   "http_status": 200,
+   "payload_sha256": "700dc754e22a58bf344967bd8d767b9af2c9d0c4264e0b64521aff6df6e92b8b",
+   "quotes": [
+    "البريد الالكتروني info@moccae.gov.ae مركز الاتصال 8003050"
+   ],
+   "ref": "cosecha/s-dd202c7b51bb/2026-11-24T05:33:16Z",
+   "run_id": "20261124T051723Z",
+   "sha256": "172a5a523a2c4d80c317536b18494c8d6d404be300eb48146c57e8d7d8d3de4d",
+   "status": "verified"
   }
  ],
  "source_id": "s-dd202c7b51bb",

@@ -1,0 +1,24 @@
+{
+ "cited_by": "trips",
+ "entries": [
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-24T05:19:28Z",
+   "http_status": 200,
+   "payload_sha256": "99fdd2023a4fc7aae208820610ccc224ed7b001244f71ff3002b89388343412f",
+   "quotes": [
+    "Fee imposed on the Sales of Hotel Establishments pursuant to the above-mentioned Regulation No. (2) of 2006 are hereby reduced from ten percent (10%) to seven percent (7%).",
+    "determine the time frames within which the reductions referred to in paragraph (b) and paragraph (c)"
+   ],
+   "ref": "trips/s-94f06a960fe1/2026-11-24T05:19:28Z",
+   "run_id": "20261124T051723Z",
+   "sha256": "71cb9641e1b7dc7dba0b0e4358b0aa5115bc6a1c6de517078dc2d59dce4839f2",
+   "status": "verified"
+  }
+ ],
+ "source_id": "s-94f06a960fe1",
+ "url": "https://dlp.dubai.gov.ae/Legislation%20Reference/2019/Decree%20No.%20(27)%20of%202019%20Concerning%20Reduction%20of%20and%20Exemption%20from%20Fees%20and%20Fines%20in%20the%20Emirate%20of%20Dubai.html",
+ "v": 1
+}

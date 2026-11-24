@@ -65,6 +65,19 @@
    "run_id": "20261123T184346Z",
    "sha256": "5617637e7b09f37ac63817605fa859d30b03dfc8a0918d289c42f867dedd2fe2",
    "status": "no_quotes"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-24T05:19:28Z",
+   "http_status": 200,
+   "payload_sha256": "4bb9251819c017dee12da93622fe5c3505467e5c949c511ffa3a9ac70b14e35e",
+   "quotes": [],
+   "ref": "trips/s-e19247eefbc6/2026-11-24T05:19:28Z",
+   "run_id": "20261124T051723Z",
+   "sha256": "5617637e7b09f37ac63817605fa859d30b03dfc8a0918d289c42f867dedd2fe2",
+   "status": "no_quotes"
   }
  ],
  "source_id": "s-e19247eefbc6",

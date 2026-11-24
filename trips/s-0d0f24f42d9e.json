@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-23T18:45:47Z",
+ "fetched_at": "2026-11-24T05:19:28Z",
  "id": "s-0d0f24f42d9e",
- "last_read_fetched_at": "2026-11-23T18:45:47Z",
+ "last_read_fetched_at": "2026-11-24T05:19:28Z",
  "manifest_fingerprint": "a596b78b0901c3ccce554b49e3395fe98dd6d1158d3c7f2432181d3f08b951dd",
- "run_id": "20261123T184346Z",
+ "run_id": "20261124T051723Z",
  "sha256": "7e3876d7289bd3ebed898e3ff864005b281051a0165394e19cde57b6f00b28d4",
  "status": "verified",
  "url": "https://developer.uber.com/docs/riders/ride-requests/tutorials/deep-links/introduction"
