@@ -54,6 +54,24 @@ SPEND_ALERT_PCT = 80.0
 SPEND_LABEL = "spend"
 # The Sawweeli hub's ops endpoints, called only when OPS_TOKEN is set.
 OPS_HUB_URL = os.environ.get("OPS_HUB_URL", "https://sawweeli-agent.empowertours.xyz").rstrip("/")
+# Monad records: the `records` section of the hub's /api/ops/spend. The thresholds mirror the proof worker's
+# (sawweeli-agent proof-worker/third_party/proof/budget.go): refill alert under 15 MON, nothing sent that would take
+# the relayer under the 10 MON reserve. The margin covers one anchor's max cost (gas limit x fee cap), so a balance
+# just above 10 MON already counts as "at the reserve".
+RECORDS_APP = "sawweeli-hub"
+RECORDS_LABEL = "records"
+RECORDS_REFILL_MON = 15.0
+RECORDS_RESERVE_MON = 10.0
+RECORDS_RESERVE_MARGIN_MON = 0.1
+RECORDS_STUCK_MIN = 60.0
+RECORDS_ACTION = {
+    "refill": "Fund the hub relayer (runbook: back to 40 MON). The worker keeps sending until the 10 MON reserve.",
+    "reserve": "Records are queueing and none go out until the relayer is funded. Fund the hub relayer now.",
+    "cap": "Nothing is lost: records keep queueing and go out after 00:00 UTC. Raise PROOF_DAILY_CAP_MON on the "
+           "proof-worker service only if the volume is expected.",
+    "stuck": "Check the proof-worker service logs (RPC, relayer activation, contract address) and the cap and "
+             "reserve issues, which also hold records back.",
+}
 
 SSL_CTX = ssl.create_default_context()
 
@@ -400,6 +418,123 @@ def process_spend_alerts(gh: Any, state: dict[str, Any], rows: list[dict[str, An
             errors.append(str(e))
 
 
+# ------------------------------------------------------------- Monad records (hub)
+def parse_hub_records(data: Any) -> dict[str, Any] | None:
+    """The `records` section of the hub's GET /api/ops/spend (sawweeli-agent lib/proof/ops.ts).
+    None: the hub answered without `records`, so the record layer is not configured (no alert).
+    {"error": ...}: the section is unreadable (the hub's own read error, or a shape this code does not know).
+    Otherwise the normalized reading. The hub's refill_alert / cap_alert mean "the worker raised that alert in the
+    last 24 h"; balance_mon is the relayer balance at the latest refill alert."""
+    if not isinstance(data, dict):
+        return {"error": "hub: /api/ops/spend body is not a JSON object"}
+    if "records" not in data:
+        return None
+    s = data["records"]
+    if not isinstance(s, dict):
+        return {"error": "hub: records is not an object"}
+    if "error" in s:
+        return {"error": f"hub: records {str(s['error'])[:60]}"}
+    waiting, oldest = _num(s.get("waiting")), _num(s.get("oldest_waiting_min"))
+    refill, cap = s.get("refill_alert"), s.get("cap_alert")
+    if waiting is None or oldest is None or not isinstance(refill, bool) or not isinstance(cap, bool):
+        return {"error": "hub: records has missing or bad fields"}
+    last = s.get("last_alert_at")
+    return {"day": str(s.get("day") or ""), "spent_mon": _num(s.get("spent_mon")) or 0.0,
+            "anchors": int(_num(s.get("anchors")) or 0), "waiting": int(waiting), "oldest_waiting_min": oldest,
+            "refill_alert": refill, "cap_alert": cap, "balance_mon": _num(s.get("balance_mon")),
+            "last_alert_at": str(last) if last else None}
+
+
+def records_activation(checks: list[dict[str, Any]]) -> dt.datetime | None:
+    """`records_activated_at` of the hub's check in checks.json: when the hub relayer was activated on the
+    ProofAnchor contract. Unset: anchoring is not live, so waiting records are expected and never "stuck".
+    Raises ValueError on a value that is not a time."""
+    for c in checks:
+        if c.get("app") == RECORDS_APP and c.get("records_activated_at"):
+            return parse_any_iso(str(c["records_activated_at"]))
+    return None
+
+
+def records_conditions(r: dict[str, Any], now: dt.datetime, activated_at: dt.datetime | None) -> dict[str, str]:
+    """Alert kind -> reason for a readable records section. Kinds: refill (relayer under the refill threshold),
+    reserve (at the reserve and records are held back: anchoring paused), cap (daily cap hit and records are held
+    back until the next UTC day), stuck (a record waited more than RECORDS_STUCK_MIN since activation)."""
+    out: dict[str, str] = {}
+    bal = r.get("balance_mon")
+    bal_txt = f"{bal:g} MON" if bal is not None else "unknown"
+    if r["refill_alert"]:
+        out["refill"] = (f"the relayer balance fell under the {RECORDS_REFILL_MON:g} MON refill threshold "
+                         f"(balance at the last alert: {bal_txt})")
+    if r["refill_alert"] and bal is not None and bal < RECORDS_RESERVE_MON + RECORDS_RESERVE_MARGIN_MON \
+            and r["waiting"] > 0:
+        out["reserve"] = (f"the relayer is at the {RECORDS_RESERVE_MON:g} MON reserve ({bal_txt}); anchoring is "
+                          f"paused and {r['waiting']} record(s) are waiting")
+    if r["cap_alert"] and r["waiting"] > 0:
+        out["cap"] = (f"the daily MON cap was hit (spent today: {r['spent_mon']:g} MON); {r['waiting']} record(s) "
+                      "wait for the next UTC day")
+    if activated_at is not None and r["waiting"] > 0:
+        since_active = (now - activated_at).total_seconds() / 60
+        stuck_min = min(r["oldest_waiting_min"], since_active)
+        if stuck_min > RECORDS_STUCK_MIN:
+            out["stuck"] = (f"{r['waiting']} record(s) not anchored; the oldest has waited "
+                            f"{fmt_duration(stuck_min * 60)} since anchoring was activated")
+    return out
+
+
+def records_line(r: dict[str, Any] | None) -> str:
+    if r is None:
+        return "not configured on the hub"
+    if "error" in r:
+        return f"unavailable ({r['error']})"
+    flags = [k for k in ("refill", "cap") if r[f"{k}_alert"]]
+    bal = f", balance at last refill alert {r['balance_mon']:g} MON" if r.get("balance_mon") is not None else ""
+    return (f"{r['day'] or '-'}: {r['spent_mon']:g} MON spent, {r['anchors']} anchor(s), {r['waiting']} waiting "
+            f"(oldest {r['oldest_waiting_min']:.0f} min){bal}; worker alerts in 24 h: {', '.join(flags) or 'none'}")
+
+
+def process_records_alerts(gh: Any, state: dict[str, Any], r: dict[str, Any] | None, now: dt.datetime,
+                           activated_at: dt.datetime | None, errors: list[str]) -> None:
+    """One issue "RECORDS <KIND>: sawweeli-hub" (label `records`) per active condition, reused if already open and
+    not commented on while it lasts. It closes when the condition clears or the hub stops reporting `records`
+    (not configured). An unreadable section changes nothing: open issues stay open, none are opened."""
+    alerts: dict[str, Any] = state.setdefault("records_alerts", {})
+    if r is not None and "error" in r:
+        return
+    stamp = iso(now)
+    conds = {} if r is None else records_conditions(r, now, activated_at)
+    for key in list(alerts):
+        kind = key.split("/", 1)[1]
+        if kind in conds:
+            continue
+        why = "The hub no longer reports records (not configured)" if r is None else f"Cleared ({records_line(r)})"
+        try:
+            gh.comment(alerts[key]["issue"], f"{why} at {stamp}. Closing.")
+            gh.close(alerts[key]["issue"])
+            print(f"closed records issue #{alerts[key]['issue']} ({key})")
+            del alerts[key]
+        except RuntimeError as e:
+            errors.append(str(e))
+    for kind, reason in conds.items():
+        key = f"{RECORDS_APP}/{kind}"
+        if key in alerts:
+            continue
+        title = f"RECORDS {kind.upper()}: {RECORDS_APP}"
+        body = (f"**{RECORDS_APP}** Monad records: {reason}.\n\n{RECORDS_ACTION[kind]}\n\n"
+                f"Hub reading at {stamp}: {records_line(r)}.\n\nThis issue closes automatically when the condition "
+                "clears. The hub reports the worker's refill and cap alerts for 24 h after the last one.")
+        try:
+            existing = gh.find_open_issue(title, RECORDS_LABEL)
+            if existing:
+                gh.comment(existing, f"Again at {stamp}: {reason}.")
+                num = existing
+            else:
+                num = gh.create_issue(title, body, [RECORDS_LABEL])
+            alerts[key] = {"issue": num, "since": stamp}
+            print(f"opened/updated records issue #{num} ({key})")
+        except RuntimeError as e:
+            errors.append(str(e))
+
+
 def voice_keepalive(token: str) -> str:
     """POST /api/ops/voice-keepalive once a day (with the summary). The hub pays for at most one short phrase per cloned
     voice, and only for a voice with no paid call in 5 days. Returns one line for the summary."""
@@ -502,8 +637,9 @@ def significant(state: dict[str, Any]) -> Any:
         for name, a in state.get("apps", {}).items()
     }
     alerts = {name: {k: a.get(k) for k in ("issue", "day")} for name, a in state.get("spend_alerts", {}).items()}
+    records = {name: a.get("issue") for name, a in state.get("records_alerts", {}).items()}
     return {"apps": apps, "outages": state.get("outages", []), "last_summary": state.get("last_summary"),
-            "spend_alerts": alerts}
+            "spend_alerts": alerts, "records_alerts": records}
 
 
 def uptime_24h(app: str, outages: list[dict[str, Any]], now: dt.datetime) -> float:
@@ -538,7 +674,8 @@ def table(results: list[dict[str, Any]]) -> str:
 
 def summary_body(checks: list[dict[str, Any]], results: dict[str, dict[str, Any]],
                  state: dict[str, Any], samples: dict[str, list[list[Any]]], now: dt.datetime,
-                 spend_rows: list[dict[str, Any]] | None = None, keepalive: str | None = None) -> str:
+                 spend_rows: list[dict[str, Any]] | None = None, keepalive: str | None = None,
+                 records: dict[str, Any] | None = None) -> str:
     lines = [f"**Daily status, {now.strftime('%Y-%m-%d %H:%M')} UTC** (last 24 h)", "",
              "| app | uptime 24h | avg ms | max ms | cert days | now |", "|---|---|---|---|---|---|"]
     slowest: tuple[str, float] | None = None
@@ -570,6 +707,8 @@ def summary_body(checks: list[dict[str, Any]], results: dict[str, dict[str, Any]
     if spend_rows:
         lines += ["", "**AI spend today** (each app's own day; used = spent + reserved over the daily cap; "
                       f"an alert opens at {SPEND_ALERT_PCT:.0f}%)", "", spend_table(spend_rows)]
+    if records is not None:
+        lines += ["", f"**Monad records (hub):** {records_line(records)}"]
     if keepalive:
         lines += ["", f"Voice keep-alive: {keepalive}"]
     return "\n".join(lines)
@@ -687,17 +826,26 @@ def main() -> int:
         spend_rows = list(pool.map(fetch_spend, spend_checks))
     configured = {c["app"] for c in spend_checks}
     ops_token = (os.environ.get("OPS_TOKEN") or "").strip()
+    # Monad records from the same hub response: None = not configured on the hub, {"error"} = unreadable.
+    records: dict[str, Any] | None = None
     if ops_token:
         configured |= {f"sawweeli-hub/{k}" for k in ("llm", "tts", "stt")}
         try:
-            spend_rows += parse_hub_spend(hub_call("GET", "/api/ops/spend", ops_token))
+            hub_spend = hub_call("GET", "/api/ops/spend", ops_token)
+            spend_rows += parse_hub_spend(hub_spend)
+            records = parse_hub_records(hub_spend)
         except RuntimeError as e:
             print(f"note: {e}", flush=True)
+            records = {"error": str(e)}
     stbl = spend_table(spend_rows)
     print(stbl, flush=True)
+    if ops_token:
+        print(f"Monad records: {records_line(records)}", flush=True)
     if summary_path:
         with open(summary_path, "a", encoding="utf-8") as f:
             f.write(f"\nGap since the previous run: {gap_note}\n\n### AI spend\n\n{stbl}\n")
+            if ops_token:
+                f.write(f"\n### Monad records\n\n{records_line(records)}\n")
 
     token = os.environ.get("GITHUB_TOKEN")
     repo = os.environ.get("GITHUB_REPOSITORY")
@@ -789,6 +937,19 @@ def main() -> int:
     except RuntimeError as e:
         errors.append(str(e))
 
+    # Monad records alerts (only when the hub was asked: without OPS_TOKEN nothing is known, nothing changes)
+    if ops_token:
+        try:
+            activated_at = records_activation(checks)
+        except ValueError:
+            activated_at = None
+            errors.append("checks.json: records_activated_at is not a time; the stuck-records alert is off")
+        try:
+            gh.ensure_label(RECORDS_LABEL, "0e8a16", "Monad records: relayer refill, reserve, daily cap, stuck records")
+            process_records_alerts(gh, state, records, now, activated_at, errors)
+        except RuntimeError as e:
+            errors.append(str(e))
+
     # source watch dead-man switch: apps that serve /.well-known/sources-status.json
     watch_checks = [c for c in checks if c.get("sources_status")]
     if watch_checks:
@@ -813,7 +974,8 @@ def main() -> int:
                 num = gh.create_issue(SUMMARY_TITLE, "Daily uptime summary, one comment per day at 14:00 UTC.", [])
                 gh.try_pin(num)
             keepalive = voice_keepalive(ops_token) if ops_token else None
-            gh.comment(num, summary_body(checks, results, state, samples, now, spend_rows, keepalive))
+            gh.comment(num, summary_body(checks, results, state, samples, now, spend_rows, keepalive,
+                                         records if ops_token else None))
             if not force:  # a manual summary does not replace the scheduled one
                 state["last_summary"] = today
             print(f"posted daily summary to issue #{num}")
