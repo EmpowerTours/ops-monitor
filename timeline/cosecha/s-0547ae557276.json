@@ -112,12 +112,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:33:16Z",
    "http_status": 200,
-   "payload_sha256": "05d228ed74140f8ccbe160693698f7baad98cb244998ffc60f3b0aa32c173864",
+   "payload_sha256": "d1af1ab6c171e328a7efa814634ec8602896b142fd77c2ca006df15fba01977f",
    "quotes": [
     "Attesting commercial invoices and certificates of origin through the eDAS System",
     "mandatory for goods imported into the UAE valued at Dh10,000 and above, effective from February 1, 2023",

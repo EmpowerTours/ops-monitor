@@ -34,12 +34,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "4109f36e940a35cc55737dafcf01021d75010f9907f1adcfe6ddf3edf74c19c2",
+   "payload_sha256": "9c46b17eff1c80c869c21bc93f08a609c4d324877185c26d8ac73f7bace33031",
    "quotes": [
     "Ajman Free Zone offers a dedicated E-Commerce License package starting from AED 5555.",
     "Unlimited access to coworking space"

@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "3874fc7e64ff4093e0cab42bcee0cebf5f51f344fc46f6d0007599b125a5f4d8",
+   "payload_sha256": "1a07604ed97a0768ba338baa249701ab0d9f153b4ad5344893bd6ad15ddae856",
    "quotes": [
     "It is granted for a period of five years, with the option of renewal",
     "Provide proof of investment or contribution to a business venture within the UAE.",
@@ -19,12 +19,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:36Z",
    "http_status": 200,
-   "payload_sha256": "e03603280ee66a797f29ad8f8eb039ee03dc5d478222182c21eb0450d36c6178",
+   "payload_sha256": "a6f1112187b920fcdeb4dea7c5d23d475480cca9a65b8d47c332eb53b941fe05",
    "quotes": [
     "It is granted for a period of five years, with the option of renewal",
     "Provide proof of investment or contribution to a business venture within the UAE.",
@@ -36,12 +36,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "62a458d0b9430e82d8dccabf6c1e111b0abd6ffb8c54d30ca219726e0194ecf3",
+   "payload_sha256": "e6c80955f223e985ef6667aab0382af67de8a280b73f03e489c1fcc09841f698",
    "quotes": [
     "It is granted for a period of five years, with the option of renewal",
     "Provide proof of investment or contribution to a business venture within the UAE.",

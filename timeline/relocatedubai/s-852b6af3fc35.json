@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "7f8fa3d0705335deceee0684a3187113bc26bffb190bf64acf467e22d7f019f1",
+   "payload_sha256": "43cbdd76335c775433a9229dbb9813fd932bb3bc4b50996d1a04d0c1cb7715c8",
    "quotes": [
     "Media Package Starting from AED 5750",
     "Standard Package Starting from AED 6875"
@@ -18,12 +18,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:36Z",
    "http_status": 200,
-   "payload_sha256": "c5fed4239d9240beb4b74dc0204d9bf094b12ec7c53a8e0bc2b5890e195f8546",
+   "payload_sha256": "eaf37f85f5841d7294b43673ca0379b0c6efc6701d40b739e4292c51014e3a46",
    "quotes": [
     "Media Package Starting from AED 5750",
     "Standard Package Starting from AED 6875"
@@ -34,12 +34,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "77536ea07c5e4c4d3a010a58ad13faf3c91b3f0ac4581ee1b2dfaadefc3a7099",
+   "payload_sha256": "900ab758dd6ed7ed3dd863d9b8ca8618546ec5fc5cd9841fb2e0bd8346a41f21",
    "quotes": [
     "Media Package Starting from AED 5750",
     "Standard Package Starting from AED 6875"

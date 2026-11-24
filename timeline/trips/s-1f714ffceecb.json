@@ -2,12 +2,12 @@
  "cited_by": "trips",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-24T05:19:28Z",
    "http_status": 200,
-   "payload_sha256": "75f6c5d984cc6f9359b8815b53564037afa28553a9c8f7f72d2eb8db0ba788f1",
+   "payload_sha256": "c138120634c7e8c1b0ccc3fa8802f296b236cce412b940a2aeca69ec3f27a508",
    "quotes": [
     "If you fail to extend your entry visa and overstay, you will have to pay a fine of AED 100 per day, which is calculated from 10 days after the expiration date of the visa.",
     "Tourist Visa and Visit Visa holders have a 10 day grace period to obtain an extension."

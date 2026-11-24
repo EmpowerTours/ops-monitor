@@ -40,12 +40,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "592687dbb1ce3060d13c5ecd15b25dbe047a03728101ed6cf33162641499edb0",
+   "payload_sha256": "4f1766811836abbb8e2a8aeace43779c9831463f763a07499848f16b2b65de04",
    "quotes": [
     "Under a virtual work visa, a foreigner may live in the UAE while working for a company outside the UAE.",
     "a copy of health insurance",

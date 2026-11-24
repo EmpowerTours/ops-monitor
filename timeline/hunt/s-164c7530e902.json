@@ -15,12 +15,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T02:10:57Z",
    "http_status": 200,
-   "payload_sha256": "304833ab67a46bd9513622d1f8aeffabf31ce029b09d64aa50cad4dd621050a1",
+   "payload_sha256": "a06b459b627abf0e6668fc80d066502f2b21811877cd94dc28868c369fd19070",
    "quotes": [],
    "ref": "hunt/s-164c7530e902/2026-11-23T02:10:57Z",
    "run_id": "20261123T021013Z",
@@ -28,12 +28,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T02:55:56Z",
    "http_status": 200,
-   "payload_sha256": "271737e8e76304727f8549b4202657850dcd3c571e7ffb8fe3aa38455c60980a",
+   "payload_sha256": "1d4e0783392a5874a63d6f15b1c655da4772f561a92ed0e07e9e9c5f1424c456",
    "quotes": [],
    "ref": "hunt/s-164c7530e902/2026-11-23T02:55:56Z",
    "run_id": "20261123T025424Z",
@@ -54,12 +54,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T18:45:37Z",
    "http_status": 200,
-   "payload_sha256": "f60f93f1bdc2d399976a236bf4f35969258785f96c2fbbce684f06d438be2a73",
+   "payload_sha256": "c09d1b53e68f020e619abe315d1532c146503268a3a7c76a3c75fe45186418da",
    "quotes": [],
    "ref": "hunt/s-164c7530e902/2026-11-23T18:45:37Z",
    "run_id": "20261123T184346Z",
@@ -67,12 +67,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: URLError",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:19:15Z",
    "http_status": 200,
-   "payload_sha256": "df5ae113f26782089a27074145b18f70d67b292d17cad4860a7020ccdf42900b",
+   "payload_sha256": "06093aef56960b93843f327db68f3eaad8e3afb643fc79316ddbe57548544f6d",
    "quotes": [],
    "ref": "hunt/s-164c7530e902/2026-11-24T05:19:15Z",
    "run_id": "20261124T051723Z",

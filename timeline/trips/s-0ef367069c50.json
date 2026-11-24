@@ -21,12 +21,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261123014037/https://dlp.dubai.gov.ae/Legislation%20Reference/2014/Executive%20Council%20Resolution%20No.%20(2)%20of%202014.html",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:12:08Z",
    "http_status": 200,
-   "payload_sha256": "359fa6a31890a8474fdcf4f61bd1d074393e825121bd429c42ed5c981fa61cbc",
+   "payload_sha256": "3d5054e79bc5f826f528302d163c46278698f05ee92b330847bb80207c0727de",
    "quotes": [
     "Luxury Hotel Apartment 20.00",
     "Deluxe Hotel Apartment 15.00",
@@ -40,12 +40,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261123014037/https://dlp.dubai.gov.ae/Legislation%20Reference/2014/Executive%20Council%20Resolution%20No.%20(2)%20of%202014.html",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:56:08Z",
    "http_status": 200,
-   "payload_sha256": "f1e014efda653e341e8543be2cce4ff477a887d681c9552fc667f3d33b92c01e",
+   "payload_sha256": "e1126b4bc294c9ca5fab353ca3cd58a973650004687c52d729e83279ffb818b2",
    "quotes": [
     "Luxury Hotel Apartment 20.00",
     "Deluxe Hotel Apartment 15.00",
@@ -59,12 +59,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261123014037/https://dlp.dubai.gov.ae/Legislation%20Reference/2014/Executive%20Council%20Resolution%20No.%20(2)%20of%202014.html",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:01:57Z",
    "http_status": 200,
-   "payload_sha256": "b57d694ee6ad8d4a6b0aa323497cd7c4acf3c8207e07e5a31c98e2be3140476f",
+   "payload_sha256": "adb8ffc4a27cf5e448bff6b42b8b4a4b28bd6dca87e114559e1a156ce2b02f5e",
    "quotes": [
     "Luxury Hotel Apartment 20.00",
     "Deluxe Hotel Apartment 15.00",
@@ -78,12 +78,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261123014037/https://dlp.dubai.gov.ae/Legislation%20Reference/2014/Executive%20Council%20Resolution%20No.%20(2)%20of%202014.html",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:45:47Z",
    "http_status": 200,
-   "payload_sha256": "1cca67f243461ca1ddbb08c59780daef957e3cb5479221e6044a4d9099ec9d47",
+   "payload_sha256": "1c822fa9db015ab9d1befb75af86a3d46e61150cdfe6b40d11f6e006e52d2eaf",
    "quotes": [
     "Luxury Hotel Apartment 20.00",
     "Deluxe Hotel Apartment 15.00",
@@ -97,12 +97,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261123014037/https://dlp.dubai.gov.ae/Legislation%20Reference/2014/Executive%20Council%20Resolution%20No.%20(2)%20of%202014.html",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:19:28Z",
    "http_status": 200,
-   "payload_sha256": "a6d0c63a61058fff1b8ce1f6e2636364efd24c0b674a1a9c71fd68093314b369",
+   "payload_sha256": "ed950e785287f1f99ba89a86158a2eabd2d74f88f37498928984470c1cc4c9ec",
    "quotes": [
     "Luxury Hotel Apartment 20.00",
     "Deluxe Hotel Apartment 15.00",

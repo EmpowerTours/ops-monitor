@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "34fb2c0d26564d08a715059012f78dd1c4e9658a1c3ff05772c80483f49523b8",
+   "payload_sha256": "192945f5f7038c1482719fc2c36dea75124cea43032b685c8622420bcd8ea98a",
    "quotes": [
     "2BR (split AC) AED 550 to 900 AED 750 to 1,200 AED 1,400 to 2,200 AED 900 to 1,600"
    ],
@@ -17,12 +17,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T18:46:36Z",
    "http_status": 200,
-   "payload_sha256": "403189db6c80d7aa6d672a668ac3a50b09ae71133123637330b188ec89edf2e4",
+   "payload_sha256": "cc2a1f643f597b4f98ffcb3867ce43c227c38147ef9687f41eabd922d92f74ed",
    "quotes": [
     "2BR (split AC) AED 550 to 900 AED 750 to 1,200 AED 1,400 to 2,200 AED 900 to 1,600"
    ],
@@ -32,12 +32,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "13a029cd76be4c5e19ca42f14677ebc070159d37a58f4ad4acfed90ffc295c5f",
+   "payload_sha256": "2790989104f844ec683932288470079a839bdd3595e21297ccc9efa6057a1fad",
    "quotes": [
     "2BR (split AC) AED 550 to 900 AED 750 to 1,200 AED 1,400 to 2,200 AED 900 to 1,600"
    ],

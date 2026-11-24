@@ -34,12 +34,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "4f9e966173fcba0c4712ed556b7583e238fae308fc58ac07d6a128353ccc9bbc",
+   "payload_sha256": "7afc7ec985bd5120f67049fe36ca727963205e12a05629b8cdaf88de2b2bb85a",
    "quotes": [
     "Job seekers are not required to pay money to any recruitment agency as the onus to pay such fees lies with the employers.",
     "Dubai Careers - Dubai Government job portal"

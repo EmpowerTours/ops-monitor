@@ -2,12 +2,12 @@
  "cited_by": "sawweeli-agent",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T02:56:36Z",
    "http_status": 200,
-   "payload_sha256": "977333b70a6c189b2ee108c654779ca90c32ba15376782d8fe7e934ffb7d6ad8",
+   "payload_sha256": "d7e6662785fa8c889d4512bf01642d116ea4198af09137227578defbbb6a57d0",
    "quotes": [
     "Federal Decree Law No. 33 of 2021 Regarding the Regulation of Employment Relationship and its amendments, known as the 'UAE Labour law', governs the labour rights of employees in the private sector."
    ],
@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:19:56Z",
    "http_status": 200,
-   "payload_sha256": "e79f7b0d3eb42bfa8314a7651b290db1c1f5b4bcf42e42011ebce4ae6e9143e7",
+   "payload_sha256": "bcdd819eee61c68add751ee76d5caf1d0d61e40277aba5d2696e24d53403617e",
    "quotes": [
     "Federal Decree Law No. 33 of 2021 Regarding the Regulation of Employment Relationship and its amendments, known as the 'UAE Labour law', governs the labour rights of employees in the private sector.",
     "Federal Decree law No. 20 of 2023 Amending Certain Provisions of Federal Decree Law No. 33 of 2021 Regarding the Regulation of Employment Relationships"

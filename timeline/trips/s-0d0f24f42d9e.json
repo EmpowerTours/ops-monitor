@@ -20,12 +20,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261123013951/https://developer.uber.com/docs/riders/ride-requests/tutorials/deep-links/introduction",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:12:08Z",
    "http_status": 200,
-   "payload_sha256": "f4b0ef95cb466653d3cee2d9a24753cb3fb27a96271e7474a1c935bcd3caf2c8",
+   "payload_sha256": "09379a6ebf6f082fad1fed9d78a4efe4205deb4d926eadb9cc3537a8eee3fb94",
    "quotes": [
     "Universal link: https://m.uber.com/looking",
     "Encoded pickup Location JSON object.",
@@ -38,12 +38,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261123013951/https://developer.uber.com/docs/riders/ride-requests/tutorials/deep-links/introduction",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:56:08Z",
    "http_status": 200,
-   "payload_sha256": "6fdd816e569a3d957fe6af5ab2fb039a70efc66bf0f30dc349dfc89e0c1ee098",
+   "payload_sha256": "b21538647fd9f287ea8efe9e95fbe0dba4c89365164e5f2879eebad253059cee",
    "quotes": [
     "Universal link: https://m.uber.com/looking",
     "Encoded pickup Location JSON object.",
@@ -56,12 +56,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261123013951/https://developer.uber.com/docs/riders/ride-requests/tutorials/deep-links/introduction",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:01:57Z",
    "http_status": 200,
-   "payload_sha256": "22bd595c6c1dc4532b8277509cfab61f6ba16cae92cb5a4acff99175858f5433",
+   "payload_sha256": "7d10aca7b0620b33883ace53ca297a5a9a58c5b0b0f2c11d04764c2c5a0d7a39",
    "quotes": [
     "Universal link: https://m.uber.com/looking",
     "Encoded pickup Location JSON object.",
@@ -74,12 +74,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261123013951/https://developer.uber.com/docs/riders/ride-requests/tutorials/deep-links/introduction",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:45:47Z",
    "http_status": 200,
-   "payload_sha256": "d22fea99bf779a91b2b42e823245baabdd75174bf609dace4eac015b4c35f626",
+   "payload_sha256": "d0ed31ad4b6d9e1695146d55811e5e679a322ea9bc77e30da917f3af17d1ed27",
    "quotes": [
     "Universal link: https://m.uber.com/looking",
     "Encoded pickup Location JSON object.",
@@ -92,12 +92,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261123013951/https://developer.uber.com/docs/riders/ride-requests/tutorials/deep-links/introduction",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:19:28Z",
    "http_status": 200,
-   "payload_sha256": "8ec7100c0066f19b9faa07ff2f82368370bf0d2c337db2849b6dfbb85379fbae",
+   "payload_sha256": "ff64b13adca980719f941160a9904a235e3aef16e9b10308210141e2394c15e9",
    "quotes": [
     "Universal link: https://m.uber.com/looking",
     "Encoded pickup Location JSON object.",

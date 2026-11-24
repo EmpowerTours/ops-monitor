@@ -32,12 +32,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:20:07Z",
    "http_status": 200,
-   "payload_sha256": "5b3b1391f210b1f226d288ba859e3019eb31cbb14ea4e5bef89b20af01c32cc9",
+   "payload_sha256": "7a395a94bb90d44839930404a4e3c1f8cbae146c5390222040e5fcbbdd644ca7",
    "quotes": [
     "Public register Search our register of DMCC entities"
    ],

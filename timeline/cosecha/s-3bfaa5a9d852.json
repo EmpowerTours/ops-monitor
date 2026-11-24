@@ -20,12 +20,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261122184335/https://gd.eppo.int/taxon/ANSTOB/hosts",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T01:32:05Z",
    "http_status": 200,
-   "payload_sha256": "2c7ea30c1382fe78ada9a9d6abfda298178dcf978eda3eaaac8ec715c1d4c334",
+   "payload_sha256": "0ac9bdaee51cbead24fcc90473acaf4bd950582d7ac38e8a987b3da5ad3c1229",
    "quotes": [
     "Citrus x aurantium var. paradisi (CIDPA)",
     "Psidium guajava (PSIGU)",
@@ -38,12 +38,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261122184335/https://gd.eppo.int/taxon/ANSTOB/hosts",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "b1475f3c6484d47b7dd8638e04e984f02dfa732fbb6f51cf15f06408ae865078",
+   "payload_sha256": "4c1b5501f377242525c90f90192cdf27e53e4290b6e06a397e49bb1990633091",
    "quotes": [
     "Citrus x aurantium var. paradisi (CIDPA)",
     "Psidium guajava (PSIGU)",
@@ -56,12 +56,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261122184335/https://gd.eppo.int/taxon/ANSTOB/hosts",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "20cd7c172c26b9de367947b3c3c49c78732952435ce337c492415152e531fce5",
+   "payload_sha256": "550aa661cfb9131e9295c90be7f6649cff18ff2e5bc23e7c68dfcbd730a70bf0",
    "quotes": [
     "Citrus x aurantium var. paradisi (CIDPA)",
     "Psidium guajava (PSIGU)",
@@ -74,12 +74,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261122184335/https://gd.eppo.int/taxon/ANSTOB/hosts",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "1c8cbfd7c73d91ca91338b925b62fc6c8d9de5c55f0c195360df6c7ed7282150",
+   "payload_sha256": "ad8c8e898e3f77f99e7752fed2ad663ea716103ea88f9ef63d98511a7b1f416a",
    "quotes": [
     "Citrus x aurantium var. paradisi (CIDPA)",
     "Psidium guajava (PSIGU)",
@@ -92,12 +92,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261122184335/https://gd.eppo.int/taxon/ANSTOB/hosts",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T19:00:07Z",
    "http_status": 200,
-   "payload_sha256": "d2ce1855a281674ce5ced90aabd04e854daeb35b236f2a5c31d838bce786698a",
+   "payload_sha256": "6e5afcb7c8e53a3e32151cba6f65cb2f01c2b866c07c0c30fff1f17872d5f926",
    "quotes": [
     "Citrus x aurantium var. paradisi (CIDPA)",
     "Psidium guajava (PSIGU)",
@@ -110,12 +110,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261122184335/https://gd.eppo.int/taxon/ANSTOB/hosts",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:33:16Z",
    "http_status": 200,
-   "payload_sha256": "6ed741e733561b9d2aaa72017a6ce41acd450a1bb3fb30ab6cb8d50d4de16795",
+   "payload_sha256": "9e0f013747b79dc212f55939c113ae14ff562d08f2800caee0a19ab47f1cc403",
    "quotes": [
     "Citrus x aurantium var. paradisi (CIDPA)",
     "Psidium guajava (PSIGU)",

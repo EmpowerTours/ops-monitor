@@ -2,12 +2,12 @@
  "cited_by": "sawweeli-agent",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-24T05:19:56Z",
    "http_status": 200,
-   "payload_sha256": "81f4ae0d5673ae7e4d29a62e2b22c7251bec1dff3db92319660c1f34d0f638a0",
+   "payload_sha256": "de6a19a773ac4d5d42f7f763fdb35da9c04a9d6c08bcaa12a7473d0de2b41ae6",
    "quotes": [
     "Recruitment and Employment of Workers",
     "It is not permissible to carry out the activity of recruitment or mediation to recruit or",

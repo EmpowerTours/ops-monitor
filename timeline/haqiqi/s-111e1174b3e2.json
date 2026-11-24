@@ -2,12 +2,12 @@
  "cited_by": "haqiqi",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:02:57Z",
    "http_status": 200,
-   "payload_sha256": "8cdc9815721ba921949f1bef5f3e3418a8580856facd23f29cd74aab5450559c",
+   "payload_sha256": "4956a48dd1341ced8397b9b3fc1723410baac0a44944e9a62ab07bd90e9d412d",
    "quotes": [
     "• Avoid untrustworthy websites to protect your data Do not enter your personal information on unofficial websites or applications, as these sites may be a source of manipulation or fraud."
    ],
@@ -17,12 +17,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:06Z",
    "http_status": 200,
-   "payload_sha256": "f88cec2e76fbf102ae89f186958f144ac1e3ef77723266882178ae5c1806e064",
+   "payload_sha256": "b1ca05e053bf8fdfed8f6654d2dc0d8a016087a36764eefa85feb1612b11e513",
    "quotes": [
     "• Avoid untrustworthy websites to protect your data Do not enter your personal information on unofficial websites or applications, as these sites may be a source of manipulation or fraud."
    ],
@@ -32,12 +32,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:19:56Z",
    "http_status": 200,
-   "payload_sha256": "b2c3502a5f856a383108ebae17db1cc69131ffc5ab6ba881c8c0287853657679",
+   "payload_sha256": "bdfc510021cf219222a6bdaa5ab0d4670c0f952a022ecc99000bedf315f8686d",
    "quotes": [
     "• Avoid untrustworthy websites to protect your data Do not enter your personal information on unofficial websites or applications, as these sites may be a source of manipulation or fraud."
    ],

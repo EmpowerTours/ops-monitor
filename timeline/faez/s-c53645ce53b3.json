@@ -2,12 +2,12 @@
  "cited_by": "faez",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-24T05:20:07Z",
    "http_status": 200,
-   "payload_sha256": "569d7523096bc46b0b31e58526ee7ca90f04d0ac5877480355f27063f9f0b223",
+   "payload_sha256": "8a5359bdef71b3e3182772c701479c23aeccf7e57c2b25c7e0f27a28dd72a7b7",
    "quotes": [
     "It acts as the single online destination for all suppliers engaged for business with Dubai Government entities.",
     "View past tenders on Dubai's eSupply platform."

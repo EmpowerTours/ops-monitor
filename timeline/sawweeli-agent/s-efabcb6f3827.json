@@ -87,12 +87,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:19:56Z",
    "http_status": 200,
-   "payload_sha256": "378c83df44c95e6f2215c6b07b90d61e79f70aee85777639a09528244024452a",
+   "payload_sha256": "5aa5d565ed4ad9f5d9ba010319d39b035f834584040459b1a55d3a0190eeef7a",
    "quotes": [
     "If you are offered a job in the UAE, you must get an offer letter issued by the UAE's Ministry of Human Resources and Emiratisation (MOHRE), signed by the authorised manager.",
     "You can verify the validity of the job offer using its reference number through the enquiry service",

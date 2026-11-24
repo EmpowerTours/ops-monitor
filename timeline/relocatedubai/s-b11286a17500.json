@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "fab961bdf8f03f80b84ae3020890f3fd774ee7628e40023f9e93756a3a302465",
+   "payload_sha256": "9d922d1e32e3a12239ee02b640e650c7b62298e72831e8bea0deaf7232b0a70e",
    "quotes": [
     "Single 250 to 450 62 to 112 1,000 to 1,800",
     "Couple 350 to 650 87 to 162 1,400 to 2,600"
@@ -18,12 +18,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T18:46:36Z",
    "http_status": 200,
-   "payload_sha256": "fd52d66f2026ccf849aba817762203ebbde9047078e923bcb72d67a39bb96f96",
+   "payload_sha256": "012646a3872a3daecdeb390bceb04e72bad46f63c17e4771134b4c7e83a275e9",
    "quotes": [
     "Single 250 to 450 62 to 112 1,000 to 1,800",
     "Couple 350 to 650 87 to 162 1,400 to 2,600"
@@ -34,12 +34,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "d1aa3d729031e487cf659f1336c53bc52641da49c99ecd70fe700938e6dd6457",
+   "payload_sha256": "b5be16771ba84e5fa7d8fa1cda87e98018fa6c8c514e50121ad24e42edd5fa05",
    "quotes": [
     "Single 250 to 450 62 to 112 1,000 to 1,800",
     "Couple 350 to 650 87 to 162 1,400 to 2,600"

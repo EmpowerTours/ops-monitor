@@ -17,12 +17,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T01:32:05Z",
    "http_status": 200,
-   "payload_sha256": "a96731253172a838c2b745845c8043dc40cd7af1102c243eb5add074b7adf301",
+   "payload_sha256": "222ace5dc4417f9c184173ff840a22864644bacdcf4a07ae663aba6656bfe1c3",
    "quotes": [
     "Apply to Register and Assess a Food Item"
    ],
@@ -32,12 +32,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "e06887d01666e47e889f0062d61630f61b9bc6d5caf9575a7b4fcd577ddf6e01",
+   "payload_sha256": "77b66647b123750059b701640ca60fccc42c519d6a68b436d3db0229befc3eba",
    "quotes": [
     "Apply to Register and Assess a Food Item"
    ],
@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "879b5e88b6f0c773a4074d12ba650a22ff61486bbc330635ae6633566c835a69",
+   "payload_sha256": "077d9e856fdd4e1ba49f63af48bc46cae5889e59d29e3480eca93409af2f7a1d",
    "quotes": [
     "Apply to Register and Assess a Food Item"
    ],
@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "251a18f8af190ff5363907165f5d3ad5957169f5b5a6b7b5635b3967f9136937",
+   "payload_sha256": "101c3044d661e767903a0ca45734c0a26bb0885fe537d25b32d16c6eea95bd48",
    "quotes": [
     "Apply to Register and Assess a Food Item"
    ],
@@ -77,12 +77,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T19:00:07Z",
    "http_status": 200,
-   "payload_sha256": "ef8eba927a5bdfd83c05f445592b0054f0cbfeb11a05081f25bf9c469540708c",
+   "payload_sha256": "e56ce868f081efccf7694e74cb8175e7db24646a40b02e2bf147843b1cbcb1cf",
    "quotes": [
     "Apply to Register and Assess a Food Item"
    ],
@@ -92,12 +92,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:33:16Z",
    "http_status": 200,
-   "payload_sha256": "8ed80cd174b542935a71c00374fe5e86c66f014aa81ef7c04e9abaa2bd5b7cce",
+   "payload_sha256": "81e64150dad03097010c9888ce6a47267eb50e14953e6de5a1aa7140c2332b5d",
    "quotes": [
     "Apply to Register and Assess a Food Item"
    ],

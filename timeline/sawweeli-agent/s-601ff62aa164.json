@@ -17,12 +17,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T02:12:25Z",
    "http_status": 200,
-   "payload_sha256": "6e43c8c3124261be47731f98c5c95eb753ab8096ac4b1b66a65378fe7177c70b",
+   "payload_sha256": "0ca583c1ef82b70dc7dce8164efd20611934ad780c104bebf6550275914dfd50",
    "quotes": [
     "The United Arab Emirates' Government Platform"
    ],
@@ -32,12 +32,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T02:56:36Z",
    "http_status": 200,
-   "payload_sha256": "24d0810466d442cb79aec5f409777afa2acbf230f834328b15a33990309b538b",
+   "payload_sha256": "77a649af8c26deaf1cb10aa474dba405488fb286e93caa5ee73977e0d91439dc",
    "quotes": [
     "The United Arab Emirates' Government Platform"
    ],
@@ -47,12 +47,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T18:02:57Z",
    "http_status": 200,
-   "payload_sha256": "49994e33dfe20842d4f1da2ef39c1fabd962ae64858f7393397c688657608191",
+   "payload_sha256": "da97780aa3a3e0192feb47dd013e8270ab786cd32040ec14b45925bcaa3dc02e",
    "quotes": [
     "The United Arab Emirates' Government Platform"
    ],
@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:06Z",
    "http_status": 200,
-   "payload_sha256": "02651240ecf2f735d7cae24fa89bc8e9cc1c1161245fa043817e8fc7c6875bdf",
+   "payload_sha256": "d2f43af2adb0bbeb742d6352a1a2f488de2b8f2bbaa681f3d68fc5d60094964d",
    "quotes": [
     "The United Arab Emirates' Government Platform"
    ],
@@ -77,12 +77,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:19:56Z",
    "http_status": 200,
-   "payload_sha256": "d3ee2b3ad4d9b47efc2129cbabef2bfc9b2155e345f9111572eb63b9266b4cc4",
+   "payload_sha256": "694c7d97abe2bfe1248e5b0069bc80d60f3db1ae0ee9ed29c9c267858968904f",
    "quotes": [
     "The United Arab Emirates' Government Platform"
    ],

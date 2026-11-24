@@ -28,12 +28,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-24T05:20:07Z",
    "http_status": 0,
-   "payload_sha256": "70bdcd7149122934d9cf93df50e3d39551481e3d35f5f66df80e4ee88e8c41f3",
+   "payload_sha256": "c509bb859d71f50772711693ece7e3a97b1064210922a0c2e2898ad1cfda451b",
    "quotes": [],
    "ref": "faez/s-a5fa244b94a7/2026-11-24T05:20:07Z",
    "run_id": "20261124T051723Z",

@@ -15,12 +15,12 @@
    "status": "no_quotes"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261123014451/https://www.airbnb.com/s/Dubai/homes",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:12:08Z",
    "http_status": 200,
-   "payload_sha256": "9518aefb1005038eaf35eb824b92e32d69a1ea632ee10a5414bb40feb395a46a",
+   "payload_sha256": "234f1d9d58cabcc655001f9af7d6e1550b5d8ab834ca049f9bc05bc96613354e",
    "quotes": [],
    "ref": "trips/s-e19247eefbc6/2026-11-23T02:12:08Z",
    "run_id": "20261123T021013Z",
@@ -28,12 +28,12 @@
    "status": "no_quotes"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T02:56:08Z",
    "http_status": 200,
-   "payload_sha256": "25e83028526a2d1c7209e83420b23729692b22065668d3b5882e41ee3f038e49",
+   "payload_sha256": "09c4dbbb3cbd966e9fb5b39c797bd5116fa3e4870db7aa40516e691ebcac28af",
    "quotes": [],
    "ref": "trips/s-e19247eefbc6/2026-11-23T02:56:08Z",
    "run_id": "20261123T025424Z",
@@ -41,12 +41,12 @@
    "status": "no_quotes"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T18:01:57Z",
    "http_status": 200,
-   "payload_sha256": "a390cec9a82bf15363e5cc0cfa6ba80c8683ab84f6f54a23e3260cf8d0b39d6c",
+   "payload_sha256": "55f98b47e37e36a6ea13b65521aff39683faba4c2bbb698506ab5d23824006a9",
    "quotes": [],
    "ref": "trips/s-e19247eefbc6/2026-11-23T18:01:57Z",
    "run_id": "20261123T175943Z",
@@ -54,12 +54,12 @@
    "status": "no_quotes"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261123014451/https://www.airbnb.com/s/Dubai/homes",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T18:45:47Z",
    "http_status": 200,
-   "payload_sha256": "c74ef241087d6863efa0e1baae1edf91a3d2688c32444861c1cbe1172d5cbaa8",
+   "payload_sha256": "97644f93ac22a585112ef9bf0bd8477be28d37acdec8038c80052b5e6eee70be",
    "quotes": [],
    "ref": "trips/s-e19247eefbc6/2026-11-23T18:45:47Z",
    "run_id": "20261123T184346Z",
@@ -67,12 +67,12 @@
    "status": "no_quotes"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261123014451/https://www.airbnb.com/s/Dubai/homes",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:19:28Z",
    "http_status": 200,
-   "payload_sha256": "4bb9251819c017dee12da93622fe5c3505467e5c949c511ffa3a9ac70b14e35e",
+   "payload_sha256": "261b96726877306bb0a049761bd6263cfa7d66fc397dfc54c79c8d69e53e307b",
    "quotes": [],
    "ref": "trips/s-e19247eefbc6/2026-11-24T05:19:28Z",
    "run_id": "20261124T051723Z",

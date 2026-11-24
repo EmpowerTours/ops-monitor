@@ -40,12 +40,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "e4c50013582aa972706d9e4e73d14e9b957d01754cac3df30c04aefd32e13e09",
+   "payload_sha256": "b823e35094d3567cf0dc095cc3808f53c34efe122e1289b6b37ab4d6db2da8b9",
    "quotes": [
     "This service allows customers to verify the validity of the Certificate of Title / Title deed issued by the Land Department."
    ],

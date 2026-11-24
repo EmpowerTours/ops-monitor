@@ -36,12 +36,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "1437daa6f76312b1e1da7d4cb66ba980bfd8a44fe703d4c39e0777ae692b9929",
+   "payload_sha256": "049209c4d5e9ed21658e39f1ee4a1077a6e8090d91d882a3b7681bf3f11d1822",
    "quotes": [
     "a long-term, renewable residence visa valid for 5 or 10 years",
     "5 years (real estate investments)",

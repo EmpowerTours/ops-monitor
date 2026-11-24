@@ -32,12 +32,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "de3876ca264292aa78707012e77054b62818482bc087b2f9169244889c30c08e",
+   "payload_sha256": "fb10f68e91cf2b00a3decb0c7c34a8f7c7489ced621f9f0bd65660a8ba462e80",
    "quotes": [
     "The Index Rate (IR) band is set at AED 550 - 750/- per member per year plus VAT"
    ],

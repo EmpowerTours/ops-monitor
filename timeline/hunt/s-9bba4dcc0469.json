@@ -15,12 +15,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T02:10:57Z",
    "http_status": 200,
-   "payload_sha256": "3846c4fc7694bac344448336c0977fc9d56e75c93f693eafa9af7079866c3ffa",
+   "payload_sha256": "c052b5b5301cb20b6748c5788a5858d3452e86bf8b445ea48bcdd7d04af3ba95",
    "quotes": [],
    "ref": "hunt/s-9bba4dcc0469/2026-11-23T02:10:57Z",
    "run_id": "20261123T021013Z",
@@ -28,12 +28,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T02:55:56Z",
    "http_status": 200,
-   "payload_sha256": "ce137bf1e042a884a718fce84b5a32ba56cbe2fdc0414b4c6289d19ee9d7968b",
+   "payload_sha256": "8839399b425f5c87327ea990de2ec3725c8af53ca9f047a4d3d9ed0d066cc634",
    "quotes": [],
    "ref": "hunt/s-9bba4dcc0469/2026-11-23T02:55:56Z",
    "run_id": "20261123T025424Z",
@@ -41,12 +41,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T18:01:46Z",
    "http_status": 200,
-   "payload_sha256": "e5c63aa7b7fa0329f6f336c8010295f16f09dd6f4c5efcafc6621730dbc60968",
+   "payload_sha256": "e0ab0840a643b9ab0fede68c251d9cf37ab4d9c630654b2a38012dd1fd4ce205",
    "quotes": [],
    "ref": "hunt/s-9bba4dcc0469/2026-11-23T18:01:46Z",
    "run_id": "20261123T175943Z",
@@ -54,12 +54,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T18:45:37Z",
    "http_status": 200,
-   "payload_sha256": "b2b1f9edfd56fd578a8a60c466677141982ef95a87cdd71c86dc186d71a777ca",
+   "payload_sha256": "8dee7675b59081c61437493dd00a35e7583d26f48f5ea9c2fb0c1ca16e1a5432",
    "quotes": [],
    "ref": "hunt/s-9bba4dcc0469/2026-11-23T18:45:37Z",
    "run_id": "20261123T184346Z",
@@ -67,12 +67,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
-   "archive_url": "",
+   "archive_status": "archived",
+   "archive_url": "https://web.archive.org/web/20261124054006/https://api.openstreetmap.org/api/0.6/node/6588569794.json",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:19:15Z",
    "http_status": 200,
-   "payload_sha256": "86c7fe70721c4dfdd128b7a6203191534c528e9da23100106146e6a28d5eac52",
+   "payload_sha256": "188115828a3aa6382257e3bfb03f1923abb8df2a222c38dff7960620a0926865",
    "quotes": [],
    "ref": "hunt/s-9bba4dcc0469/2026-11-24T05:19:15Z",
    "run_id": "20261124T051723Z",

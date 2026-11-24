@@ -36,12 +36,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:19:59Z",
    "http_status": 200,
-   "payload_sha256": "000047ef3af4e02115c69e959a85825c1cc05d4072a603872f7385f77bfb59d9",
+   "payload_sha256": "e2411c50ec2b0db6a69a4dcc1b930b9dfd58c4ecaf8325d6c7e9d6e9be6c6f93",
    "quotes": [
     "A foodstuff trading license starts from AED 12,500 at Meydan Free Zone.",
     "You need a foodstuff trading license that lists your specific activities, such as importing, exporting, or re-exporting food products.",

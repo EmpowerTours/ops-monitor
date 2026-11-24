@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "fa1bbf0a4df6b21f82a37989ed89090b02d7a5466d0244fc8e49ba8d6b4befbc",
+   "payload_sha256": "47a8306c43ef7037946c479a3c62b02ae36b28a20530c9791f7421f6a5cb3736",
    "quotes": [
     "The residence permit is valid for 10 years and can be extended if the same conditions are met.",
     "The applicant must own a property or a group of properties with a total value of no less than AED 2 million.",
@@ -30,12 +30,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:36Z",
    "http_status": 200,
-   "payload_sha256": "2efa9cc9bb8d1830da9b3a05fcc7face9c84d1482866027131541ece85babb41",
+   "payload_sha256": "9a7dbf4f0140ae6becbc591cc84bd005fbdb007ba7c03a23e7e4cb91047d304b",
    "quotes": [
     "The residence permit is valid for 10 years and can be extended if the same conditions are met.",
     "The applicant must own a property or a group of properties with a total value of no less than AED 2 million.",
@@ -58,12 +58,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "124bcf90b78223d022b592fb87db2de9ebe56de2380d9ddb5472f35f705abeda",
+   "payload_sha256": "45ff3e507e95bbefcaf02e44aae1ce377b2f47c9c28639880efc6d250dded58c",
    "quotes": [
     "The residence permit is valid for 10 years and can be extended if the same conditions are met.",
     "The applicant must own a property or a group of properties with a total value of no less than AED 2 million.",

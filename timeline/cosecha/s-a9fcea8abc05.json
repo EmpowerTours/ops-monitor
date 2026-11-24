@@ -110,12 +110,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:33:16Z",
    "http_status": 200,
-   "payload_sha256": "21db738ed9a2c0e6f8fad99082d27f4b128b500136ade5bab0cadd61af43d949",
+   "payload_sha256": "f004e16ac1c263c5b9be23f0bcf98e216ec5d6443b95aba6750d025a267e2aac",
    "quotes": [
     "Food product registration in ZAD, coupled with import inspection procedures",
     "UAE.S 9:2019 requires a production date or harvest year and packing date",

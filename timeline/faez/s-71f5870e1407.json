@@ -2,12 +2,12 @@
  "cited_by": "faez",
  "entries": [
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-24T05:20:07Z",
    "http_status": 200,
-   "payload_sha256": "9bc124f5e8e4fa6b02ed73247eb0111d7b2b04b1b2d648f727b720a9fdb55f59",
+   "payload_sha256": "422de32c06ad717b2ddddb36b8ee0954a07fbae1ab6b6721e1d5eb40a253ff0a",
    "quotes": [
     "https://www.difc.com/business/public-register"
    ],
