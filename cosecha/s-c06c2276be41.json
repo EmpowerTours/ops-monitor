@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-24T05:33:16Z",
+ "fetched_at": "2026-11-24T18:32:37Z",
  "id": "s-c06c2276be41",
- "last_read_fetched_at": "2026-11-24T05:33:16Z",
+ "last_read_fetched_at": "2026-11-24T18:32:37Z",
  "manifest_fingerprint": "416780583dfe9d6edfbe8648e369c71847a98918c17b6eb87a7064a12eea69bb",
- "run_id": "20261124T051723Z",
- "sha256": "ede42e122300a570ae1091ff4e502a8b3d3f2e268170e2cdcf7e2b10b74b35d1",
+ "run_id": "20261124T181644Z",
+ "sha256": "06a8cf4f76299bfd99d60cf922e8c33b5e1704616e2878f7c83dc73857090893",
  "status": "changed_quote_ok",
  "url": "https://puertointerior.guanajuato.gob.mx/blog/2026/01/21/resultados-2025-reafirman-papel-estrategico-del-puerto-lazaro-cardenas-en-logistica/"
 }

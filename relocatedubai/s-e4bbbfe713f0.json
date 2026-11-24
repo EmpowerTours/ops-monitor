@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-24T05:20:48Z",
+ "fetched_at": "2026-11-24T18:20:04Z",
  "id": "s-e4bbbfe713f0",
- "last_read_fetched_at": "2026-11-24T05:20:48Z",
+ "last_read_fetched_at": "2026-11-24T18:20:04Z",
  "manifest_fingerprint": "3142a94bcc9d3c7dbd558bd4338584ae34e7e526594504d5e263202cc7ca97f5",
- "run_id": "20261124T051723Z",
+ "run_id": "20261124T181644Z",
  "sha256": "0e1d92f97aef3c3f0df23dc8cbcd3dad4f016b7ca0a1d6879664063ced582fe1",
  "status": "changed_quote_ok",
  "url": "https://icp.gov.ae/en/services-details/?serviceid=68e73fd45ae59b00117389f4"

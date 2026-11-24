@@ -20,6 +20,26 @@
    "run_id": "20261124T051723Z",
    "sha256": "b33e42b82b7627eac00903fb769bfbba0f4c9e3e34d398e76a0f6c14b9a65c78",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-24T18:19:17Z",
+   "http_status": 200,
+   "payload_sha256": "9acdd8e482cb5e61e2012c3b0648c729eb917232d0709dd4d75e22bd98f125fd",
+   "quotes": [
+    "Recruitment and Employment of Workers",
+    "It is not permissible to carry out the activity of recruitment or mediation to recruit or",
+    "employ Workers without a license from the Ministry, in accordance with the conditions",
+    "4. The Employer is prohibited from charging the Worker the fees and costs of recruitment and employment or collecting them from him, whether directly or indirectly.",
+    "whenever the value of the claim subject to the dispute does not exceed the amount of (50,000) fifty thousand AED",
+    "appoints one or more workers in a fictitious manner"
+   ],
+   "ref": "sawweeli-agent/s-a615a1ef11f4/2026-11-24T18:19:17Z",
+   "run_id": "20261124T181644Z",
+   "sha256": "b33e42b82b7627eac00903fb769bfbba0f4c9e3e34d398e76a0f6c14b9a65c78",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-a615a1ef11f4",

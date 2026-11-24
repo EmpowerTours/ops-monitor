@@ -57,6 +57,25 @@
    "run_id": "20261124T051723Z",
    "sha256": "d5ed7b098bd4e5f8e52801926b639ef8674510961cf55098ef1b5d39fe704dc4",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": true,
+   "fetched_at": "2026-11-24T18:20:04Z",
+   "http_status": 200,
+   "payload_sha256": "f395427920ac63b5ad391acc2d5529d10c2b07b57b64b508aced8c1e0d50118c",
+   "quotes": [
+    "\"Personal savings\" with no bank statements cannot be verified.",
+    "Without it, the application stalled for over a month.",
+    "Submission of incomplete, outdated, or incorrectly completed forms and insufficient supporting documents often leads to rejection.",
+    "Trading, crypto, and financial services sit in higher AML risk tiers.",
+    "Banks expect the licensed activity, actual operations, and expected transactions to align."
+   ],
+   "ref": "relocatedubai/s-0b84758ea482/2026-11-24T18:20:04Z",
+   "run_id": "20261124T181644Z",
+   "sha256": "70480688d8e0da00b7e221fd087a64585e5e1b62e9faa74410dbe76697a9fc24",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-0b84758ea482",

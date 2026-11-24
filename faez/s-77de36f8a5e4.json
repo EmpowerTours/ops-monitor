@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-24T05:20:07Z",
+ "fetched_at": "2026-11-24T18:19:31Z",
  "id": "s-77de36f8a5e4",
- "last_read_fetched_at": "2026-11-24T05:20:07Z",
+ "last_read_fetched_at": "2026-11-24T18:19:31Z",
  "manifest_fingerprint": "c544e86fd8dd9dc0f02fde73f1acf1ad3830dc7e46e7f6d253638bdbf338e772",
- "run_id": "20261124T051723Z",
+ "run_id": "20261124T181644Z",
  "sha256": "fa79d639ef6a0e9339ff5a4a1c254cc009c0844bea699292b2d0babb16e122a7",
  "status": "verified",
  "url": "https://esupply.dubai.gov.ae/esupply/web/index.html"

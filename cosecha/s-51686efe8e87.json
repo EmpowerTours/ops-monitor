@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-24T05:33:16Z",
+ "fetched_at": "2026-11-24T18:32:37Z",
  "id": "s-51686efe8e87",
- "last_read_fetched_at": "2026-11-24T05:33:16Z",
+ "last_read_fetched_at": "2026-11-24T18:32:37Z",
  "manifest_fingerprint": "8288750373e3d370006a1e1e4a831ae057c0b983c66bb56af8cc6878ab7980b1",
- "run_id": "20261124T051723Z",
- "sha256": "4757ba7d1aefa18c25798e45034ef41774a10bc033a6ce51a61dbc12cdd9a176",
+ "run_id": "20261124T181644Z",
+ "sha256": "4bd738e10a0418e48287dc11d1ce184b8937d0fedde482509491945c5814ddc8",
  "status": "changed_quote_ok",
  "url": "https://mof.gov.ae/en/public-finance/tax/value-added-tax-vat/"
 }

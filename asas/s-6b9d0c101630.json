@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-24T05:19:59Z",
+ "fetched_at": "2026-11-24T18:19:19Z",
  "id": "s-6b9d0c101630",
- "last_read_fetched_at": "2026-11-24T05:19:59Z",
+ "last_read_fetched_at": "2026-11-24T18:19:19Z",
  "manifest_fingerprint": "6f10112f2119ae85d78c33efeb6050035ab4747053596190093f6e8d887dd6ef",
- "run_id": "20261124T051723Z",
- "sha256": "e4272b7fec0b34d7f0fb9443c15bb8c3727656ed9288a77e7891975190d70f30",
- "status": "verified",
+ "run_id": "20261124T181644Z",
+ "sha256": "17361f348223da73a61b26adc38abd8046c44be1dbabe616f96615c3b7374322",
+ "status": "changed_quote_ok",
  "url": "https://www.meydanfz.ae/activity-hub/setup-honey-apiary-accessories-business-in-dubai-uae"
 }

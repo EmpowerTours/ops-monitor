@@ -45,6 +45,21 @@
    "run_id": "20261124T051723Z",
    "sha256": "1deb3f6da7ead1bfdb424aa3d6a2a5cf511fba1705038bb4bf7a451399051089",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-24T18:20:04Z",
+   "http_status": 200,
+   "payload_sha256": "a96c0c5944ac6884ec29e0774e371ad04c194aec3f45321818e3d9fc75531dda",
+   "quotes": [
+    "2BR (split AC) AED 550 to 900 AED 750 to 1,200 AED 1,400 to 2,200 AED 900 to 1,600"
+   ],
+   "ref": "relocatedubai/s-3862af7953ba/2026-11-24T18:20:04Z",
+   "run_id": "20261124T181644Z",
+   "sha256": "1deb3f6da7ead1bfdb424aa3d6a2a5cf511fba1705038bb4bf7a451399051089",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-3862af7953ba",

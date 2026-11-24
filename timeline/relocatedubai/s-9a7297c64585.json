@@ -54,6 +54,24 @@
    "run_id": "20261124T051723Z",
    "sha256": "30a56fc0726c0c1146147da0b4f1a9de5e7cbb5f7c61c0c45e8fa0c7a1a99b9f",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-24T18:20:04Z",
+   "http_status": 200,
+   "payload_sha256": "a216abdfeb2419c81e79c03e12841b414db7535712227eb3bf85186e4a6f6535",
+   "quotes": [
+    "Open your NEO BIZ account in 1 day",
+    "• No minimum balance",
+    "• AED 99 per month",
+    "• AED 199 per month"
+   ],
+   "ref": "relocatedubai/s-9a7297c64585/2026-11-24T18:20:04Z",
+   "run_id": "20261124T181644Z",
+   "sha256": "30a56fc0726c0c1146147da0b4f1a9de5e7cbb5f7c61c0c45e8fa0c7a1a99b9f",
+   "status": "verified"
   }
  ],
  "source_id": "s-9a7297c64585",

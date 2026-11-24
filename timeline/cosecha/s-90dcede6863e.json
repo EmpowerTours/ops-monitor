@@ -105,6 +105,21 @@
    "run_id": "20261124T051723Z",
    "sha256": "e518fbee2526dade3f956584169e08f83ec3632f494e2ff757cdd56871107892",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": true,
+   "fetched_at": "2026-11-24T18:32:37Z",
+   "http_status": 200,
+   "payload_sha256": "a633f678568ac26e2b49ad9a64dcd719f31173537eae3a9762996b1e79ead41f",
+   "quotes": [
+    "Centros de Apoyo al Desarrollo Rural (CADER) de Tecpan y Coyuca de Catalán"
+   ],
+   "ref": "cosecha/s-90dcede6863e/2026-11-24T18:32:37Z",
+   "run_id": "20261124T181644Z",
+   "sha256": "abc9a7f8754537c29a658d1f34b4a86945f266b0c37f3027a110f349574fbccb",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-90dcede6863e",

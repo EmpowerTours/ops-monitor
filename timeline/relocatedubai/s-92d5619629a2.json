@@ -45,6 +45,21 @@
    "run_id": "20261124T051723Z",
    "sha256": "8534dea0a40763771ca1a07c76b7eee15008f5d571d89a47664fa8c6e45614b9",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-24T18:20:04Z",
+   "http_status": 200,
+   "payload_sha256": "28e0bf9c312c4e62942d615fc19797614c64dc18b6340e020e46850d40b7c6a7",
+   "quotes": [
+    "Minimum Monthly Average Balances Min. AED 250k. If less than AED 250k a fee of AED 500 + VAT."
+   ],
+   "ref": "relocatedubai/s-92d5619629a2/2026-11-24T18:20:04Z",
+   "run_id": "20261124T181644Z",
+   "sha256": "8534dea0a40763771ca1a07c76b7eee15008f5d571d89a47664fa8c6e45614b9",
+   "status": "verified"
   }
  ],
  "source_id": "s-92d5619629a2",

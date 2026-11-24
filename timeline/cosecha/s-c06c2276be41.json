@@ -112,6 +112,22 @@
    "run_id": "20261124T051723Z",
    "sha256": "ede42e122300a570ae1091ff4e502a8b3d3f2e268170e2cdcf7e2b10b74b35d1",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": true,
+   "fetched_at": "2026-11-24T18:32:37Z",
+   "http_status": 200,
+   "payload_sha256": "47563ef9a1cf5636e32f48f435c1b08bb4d5b83baad06396f8aa1d2e1639afa8",
+   "quotes": [
+    "operar 27.3 millones de toneladas al cierre de 2025",
+    "alcanzó un movimiento de 2 millones, 616 mil 770 TEU's"
+   ],
+   "ref": "cosecha/s-c06c2276be41/2026-11-24T18:32:37Z",
+   "run_id": "20261124T181644Z",
+   "sha256": "06a8cf4f76299bfd99d60cf922e8c33b5e1704616e2878f7c83dc73857090893",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-c06c2276be41",

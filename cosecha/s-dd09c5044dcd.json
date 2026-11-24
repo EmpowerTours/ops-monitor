@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-24T05:33:16Z",
+ "fetched_at": "2026-11-24T18:32:37Z",
  "id": "s-dd09c5044dcd",
- "last_read_fetched_at": "2026-11-24T05:33:16Z",
+ "last_read_fetched_at": "2026-11-24T18:32:37Z",
  "manifest_fingerprint": "8b5079e5e949937a02d6a497ea5a8643ba13ef53b7f6b3a2e1f3a82c9103fa90",
- "run_id": "20261124T051723Z",
+ "run_id": "20261124T181644Z",
  "sha256": "0503c4c90efdd7afac773d31e7c91adfaf42e11175d23992955744203ff536fd",
  "status": "verified",
  "url": "https://www.sat.gob.mx/minisitio/PadronImportadoresExportadores/pes_inscripcion.html"

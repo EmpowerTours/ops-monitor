@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-24T05:20:48Z",
+ "fetched_at": "2026-11-24T18:20:04Z",
  "id": "s-729b55faafe1",
- "last_read_fetched_at": "2026-11-24T05:20:48Z",
+ "last_read_fetched_at": "2026-11-24T18:20:04Z",
  "manifest_fingerprint": "d5e7feb0d0c64a263d6dc2df389898448f13e1aa4a316e7db46c7187e95a6e62",
- "run_id": "20261124T051723Z",
+ "run_id": "20261124T181644Z",
  "sha256": "dada833c1bb344666decd1a22e6f5efc69785d54e58b8d932d09bead88c5fee7",
  "status": "changed_quote_ok",
  "url": "https://icp.gov.ae/en/services/uae-golden-residency/"

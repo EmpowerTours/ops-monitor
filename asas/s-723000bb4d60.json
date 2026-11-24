@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-24T05:19:59Z",
+ "fetched_at": "2026-11-24T18:19:19Z",
  "id": "s-723000bb4d60",
- "last_read_fetched_at": "2026-11-24T05:19:59Z",
+ "last_read_fetched_at": "2026-11-24T18:19:19Z",
  "manifest_fingerprint": "cd9645d8d8092d0da2a2c8f7c7ab6dbb5cb4606ccef3ae736d8058d286cfc27d",
- "run_id": "20261124T051723Z",
- "sha256": "c3b0e985ee47f6093dd79807d745831642bc878aeb1539cff373ad6b1f555a03",
- "status": "verified",
+ "run_id": "20261124T181644Z",
+ "sha256": "9989f126f8e133649e797bc425913e6956b35bd1398514ee98b459d7699053f6",
+ "status": "changed_quote_ok",
  "url": "https://www.meydanfz.ae/blog/start-a-foodstuff-trading-business-in-dubai-uae"
 }
