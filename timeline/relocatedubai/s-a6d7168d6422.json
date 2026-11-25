@@ -66,12 +66,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "068e127d77a65ecbc84f473251e7680cb7d65a12c69e1451df94f80ec37e18b1",
+   "payload_sha256": "1f388b4a144e12cb9aea704a142e5967a1fe75063c2b8c8581a31c6f6b1ab160",
    "quotes": [
     "Open your account in just a few days.",
     "Minimum average monthly balance of just 25,000"

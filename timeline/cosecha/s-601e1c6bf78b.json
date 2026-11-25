@@ -122,12 +122,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "52e5d15ffd9c7d3f34b20ea6509183e8e6a9eddd39a811c142e0b79cd6fef153",
+   "payload_sha256": "671cd2e931d3d4a8f363b0abaa0d22ff14cabf53c0d61631d79291c97aba2751",
    "quotes": [
     "Registered Halal Certification Bodies"
    ],

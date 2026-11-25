@@ -138,12 +138,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "f42282d32ccb92edd69328258443956a01b0f73277c5e0cc0f01d000588d8e28",
+   "payload_sha256": "e0b4677936561750aa54b3072259141bbe8ec6e5e40829e824b48acec102857b",
    "quotes": [
     "de las consideradas en las fracciones arancelarias listadas en la fracción II del Anexo 10 de las Reglas Generales de Comercio Exterior vigentes",
     "Estar inscrito y activo en el RFC.",

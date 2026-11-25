@@ -36,12 +36,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "2eb0da87bb8b7187af3cc1189855551ddf653c7824329440c79a51e41be4bee2",
+   "payload_sha256": "1486d57c6f42c50d0c21a2bb4a341bdb1e4c14ae6c807a12f9f0fd17a882af72",
    "quotes": [
     "The time to obtain the service : 1 working day",
     "122-003-026-000",
@@ -53,12 +53,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "ffb4d4c3c5ef86dcf923cdc3a1116308edc6875cd478d0502a22e5848652c456",
+   "payload_sha256": "58771b025a4e0b44e93c6950c6cd9c9c45b65c53c81a46920542bcfef4bb8a3a",
    "quotes": [
     "The time to obtain the service : 1 working day",
     "122-003-026-000",
@@ -70,12 +70,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "7433a2073fbcdc48078af9fbdda296dd4a8c94cb08fd8226761cde6bf7b72a8b",
+   "payload_sha256": "4455e045aa145c0b3adcc24b7dc0d6162b957e66590939a308a5d36391317e7d",
    "quotes": [
     "The time to obtain the service : 1 working day",
     "122-003-026-000",
@@ -87,12 +87,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T19:00:07Z",
    "http_status": 200,
-   "payload_sha256": "1e34a33ff1b0ea7370e9a3742835d271578833fdce39f66a2b41be1407c36a96",
+   "payload_sha256": "f7db479898eb57bb9010b98c5e00ee5b151412ca096ae460e37328cdf1087ea5",
    "quotes": [
     "The time to obtain the service : 1 working day",
     "122-003-026-000",
@@ -104,12 +104,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:33:16Z",
    "http_status": 200,
-   "payload_sha256": "32a802d6a7990e453ae560082058a7fff35bd313945ecb0eed1fb45238c0b747",
+   "payload_sha256": "4c9a1d1eb35d662191d0ec439866fa729b9b21d98a32e79cdbaec1f2612eead9",
    "quotes": [
     "The time to obtain the service : 1 working day",
     "122-003-026-000",
@@ -121,12 +121,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 200,
-   "payload_sha256": "95b01563fdee048b2bfe476e14c2629797970f8a2bb01bb4f419ea4002564d86",
+   "payload_sha256": "edf0b4c40862b7a983c7e97636789c3f1e323afd5a4a3ef537ff8086a67cb706",
    "quotes": [
     "The time to obtain the service : 1 working day",
     "122-003-026-000",
@@ -138,12 +138,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "54f69363fc1adfff6d33de605583ba2f9fae39420b4723e04d1196ccf2a73731",
+   "payload_sha256": "7b2b497d1af170c5ad9e0dc72b0123c46ce387a350f2d731cac0045749110092",
    "quotes": [
     "The time to obtain the service : 1 working day",
     "122-003-026-000",

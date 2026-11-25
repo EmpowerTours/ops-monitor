@@ -74,12 +74,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:31Z",
    "http_status": 200,
-   "payload_sha256": "9d9e1b5c67f0de65498cdf541201bee1c6ce31f7f3edb3427a338efc6403a541",
+   "payload_sha256": "bd0b0f6430e793faf5eab08c421ff37d1f70f3c2c890c446ea089562b7c478f8",
    "quotes": [
     "After you sign the offer letter, the employer will send you an electronic entry permit for employment to allow you to enter the country.",
     "Visit or tourist entry permit/visa does not give you right to work in the UAE. Working under visit or tourist visa will result in fines and legal liability.",

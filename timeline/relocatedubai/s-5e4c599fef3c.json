@@ -66,12 +66,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "ff62a9137efc283089243c5daf920262a94eb34260fd1ae9aa5013c618359c09",
+   "payload_sha256": "e16a5765ed87267af334b0e3b98a71c40a233800217130743485e8e2e35ca763",
    "quotes": [
     "Shell company concerns (no economic substance)",
     "Non-resident shareholders without UAE presence"

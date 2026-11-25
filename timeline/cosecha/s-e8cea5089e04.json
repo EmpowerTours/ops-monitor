@@ -130,12 +130,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "33e8c48810b9a584cc527b059b0f51d21d2493db69c872cd43bb8aec2715c50c",
+   "payload_sha256": "ee8c4b104928932a863de0b52b25915eca62076363ea1a0e0e262f40c78c24fd",
    "quotes": [
     "Items do not need label assessment",
     "ZAD Certification"

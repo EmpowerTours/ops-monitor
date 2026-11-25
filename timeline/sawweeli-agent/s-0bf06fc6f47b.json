@@ -240,12 +240,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:23:18Z",
    "http_status": 200,
-   "payload_sha256": "941987332604a52c0cb654a0d6c4e3fe39c65336fac7c99eedba94d0cb6efd95",
+   "payload_sha256": "44a2dfd71730348dc872a704b03ceca649dec4f5c236d82be47e372cc9dad2fb",
    "quotes": [
     "E& إي إند",
     "Al Qusais القصيص",

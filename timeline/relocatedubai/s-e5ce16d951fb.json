@@ -86,12 +86,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "2c69bb6475d7cb9ea5f142aae3b4645fd7b1504d664f715d0300108de38ce87c",
+   "payload_sha256": "a0b97a564c2e523db057eb8b8285b5cf69411350a5928011c96b618219c03184",
    "quotes": [
     "Basic Package AED 6,000",
     "Lite Package AED 12,000",

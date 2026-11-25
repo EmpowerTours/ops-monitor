@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "e583355c201eb4aaeb7de8fc72fa2dcf53f29f02bf14f7245ab9fe6323961930",
+   "payload_sha256": "39aca762837655bb432eee7fc5f903269c3dcf6f40a78979811aa12564ca7f3d",
    "quotes": [
     "Minimum Monthly Average Balances Min. AED 250k. If less than AED 250k a fee of AED 500 + VAT."
    ],

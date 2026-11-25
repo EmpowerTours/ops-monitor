@@ -122,12 +122,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "b4fb2e2435a21aae4e0e10f5a8a12b6520631b579944a0e40f341e2424c17e64",
+   "payload_sha256": "f7256554cbfb1da82ae13b8a6e6cbe99b47a94926e96de69aa1a861e13a0f4c8",
    "quotes": [
     "List of Approved Slaughterhouses"
    ],

@@ -93,12 +93,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
-   "archive_url": "",
+   "archive_status": "archived",
+   "archive_url": "https://web.archive.org/web/20261124183435/https://api.openstreetmap.org/api/0.6/node/10901489476.json",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T05:19:17Z",
    "http_status": 200,
-   "payload_sha256": "d36974a456a3ee8d8191dc12439f3ca2fba286b89234fee2deca203e78cf760d",
+   "payload_sha256": "75465785d2a0feb97bfad2324109be2719d46d153ae39fc7c471cfd0878c9c21",
    "quotes": [],
    "ref": "hunt/s-bfe38615172b/2026-11-25T05:19:17Z",
    "run_id": "20261125T051723Z",

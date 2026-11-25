@@ -2,12 +2,12 @@
  "cited_by": "haqiqi",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:02:57Z",
    "http_status": 200,
-   "payload_sha256": "6c5a72f537d25d0275429b490460451a12e715945e263d718efa2f098eba425e",
+   "payload_sha256": "f73d71aac3027a18f1ccfa5f77489af09c7ff55be91385fb57ce995cee3224de",
    "quotes": [
     "No, an ECR Passport Holder must come through eMigrate System.",
     "Send your offer letter/employment visa to the PBSK (email ID: pbsk.dubai@mea.gov.in"
@@ -18,12 +18,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:06Z",
    "http_status": 200,
-   "payload_sha256": "e7a98b90d040a9c5faeabfcfac05016c47eb57b1bf3b1aaf2c43e044f70ecdd7",
+   "payload_sha256": "77756dc5fdc8bc3302858c83ccd06d6a330d018c9c7caef3e8a5aa84a5908b70",
    "quotes": [
     "No, an ECR Passport Holder must come through eMigrate System.",
     "Send your offer letter/employment visa to the PBSK (email ID: pbsk.dubai@mea.gov.in"
@@ -34,12 +34,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:19:56Z",
    "http_status": 200,
-   "payload_sha256": "11b723a9e5c8a4285eaf3f6be7bb9a6e38dca7bc056435d059c3e47afce11a2b",
+   "payload_sha256": "d1a4309d6c3f2a14db7c6510cfaf73bda118d7d66851e37b94cffe90d416809a",
    "quotes": [
     "No, an ECR Passport Holder must come through eMigrate System.",
     "Send your offer letter/employment visa to the PBSK (email ID: pbsk.dubai@mea.gov.in"
@@ -50,12 +50,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:19:17Z",
    "http_status": 200,
-   "payload_sha256": "25e5c10435cd4664771fbb4ea30fa1a9546002ad1c540e28c69ad1de0ea2fab7",
+   "payload_sha256": "183022bed23568b9a277c0ec57ecf3c847b06a0d41d8c724e40e935f149c2ed6",
    "quotes": [
     "No, an ECR Passport Holder must come through eMigrate System.",
     "Send your offer letter/employment visa to the PBSK (email ID: pbsk.dubai@mea.gov.in"
@@ -66,12 +66,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-25T05:24:31Z",
    "http_status": 0,
-   "payload_sha256": "5059b8e8606e247e8a3bfe29aed7703830931d97ba0125c1624cd8b3c6bb2d1e",
+   "payload_sha256": "6fc5ab647345b041b8ab64711b535cf6ac8a9e5a15c7d56a2fb3dfb94a993421",
    "quotes": [
     "No, an ECR Passport Holder must come through eMigrate System.",
     "Send your offer letter/employment visa to the PBSK (email ID: pbsk.dubai@mea.gov.in"

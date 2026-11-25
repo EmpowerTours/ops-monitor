@@ -70,12 +70,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:23:23Z",
    "http_status": 200,
-   "payload_sha256": "bf54a2a35412341ac331f54a8f57e9313b82af463ccc26f18e6ada3fafe71b7b",
+   "payload_sha256": "0a6ffd83290122e6cfd9b72ffd6c6debef8204e94e4e44a592d2a9d074251ae9",
    "quotes": [
     "if an expatriate resident lives outside the UAE for more than 180 days continuously, his/her residence visa will be nullified automatically.",
     "A residence visa requires applicants who are 18 and above to undergo a medical test to prove that they are medically fit.",

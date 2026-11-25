@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:19:28Z",
    "http_status": 200,
-   "payload_sha256": "0a6b8fc97bc3e3b1dd4940db6d71c10ea0470ea4d9bb885146a26093752b81d3",
+   "payload_sha256": "169e6eda3a0f96265397f6a597fb5b3399012e19fda4f532e8482e766cb98097",
    "quotes": [
     "Expiry of the permitted stay period for the foreigner in the State, or the cancellation or expiration of the (entry visa / residence permit / exit permit / newborn registration), per day. - 50 AED"
    ],
@@ -62,12 +62,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:18:50Z",
    "http_status": 200,
-   "payload_sha256": "77fe65376cf779d8acdfbfc2af9a345f8b24603fc456adc09260ba1b31cacbcb",
+   "payload_sha256": "86ca600e108b3608f73873f9bcaad47f442613d89caf20daf695f2e13d14b622",
    "quotes": [
     "Expiry of the permitted stay period for the foreigner in the State, or the cancellation or expiration of the (entry visa / residence permit / exit permit / newborn registration), per day. - 50 AED"
    ],
@@ -77,12 +77,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T05:19:46Z",
    "http_status": 200,
-   "payload_sha256": "226aa893605e6cd24fe4e9b86cd7c3495ae9e230c8c41212ef8dce21ed16d629",
+   "payload_sha256": "0a75877e5ff23cfc1446e05d85428ce4c47151802d56c09a932746e4d1073003",
    "quotes": [
     "Expiry of the permitted stay period for the foreigner in the State, or the cancellation or expiration of the (entry visa / residence permit / exit permit / newborn registration), per day. - 50 AED"
    ],

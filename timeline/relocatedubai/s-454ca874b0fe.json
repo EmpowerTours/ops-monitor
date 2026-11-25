@@ -58,12 +58,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "45ff3e507e95bbefcaf02e44aae1ce377b2f47c9c28639880efc6d250dded58c",
+   "payload_sha256": "cd8c6ae26e2766c06bb79b5296ee84b28578155983b58ad48b939f930bd5c606",
    "quotes": [
     "The residence permit is valid for 10 years and can be extended if the same conditions are met.",
     "The applicant must own a property or a group of properties with a total value of no less than AED 2 million.",
@@ -86,12 +86,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "fc8b692f0730b19475fe97f8bac38f45ebf069feb5d4e8649c56ddd6087266a8",
+   "payload_sha256": "33a3616573e5c9e15d21e9f519fc3296fba40b55e54a8f3a6fb67bf3292bc41a",
    "quotes": [
     "The residence permit is valid for 10 years and can be extended if the same conditions are met.",
     "The applicant must own a property or a group of properties with a total value of no less than AED 2 million.",
@@ -114,12 +114,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "97c28721b0c336373b3ef0e10218dc6b78f1899f0255779978eea8918c03c59c",
+   "payload_sha256": "a10bb9fc7f33231500b6b6bbaedb6b0b28013ba24a6f066ebcbf517c4064eca5",
    "quotes": [
     "The residence permit is valid for 10 years and can be extended if the same conditions are met.",
     "The applicant must own a property or a group of properties with a total value of no less than AED 2 million.",

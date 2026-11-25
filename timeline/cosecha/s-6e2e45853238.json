@@ -130,12 +130,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "8bd1043e283c208c5e1905113c9cbf7b7cc125aa9c4fad0edfe7360c8f827e20",
+   "payload_sha256": "8e37cf9a98795fae294e48253e9116f9ff40ff184fe0861f1e1019941309dc2c",
    "quotes": [
     "Law Number: No. (116) of 2024",
     "This Cabinet Resolution repeals the previous Technical Regulation No. (UAES MRL1:2019)"

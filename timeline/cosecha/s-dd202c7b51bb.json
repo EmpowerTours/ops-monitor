@@ -122,12 +122,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "49235cff684de0b2342b2b3898033176c433f9091abb3c9cb3b37dd5afc2ed98",
+   "payload_sha256": "a0b8466a75a60698903b100d35bc379923cb844132861e6d5b965ac06f6eae0f",
    "quotes": [
     "البريد الالكتروني info@moccae.gov.ae مركز الاتصال 8003050"
    ],

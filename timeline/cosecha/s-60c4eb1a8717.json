@@ -122,12 +122,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "32ee73ee4d50f7695db6421b6ce767563e6673bd92884e5de6feba2640ddee7f",
+   "payload_sha256": "386ed5766f5aca45ac24b05ee8c831a42c580eed3ca6a8e5ddd729a0431435e6",
    "quotes": [
     "Health certificate issued or endorsed by the competent authority in the country of origin (imported food)"
    ],

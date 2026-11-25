@@ -78,12 +78,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "b8d9aa8bbd80bc3a04326abdea73d8889610fa1b29186a87f1e350ab197d09bd",
+   "payload_sha256": "113a20190d0a2d07c22f8353a28e214862bbbfa606725819346651fbffdd701f",
    "quotes": [
     "\"Personal savings\" with no bank statements cannot be verified.",
     "Without it, the application stalled for over a month.",

@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:31Z",
    "http_status": 200,
-   "payload_sha256": "18330abd6b3102aefb48d0458d218c13f3e015eb57594c956bb9b5b4ee6f7304",
+   "payload_sha256": "e145d24ba4a9c7451c9e689a27687dbcb283a3702dacaa7bcd2e802acdfe856f",
    "quotes": [
     "Search Pre Permission Detail"
    ],

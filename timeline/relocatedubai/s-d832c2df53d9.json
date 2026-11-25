@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "6b654a115fa59d9497604fb4e75bb24e0be909797629ff9a746f7325c7f3c33c",
+   "payload_sha256": "922fd6bed235be1cc20be1d718c0440b14ebda9b64b05a460acaaa1b55376c0b",
    "quotes": [
     "Freelance work permit - It is issued to individuals who wish to engage in freelance work independently"
    ],

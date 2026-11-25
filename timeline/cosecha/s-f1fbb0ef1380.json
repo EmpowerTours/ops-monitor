@@ -146,12 +146,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "8b01647bbbdce56e7b39fa2bb7ac7b925adc54b16767e97ddb04dea604e9ca33",
+   "payload_sha256": "79f10b76ac5a3a2c15f8080921580c4d760af859d83688e1641b6f9251b2e339",
    "quotes": [
     "obtain a permit valid for 30 days from the date of issuance",
     "The consignment from a country or region where FMD has not been recorded for at least 12 months prior the collection of the product.",

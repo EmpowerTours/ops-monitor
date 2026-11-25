@@ -34,12 +34,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "913266d0692550bb95c364df04d953fb16ea5daaf7acfcc5f8763d94a863bd84",
+   "payload_sha256": "360cbf5ca90a9d9f8c93fcab2c892159914a01113d97ded654fe2ec4aec537aa",
    "quotes": [
     "Provide evidence that he works for an entity outside the UAE and that the work is being done remotely.",
     "Submit proof that he has a monthly income of no less than (3,500) US dollars or the equivalent in foreign currencies."
@@ -50,12 +50,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "73adb8e64aafce064ea361bb95688c1c61aa50b75acfbe66aad3a9e0b4d0a53b",
+   "payload_sha256": "2ad9b7e1a2efe661cccba41782c2e5fea446fa2b19d01d1ee4e0af3065704abd",
    "quotes": [
     "Provide evidence that he works for an entity outside the UAE and that the work is being done remotely.",
     "Submit proof that he has a monthly income of no less than (3,500) US dollars or the equivalent in foreign currencies."
@@ -66,12 +66,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "ae2573e4cb486ea098ab8cad99f4b3c8ef7eed5d102a91b2b9b26de8280ec49a",
+   "payload_sha256": "2271e24369d2bac4cd8a098a08d8334355d99edb91aba45891228ad572a16a38",
    "quotes": [
     "Provide evidence that he works for an entity outside the UAE and that the work is being done remotely.",
     "Submit proof that he has a monthly income of no less than (3,500) US dollars or the equivalent in foreign currencies."

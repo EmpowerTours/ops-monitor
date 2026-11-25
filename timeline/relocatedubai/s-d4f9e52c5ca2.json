@@ -52,12 +52,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "66819768cab76b08abf9d21adf15defac3b8c62a322ca62e49074b02529f69b5",
+   "payload_sha256": "75631e10a2c0b103a98399e4853487dbb955daad83e4106173c0000fa572c062",
    "quotes": [
     "entitles the holder to remain in the country for (60) sixty days from entry until the necessary processes for issuing residency have been completed.",
     "2. A passport copy, valid for at least 6 months.",
@@ -77,12 +77,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "953a9ba998eca3434b2fb73f9e8afceac749012c4ff8ab73e5ce7a95ae1139e0",
+   "payload_sha256": "dbb0ad8d1dcd4182e4cc2050b80b760ef700b3f4e99483931ded8fe587ae21ca",
    "quotes": [
     "entitles the holder to remain in the country for (60) sixty days from entry until the necessary processes for issuing residency have been completed.",
     "2. A passport copy, valid for at least 6 months.",
@@ -102,12 +102,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "e4e55cc1eaad437b22f18fac13be31060241cf856493086a6c1253c86976557d",
+   "payload_sha256": "3db87df0ed8bfa16b7ff96d7bdb1b715bbcd8d8aa1d6d9e72076a0e056b6604d",
    "quotes": [
     "entitles the holder to remain in the country for (60) sixty days from entry until the necessary processes for issuing residency have been completed.",
     "2. A passport copy, valid for at least 6 months.",

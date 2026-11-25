@@ -146,12 +146,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "ca36787d40162e9d2ae0fe1c96f553f1cbc21e8b762f747e4654df095b90c88b",
+   "payload_sha256": "2e9bb865932970a6a6f77ff7d1b359ce9f63a7a595e6870b9b326afab3282c3f",
    "quotes": [
     "Test Report from accredited and recognized laboratory as per the technical requirements mentioned under: UAE.S GSO 147:2019",
     "Validity of Test report should be less than 3 Year.",

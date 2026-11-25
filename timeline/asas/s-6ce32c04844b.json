@@ -70,12 +70,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:23:23Z",
    "http_status": 200,
-   "payload_sha256": "9d20474d154d3232d8e01093b82ca050b860a68060bbec58f296f8d8b3a0a9ce",
+   "payload_sha256": "3507535eba69cebf72e2d08e5355699df03d9fb543c12b68d78c1ea420420e4d",
    "quotes": [
     "Advance payment in full Original price AED 57,481 Package price AED 35,484",
     "Save on office space costs with special flexi desk options (eligible for one UAE residency visa)",

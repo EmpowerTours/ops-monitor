@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "2d01536152c36d140650a28c7fa151aa6ef8b243c4937a9dc9c9d77c2f2a814f",
+   "payload_sha256": "bb9829e55aacb51c5cae1bb48e166d796153303cf2fbeab5d4d68b1e512bbaca",
    "quotes": [
     "The sponsor must have a minimum salary of AED 4,000 or AED 3,000 plus accommodation."
    ],

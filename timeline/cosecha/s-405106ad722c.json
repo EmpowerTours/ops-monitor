@@ -28,12 +28,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "a3b3f2f52f3d8e99b8c90e3198a228986e7e6539f97145255054aadc8b759ee7",
+   "payload_sha256": "591124bbabac50ef8156f3ed9bfe6c764717fc8ac7fa55e357acf2c47212e6db",
    "quotes": [],
    "ref": "cosecha/s-405106ad722c/2026-11-25T05:33:23Z",
    "run_id": "20261125T051723Z",

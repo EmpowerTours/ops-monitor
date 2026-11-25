@@ -66,12 +66,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:31Z",
    "http_status": 200,
-   "payload_sha256": "97d42a776222f7d6771448415eeea1d7912e05e305975ee129c8b75a80e952e8",
+   "payload_sha256": "f339ce4109deba76b4f8a54a3e37c7393805914b05ee8e21f491cc3311d68c1c",
    "quotes": [
     "(+94) 71 9 802 822 - Only for Foreign Countries",
     "Hotline : 1989"

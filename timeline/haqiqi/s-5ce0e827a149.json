@@ -54,12 +54,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:31Z",
    "http_status": 200,
-   "payload_sha256": "2504b2cc572fd6f0f993d8f2c38ee9c6f3b38ea64ca0af81ae3d7f7c126c5297",
+   "payload_sha256": "8e78d96699df409e143f40eb96c02b80fef791e050dd1c6c503326a2f1997274",
    "quotes": [],
    "ref": "haqiqi/s-5ce0e827a149/2026-11-25T05:24:31Z",
    "run_id": "20261125T051723Z",

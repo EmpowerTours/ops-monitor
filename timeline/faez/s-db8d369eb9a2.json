@@ -70,12 +70,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:23:32Z",
    "http_status": 200,
-   "payload_sha256": "96d4aafedcc2e12bc318c1fc093e0d79ea077522965e177b541d7b752f799c95",
+   "payload_sha256": "d6c23b45723804ce1f15ea9d7822c08f1a1b506f5034978ce55e83719e4df480",
    "quotes": [
     "Law No. (12) of 2020 Concerning Contracts and Warehouse Management in the Government of Dubai",
     "Bid Bond Article (31) a. A Bid must be accompanied by a Bid Bond",

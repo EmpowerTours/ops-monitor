@@ -87,12 +87,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:19:46Z",
    "http_status": 200,
-   "payload_sha256": "9761496ca3f918ba545fe5615969298f087fe982541638d3c6b91f5364d21b3e",
+   "payload_sha256": "2ddc40a91de0dada94a0ad1a200befd250c5bec1f1ab2e38e236416b1a40132c",
    "quotes": [
     "AED 20 (Normal)",
     "AED 25 (Van)",

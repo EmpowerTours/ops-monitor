@@ -70,12 +70,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "c6d856eea07647e9b817ea8de17cac7ab36e049b8d2ebc5805744aafc76baf9e",
+   "payload_sha256": "199716b8cc524ff697e3b260f087073d00b8e52ea3435edb5b3e9940cd4c8e30",
    "quotes": [
     "It is granted for a period of five years, with the option of renewal",
     "Provide proof of investment or contribution to a business venture within the UAE.",

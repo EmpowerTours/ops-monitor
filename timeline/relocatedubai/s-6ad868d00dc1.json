@@ -34,12 +34,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "22190f91d9f8b4e309270b334983e8cdb3b93d05a1b0734b73126deefe475ff1",
+   "payload_sha256": "b0bf50ed608a11e614d5cdbbad01c835526c174b588170157a1f727f67ee8b35",
    "quotes": [
     "The marriage contract is certified.",
     "In addition to housing, the resident's salary must be AED4,000 or AED3,000"
@@ -50,12 +50,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "164c017a0bffaa9522aafcfa959027f78a2eeda5081b494dd4fe06aa18d25d58",
+   "payload_sha256": "d9e8117fa233e14fabfe4c99d7c5b80ed1decb5e2bb99370dea68e0054a5b837",
    "quotes": [
     "The marriage contract is certified.",
     "In addition to housing, the resident's salary must be AED4,000 or AED3,000"
@@ -66,12 +66,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "8b64cffd9188356a9c1829fefebfad5e07ce86cf82008744f7e1ce212026dcf9",
+   "payload_sha256": "3ea4bd59f89ccb12079b5274ebc5e1fba3f1d4a0c2f410a7d06025eae3f7bc6d",
    "quotes": [
     "The marriage contract is certified.",
     "In addition to housing, the resident's salary must be AED4,000 or AED3,000"

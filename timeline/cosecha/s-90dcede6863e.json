@@ -107,12 +107,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 200,
-   "payload_sha256": "88f500fdf39912536e9f55aacce5f58fdb6312aa40b3812f3dcf439eac334318",
+   "payload_sha256": "39270b8fe3c6205c2d26c3af1548f603065a87d1fb49657b47168a1c7f7d9ba8",
    "quotes": [
     "Centros de Apoyo al Desarrollo Rural (CADER) de Tecpan y Coyuca de Catalán"
    ],
@@ -122,12 +122,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "df33df662c21543ec89f730dfafd9fc6cf43adcb713665aee3f2954d4e1b1f1e",
+   "payload_sha256": "141ba21cb25930f382be2fd83fc6ec9f9f976c6d16c690969f270142bbd4ffad",
    "quotes": [
     "Centros de Apoyo al Desarrollo Rural (CADER) de Tecpan y Coyuca de Catalán"
    ],

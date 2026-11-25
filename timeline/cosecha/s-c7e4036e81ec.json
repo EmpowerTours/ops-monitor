@@ -145,12 +145,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "8458994a0b076602179acd28016d0862a028a7ec64d4f2c12fbc9a3df8af0eb3",
+   "payload_sha256": "9afd6cd0cf6224330055111ab04530cdcce4e0f3ad118e7518d3b39b8bc5e7b7",
    "quotes": [
     "temperatura promedio anual es de 28.6oC; se presentan lluvias en verano y una precipitación pluvial anual promedio de 1,168 mm.",
     "promedio anual de 25.4oC, con lluvias en verano y una precipitación pluvial anual de 1,400 mm.",
