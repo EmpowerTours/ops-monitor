@@ -85,6 +85,23 @@
    "run_id": "20261125T051723Z",
    "sha256": "66dc73cdc7292c286f5335d78e7ef741e8dee3ac08ef57b89ea3207ebc4209b6",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": true,
+   "fetched_at": "2026-11-25T17:40:06Z",
+   "http_status": 200,
+   "payload_sha256": "01a1bca6293f4bf8c44f1bc9a7c855df8d3960aacae0e3bc9c974a58a49d1279",
+   "quotes": [
+    "It is granted for a period of five years, with the option of renewal",
+    "Provide proof of investment or contribution to a business venture within the UAE.",
+    "Obtain the necessary licences and approvals from the relevant authorities."
+   ],
+   "ref": "relocatedubai/s-fe28501a5d28/2026-11-25T17:40:06Z",
+   "run_id": "20261125T173639Z",
+   "sha256": "892ade340f3347db165656cc477abf756e33770ca84996b258956c107911f0d3",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-fe28501a5d28",

@@ -80,6 +80,22 @@
    "run_id": "20261125T051723Z",
    "sha256": "09999d783444c28bb5d4e8cabf73d8e307103c8495b6e76a09a0ead7a1860eb5",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": true,
+   "fetched_at": "2026-11-25T17:39:27Z",
+   "http_status": 200,
+   "payload_sha256": "32575cd70191ce10b036829e5d2b0478fecbaa8ca481c301065df2720be60cf2",
+   "quotes": [
+    "License Status",
+    "Agency List"
+   ],
+   "ref": "haqiqi/s-de12ae67866b/2026-11-25T17:39:27Z",
+   "run_id": "20261125T173639Z",
+   "sha256": "063e609282bf438d29c133ffbdf1e6942bd53bc0c458eb20332e96d860797eeb",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-de12ae67866b",

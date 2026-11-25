@@ -159,6 +159,24 @@
    "run_id": "20261125T051723Z",
    "sha256": "621857b9b6636723e71edb245cce48483af313e5eff20a8f575f25b88f81adb0",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-25T17:52:39Z",
+   "http_status": 200,
+   "payload_sha256": "df01f406981f0d2631e843c5c702b2b7f701ad93eb9db7272a4d3b9e04ad28b8",
+   "quotes": [
+    "Issue accreditation for a slaughterhouse outside the UAE",
+    "Service Fees No fees",
+    "The time to obtain the service : 40 working days",
+    "The approved slaughterhouse must only use the approved health certificate Model for the exportation of its approved products to the UAE"
+   ],
+   "ref": "cosecha/s-4295d9aae3bb/2026-11-25T17:52:39Z",
+   "run_id": "20261125T173639Z",
+   "sha256": "621857b9b6636723e71edb245cce48483af313e5eff20a8f575f25b88f81adb0",
+   "status": "verified"
   }
  ],
  "source_id": "s-4295d9aae3bb",

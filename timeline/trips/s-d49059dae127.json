@@ -104,6 +104,19 @@
    "run_id": "20261125T051723Z",
    "sha256": "",
    "status": "unreachable"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-25T17:38:57Z",
+   "http_status": 0,
+   "payload_sha256": "ed61fece6ff2b25271f8ab8a490e27c13d8ac2c789a94288a64c574bf18802d4",
+   "quotes": [],
+   "ref": "trips/s-d49059dae127/2026-11-25T17:38:57Z",
+   "run_id": "20261125T173639Z",
+   "sha256": "",
+   "status": "unreachable"
   }
  ],
  "source_id": "s-d49059dae127",

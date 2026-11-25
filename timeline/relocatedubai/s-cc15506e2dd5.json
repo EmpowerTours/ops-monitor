@@ -75,6 +75,21 @@
    "run_id": "20261125T051723Z",
    "sha256": "6428d3d17ebd08bd157223b94dab604b58660f55593d38bdae5029c6433e6722",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-25T17:40:06Z",
+   "http_status": 200,
+   "payload_sha256": "8427f79a42f319fd0c55dd71534051acf83d715aa08e59cbb201c04c75604340",
+   "quotes": [
+    "The Index Rate (IR) band is set at AED 550 - 750/- per member per year plus VAT"
+   ],
+   "ref": "relocatedubai/s-cc15506e2dd5/2026-11-25T17:40:06Z",
+   "run_id": "20261125T173639Z",
+   "sha256": "6428d3d17ebd08bd157223b94dab604b58660f55593d38bdae5029c6433e6722",
+   "status": "verified"
   }
  ],
  "source_id": "s-cc15506e2dd5",

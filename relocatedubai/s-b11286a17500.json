@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-25T05:24:07Z",
+ "fetched_at": "2026-11-25T17:40:06Z",
  "id": "s-b11286a17500",
- "last_read_fetched_at": "2026-11-25T05:24:07Z",
+ "last_read_fetched_at": "2026-11-25T17:40:06Z",
  "manifest_fingerprint": "66ced8ef1fe1a88182bfb8ef5a1fcec7bbf7bc3b0105ff6d5145eb71795d6eed",
- "run_id": "20261125T051723Z",
- "sha256": "cde0d261ed0f7b873e2db272654a9dc43e3ef69e411f8b2d08950e65481a59ac",
+ "run_id": "20261125T173639Z",
+ "sha256": "4794b830921acf3804609db62cfb93e09da9b6330fe3b42d3337791ac2ba5210",
  "status": "changed_quote_ok",
  "url": "https://www.startdxb.ae/article/groceries-cost-in-dubai-weekly-shop-for-singles-couples-families"
 }

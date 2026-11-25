@@ -153,6 +153,23 @@
    "run_id": "20261125T051723Z",
    "sha256": "369c4a4910ccb31cbd73a66a624a8fcd8e16529ff1085293a7fee1a863210e29",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-25T17:52:39Z",
+   "http_status": 200,
+   "payload_sha256": "ad46a0f4e73a0ea2a98ae091dbab7a3baed52d52b207fd2896c3e1a7e0e0c598",
+   "quotes": [
+    "The time to obtain the service : 1 working day",
+    "122-003-026-000",
+    "200Payment Method: Cards"
+   ],
+   "ref": "cosecha/s-2e0724e8f1fe/2026-11-25T17:52:39Z",
+   "run_id": "20261125T173639Z",
+   "sha256": "369c4a4910ccb31cbd73a66a624a8fcd8e16529ff1085293a7fee1a863210e29",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-2e0724e8f1fe",

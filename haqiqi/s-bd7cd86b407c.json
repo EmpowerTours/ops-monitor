@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-25T05:24:31Z",
+ "fetched_at": "2026-11-25T17:39:27Z",
  "id": "s-bd7cd86b407c",
  "last_read_fetched_at": "",
  "manifest_fingerprint": "ec2639e292f27b822237f57c7d8f422e93b2278ba8222c4e5e385faacf3720a6",
- "run_id": "20261125T051723Z",
+ "run_id": "20261125T173639Z",
  "sha256": "",
  "status": "unreachable",
  "url": "https://www.swift.com/standards/data-standards/iban-international-bank-account-number"

@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-25T05:24:07Z",
+ "fetched_at": "2026-11-25T17:40:06Z",
  "id": "s-3862af7953ba",
- "last_read_fetched_at": "2026-11-25T05:24:07Z",
+ "last_read_fetched_at": "2026-11-25T17:40:06Z",
  "manifest_fingerprint": "661c80ebf68e30300e7e005633724b5c94708d227ca8599a4905bd79621e244f",
- "run_id": "20261125T051723Z",
- "sha256": "1deb3f6da7ead1bfdb424aa3d6a2a5cf511fba1705038bb4bf7a451399051089",
+ "run_id": "20261125T173639Z",
+ "sha256": "7b38a538dafac814a920643399bcb98c838e9f030a32f7339fe8ef4f5a2bf82f",
  "status": "changed_quote_ok",
  "url": "https://www.startdxb.ae/article/utilities-cost-in-dubai-dewa-cooling-internet-real-monthly-numbers"
 }

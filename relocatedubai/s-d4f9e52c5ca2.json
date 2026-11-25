@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-25T05:24:07Z",
+ "fetched_at": "2026-11-25T17:40:06Z",
  "id": "s-d4f9e52c5ca2",
- "last_read_fetched_at": "2026-11-25T05:24:07Z",
+ "last_read_fetched_at": "2026-11-25T17:40:06Z",
  "manifest_fingerprint": "9aec0b914acdc37740102ebca8fb1f2574871e76b9146eafbb0f37987a2d0006",
- "run_id": "20261125T051723Z",
+ "run_id": "20261125T173639Z",
  "sha256": "4cecb4a6741016537a1414ec41139c9718e764ad88f5370155d771cba83608ea",
  "status": "changed_quote_ok",
  "url": "https://www.gdrfad.gov.ae/en/services/2b2f69af-408c-11ed-4fe5-0050569629e8"

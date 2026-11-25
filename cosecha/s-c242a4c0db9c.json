@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-25T05:33:23Z",
+ "fetched_at": "2026-11-25T17:52:39Z",
  "id": "s-c242a4c0db9c",
- "last_read_fetched_at": "2026-11-25T05:33:23Z",
+ "last_read_fetched_at": "2026-11-25T17:52:39Z",
  "manifest_fingerprint": "f52e8f08485a4c99db96467fcf8306f97c3665b60253169ef73e354a1b87639a",
- "run_id": "20261125T051723Z",
+ "run_id": "20261125T173639Z",
  "sha256": "5bc575d4915009ea7990bc80095c229da929414f4dbc19c8f34e265f3a15fa93",
  "status": "changed_quote_ok",
  "url": "https://moiat.gov.ae/en/open-data/product-conformity-data?producttypeid=14440"

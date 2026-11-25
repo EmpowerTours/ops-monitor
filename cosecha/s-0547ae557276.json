@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-25T05:33:23Z",
+ "fetched_at": "2026-11-25T17:52:39Z",
  "id": "s-0547ae557276",
- "last_read_fetched_at": "2026-11-25T05:33:23Z",
+ "last_read_fetched_at": "2026-11-25T17:52:39Z",
  "manifest_fingerprint": "6dfbbd64f91e8c4b1d01f44f0874fc6ef51d4de0c4f854df9620a9f421ef801f",
- "run_id": "20261125T051723Z",
+ "run_id": "20261125T173639Z",
  "sha256": "e2d794b9e9141e5683ebac9ab37bc9e0053dd331340d3a8c4b02fc7b2e5f4122",
  "status": "verified",
  "url": "https://www.mofa.gov.ae/en/faqs"

@@ -162,6 +162,24 @@
    "run_id": "20261125T051723Z",
    "sha256": "805394ac0e8ff4651226ea47726d15b5e1ce07d07ccf654947bb630be7d84a43",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-25T17:52:39Z",
+   "http_status": 200,
+   "payload_sha256": "68a59a60b7d5badc752fb6bf770325a40eec3391c439f1641cf965a465a9a945",
+   "quotes": [
+    "Citrus x aurantium var. paradisi (CIDPA)",
+    "Psidium guajava (PSIGU)",
+    "Mangifera indica (MNGIN)",
+    "Selenicereus undatus (HCRUN)"
+   ],
+   "ref": "cosecha/s-3bfaa5a9d852/2026-11-25T17:52:39Z",
+   "run_id": "20261125T173639Z",
+   "sha256": "805394ac0e8ff4651226ea47726d15b5e1ce07d07ccf654947bb630be7d84a43",
+   "status": "verified"
   }
  ],
  "source_id": "s-3bfaa5a9d852",

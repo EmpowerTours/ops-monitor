@@ -65,6 +65,19 @@
    "run_id": "20261125T051723Z",
    "sha256": "0b4b3d31ec0b720403a10eaf0a8dbde34581f08658cf9759c4b6db134ec67fd9",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-25T17:39:27Z",
+   "http_status": 200,
+   "payload_sha256": "ee9ef36d1f03d776c5037ad3527187b250c5ced68ac8f4aaa160e249a9870adb",
+   "quotes": [],
+   "ref": "haqiqi/s-5ce0e827a149/2026-11-25T17:39:27Z",
+   "run_id": "20261125T173639Z",
+   "sha256": "0b4b3d31ec0b720403a10eaf0a8dbde34581f08658cf9759c4b6db134ec67fd9",
+   "status": "verified"
   }
  ],
  "source_id": "s-5ce0e827a149",

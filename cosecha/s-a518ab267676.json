@@ -1,12 +1,12 @@
 {
- "fetched_at": "2026-11-25T05:33:23Z",
+ "fetched_at": "2026-11-25T17:52:39Z",
  "id": "s-a518ab267676",
- "last_read_fetched_at": "2026-11-25T05:33:23Z",
+ "last_read_fetched_at": "2026-11-25T17:52:39Z",
  "manifest_fingerprint": "af861f4f3a4b3b1d7864f185f40c3f2b00a2507df94de5042abe834c5df72098",
- "run_id": "20261125T051723Z",
- "sha256": "fab6f1c4118732ba35b4b0ffac3b0c22cdf67694df1d35c2d5422bf3a351bcdf",
- "sha256_ar": "42e6a0bd4d9b071a31c9c64d96c908d2c77dc6450ca0795119699d47e3dc6cc6",
- "status": "changed_quote_ok",
+ "run_id": "20261125T173639Z",
+ "sha256": "84a7a1dea2e38676d6c84bba2f58d6337c4422b2125bf51cbf96de94f2ee2de4",
+ "sha256_ar": "a09ad6a30b9ea6d6553ac34b5c99a9b0da838eb54f4bc23a42befa6b5f8f7371",
+ "status": "quote_missing",
  "url": "https://moccae.gov.ae/en/services/release-of-agricultural-products-consignment",
  "url_ar": "https://www.moccae.gov.ae/ar/services/release-of-agricultural-products-consignment"
 }

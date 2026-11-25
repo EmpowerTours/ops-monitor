@@ -80,6 +80,22 @@
    "run_id": "20261125T051723Z",
    "sha256": "7ca0d97692fad74944827f774f915955fcf60fabd6210c7372784589b09afba7",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-25T17:40:06Z",
+   "http_status": 200,
+   "payload_sha256": "0234ce1533e8d2172b38b75580513a2629bc3a5411cc278d0ad7908b3c126011",
+   "quotes": [
+    "The marriage contract is certified.",
+    "In addition to housing, the resident's salary must be AED4,000 or AED3,000"
+   ],
+   "ref": "relocatedubai/s-6ad868d00dc1/2026-11-25T17:40:06Z",
+   "run_id": "20261125T173639Z",
+   "sha256": "7ca0d97692fad74944827f774f915955fcf60fabd6210c7372784589b09afba7",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-6ad868d00dc1",

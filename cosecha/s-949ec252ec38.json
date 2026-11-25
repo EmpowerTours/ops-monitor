@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-25T05:33:23Z",
+ "fetched_at": "2026-11-25T17:52:39Z",
  "id": "s-949ec252ec38",
- "last_read_fetched_at": "2026-11-25T05:33:23Z",
+ "last_read_fetched_at": "2026-11-25T17:52:39Z",
  "manifest_fingerprint": "ecbba5b07ada4f8e34ebb8e266a0ad80d2605cb54340e203900ac18e590b2ff0",
- "run_id": "20261125T051723Z",
+ "run_id": "20261125T173639Z",
  "sha256": "093848a9296beabb6e2593e57837d27696ca384d001991e83ccc05aff1a88e04",
  "status": "verified",
  "url": "https://moccae.gov.ae/en/services/permit-import-ani-waste"

@@ -85,6 +85,23 @@
    "run_id": "20261125T051723Z",
    "sha256": "fd68e3707dcef2f24247fe15de5243235c909bf036292222dced8affe6ff552a",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-25T17:39:30Z",
+   "http_status": 200,
+   "payload_sha256": "08ec1a4b1a5b720158f90cfc05be0549d68eb52ac66725ca40b7db2b250841e2",
+   "quotes": [
+    "The full incorporation takes 3-4 weeks.",
+    "Please note the license will only be issued with an active lease.",
+    "The full incorporation takes 3"
+   ],
+   "ref": "asas/s-fd85311cbba8/2026-11-25T17:39:30Z",
+   "run_id": "20261125T173639Z",
+   "sha256": "fd68e3707dcef2f24247fe15de5243235c909bf036292222dced8affe6ff552a",
+   "status": "verified"
   }
  ],
  "source_id": "s-fd85311cbba8",
