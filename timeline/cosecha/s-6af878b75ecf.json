@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "5ac46c7fbbd1e9a80896bd4753f22143e288025c72e929ce4a74eaa79b3d89e6",
+   "payload_sha256": "f29114fe95a713076b045b605c6f91830d7eed302ac7f4dcd8b6bbab2d2a5e36",
    "quotes": [
     "Mexico لا يوجد مسالخ معتمدة All the slaughterhouses are not approved"
    ],
@@ -77,12 +77,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T19:00:07Z",
    "http_status": 200,
-   "payload_sha256": "cb65beed71556cc063a74a5fddb6968da94577022ea770e8f0284b09a2627730",
+   "payload_sha256": "4f4aa3772458d6c8f163b3c25b569df8b562afa3642817cc708e1a7b556ce8dd",
    "quotes": [
     "Mexico لا يوجد مسالخ معتمدة All the slaughterhouses are not approved"
    ],
@@ -92,12 +92,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:33:16Z",
    "http_status": 200,
-   "payload_sha256": "599d06472bc0484c66ca597003feec486a6779cf207df164866f6af17347d32e",
+   "payload_sha256": "0e904df4c298d73131079e69917a8f2b3a0c7d6b27f84cf50a424b939ccd5acf",
    "quotes": [
     "Mexico لا يوجد مسالخ معتمدة All the slaughterhouses are not approved"
    ],
@@ -107,12 +107,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 200,
-   "payload_sha256": "4699dd355106ec91e3e01791d47230c5e9a81ab1ffac5cc8093c8b7a58f4b6c7",
+   "payload_sha256": "f43fc8ab6ffb38a7e9a5d2a16bf4429a98a0d0431c0a176d3c15a3350f9c3ae3",
    "quotes": [
     "Mexico لا يوجد مسالخ معتمدة All the slaughterhouses are not approved"
    ],
@@ -122,12 +122,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "c75d6f821da949509ebe192c2e5180d5cd4936a17f5fcb8f19ffa8b0949ae913",
+   "payload_sha256": "e0a7f43aadea0abfb8ac708136ee8658dd13a6595c6695641f8795bf8af64f2f",
    "quotes": [
     "Mexico لا يوجد مسالخ معتمدة All the slaughterhouses are not approved"
    ],
@@ -137,12 +137,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "7580c726908c779d6f8d10caa95b43eeeb90b2c2310653125c82cd4fd023f565",
+   "payload_sha256": "e37482e5075e0973a732f4d1758d0580cd0a2b49081445b08433efdaee87ec1d",
    "quotes": [
     "Mexico لا يوجد مسالخ معتمدة All the slaughterhouses are not approved"
    ],

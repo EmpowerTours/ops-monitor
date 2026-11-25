@@ -82,12 +82,12 @@
    "status": "quote_missing"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "fb0cb70c923cb916d6d6ff2177178193d3d18764f1bb57f377bbf6c2013eec64",
+   "payload_sha256": "065f90261aaf15131f8163d6463e5c02daca4ad0b0263125596b2b3dc9171527",
    "quotes": [
     "Media Package Starting from AED 5750",
     "Standard Package Starting from AED 6875"

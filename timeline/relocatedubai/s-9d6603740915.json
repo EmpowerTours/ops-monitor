@@ -97,12 +97,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "80c950672ba182782af863b462ad96d6b5d8f4290e3ff931806418d77be8b8c1",
+   "payload_sha256": "00cc8ee5ee8d52fde3ec1d8dc3ce60a2b4035c1f383342520917fae801aafc6c",
    "quotes": [
     "Idea Best for founders without visa needs Starting fromAED 6,600 / year 0 visa",
     "Seed Best for solo founders and early-stage startups Starting fromAED 13,200 / year 1 visa included",

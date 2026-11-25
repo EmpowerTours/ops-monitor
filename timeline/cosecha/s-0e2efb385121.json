@@ -145,12 +145,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "71fe0652c0fcef62e16092f954279e9a406921258bf06a86251aeefa2a24cc99",
+   "payload_sha256": "a80450aca0e6c594b3e588002fac7196807880864d468b1004bb0cae4502aba6",
    "quotes": [
     "Halal Certification Services",
     "While the Halal National Mark is optional"

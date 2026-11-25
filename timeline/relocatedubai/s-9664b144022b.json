@@ -77,12 +77,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "dce3e81a64a0230b56842d1c1554eb6179aadcf49aba4577bbc1cb7efdf0b2d9",
+   "payload_sha256": "09c8bcd157631f9143bd63cbd96ff780ff925e5bc445f75f62d73554317f4fbb",
    "quotes": [
     "Monthly car cost all-in: AED 1,200 to AED 2,500."
    ],

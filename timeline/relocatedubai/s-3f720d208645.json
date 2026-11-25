@@ -87,12 +87,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "aec776d5c8ae55a2c24222b91528f92b11e2d2984199b316401a7cacf1a16d25",
+   "payload_sha256": "0b502411dca252876b9f809515c887c062a5b6c1d1381c10ced21898f5b34b30",
    "quotes": [
     "SmartStart Business Account (AED Only)",
     "Monthly Service Fee 125.00",

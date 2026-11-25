@@ -164,12 +164,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261122184335/https://gd.eppo.int/taxon/ANSTOB/hosts",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "68a59a60b7d5badc752fb6bf770325a40eec3391c439f1641cf965a465a9a945",
+   "payload_sha256": "238e344dafc5401913c5ce5e11d295dd0c4126f0541e8b3341fff05b3c5c21fd",
    "quotes": [
     "Citrus x aurantium var. paradisi (CIDPA)",
     "Psidium guajava (PSIGU)",

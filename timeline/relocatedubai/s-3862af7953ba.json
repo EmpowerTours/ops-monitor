@@ -32,12 +32,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "2790989104f844ec683932288470079a839bdd3595e21297ccc9efa6057a1fad",
+   "payload_sha256": "1f9eb56a221fed1ac31ee39c63e7724876c9542a803e76275bd007791abdd750",
    "quotes": [
     "2BR (split AC) AED 550 to 900 AED 750 to 1,200 AED 1,400 to 2,200 AED 900 to 1,600"
    ],
@@ -47,12 +47,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "b84eb4104d5f6b8e29b046e6e53fed363d7a4926b2698a520a116297ff16ba2c",
+   "payload_sha256": "cb50ed54ed057f8428a0dc8372b09a5f655cdb43728c0a78f2f9e3a24a9ecc6c",
    "quotes": [
     "2BR (split AC) AED 550 to 900 AED 750 to 1,200 AED 1,400 to 2,200 AED 900 to 1,600"
    ],
@@ -62,12 +62,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "c7338ee8f4e57af5e0e90e541f00c7d8dc4bc3df328eb5ba0045d4ed2921a74e",
+   "payload_sha256": "dd295a04dd04caaf997a9a2e1e0a58868ead95a6d548e8a9d86d9aec00bb8fe9",
    "quotes": [
     "2BR (split AC) AED 550 to 900 AED 750 to 1,200 AED 1,400 to 2,200 AED 900 to 1,600"
    ],
@@ -77,12 +77,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "10fde54638446259eaac4e144d39b8f66d39f477f816be91303baa268473c799",
+   "payload_sha256": "34ee38eb09932fd1a0d8aaf050a4a5d6a5320b13e08698b347e43219883765bf",
    "quotes": [
     "2BR (split AC) AED 550 to 900 AED 750 to 1,200 AED 1,400 to 2,200 AED 900 to 1,600"
    ],

@@ -155,12 +155,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "2ecfafac5e669324eef8f91d8220572ebd1475b09f54033380b1935dc9e104f0",
+   "payload_sha256": "6a98880c9e89575e990ccb5eaca05031598aff492a1642e4574f5c9692bbe5f8",
    "quotes": [
     "List (A 1 ): Quarantine Pests",
     "Anastrepha ludens",

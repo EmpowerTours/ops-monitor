@@ -50,12 +50,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:39:38Z",
    "http_status": 200,
-   "payload_sha256": "7bdd1a151b3f89e58e386df15a15b4f3d3e2a4e35b1098a18cedd0bc6d8b44d8",
+   "payload_sha256": "be9a03cb601e24ba5651af9dc83fbee7c9b2e87595fb973cddfadc9624beca1e",
    "quotes": [
     "Search for licence information - Dubai Economy and Tourism",
     "Check business name - Invest in Dubai"

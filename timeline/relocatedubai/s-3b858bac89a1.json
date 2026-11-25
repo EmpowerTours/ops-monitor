@@ -97,12 +97,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "ecef527f600d9a2b77aad3736892f82da89af91a29a5116fe014024791f115e1",
+   "payload_sha256": "e894af0d51c752f9d38cfc7123c21dca5ba465ed22ae27836f9c0f7dbafd13f4",
    "quotes": [
     "DLD Customers can scan the QR code on each real estate advertisement to get a glimpse of the property's authorised details and establish if it has been sold or rented."
    ],

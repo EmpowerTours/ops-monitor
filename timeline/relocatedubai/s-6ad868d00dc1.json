@@ -82,12 +82,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "0234ce1533e8d2172b38b75580513a2629bc3a5411cc278d0ad7908b3c126011",
+   "payload_sha256": "54fe02f1b2a462b9f2f4a778c7294b7945bbf52081f469f9f6191137d2c041b7",
    "quotes": [
     "The marriage contract is certified.",
     "In addition to housing, the resident's salary must be AED4,000 or AED3,000"

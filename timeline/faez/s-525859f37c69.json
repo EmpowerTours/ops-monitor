@@ -87,12 +87,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:39:38Z",
    "http_status": 200,
-   "payload_sha256": "409366c2c82a7f59afcd4b5a309c3d7afcb92fce422abb797d7783d568120043",
+   "payload_sha256": "861a8faa3f38848313e8973b479ac6b63ae1be25085473b29ed59de904331d8c",
    "quotes": [
     "Employment offers and contracts services",
     "Job offer - عرض عمل",

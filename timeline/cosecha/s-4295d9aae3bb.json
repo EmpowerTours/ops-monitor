@@ -161,12 +161,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "df01f406981f0d2631e843c5c702b2b7f701ad93eb9db7272a4d3b9e04ad28b8",
+   "payload_sha256": "1f4fe0fd30b10ffbd6bdb36026a3fe49f9be358c1580319caa9e6d8dc82879c9",
    "quotes": [
     "Issue accreditation for a slaughterhouse outside the UAE",
     "Service Fees No fees",

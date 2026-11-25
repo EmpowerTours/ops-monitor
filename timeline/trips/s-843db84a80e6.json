@@ -50,12 +50,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:38:57Z",
    "http_status": 200,
-   "payload_sha256": "bd0f7f244250e36c08abe9a613f274824a9290504a89b761cf6c89d171d57c26",
+   "payload_sha256": "ed150e93f24d9ef22c0eb00a32d3855e38bf34a91921f29bca95ce9e5e87a7e8",
    "quotes": [
     "Fee imposed on Hotel Establishment sales to seven percent (7%), and",
     "Fee imposed on Hotel Establishment sales to 3.5%"

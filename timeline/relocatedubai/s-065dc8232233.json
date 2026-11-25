@@ -82,12 +82,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "addd984f8cca559d7e7be84fc5e20ba3c4bb2ac8a66dd6e9ce6e1b099959a0a9",
+   "payload_sha256": "f48436777c3248ff2c4506cf7fb6011ce60ac873199a71a9572bcb395bbb1b26",
    "quotes": [
     "Open your business in Dubai online within 24 hours, starting from AED 12,500.",
     "low cost Dubai trade license with flexi desk office solution"

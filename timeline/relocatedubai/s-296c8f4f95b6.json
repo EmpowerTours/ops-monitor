@@ -87,12 +87,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "1e6ee0b87fc27df3d64e56fa5afdd40b5156fe71a6aa7036551afa1e258d1daa",
+   "payload_sha256": "1a289a2aa15007db64091acb8fd4398c0d4bf85c5ba54a3dbfe7f518b65679ac",
    "quotes": [
     "a renewable residence visa valid for 5 years",
     "the ability to sponsor family members, including spouses and children.",

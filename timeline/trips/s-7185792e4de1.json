@@ -130,12 +130,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261123014059/https://dlp.dubai.gov.ae/Legislation%20Reference/2020/Administrative%20Resolution%20No.%20%282%29%20of%202020%20Prescribing%20the%20Rules%20for%20Calculating,%20Collecting,%20and%20Paying%20the%20Tourism%20Dirham%20Fee%20in%20the%20Emirate%20of%20Dubai.html",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:38:57Z",
    "http_status": 200,
-   "payload_sha256": "b5f31da2f55e27039d4ceafd660946a1fcd58a2f6c3dd9522c77fe2a9c7b17c4",
+   "payload_sha256": "56719087c06c483fd371a518470437b7b0e90eeafe0e79f8b2a23caaefec3bec",
    "quotes": [
     "for a maximum of thirty (30) consecutive nights, be charged the Tourism Dirham Fee",
     "The fee will not apply to hotel room nights beyond thirty (30) consecutive nights."

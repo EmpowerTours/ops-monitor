@@ -97,12 +97,12 @@
    "status": "quote_missing"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "21a1c70f7bfab6f89da1c519a39d73d0f37f130bae6c02c9db34221a4d687e68",
+   "payload_sha256": "d185876222ef5caaa2764986ba7b97a68cda1470b630a78b11ba34672bb163a1",
    "quotes": [
     "Studio apartment AED 40K",
     "1-bed apartment AED 58K",

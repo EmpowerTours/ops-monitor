@@ -80,12 +80,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-25T17:38:57Z",
    "http_status": 0,
-   "payload_sha256": "c86ee77acfb6ceb2603203b38bc2e029cf5a78ff20d7902ee2c644a5f37a38a8",
+   "payload_sha256": "24f7d8cb8a1bb9196f33ed1119db86cd3a3cd51e2599f42df5bf8d02f78d01a7",
    "quotes": [],
    "ref": "trips/s-7d1d7631c93e/2026-11-25T17:38:57Z",
    "run_id": "20261125T173639Z",

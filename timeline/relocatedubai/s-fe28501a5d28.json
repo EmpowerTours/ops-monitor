@@ -36,12 +36,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "e6c80955f223e985ef6667aab0382af67de8a280b73f03e489c1fcc09841f698",
+   "payload_sha256": "132128c0720598d48f1e42e2f5d745cf054763bee50ca3f97ca444f92e160401",
    "quotes": [
     "It is granted for a period of five years, with the option of renewal",
     "Provide proof of investment or contribution to a business venture within the UAE.",
@@ -53,12 +53,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "07686727dc95460e81856a64f7ab2b2a7f4a7dfc6d473bafdb6dfcb6194a504c",
+   "payload_sha256": "b3ca6365e4261395392fb86aaf7f4458f2976d991d180493537716478ce8cda2",
    "quotes": [
     "It is granted for a period of five years, with the option of renewal",
     "Provide proof of investment or contribution to a business venture within the UAE.",
@@ -70,12 +70,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "199716b8cc524ff697e3b260f087073d00b8e52ea3435edb5b3e9940cd4c8e30",
+   "payload_sha256": "294494e93133444f53860965636e61b177be3eca3ed48d5e767dcadcae84065b",
    "quotes": [
     "It is granted for a period of five years, with the option of renewal",
     "Provide proof of investment or contribution to a business venture within the UAE.",
@@ -87,12 +87,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "01a1bca6293f4bf8c44f1bc9a7c855df8d3960aacae0e3bc9c974a58a49d1279",
+   "payload_sha256": "ecce388516a733d28bca1a5cce8be6a5fb04dadeba7d97112ca2b230aba24c91",
    "quotes": [
     "It is granted for a period of five years, with the option of renewal",
     "Provide proof of investment or contribution to a business venture within the UAE.",

@@ -107,12 +107,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T05:19:46Z",
    "http_status": 200,
-   "payload_sha256": "8f99101becd27c68469130b7b5c8dabc8bb320b289df4df074d88c4a9fe82964",
+   "payload_sha256": "91b7d7653f77e0a0993024d1b59cdef25d91fa96980ec6794b6ce7508a0e4dc0",
    "quotes": [
     "VAT 5% (AED)"
    ],
@@ -122,12 +122,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T17:38:57Z",
    "http_status": 200,
-   "payload_sha256": "c0de5332fd7df48270162ea9bd6c47b3dd410daab70dbbc8a015931c00d65ffd",
+   "payload_sha256": "2fc92ceeee35fce97e81c1b588304a31dcb29e8e1e77fb30b40f20ea4c50f617",
    "quotes": [
     "VAT 5% (AED)"
    ],

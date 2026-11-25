@@ -114,12 +114,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 200,
-   "payload_sha256": "b8374e979582ea626241175e75cd4f7fe31e226d99f9f278a857d42d959bcfac",
+   "payload_sha256": "96ddce57bc87bfcb241f421eb2de7364405b12610d7dcc2bba54a6aa8dcf777a",
    "quotes": [
     "operar 27.3 millones de toneladas al cierre de 2025",
     "alcanzó un movimiento de 2 millones, 616 mil 770 TEU's"
@@ -130,12 +130,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "e0adff88f973e0b461b20da37bda587d6f8e00619af24de7fa2f3f0cc649c793",
+   "payload_sha256": "9647d5e833e4702f5af0f21d85dc00e4cc3a91a7568b7b92947b601474cb77a1",
    "quotes": [
     "operar 27.3 millones de toneladas al cierre de 2025",
     "alcanzó un movimiento de 2 millones, 616 mil 770 TEU's"
@@ -146,12 +146,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "8fc5fdbdce7bccca05656d68db8f66de6edf4690c9ce3ad4d125d90a9f9addec",
+   "payload_sha256": "4551f6831382c7d0ccf529f7b0c0c25d7d3680581f014695d09f9008da0f981c",
    "quotes": [
     "operar 27.3 millones de toneladas al cierre de 2025",
     "alcanzó un movimiento de 2 millones, 616 mil 770 TEU's"

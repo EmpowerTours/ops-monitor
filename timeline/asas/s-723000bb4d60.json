@@ -53,12 +53,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T18:19:19Z",
    "http_status": 200,
-   "payload_sha256": "b9ecb692488cd0736de816bd276b8542eef9b3e8606f88de2c57c4b5d7bee625",
+   "payload_sha256": "6455bcb15c5ee8b4e2b770d2e7f5085c8bff233f2b535c3bafaf6f8aa9c03b9a",
    "quotes": [
     "A foodstuff trading license starts from AED 12,500 at Meydan Free Zone.",
     "You need a foodstuff trading license that lists your specific activities, such as importing, exporting, or re-exporting food products.",
@@ -70,12 +70,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:23:23Z",
    "http_status": 200,
-   "payload_sha256": "7015095f1c2e30da82b68107f5ef53d175ac42fc63d743390eac5e18d7e9097f",
+   "payload_sha256": "5b062baf7f1b8c878c7e1c1bf8217f8cd9b6dfd7304158c7fc25cb8cd9c79906",
    "quotes": [
     "A foodstuff trading license starts from AED 12,500 at Meydan Free Zone.",
     "You need a foodstuff trading license that lists your specific activities, such as importing, exporting, or re-exporting food products.",
@@ -87,12 +87,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T17:39:30Z",
    "http_status": 200,
-   "payload_sha256": "c9246c6ed1d1f3f240cf1f3a59d3336dfc6326c79446d5d8376863502461fc27",
+   "payload_sha256": "30674530d85b6552cf33a7e3683ff5af54972011d93ca1b60c6a5e7a2cd70f50",
    "quotes": [
     "A foodstuff trading license starts from AED 12,500 at Meydan Free Zone.",
     "You need a foodstuff trading license that lists your specific activities, such as importing, exporting, or re-exporting food products.",
