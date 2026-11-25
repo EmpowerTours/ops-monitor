@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-24T18:18:50Z",
+ "fetched_at": "2026-11-25T05:19:46Z",
  "id": "s-1f714ffceecb",
- "last_read_fetched_at": "2026-11-24T18:18:50Z",
+ "last_read_fetched_at": "2026-11-25T05:19:46Z",
  "manifest_fingerprint": "37de834c48626de220a71ee6d77ade465fab746d96af17389017ecff9ed604a1",
- "run_id": "20261124T181644Z",
+ "run_id": "20261125T051723Z",
  "sha256": "0641490f789ea0f2a4124cb215df82fcbb130c057a3b013e247318337b82c654",
  "status": "verified",
  "url": "https://adro.gov.ae/Visas"

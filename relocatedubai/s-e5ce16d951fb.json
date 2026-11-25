@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-24T18:20:04Z",
+ "fetched_at": "2026-11-25T05:24:07Z",
  "id": "s-e5ce16d951fb",
- "last_read_fetched_at": "2026-11-24T18:20:04Z",
+ "last_read_fetched_at": "2026-11-25T05:24:07Z",
  "manifest_fingerprint": "2ff2f79b71114bd652b5d0f07161ff0d10c01b74d5b04014971b768367b28d76",
- "run_id": "20261124T181644Z",
+ "run_id": "20261125T051723Z",
  "sha256": "c13d098597503ef5448d300c7dcdc3ee192649fc04989bde1d46ba28ff48eeb6",
  "status": "changed_quote_ok",
  "url": "https://rakez.com/en/promotions/instant-licence"

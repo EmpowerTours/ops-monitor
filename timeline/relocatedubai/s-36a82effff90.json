@@ -64,6 +64,22 @@
    "run_id": "20261124T181644Z",
    "sha256": "c61a86a414ffea0a9f7ee545405400e7d2e813c2abb2e80a96ab13bacaa7d5dd",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": true,
+   "fetched_at": "2026-11-25T05:24:07Z",
+   "http_status": 200,
+   "payload_sha256": "ae2573e4cb486ea098ab8cad99f4b3c8ef7eed5d102a91b2b9b26de8280ec49a",
+   "quotes": [
+    "Provide evidence that he works for an entity outside the UAE and that the work is being done remotely.",
+    "Submit proof that he has a monthly income of no less than (3,500) US dollars or the equivalent in foreign currencies."
+   ],
+   "ref": "relocatedubai/s-36a82effff90/2026-11-25T05:24:07Z",
+   "run_id": "20261125T051723Z",
+   "sha256": "362821a0500fa220f2537b8af61ad74b9128080ea841fd8c190a28e7a877e14b",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-36a82effff90",

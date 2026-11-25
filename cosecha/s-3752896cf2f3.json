@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-24T18:32:37Z",
+ "fetched_at": "2026-11-25T05:33:23Z",
  "id": "s-3752896cf2f3",
- "last_read_fetched_at": "2026-11-24T18:32:37Z",
+ "last_read_fetched_at": "2026-11-25T05:33:23Z",
  "manifest_fingerprint": "8e10101879970539f1c38861d9e48d7d0b40eed79f36ac3d5c385712261c889a",
- "run_id": "20261124T181644Z",
- "sha256": "88d14d45aee03cb4965ef1c15e12e4da7f0318f90a8cd5a4d7828bcf19ceffd9",
+ "run_id": "20261125T051723Z",
+ "sha256": "95a3d69da2f014342659284acf15a6cfa4e17be2dcb3110f03c033e46372ed2b",
  "status": "changed_quote_ok",
  "url": "https://www.dm.gov.ae/municipality-business/food-safety-department-2/important-information-to-food-establishment/"
 }

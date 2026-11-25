@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-24T18:20:04Z",
+ "fetched_at": "2026-11-25T05:24:07Z",
  "id": "s-864e7a6ca4b3",
- "last_read_fetched_at": "2026-11-24T18:20:04Z",
+ "last_read_fetched_at": "2026-11-25T05:24:07Z",
  "manifest_fingerprint": "ce49b5503b1399c3f3940db0611ae9c188f4c4a97d80b192df11b63d190b0952",
- "run_id": "20261124T181644Z",
- "sha256": "3c2db38701d15c06c532ccd3ad8ce050ebe84782d47a1343bf21eb4fe8d2f0af",
+ "run_id": "20261125T051723Z",
+ "sha256": "835696db84443b5ab8c5bd0f22b98edb1c20f8ff76e4ef3ef646bdb92c19806d",
  "status": "quote_missing",
  "url": "https://www.brickdxb.com/dubai-rent-by-area"
 }

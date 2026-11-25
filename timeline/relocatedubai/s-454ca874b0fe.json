@@ -112,6 +112,34 @@
    "run_id": "20261124T181644Z",
    "sha256": "6790e04a69925ef2449d71761d8ea7ef27d5862acd93c8bc4fddbe6d70be8468",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": true,
+   "fetched_at": "2026-11-25T05:24:07Z",
+   "http_status": 200,
+   "payload_sha256": "97c28721b0c336373b3ef0e10218dc6b78f1899f0255779978eea8918c03c59c",
+   "quotes": [
+    "The residence permit is valid for 10 years and can be extended if the same conditions are met.",
+    "The applicant must own a property or a group of properties with a total value of no less than AED 2 million.",
+    "If the ownership is in the form of a share in a joint property, the value of the share must not be less than AED 2 million.",
+    "mortgaged property is acceptable",
+    "It is required to place a lien on the property to ensure the continuity of ownership throughout the validity of the Golden Residency",
+    "property may not be disposed of nor the financial deposit refunded",
+    "Owning a bank deposit of no less than AED 2 million.",
+    "stating that it has been frozen for a period of no less than two years.",
+    "Withdrawal of the deposit or investment is not permitted throughout the Golden Residency period (10 years).",
+    "Submit a tax certificate issued by the Federal Tax Authority in the UAE.",
+    "Proof that the total value of taxes paid annually is no less than AED 250,000",
+    "Expected Completion Time 5.0 Day(s)",
+    "(Al Tarash Center - Gulf Vision - Golden Cube - Al Yalayis - AGS H)",
+    "1. Visit the nearest Amer Service centres."
+   ],
+   "ref": "relocatedubai/s-454ca874b0fe/2026-11-25T05:24:07Z",
+   "run_id": "20261125T051723Z",
+   "sha256": "40569d8f3b56a9e60080602b87b1cf9ebfdf1820d9b4e0b484c61c0dc388fa64",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-454ca874b0fe",

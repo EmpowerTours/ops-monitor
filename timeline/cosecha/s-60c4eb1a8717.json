@@ -120,6 +120,21 @@
    "run_id": "20261124T181644Z",
    "sha256": "15c560e60784c6d9733fc0424a511a8014ef507deb700512254ed12022d1e6df",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-25T05:33:23Z",
+   "http_status": 200,
+   "payload_sha256": "32ee73ee4d50f7695db6421b6ce767563e6673bd92884e5de6feba2640ddee7f",
+   "quotes": [
+    "Health certificate issued or endorsed by the competent authority in the country of origin (imported food)"
+   ],
+   "ref": "cosecha/s-60c4eb1a8717/2026-11-25T05:33:23Z",
+   "run_id": "20261125T051723Z",
+   "sha256": "15c560e60784c6d9733fc0424a511a8014ef507deb700512254ed12022d1e6df",
+   "status": "verified"
   }
  ],
  "source_id": "s-60c4eb1a8717",

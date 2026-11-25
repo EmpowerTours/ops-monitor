@@ -32,6 +32,22 @@
    "run_id": "20261124T181644Z",
    "sha256": "65b0d16a006d0af80565d66973532b33b8ab3189f2055618af577a3913549956",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-25T05:19:46Z",
+   "http_status": 200,
+   "payload_sha256": "8641cd0a83d7d76438646f7b984fd803d6e27f2a3f7c238f49732f2458dd4535",
+   "quotes": [
+    "Fee imposed on Hotel Establishment sales to seven percent (7%), and",
+    "Fee imposed on Hotel Establishment sales to 3.5%"
+   ],
+   "ref": "trips/s-843db84a80e6/2026-11-25T05:19:46Z",
+   "run_id": "20261125T051723Z",
+   "sha256": "65b0d16a006d0af80565d66973532b33b8ab3189f2055618af577a3913549956",
+   "status": "verified"
   }
  ],
  "source_id": "s-843db84a80e6",

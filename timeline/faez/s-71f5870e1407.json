@@ -30,6 +30,21 @@
    "run_id": "20261124T181644Z",
    "sha256": "ebeeab19c22656c843ad0ea9ea6d195a23b669d61e4063fa86821a58bea7c799",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-25T05:23:32Z",
+   "http_status": 200,
+   "payload_sha256": "00fd95baec661ad91a13032e9afd82cedb1ab2d8bad058295409cc4f913ccc93",
+   "quotes": [
+    "https://www.difc.com/business/public-register"
+   ],
+   "ref": "faez/s-71f5870e1407/2026-11-25T05:23:32Z",
+   "run_id": "20261125T051723Z",
+   "sha256": "ebeeab19c22656c843ad0ea9ea6d195a23b669d61e4063fa86821a58bea7c799",
+   "status": "verified"
   }
  ],
  "source_id": "s-71f5870e1407",

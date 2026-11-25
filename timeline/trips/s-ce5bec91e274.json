@@ -85,6 +85,23 @@
    "run_id": "20261124T181644Z",
    "sha256": "eb5509d61a942f9cf0bf0da92ac1319142de2efac5d69e7acc461c2dada2fdab",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-25T05:19:46Z",
+   "http_status": 200,
+   "payload_sha256": "890ecf9ba929ed9e0a32c5c07df758ce808e8f4931bb681debec4d1fa83fc94d",
+   "quotes": [
+    "Article (3) of the above-mentioned Executive Council Resolution No. (2) of 2014 is hereby superseded by the following",
+    "for a maximum of thirty (30) consecutive nights, be charged the",
+    "in accordance with the amounts indicated in Schedule (1) attached to this Resolution"
+   ],
+   "ref": "trips/s-ce5bec91e274/2026-11-25T05:19:46Z",
+   "run_id": "20261125T051723Z",
+   "sha256": "eb5509d61a942f9cf0bf0da92ac1319142de2efac5d69e7acc461c2dada2fdab",
+   "status": "verified"
   }
  ],
  "source_id": "s-ce5bec91e274",

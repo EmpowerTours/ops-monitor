@@ -60,6 +60,21 @@
    "run_id": "20261124T181644Z",
    "sha256": "1e3144426efac738375930d854c4f0d52dd743e035edc97444f50346f02cbc32",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-25T05:23:32Z",
+   "http_status": 200,
+   "payload_sha256": "0218ee5b1d070bfcb8582f84a6455ad2eff9d0c62db5afb5780f17452bdde352",
+   "quotes": [
+    "Public register Search our register of DMCC entities"
+   ],
+   "ref": "faez/s-7db47f38b8f7/2026-11-25T05:23:32Z",
+   "run_id": "20261125T051723Z",
+   "sha256": "1e3144426efac738375930d854c4f0d52dd743e035edc97444f50346f02cbc32",
+   "status": "verified"
   }
  ],
  "source_id": "s-7db47f38b8f7",

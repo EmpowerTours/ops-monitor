@@ -128,6 +128,22 @@
    "run_id": "20261124T181644Z",
    "sha256": "14433364e71a3ee32a4f54b77ef31de75e851c0bb25cbbd906d47f180b868005",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-25T05:33:23Z",
+   "http_status": 200,
+   "payload_sha256": "33e8c48810b9a584cc527b059b0f51d21d2493db69c872cd43bb8aec2715c50c",
+   "quotes": [
+    "Items do not need label assessment",
+    "ZAD Certification"
+   ],
+   "ref": "cosecha/s-e8cea5089e04/2026-11-25T05:33:23Z",
+   "run_id": "20261125T051723Z",
+   "sha256": "14433364e71a3ee32a4f54b77ef31de75e851c0bb25cbbd906d47f180b868005",
+   "status": "verified"
   }
  ],
  "source_id": "s-e8cea5089e04",

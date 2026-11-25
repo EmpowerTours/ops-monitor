@@ -128,6 +128,22 @@
    "run_id": "20261124T181644Z",
    "sha256": "89b4abbfdbfc6d205ffd7e943e6bbfe7a50acc555e75871009b78999aa81fea7",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-25T05:33:23Z",
+   "http_status": 200,
+   "payload_sha256": "18b2bb8588640d68cdc70a70b6c50250a45c91b52732fa97a2cfa6e29a5f2dce",
+   "quotes": [
+    "Labels must be in Arabic only or Arabic/English.",
+    "The minimum information requirements for the Arabic label or sticker are:"
+   ],
+   "ref": "cosecha/s-8a445c25616a/2026-11-25T05:33:23Z",
+   "run_id": "20261125T051723Z",
+   "sha256": "89b4abbfdbfc6d205ffd7e943e6bbfe7a50acc555e75871009b78999aa81fea7",
+   "status": "verified"
   }
  ],
  "source_id": "s-8a445c25616a",

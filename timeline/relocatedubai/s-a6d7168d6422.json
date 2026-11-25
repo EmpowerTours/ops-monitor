@@ -64,6 +64,22 @@
    "run_id": "20261124T181644Z",
    "sha256": "e000a421e2c00b743de930a566d28e08c0235dd14b4cbd12b43fd1c2f9c0e203",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-25T05:24:07Z",
+   "http_status": 200,
+   "payload_sha256": "068e127d77a65ecbc84f473251e7680cb7d65a12c69e1451df94f80ec37e18b1",
+   "quotes": [
+    "Open your account in just a few days.",
+    "Minimum average monthly balance of just 25,000"
+   ],
+   "ref": "relocatedubai/s-a6d7168d6422/2026-11-25T05:24:07Z",
+   "run_id": "20261125T051723Z",
+   "sha256": "e000a421e2c00b743de930a566d28e08c0235dd14b4cbd12b43fd1c2f9c0e203",
+   "status": "verified"
   }
  ],
  "source_id": "s-a6d7168d6422",
