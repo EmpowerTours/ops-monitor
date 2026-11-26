@@ -1,16 +1,70 @@
 {
   "apps": {
     "asas": {
-      "cert_days": 72,
+      "cert_days": 71,
       "down_since": null,
       "issue": null,
-      "ms": 364,
+      "ms": 355,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "cosecha": {
-      "cert_days": 73,
+      "cert_days": 72,
+      "down_since": null,
+      "issue": null,
+      "ms": 215,
+      "reasons": [],
+      "since": "2026-11-19T04:56:36Z",
+      "status": "up"
+    },
+    "demo-studio": {
+      "cert_days": 82,
+      "down_since": null,
+      "issue": null,
+      "ms": 158,
+      "reasons": [],
+      "since": "2026-11-19T04:56:36Z",
+      "status": "up"
+    },
+    "faez": {
+      "cert_days": 58,
+      "down_since": null,
+      "issue": null,
+      "ms": 194,
+      "reasons": [],
+      "since": "2026-11-19T04:56:36Z",
+      "status": "up"
+    },
+    "haqiqi": {
+      "cert_days": 70,
+      "down_since": null,
+      "issue": null,
+      "ms": 152,
+      "reasons": [],
+      "since": "2026-11-19T04:56:36Z",
+      "status": "up"
+    },
+    "hunt-dubai": {
+      "cert_days": 63,
+      "down_since": null,
+      "issue": null,
+      "ms": 258,
+      "reasons": [],
+      "since": "2026-11-19T04:56:36Z",
+      "status": "up"
+    },
+    "relocatedubai": {
+      "cert_days": 64,
+      "down_since": null,
+      "issue": null,
+      "ms": 177,
+      "reasons": [],
+      "since": "2026-11-19T04:56:36Z",
+      "status": "up"
+    },
+    "sawweeli-hub": {
+      "cert_days": 78,
       "down_since": null,
       "issue": null,
       "ms": 218,
@@ -18,71 +72,17 @@
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
-    "demo-studio": {
-      "cert_days": 83,
-      "down_since": null,
-      "issue": null,
-      "ms": 175,
-      "reasons": [],
-      "since": "2026-11-19T04:56:36Z",
-      "status": "up"
-    },
-    "faez": {
-      "cert_days": 59,
-      "down_since": null,
-      "issue": null,
-      "ms": 217,
-      "reasons": [],
-      "since": "2026-11-19T04:56:36Z",
-      "status": "up"
-    },
-    "haqiqi": {
-      "cert_days": 71,
-      "down_since": null,
-      "issue": null,
-      "ms": 206,
-      "reasons": [],
-      "since": "2026-11-19T04:56:36Z",
-      "status": "up"
-    },
-    "hunt-dubai": {
-      "cert_days": 64,
-      "down_since": null,
-      "issue": null,
-      "ms": 193,
-      "reasons": [],
-      "since": "2026-11-19T04:56:36Z",
-      "status": "up"
-    },
-    "relocatedubai": {
+    "sawweeli-trips": {
       "cert_days": 65,
       "down_since": null,
       "issue": null,
-      "ms": 244,
-      "reasons": [],
-      "since": "2026-11-19T04:56:36Z",
-      "status": "up"
-    },
-    "sawweeli-hub": {
-      "cert_days": 80,
-      "down_since": null,
-      "issue": null,
-      "ms": 206,
-      "reasons": [],
-      "since": "2026-11-19T04:56:36Z",
-      "status": "up"
-    },
-    "sawweeli-trips": {
-      "cert_days": 66,
-      "down_since": null,
-      "issue": null,
-      "ms": 200,
+      "ms": 207,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     }
   },
-  "last_summary": "2026-11-25",
+  "last_summary": "2026-11-26",
   "outages": [
     {
       "app": "alert-test",
@@ -92,6 +92,6 @@
   ],
   "records_alerts": {},
   "spend_alerts": {},
-  "updated": "2026-11-25T14:01:02Z",
+  "updated": "2026-11-26T20:31:42Z",
   "watch_alerts": {}
 }
