@@ -102,6 +102,41 @@ commented on while it lasts, and closed when it clears:
 - The hub reports the worker's refill and cap alerts for 24 h after the last
   one, so `REFILL` can stay open up to a day after a refill.
 
+## Monad records (every app, no key)
+
+Every run also reads each app's records health with no token or key. The relayer
+addresses are public (`relayer` on each app in `checks.json`):
+
+- **Balance:** `eth_getBalance` for each relayer on the public Monad RPC
+  (`MONAD_RPC_URL`, default `https://rpc.monad.xyz`). Before any balance is
+  read, the run checks that the chain id is 143; any other chain reads nothing.
+- **Records block:** the `records` block of the app's public `/readyz`
+  (faez#75, hunt-dubai#34, landing-dubai#35). It has the hub's fields plus
+  `cap_mon`, `relayer` and `chain_id`.
+
+Each condition gets one issue `RECORDS <KIND>: <app>` labelled `records`. It
+is reused if already open, not commented on while it lasts, and closed when it
+clears:
+
+| kind | opens when |
+|---|---|
+| `LOW FUNDS` | the relayer's balance on chain is under 15 MON (the refill threshold) |
+| `RESERVE` | the balance is within 0.1 MON of the 10 MON reserve: anchoring is paused |
+| `CAP` | the app's block says the daily MON cap was hit and records are waiting |
+| `STUCK` | a record has waited more than 1 h, counted from `records_activated_at` |
+
+- **Nothing opens for an app until its `records_activated_at` is set** (an
+  RFC 3339 time, when its relayer went live on ProofAnchor). Relayers hold
+  nothing before that, so an unfunded relayer is expected. The balance still
+  shows in the run summary and the daily summary.
+- **Unreadable input:** a balance that cannot be read, or a block that is
+  unreadable (`{"error": ...}`, a bad shape, an HTTP error), changes nothing
+  for its kinds.
+- **No block:** a `/readyz` without a `records` block, or a text `/readyz`,
+  means the app's record layer is off. `CAP` and `STUCK` then close.
+- **The hub:** its conditions stay with the `OPS_TOKEN` path above. Here it
+  only shows its balance.
+
 ## Source watch
 
 Daily, a second workflow (`source-watch.yml`, dispatched by the same Worker at 05:17 UTC) checks

@@ -6,7 +6,9 @@
     "healthz": "/healthz",
     "keyword": "Asas",
     "readyz": "/readyz",
-    "sources_status": "/.well-known/sources-status.json"
+    "sources_status": "/.well-known/sources-status.json",
+    "relayer": "0xAFe6b0018d4175711505b03A541f254CB8FDC064",
+    "records_activated_at": null
   },
   {
     "app": "faez",
@@ -15,7 +17,9 @@
     "healthz": "/healthz",
     "keyword": "Faez",
     "readyz": "/readyz",
-    "sources_status": "/.well-known/sources-status.json"
+    "sources_status": "/.well-known/sources-status.json",
+    "relayer": "0x892B282bA8E74cdDd5E5A5a584110aCB59f819B7",
+    "records_activated_at": null
   },
   {
     "app": "cosecha",
@@ -24,7 +28,9 @@
     "healthz": "/healthz",
     "keyword": "Cosecha",
     "readyz": "/readyz",
-    "sources_status": "/.well-known/sources-status.json"
+    "sources_status": "/.well-known/sources-status.json",
+    "relayer": "0x8F3241076A75817e75B242757831694b5b50c07a",
+    "records_activated_at": null
   },
   {
     "app": "haqiqi",
@@ -33,7 +39,9 @@
     "healthz": "/healthz",
     "keyword": "Haqiqi",
     "readyz": "/readyz",
-    "sources_status": "/.well-known/sources-status.json"
+    "sources_status": "/.well-known/sources-status.json",
+    "relayer": "0xcd6F5a56b8B7b3361e26705BC66D021B197c2623",
+    "records_activated_at": null
   },
   {
     "app": "relocatedubai",
@@ -42,7 +50,9 @@
     "healthz": "/healthz",
     "keyword": "RelocateDubai",
     "readyz": "/readyz",
-    "sources_status": "/.well-known/sources-status.json"
+    "sources_status": "/.well-known/sources-status.json",
+    "relayer": "0x50428d62E61B2c2Db1346Fd34a05932613FB3672",
+    "records_activated_at": null
   },
   {
     "app": "hunt-dubai",
@@ -51,7 +61,9 @@
     "healthz": "/healthz",
     "keyword": "Hunt Dubai",
     "readyz": "/readyz",
-    "sources_status": "/.well-known/sources-status.json"
+    "sources_status": "/.well-known/sources-status.json",
+    "relayer": "0xB258aE31349fc7D450C52B29a84C9cF99C1d2F21",
+    "records_activated_at": null
   },
   {
     "app": "sawweeli-trips",
@@ -60,7 +72,9 @@
     "healthz": "/healthz",
     "keyword": "Sawweeli Trips",
     "readyz": "/readyz",
-    "sources_status": "/.well-known/sources-status.json"
+    "sources_status": "/.well-known/sources-status.json",
+    "relayer": "0xFcb98729456c49967D0A99D9C7eBEDE2e7d6bCCC",
+    "records_activated_at": null
   },
   {
     "app": "sawweeli-hub",
@@ -70,7 +84,8 @@
     "healthz_keyword": "\"ok\":true",
     "keyword": "Sawweeli",
     "sources_status": "/.well-known/sources-status.json",
-    "records_activated_at": null
+    "records_activated_at": null,
+    "relayer": "0xc4f1cCB74A75E84f5f9b6fC7dE45f6C329Fa9555"
   },
   {
     "app": "demo-studio",
