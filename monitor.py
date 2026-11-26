@@ -502,7 +502,7 @@ def process_records_alerts(gh: Any, state: dict[str, Any], r: dict[str, Any] | N
         return
     stamp = iso(now)
     conds = {} if r is None else records_conditions(r, now, activated_at)
-    for key in list(alerts):
+    for key in [k for k in alerts if k.startswith(RECORDS_APP + "/")]:  # other apps: process_relayer_alerts
         kind = key.split("/", 1)[1]
         if kind in conds:
             continue
@@ -533,6 +533,211 @@ def process_records_alerts(gh: Any, state: dict[str, Any], r: dict[str, Any] | N
             print(f"opened/updated records issue #{num} ({key})")
         except RuntimeError as e:
             errors.append(str(e))
+
+# ------------------------------------------------------- Monad records (every app, no key)
+# Each app's relayer is read straight from the public Monad RPC (eth_getBalance, chain 143 checked first), and each
+# app's public /readyz `records` block (faez#75, hunt-dubai#34, landing-dubai#35; same fields as the hub's
+# /api/ops/spend `records` section plus cap_mon). No key or token: addresses and blocks are public. Nothing opens
+# before an app's `records_activated_at` is set in checks.json (relayers are unfunded until then). The hub's
+# conditions stay with process_records_alerts (OPS_TOKEN); here the hub's balance is only reported.
+MONAD_RPC_URL = os.environ.get("MONAD_RPC_URL", "https://rpc.monad.xyz")
+MONAD_CHAIN_ID = 143
+RELAYER_ACTION = {
+    "low_funds": "Fund this app's relayer (runbook: back to 30 MON, 40 on sawweeli-trips). The app keeps sending "
+                 "until the 10 MON reserve.",
+    "reserve": "Anchoring is paused: nothing is sent that would take the relayer under the 10 MON reserve. Records "
+               "queue and nothing is lost. Fund the relayer now.",
+    "cap": "Nothing is lost: records keep queueing and go out after 00:00 UTC. Raise PROOF_DAILY_CAP_MON on the "
+           "app's service only if the volume is expected.",
+    "stuck": "Check the app's logs (RPC, relayer activation on ProofAnchor, contract address) and the cap and "
+             "reserve issues, which also hold records back.",
+}
+RELAYER_TITLE = {"low_funds": "LOW FUNDS", "reserve": "RESERVE", "cap": "CAP", "stuck": "STUCK"}
+
+
+def rpc_call(method: str, params: list[Any]) -> Any:
+    """One JSON-RPC call to MONAD_RPC_URL. Raises RuntimeError with the method and the error kind only."""
+    body = json.dumps({"jsonrpc": "2.0", "id": 1, "method": method, "params": params}).encode()
+    req = urllib.request.Request(MONAD_RPC_URL, data=body, method="POST",
+                                 headers={"Content-Type": "application/json", "User-Agent": USER_AGENT})
+    try:
+        with urllib.request.urlopen(req, timeout=TIMEOUT_S, context=SSL_CTX) as resp:
+            out = json.loads(resp.read(MAX_BODY) or b"null")
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"rpc {method}: HTTP {e.code}") from None
+    except (urllib.error.URLError, socket.timeout, TimeoutError, OSError, ValueError) as e:
+        raise RuntimeError(f"rpc {method}: {type(e).__name__}") from None
+    if not isinstance(out, dict) or "result" not in out:
+        raise RuntimeError(f"rpc {method}: no result")
+    return out["result"]
+
+
+def relayer_balances(addrs: list[str]) -> tuple[dict[str, float | None], str | None]:
+    """Balances in MON at the latest block, after checking the RPC is Monad mainnet. ({}, reason) when the chain
+    cannot be read or is another chain; a single bad answer is None (unknown) for that address only."""
+    try:
+        chain = rpc_call("eth_chainId", [])
+        if not isinstance(chain, str) or int(chain, 16) != MONAD_CHAIN_ID:
+            return {}, f"rpc is chain {chain}, not Monad mainnet ({MONAD_CHAIN_ID})"
+    except (RuntimeError, ValueError) as e:
+        return {}, str(e)
+    out: dict[str, float | None] = {}
+    for a in addrs:
+        try:
+            v = rpc_call("eth_getBalance", [a, "latest"])
+            out[a] = int(v, 16) / 10 ** 18
+        except (RuntimeError, ValueError, TypeError):
+            out[a] = None
+    return out, None
+
+
+def parse_app_records(app: str, data: Any) -> dict[str, Any] | None:
+    """The `records` block of an app's /readyz. None: no block (the app's record layer is off). {"error"}: unreadable.
+    Otherwise the hub's normalized fields plus cap_mon (None when not stated)."""
+    if not isinstance(data, dict):
+        return {"error": f"{app}: /readyz body is not a JSON object"}
+    if "records" not in data:
+        return None
+    r = parse_hub_records(data)
+    if r is not None and "error" in r:
+        return {"error": app + r["error"][len("hub"):]}
+    assert r is not None
+    r["cap_mon"] = _num(data["records"].get("cap_mon"))
+    return r
+
+
+def collect_relayers(checks: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """One row per check with a `relayer`: chain balance, the /readyz records block (apps with `readyz` only; the
+    hub reports through OPS_TOKEN) and the activation time from checks.json."""
+    rcs = [c for c in checks if c.get("relayer")]
+    if not rcs:
+        return []
+    balances, berr = relayer_balances([c["relayer"] for c in rcs])
+
+    def one(c: dict[str, Any]) -> dict[str, Any]:
+        records: dict[str, Any] | None = None
+        if c.get("readyz"):
+            parts = urlsplit(c["url"])
+            res = fetch(urljoin(f"{parts.scheme}://{parts.netloc}", c["readyz"]))
+            if res["status"] != 200:
+                records = {"error": f"{c['app']}: /readyz " + (res["error"] or f"HTTP {res['status']}")}
+            else:
+                try:
+                    records = parse_app_records(c["app"], json.loads(res["body"] or "null"))
+                except ValueError:  # a text /readyz (asas, haqiqi today) carries no records block
+                    records = None
+        active, cfg_err = None, None
+        if c.get("records_activated_at"):
+            try:
+                active = parse_any_iso(str(c["records_activated_at"]))
+            except ValueError:
+                cfg_err = "checks.json: records_activated_at is not a time; alerts for this app are off"
+        bal = balances.get(c["relayer"])
+        return {"app": c["app"], "relayer": c["relayer"], "balance_mon": bal,
+                "balance_error": berr or (None if bal is not None else "balance not read"),
+                "records": records, "activated_at": active, "config_error": cfg_err}
+
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        return list(pool.map(one, rcs))
+
+
+def relayer_conditions(r: dict[str, Any], now: dt.datetime) -> dict[str, str]:
+    """Alert kind -> reason, for an activated app only. low_funds: chain balance under the refill threshold;
+    reserve: at the 10 MON reserve (anchoring paused); cap: the daily MON cap was hit and records wait; stuck: a
+    record waited over RECORDS_STUCK_MIN since activation. Unknown inputs open nothing."""
+    out: dict[str, str] = {}
+    active = r.get("activated_at")
+    if active is None:
+        return out
+    bal = r.get("balance_mon")
+    if bal is not None:
+        if bal < RECORDS_REFILL_MON:
+            out["low_funds"] = f"the relayer holds {bal:g} MON on Monad, under the {RECORDS_REFILL_MON:g} MON refill threshold"
+        if bal < RECORDS_RESERVE_MON + RECORDS_RESERVE_MARGIN_MON:
+            out["reserve"] = f"the relayer holds {bal:g} MON, at the {RECORDS_RESERVE_MON:g} MON reserve: anchoring is paused"
+    rec = r.get("records")
+    if rec is not None and "error" not in rec and rec["waiting"] > 0:
+        if rec["cap_alert"]:
+            cap = f" of {rec['cap_mon']:g}" if rec.get("cap_mon") is not None else ""
+            out["cap"] = (f"the daily MON cap was hit (spent today: {rec['spent_mon']:g}{cap} MON); {rec['waiting']} "
+                          "record(s) wait for the next UTC day")
+        stuck_min = min(rec["oldest_waiting_min"], (now - active).total_seconds() / 60)
+        if stuck_min > RECORDS_STUCK_MIN:
+            out["stuck"] = (f"{rec['waiting']} record(s) not anchored; the oldest has waited "
+                            f"{fmt_duration(stuck_min * 60)} since anchoring was activated")
+    return out
+
+
+def relayer_unknown(r: dict[str, Any]) -> set[str]:
+    """Kinds whose input could not be read this run: their issues stay as they are."""
+    out: set[str] = set()
+    if r.get("balance_mon") is None:
+        out |= {"low_funds", "reserve"}
+    rec = r.get("records")
+    if rec is not None and "error" in rec:
+        out |= {"cap", "stuck"}
+    return out
+
+
+def relayer_line(r: dict[str, Any]) -> str:
+    bal = f"{r['balance_mon']:g} MON" if r.get("balance_mon") is not None else f"balance unknown ({r.get('balance_error')})"
+    rec = r.get("records")
+    if rec is None:
+        rtxt = "records via the hub" if r["app"] == RECORDS_APP else "no records block (layer off)"
+    elif "error" in rec:
+        rtxt = f"records unavailable ({rec['error']})"
+    else:
+        cap = f"/{rec['cap_mon']:g}" if rec.get("cap_mon") is not None else ""
+        rtxt = (f"{rec['spent_mon']:g}{cap} MON spent today, {rec['anchors']} anchor(s), {rec['waiting']} waiting "
+                f"(oldest {rec['oldest_waiting_min']:.0f} min)")
+    act = "" if r.get("activated_at") else "; not activated (no alerts)"
+    return f"{r['app']}: relayer {bal}; {rtxt}{act}"
+
+
+def process_relayer_alerts(gh: Any, state: dict[str, Any], rows: list[dict[str, Any]], now: dt.datetime,
+                           errors: list[str]) -> None:
+    """One issue "RECORDS <KIND>: <app>" (label `records`) per active condition, keyed "<app>/<kind>" next to the
+    hub's keys in records_alerts. Reused if already open, not commented on while it lasts, closed when it clears.
+    An input that could not be read changes nothing for its kinds. The hub's own keys are never touched here."""
+    alerts: dict[str, Any] = state.setdefault("records_alerts", {})
+    stamp = iso(now)
+    for r in rows:
+        app = r["app"]
+        if app == RECORDS_APP:
+            continue
+        if r.get("config_error"):
+            errors.append(r["config_error"])
+        conds, unknown = relayer_conditions(r, now), relayer_unknown(r)
+        for key in [k for k in alerts if k.split("/", 1)[0] == app]:
+            kind = key.split("/", 1)[1]
+            if kind in conds or kind in unknown:
+                continue
+            try:
+                gh.comment(alerts[key]["issue"], f"Cleared ({relayer_line(r)}) at {stamp}. Closing.")
+                gh.close(alerts[key]["issue"])
+                print(f"closed records issue #{alerts[key]['issue']} ({key})")
+                del alerts[key]
+            except RuntimeError as e:
+                errors.append(str(e))
+        for kind, reason in conds.items():
+            key = f"{app}/{kind}"
+            if key in alerts:
+                continue
+            title = f"RECORDS {RELAYER_TITLE[kind]}: {app}"
+            body = (f"**{app}** Monad records: {reason}.\n\n{RELAYER_ACTION[kind]}\n\nReading at {stamp}: {relayer_line(r)}."
+                    f"\n\nRelayer `{r['relayer']}` (balance read from {MONAD_RPC_URL}, chain {MONAD_CHAIN_ID}). This issue "
+                    "closes automatically when the condition clears.")
+            try:
+                existing = gh.find_open_issue(title, RECORDS_LABEL)
+                if existing:
+                    gh.comment(existing, f"Again at {stamp}: {reason}.")
+                    num = existing
+                else:
+                    num = gh.create_issue(title, body, [RECORDS_LABEL])
+                alerts[key] = {"issue": num, "since": stamp}
+                print(f"opened/updated records issue #{num} ({key})")
+            except RuntimeError as e:
+                errors.append(str(e))
 
 
 def voice_keepalive(token: str) -> str:
@@ -675,7 +880,7 @@ def table(results: list[dict[str, Any]]) -> str:
 def summary_body(checks: list[dict[str, Any]], results: dict[str, dict[str, Any]],
                  state: dict[str, Any], samples: dict[str, list[list[Any]]], now: dt.datetime,
                  spend_rows: list[dict[str, Any]] | None = None, keepalive: str | None = None,
-                 records: dict[str, Any] | None = None) -> str:
+                 records: dict[str, Any] | None = None, relayers: list[dict[str, Any]] | None = None) -> str:
     lines = [f"**Daily status, {now.strftime('%Y-%m-%d %H:%M')} UTC** (last 24 h)", "",
              "| app | uptime 24h | avg ms | max ms | cert days | now |", "|---|---|---|---|---|---|"]
     slowest: tuple[str, float] | None = None
@@ -709,6 +914,9 @@ def summary_body(checks: list[dict[str, Any]], results: dict[str, dict[str, Any]
                       f"an alert opens at {SPEND_ALERT_PCT:.0f}%)", "", spend_table(spend_rows)]
     if records is not None:
         lines += ["", f"**Monad records (hub):** {records_line(records)}"]
+    if relayers:
+        lines += ["", "**Monad records, per app (relayer balance on chain, /readyz block):**", ""]
+        lines += [f"- {relayer_line(r)}" for r in relayers]
     if keepalive:
         lines += ["", f"Voice keep-alive: {keepalive}"]
     return "\n".join(lines)
@@ -841,11 +1049,17 @@ def main() -> int:
     print(stbl, flush=True)
     if ops_token:
         print(f"Monad records: {records_line(records)}", flush=True)
+    # Monad records per app, with no key: relayer balances from the public RPC, /readyz records blocks.
+    relayers = collect_relayers(checks)
+    for r in relayers:
+        print(f"Monad records: {relayer_line(r)}", flush=True)
     if summary_path:
         with open(summary_path, "a", encoding="utf-8") as f:
             f.write(f"\nGap since the previous run: {gap_note}\n\n### AI spend\n\n{stbl}\n")
             if ops_token:
                 f.write(f"\n### Monad records\n\n{records_line(records)}\n")
+            if relayers:
+                f.write("\n### Monad records per app\n\n" + "".join(f"- {relayer_line(r)}\n" for r in relayers))
 
     token = os.environ.get("GITHUB_TOKEN")
     repo = os.environ.get("GITHUB_REPOSITORY")
@@ -950,6 +1164,13 @@ def main() -> int:
         except RuntimeError as e:
             errors.append(str(e))
 
+    if relayers:
+        try:
+            gh.ensure_label(RECORDS_LABEL, "0e8a16", "Monad records: relayer refill, reserve, daily cap, stuck records")
+            process_relayer_alerts(gh, state, relayers, now, errors)
+        except RuntimeError as e:
+            errors.append(str(e))
+
     # source watch dead-man switch: apps that serve /.well-known/sources-status.json
     watch_checks = [c for c in checks if c.get("sources_status")]
     if watch_checks:
@@ -975,7 +1196,7 @@ def main() -> int:
                 gh.try_pin(num)
             keepalive = voice_keepalive(ops_token) if ops_token else None
             gh.comment(num, summary_body(checks, results, state, samples, now, spend_rows, keepalive,
-                                         records if ops_token else None))
+                                         records if ops_token else None, relayers))
             if not force:  # a manual summary does not replace the scheduled one
                 state["last_summary"] = today
             print(f"posted daily summary to issue #{num}")
