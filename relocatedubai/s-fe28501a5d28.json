@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-25T17:40:06Z",
+ "fetched_at": "2026-11-26T17:21:20Z",
  "id": "s-fe28501a5d28",
- "last_read_fetched_at": "2026-11-25T17:40:06Z",
+ "last_read_fetched_at": "2026-11-26T17:21:20Z",
  "manifest_fingerprint": "de9bfbc35d4199a24f901de5b90499248b283f843b988e1cd95a62ce88581106",
- "run_id": "20261125T173639Z",
- "sha256": "892ade340f3347db165656cc477abf756e33770ca84996b258956c107911f0d3",
+ "run_id": "20261126T171752Z",
+ "sha256": "7b2357563dc98db280829d0caf8ee8a68c11850fce7cddd6fee0ca07aac838eb",
  "status": "changed_quote_ok",
  "url": "https://icp.gov.ae/en/services/uae-green-residency/"
 }

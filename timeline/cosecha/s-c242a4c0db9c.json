@@ -135,6 +135,21 @@
    "run_id": "20261125T173639Z",
    "sha256": "5bc575d4915009ea7990bc80095c229da929414f4dbc19c8f34e265f3a15fa93",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-26T17:33:43Z",
+   "http_status": 200,
+   "payload_sha256": "82c6db278696746cff813400bf93e975519a950c59d8ef0939350828966c6f35",
+   "quotes": [
+    "ECAS Product Type Honey"
+   ],
+   "ref": "cosecha/s-c242a4c0db9c/2026-11-26T17:33:43Z",
+   "run_id": "20261126T171752Z",
+   "sha256": "5bc575d4915009ea7990bc80095c229da929414f4dbc19c8f34e265f3a15fa93",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-c242a4c0db9c",

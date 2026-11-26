@@ -153,6 +153,23 @@
    "run_id": "20261125T173639Z",
    "sha256": "b957f8d370c72ed0b385edfbe14370f13532f48816313a3ce451ab8a7455a5cc",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-26T17:20:07Z",
+   "http_status": 200,
+   "payload_sha256": "db506d65d0322380ace210df1153eaa011f2b5437ef736dc05d475e3cca9839c",
+   "quotes": [
+    "A document issued by the DTCM stating that the DTCM approves that a furnished real property unit be designated as a Holiday Home",
+    "A Permit will be valid for a term of one (1) year",
+    "include the Licensee's approved trade name and Permit number in all print and digital advertisements"
+   ],
+   "ref": "trips/s-5083796f7bc8/2026-11-26T17:20:07Z",
+   "run_id": "20261126T171752Z",
+   "sha256": "b957f8d370c72ed0b385edfbe14370f13532f48816313a3ce451ab8a7455a5cc",
+   "status": "verified"
   }
  ],
  "source_id": "s-5083796f7bc8",

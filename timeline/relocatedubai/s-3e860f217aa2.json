@@ -90,6 +90,21 @@
    "run_id": "20261125T173639Z",
    "sha256": "670da84c1d9da018e6c6844b6e44275c60d82ef16abec4cc178c5d3552071a67",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-26T17:21:20Z",
+   "http_status": 200,
+   "payload_sha256": "d394123345a42ae38e2f5fa49f9c84ab4a7e9911a47e3bd642b999b8cccfbf5d",
+   "quotes": [
+    "a tailored proposal that outlines the best type of license, business activities, visa package, and office solutions."
+   ],
+   "ref": "relocatedubai/s-3e860f217aa2/2026-11-26T17:21:20Z",
+   "run_id": "20261126T171752Z",
+   "sha256": "670da84c1d9da018e6c6844b6e44275c60d82ef16abec4cc178c5d3552071a67",
+   "status": "verified"
   }
  ],
  "source_id": "s-3e860f217aa2",

@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-25T17:39:27Z",
+ "fetched_at": "2026-11-26T17:22:11Z",
  "id": "s-1e9e0319a8c6",
- "last_read_fetched_at": "2026-11-25T17:39:27Z",
+ "last_read_fetched_at": "2026-11-26T17:22:11Z",
  "manifest_fingerprint": "903e4721f8a8c31c72a64f08a62a775f14779b21ff0a12441d741db0fbaf9f5d",
- "run_id": "20261125T173639Z",
+ "run_id": "20261126T171752Z",
  "sha256": "181f32766d82eb515f79ea75e7d358755dfb0666cde55af8e9f96324efca6bc4",
  "status": "verified",
  "url": "https://www.dubaipolice.gov.ae/dpcms/api/news/b3teosejk8zxdntp79i7kpxp?mode=dp&locale=en"

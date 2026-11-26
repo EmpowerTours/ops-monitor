@@ -105,6 +105,21 @@
    "run_id": "20261125T173639Z",
    "sha256": "357f9d5383aa6c22aa69104d99fc0f32c6a8f704c4b8cda8720e1f8aedf164ed",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-26T17:20:07Z",
+   "http_status": 200,
+   "payload_sha256": "48d2c9da9634c8f44127986328147f7d625306da339cfd53073df8ce01e6203c",
+   "quotes": [
+    "If you hold a Mexican passport you're eligible for a multiple entry 180-day visit visa that's valid for 6 months from the date of issue, and for a stay of 180 days in total."
+   ],
+   "ref": "trips/s-02de5aca4efa/2026-11-26T17:20:07Z",
+   "run_id": "20261126T171752Z",
+   "sha256": "357f9d5383aa6c22aa69104d99fc0f32c6a8f704c4b8cda8720e1f8aedf164ed",
+   "status": "verified"
   }
  ],
  "source_id": "s-02de5aca4efa",

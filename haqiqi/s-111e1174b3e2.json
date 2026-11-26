@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-25T17:39:27Z",
+ "fetched_at": "2026-11-26T17:22:11Z",
  "id": "s-111e1174b3e2",
- "last_read_fetched_at": "2026-11-25T17:39:27Z",
+ "last_read_fetched_at": "2026-11-26T17:22:11Z",
  "manifest_fingerprint": "3384de1c750a46a6a973151508c8de9575bf6db64a05cdf8eb18414d3843281c",
- "run_id": "20261125T173639Z",
- "sha256": "2db2b74f52e83c4fb1a519fb0cfc0610a78a5d7e06078471ff004363bb600456",
+ "run_id": "20261126T171752Z",
+ "sha256": "063377268fb95addb6dc9f871f6cd236b5a7e216a1e6ab2668c144fbadc26f2f",
  "status": "changed_quote_ok",
  "url": "https://www.gdrfad.gov.ae/en/announcement"
 }

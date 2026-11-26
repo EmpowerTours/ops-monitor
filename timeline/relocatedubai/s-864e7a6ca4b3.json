@@ -114,6 +114,25 @@
    "run_id": "20261125T173639Z",
    "sha256": "835696db84443b5ab8c5bd0f22b98edb1c20f8ff76e4ef3ef646bdb92c19806d",
    "status": "quote_missing"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": true,
+   "fetched_at": "2026-11-26T17:21:20Z",
+   "http_status": 200,
+   "payload_sha256": "15cb8e6dce741b1c171dba6651416d28a07da0d91f618ca545e07488b20ad210",
+   "quotes": [
+    "Studio apartment AED 40K",
+    "1-bed apartment AED 58K",
+    "2-bed apartment AED 76K",
+    "3-bed apartment AED 120K",
+    "Median Ejari rent, the 12 months to 19 November 2026"
+   ],
+   "ref": "relocatedubai/s-864e7a6ca4b3/2026-11-26T17:21:20Z",
+   "run_id": "20261126T171752Z",
+   "sha256": "c7da4db8d0c416ad8dffb6c4fda23d08455a6d4b54ac690571cbc8254f923521",
+   "status": "quote_missing"
   }
  ],
  "source_id": "s-864e7a6ca4b3",

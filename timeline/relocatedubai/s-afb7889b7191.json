@@ -90,6 +90,21 @@
    "run_id": "20261125T173639Z",
    "sha256": "0a20c4ce9dd4c44d24e8837cf3c5d57f6554a46013a1ac4e4cd4e300d0e8ee9d",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-26T17:21:20Z",
+   "http_status": 200,
+   "payload_sha256": "cf8440c596b7ee9e0c2a2a2f62a6f745fdd66b0169cb47d8cd3fadc1c0f97b23",
+   "quotes": [
+    "The sponsor must have a minimum salary of AED 4,000 or AED 3,000 plus accommodation."
+   ],
+   "ref": "relocatedubai/s-afb7889b7191/2026-11-26T17:21:20Z",
+   "run_id": "20261126T171752Z",
+   "sha256": "0a20c4ce9dd4c44d24e8837cf3c5d57f6554a46013a1ac4e4cd4e300d0e8ee9d",
+   "status": "verified"
   }
  ],
  "source_id": "s-afb7889b7191",

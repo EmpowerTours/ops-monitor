@@ -119,6 +119,23 @@
    "run_id": "20261125T173639Z",
    "sha256": "ce50a07f88d781313ab41a887427136ed4e1841f9faac1b4d7bb0ad4c7032536",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-26T17:20:07Z",
+   "http_status": 200,
+   "payload_sha256": "84852b61ded835222eeb9c7ca395384ac293659112e8abab83043d1b66927bdb",
+   "quotes": [
+    "AED 20 (Normal)",
+    "AED 25 (Van)",
+    "Per KM Rate - AED 2.62"
+   ],
+   "ref": "trips/s-4098f0e154af/2026-11-26T17:20:07Z",
+   "run_id": "20261126T171752Z",
+   "sha256": "ce50a07f88d781313ab41a887427136ed4e1841f9faac1b4d7bb0ad4c7032536",
+   "status": "verified"
   }
  ],
  "source_id": "s-4098f0e154af",

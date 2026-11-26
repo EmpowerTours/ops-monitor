@@ -90,6 +90,21 @@
    "run_id": "20261125T173639Z",
    "sha256": "e403761422b656c349dfc314880ea67ad0c28cbe4e8909c6cc204745d0e13d7a",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-26T17:21:20Z",
+   "http_status": 200,
+   "payload_sha256": "f7b9e43a43ab53528999dc7210f1ac090b3ffe3d44e1c913c977b21e2c4c202a",
+   "quotes": [
+    "Freelance work permit - It is issued to individuals who wish to engage in freelance work independently"
+   ],
+   "ref": "relocatedubai/s-d832c2df53d9/2026-11-26T17:21:20Z",
+   "run_id": "20261126T171752Z",
+   "sha256": "e403761422b656c349dfc314880ea67ad0c28cbe4e8909c6cc204745d0e13d7a",
+   "status": "verified"
   }
  ],
  "source_id": "s-d832c2df53d9",

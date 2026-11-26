@@ -126,6 +126,24 @@
    "run_id": "20261125T173639Z",
    "sha256": "ee77d44ac86afdc58f7907bfa1953df31474c1c325d3f71616e0a4317e303669",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-26T17:20:07Z",
+   "http_status": 200,
+   "payload_sha256": "54baef8cfc8904b62884f2530bff8ec7fe25600c200a8d219f23bd8b5f3e2f9c",
+   "quotes": [
+    "6:00 AM - 10:00PM → AED 5",
+    "10:00 PM - 6:00 AM → AED 5.5",
+    "Per KM Rate: AED 2.45",
+    "The minimum fare for Street Hail 12 AED and 13 AED for E-hail."
+   ],
+   "ref": "trips/s-8ffc75194e66/2026-11-26T17:20:07Z",
+   "run_id": "20261126T171752Z",
+   "sha256": "ee77d44ac86afdc58f7907bfa1953df31474c1c325d3f71616e0a4317e303669",
+   "status": "verified"
   }
  ],
  "source_id": "s-8ffc75194e66",

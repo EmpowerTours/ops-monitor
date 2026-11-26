@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-25T17:38:45Z",
+ "fetched_at": "2026-11-26T17:19:47Z",
  "id": "s-b4b6a09d65c3",
- "last_read_fetched_at": "2026-11-25T17:38:45Z",
+ "last_read_fetched_at": "2026-11-26T17:19:47Z",
  "manifest_fingerprint": "a56cdc566e356c0869a037515d47ad1751409ea118fd9f574b3af4c047a7c624",
- "run_id": "20261125T173639Z",
- "sha256": "834440e6ae06bd50dd6ea3b68bf824622aedfe7debf521e963c79cc129efc508",
+ "run_id": "20261126T171752Z",
+ "sha256": "83d276a3bff7fadb387740977f0daab7330387bdebfd8ec2bb5357e01109cf53",
  "status": "verified",
  "url": "https://api.openstreetmap.org/api/0.6/node/5626394324.json"
 }

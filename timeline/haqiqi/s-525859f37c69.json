@@ -102,6 +102,23 @@
    "run_id": "20261125T173639Z",
    "sha256": "ed1404c683abffcd574a44bc7cac2494f27912b2686e2e0bca52529db9299197",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-26T17:22:11Z",
+   "http_status": 200,
+   "payload_sha256": "b9955ffee8f2c39237bdc44bc25cc8f1c9c2751bca6a1752d888007b044dea2e",
+   "quotes": [
+    "Search By Transaction Number",
+    "Job offer - عرض عمل",
+    "Transaction Number (*) رقم المعاملة"
+   ],
+   "ref": "haqiqi/s-525859f37c69/2026-11-26T17:22:11Z",
+   "run_id": "20261126T171752Z",
+   "sha256": "ed1404c683abffcd574a44bc7cac2494f27912b2686e2e0bca52529db9299197",
+   "status": "verified"
   }
  ],
  "source_id": "s-525859f37c69",

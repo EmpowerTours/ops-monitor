@@ -102,6 +102,23 @@
    "run_id": "20261125T173639Z",
    "sha256": "eb4281975e39e24f0dbf8cf02978cdba2e8efdb4507560da04ac072e8609a0e5",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-26T17:21:20Z",
+   "http_status": 200,
+   "payload_sha256": "74d5735cca819865d95fac145b59b840beb8e25050f8406597ecfc5468810b7a",
+   "quotes": [
+    "a renewable residence visa valid for 5 years",
+    "the ability to sponsor family members, including spouses and children.",
+    "Investors and business partners."
+   ],
+   "ref": "relocatedubai/s-296c8f4f95b6/2026-11-26T17:21:20Z",
+   "run_id": "20261126T171752Z",
+   "sha256": "eb4281975e39e24f0dbf8cf02978cdba2e8efdb4507560da04ac072e8609a0e5",
+   "status": "verified"
   }
  ],
  "source_id": "s-296c8f4f95b6",

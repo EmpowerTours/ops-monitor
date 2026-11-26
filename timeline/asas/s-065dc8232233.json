@@ -114,6 +114,25 @@
    "run_id": "20261125T173639Z",
    "sha256": "854ad12ee80e5b3421fd871e1ad447b271d550ff1884572dd416c919f53409ce",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-26T17:20:33Z",
+   "http_status": 200,
+   "payload_sha256": "93c8b226f4bf1cedb1040921521f2d3c367ae869b017a9c5a1768ff4a93b416b",
+   "quotes": [
+    "The starting cost is AED 12,500 for a business license, including company registration.",
+    "Additional services such as immigration or establishment card, company stamp, visa allocation, and residency visas are available on a pay-as-you-go basis and are not charged upfront.",
+    "Your business license ready in 24 hours from our digital portal",
+    "No relocation or UAE residency required for international founders.",
+    "low cost Dubai trade license with flexi desk office solution, from day one"
+   ],
+   "ref": "asas/s-065dc8232233/2026-11-26T17:20:33Z",
+   "run_id": "20261126T171752Z",
+   "sha256": "854ad12ee80e5b3421fd871e1ad447b271d550ff1884572dd416c919f53409ce",
+   "status": "verified"
   }
  ],
  "source_id": "s-065dc8232233",

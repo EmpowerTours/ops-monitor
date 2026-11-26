@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-25T17:52:39Z",
+ "fetched_at": "2026-11-26T17:33:43Z",
  "id": "s-6e2e45853238",
- "last_read_fetched_at": "2026-11-25T17:52:39Z",
+ "last_read_fetched_at": "2026-11-26T17:33:43Z",
  "manifest_fingerprint": "81a5311b9759b1296cc67c7016619a13bc6034a4ff56dc34759666682df276f2",
- "run_id": "20261125T173639Z",
+ "run_id": "20261126T171752Z",
  "sha256": "b2dacf3483d6a9263079bb2bd65be63c932681691e66244cf3b32adb8a42e25d",
  "status": "changed_quote_ok",
  "url": "https://legal-wires.com/uae/cabinet-resolution-on-the-technical-regulations-for-maximum-residue-limits-for-pesticides-in-agricultural-and-food-products"

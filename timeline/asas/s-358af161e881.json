@@ -102,6 +102,23 @@
    "run_id": "20261125T173639Z",
    "sha256": "c5a8929c5db4680547dcd6773257cb2dabf6c456b29bef751dca8de3e655e3b3",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-26T17:20:33Z",
+   "http_status": 200,
+   "payload_sha256": "b47a17b34d39b17fb79f5f82886b8fc22939d52a5501c79380a205297daf92c2",
+   "quotes": [
+    "if an expatriate resident lives outside the UAE for more than 180 days continuously, his/her residence visa will be nullified automatically.",
+    "A residence visa requires applicants who are 18 and above to undergo a medical test to prove that they are medically fit.",
+    "apply for an Emirates ID card from Federal Authority for Identity and Citizenship"
+   ],
+   "ref": "asas/s-358af161e881/2026-11-26T17:20:33Z",
+   "run_id": "20261126T171752Z",
+   "sha256": "c5a8929c5db4680547dcd6773257cb2dabf6c456b29bef751dca8de3e655e3b3",
+   "status": "verified"
   }
  ],
  "source_id": "s-358af161e881",

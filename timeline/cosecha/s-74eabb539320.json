@@ -280,6 +280,34 @@
    "run_id": "20261125T173639Z",
    "sha256": "c9bea0451a608c24ac3da5cfa769f8a875741d4656b02ef30bf4ea630286ded7",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-26T17:33:43Z",
+   "http_status": 200,
+   "payload_sha256": "dca8843e447f2e0083e8bc5a8f58d3e57dc75f4a0e70ef231528c72e2fdc4234",
+   "quotes": [
+    "Malus domestica (MABSD)",
+    "Citrus x aurantium var. paradisi (CIDPA)",
+    "Psidium guajava (PSIGU)",
+    "Citrus x limon var. meyerii (CIDMY)",
+    "Citrus x aurantiifolia (CIDAF)",
+    "Citrus x aurantiifolia (CIDAF)",
+    "Citrus reticulata (CIDRE)",
+    "Mangifera indica (MNGIN)",
+    "Citrus x aurantium var. sinensis (CIDSI)",
+    "Passiflora edulis (PAQED)",
+    "Prunus persica (PRNPS)",
+    "Pyrus communis (PYUCO)",
+    "Diospyros kaki (DOSKA)",
+    "Punica granatum (PUNGR)"
+   ],
+   "ref": "cosecha/s-74eabb539320/2026-11-26T17:33:43Z",
+   "run_id": "20261126T171752Z",
+   "sha256": "c9bea0451a608c24ac3da5cfa769f8a875741d4656b02ef30bf4ea630286ded7",
+   "status": "verified"
   }
  ],
  "source_id": "s-74eabb539320",
