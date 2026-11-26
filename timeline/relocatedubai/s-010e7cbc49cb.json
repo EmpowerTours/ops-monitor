@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "e0477587259e86466c597b8299df3e7af28254b394ee26762c27145cb181b1d2",
+   "payload_sha256": "4776a859df6852aa2c8e84891977893a17a3cbb249d3a7ecbc9a2ec9a6afd4da",
    "quotes": [
     "From AED 5,750",
     "Choose up to 5 business activities from over 2000 options",
@@ -20,12 +20,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:36Z",
    "http_status": 200,
-   "payload_sha256": "f2c98ee7a20fedfb19a6bc5979688f1196abe7f208b8d03c5db35ba98e2d6ad1",
+   "payload_sha256": "6ac2bb7514f4376d5389ae44975735da81853af593fc0bcf61cd31d4eb627dbe",
    "quotes": [
     "From AED 5,750",
     "Choose up to 5 business activities from over 2000 options",
@@ -38,12 +38,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "d2e86f659120df271f7fec5caf58a62a90c718c8eb38f3ec5f632b1dbd476945",
+   "payload_sha256": "1ca655bda823910bc4cdd5e96fd25b8b0e1c15657bc29545a48864445d6e0969",
    "quotes": [
     "From AED 5,750",
     "Choose up to 5 business activities from over 2000 options",
@@ -56,12 +56,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "e0ac9696a71f3530725f58de2b691d800a562537777883367ddc513a167c5b53",
+   "payload_sha256": "7c39c497f8be36e3b081f541c0871bfd8406db6434dee5022fee6a94e706c4f6",
    "quotes": [
     "From AED 5,750",
     "Choose up to 5 business activities from over 2000 options",
@@ -74,12 +74,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "19a82faf15a103e5a7c357e9af08ab3753f9fd5603bf2c2fd93efcc4ab4c6bf3",
+   "payload_sha256": "e9f8e8c031fa77bcfe264a20f3815b52dece2fbb1dd01eb11d8ef0dfcf83a4ef",
    "quotes": [
     "From AED 5,750",
     "Choose up to 5 business activities from over 2000 options",
@@ -92,12 +92,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "bb23fdd0ed63e748a3f9dfaf6c370cbcd86f8d9d70caf3b78c11f050ce101a6c",
+   "payload_sha256": "a2d098b54c80f860f4b2bead48b53805f6c4f5272c0801e3d44d5640d1ee2a26",
    "quotes": [
     "From AED 5,750",
     "Choose up to 5 business activities from over 2000 options",
@@ -110,12 +110,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-26T17:21:20Z",
    "http_status": 200,
-   "payload_sha256": "1ba8cc09c1a30792d8405c82ab28a0a03135c782ba3ebd98b68ebe67747cf987",
+   "payload_sha256": "de65b8b2dc2713ee79ccd936a6482e67f4bb6f9b40afc80ab355aa2279f4fd0b",
    "quotes": [
     "From AED 5,750",
     "Choose up to 5 business activities from over 2000 options",

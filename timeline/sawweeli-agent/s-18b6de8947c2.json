@@ -111,12 +111,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:20:31Z",
    "http_status": 200,
-   "payload_sha256": "869babaf7da768bd8d92c2b277a5d35174554fb40a00d452f7a95edada5c30bb",
+   "payload_sha256": "3a6d1fefbecc2b15ec555e96d1688045d55271f16d82cc08f4a1e2f82723ef2a",
    "quotes": [
     "Federal Decree Law No. 33 of 2021 Regarding the Regulation of Employment Relationship and its amendments, known as the 'UAE Labour law', governs the labour rights of employees in the private sector.",
     "Federal Decree law No. 20 of 2023 Amending Certain Provisions of Federal Decree Law No. 33 of 2021 Regarding the Regulation of Employment Relationships"

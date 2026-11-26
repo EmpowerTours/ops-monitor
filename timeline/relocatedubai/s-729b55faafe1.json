@@ -122,12 +122,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "296074e9bc34ef5508e41d49b7004490f04dd6ea1c47e31f1b5b482911990311",
+   "payload_sha256": "e4bcc7c44f8067554764a5ccd6e60b478cb34da81e79b83563c8629bba2fd3f7",
    "quotes": [
     "The investor must be a partner in an existing or newly established establishment or company, with a financial share of at least AED 2,000,000.",
     "The invested capital must be fully owned by the investor and must not be derived from a loan.",
@@ -146,12 +146,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-26T17:21:20Z",
    "http_status": 200,
-   "payload_sha256": "14d9c909f7a304a2647e3dcf5db29ef566617a58203fc478822ec74e35968852",
+   "payload_sha256": "7f4bf652670f86df7a6ac61e1571f57de33abc31f33a6560e2890c2e2b597d29",
    "quotes": [
     "The investor must be a partner in an existing or newly established establishment or company, with a financial share of at least AED 2,000,000.",
     "The invested capital must be fully owned by the investor and must not be derived from a loan.",

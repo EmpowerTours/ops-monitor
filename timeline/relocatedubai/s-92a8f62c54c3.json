@@ -80,12 +80,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-26T17:21:20Z",
    "http_status": 0,
-   "payload_sha256": "b03687ef34e6512048b215da3814426980695a63c039f92e29d63266495fd9f8",
+   "payload_sha256": "55bfa8951df895a62d1c135ffd02e55ca5d44aea474498cd4cfcf381258b6106",
    "quotes": [],
    "ref": "relocatedubai/s-92a8f62c54c3/2026-11-26T17:21:20Z",
    "run_id": "20261126T171752Z",

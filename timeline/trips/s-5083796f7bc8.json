@@ -155,12 +155,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261123014120/https://dlp.dubai.gov.ae/Legislation%20Reference/2020/Administrative%20Resolution%20No.%20(1)%20of%202020.html",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:20:07Z",
    "http_status": 200,
-   "payload_sha256": "db506d65d0322380ace210df1153eaa011f2b5437ef736dc05d475e3cca9839c",
+   "payload_sha256": "9e4fc9a15e292d4879d797da666d10f7ca69144011eae5671418cfc24afaa3b0",
    "quotes": [
     "A document issued by the DTCM stating that the DTCM approves that a furnished real property unit be designated as a Holiday Home",
     "A Permit will be valid for a term of one (1) year",

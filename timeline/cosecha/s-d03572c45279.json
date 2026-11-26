@@ -152,12 +152,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
-   "archive_url": "",
+   "archive_status": "unchanged since the archived copy",
+   "archive_url": "https://web.archive.org/web/20261122183045/http://omawww.sat.gob.mx/PadronImportadoresExportadores/Paginas/documentos/Guia_Padron_Exportadores_Sectorial.pdf",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:33:43Z",
    "http_status": 200,
-   "payload_sha256": "af3d679b39b078b1b2574bc247a27e1f39b83fd776383b7b0dbab9d41d720bc1",
+   "payload_sha256": "5104a6a50059a2b4b43d1a011d188e906a4bc2a7be196e32a74630e32060e286",
    "quotes": [
     "del Apartado B del Anexo 10 de las Reglas Generales de Comercio"
    ],

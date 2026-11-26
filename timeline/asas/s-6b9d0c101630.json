@@ -77,12 +77,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T17:39:30Z",
    "http_status": 200,
-   "payload_sha256": "c14c7e1e62fb93317cf3bdc94a8f1b2e68ef7d1d581abe28b6d9fc24a1907d3c",
+   "payload_sha256": "3fb2d9526f5c428ebd7b523b2db86fd2fc763c21a33affcb4b7da841d6b4785a",
    "quotes": [
     "Activity 4721.81 covers the trading of honey and apiary accessories"
    ],
@@ -92,12 +92,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-26T17:20:33Z",
    "http_status": 200,
-   "payload_sha256": "abdf81d947021d270589a69b3bd1101fdfa3eeb8a8f038d598fc177a229feb13",
+   "payload_sha256": "a32fabd1cf5e03cad0923f6c8042ffefc63800d02d1eb6bd5b25b8d189fa0a85",
    "quotes": [
     "Activity 4721.81 covers the trading of honey and apiary accessories"
    ],

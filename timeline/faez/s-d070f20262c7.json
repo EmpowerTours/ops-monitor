@@ -66,12 +66,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T05:23:32Z",
    "http_status": 200,
-   "payload_sha256": "424c865f5a5721e7cbff470a73061e6afe8c7ba58ba1d67c165a11b2118a25be",
+   "payload_sha256": "0a4d27ee5296685d723f8a08237148824e0deb72f8261a5bb6549d49d74cc1b1",
    "quotes": [
     "Home / Contact",
     "Contact Customer Service"
@@ -82,12 +82,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:39:38Z",
    "http_status": 200,
-   "payload_sha256": "be1136deb68f488ddc4ae53fa6e2c0f416ed487f3d182879b277254bfa4baa11",
+   "payload_sha256": "709398b6faf05b1e053faa7f136eeaf468c7a72664d30b2c5850d2ff546ecc5a",
    "quotes": [
     "Home / Contact",
     "Contact Customer Service"
@@ -98,12 +98,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-26T17:20:46Z",
    "http_status": 200,
-   "payload_sha256": "69e6ffda4f6f0bf221d9ea684f166b8436de19c16df1addeb91d04a4bd4e8dc5",
+   "payload_sha256": "26b38fe4dda20655230ef85289ec6b6de559a98494aa632a9e76b146e8088afc",
    "quotes": [
     "Home / Contact",
     "Contact Customer Service"

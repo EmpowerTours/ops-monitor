@@ -152,12 +152,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:33:43Z",
    "http_status": 200,
-   "payload_sha256": "f400e0a6b9b8b05498df50c7cb6111df80b5f8d6516db32da7e67aa3df433bc0",
+   "payload_sha256": "c8e58eb7edfee76cb8753a2ba414764935158d4bb4bd43ee0568e1d8effa3377",
    "quotes": [
     "(Tuta absoluta)"
    ],

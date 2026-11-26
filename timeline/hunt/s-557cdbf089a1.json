@@ -142,12 +142,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:19:47Z",
    "http_status": 200,
-   "payload_sha256": "8f43bd6f6f99ddd5a72ab92136cee8d42e1b77c00b580532b6a1c1bf09d1d127",
+   "payload_sha256": "99321b61c4cc6c28527f9aac1a4badf7dad22774ccd4c743a980dfc0d943bb49",
    "quotes": [
     "حق طلب نقل البيانات الشخصية",
     "وذلك بشكل منظم وقابل للقراءة آليًا",

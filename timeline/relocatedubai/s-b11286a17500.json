@@ -98,12 +98,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:21:20Z",
    "http_status": 200,
-   "payload_sha256": "e595029b12c0eb647eb688f10b523a08ab6ca681aded11cf1a09042864f24577",
+   "payload_sha256": "82b6a0c16c267a684aaac56e22f7972fa6a39fcd84ace49779d29bd92613a96f",
    "quotes": [
     "Single 250 to 450 62 to 112 1,000 to 1,800",
     "Couple 350 to 650 87 to 162 1,400 to 2,600"

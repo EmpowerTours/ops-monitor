@@ -512,12 +512,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:33:43Z",
    "http_status": 200,
-   "payload_sha256": "b080b1f75e7f80db54cd17984f2ca15ec3010e95824deea5459b95ad563ba705",
+   "payload_sha256": "29b152d7cf8cc37464e78b3fa01d29ff4670d92308095434280396c28d31fd6e",
    "quotes": [
     "يحظر دخول أي ارسالية واردة للدولة لا تستوفي ما ورد في المادة الأولى من هذا القرار.",
     "Capsicum annuum Sweet pepper",

@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "09d9c07957ab5f8b862740d93622a5b0f1258d2604f3cb1e502860db3f743c85",
+   "payload_sha256": "75836562ee0d57b8021fd3b9137fb13818b58062893e19a0cf4540883acb767e",
    "quotes": [
     "DLD Customers can scan the QR code on each real estate advertisement to get a glimpse of the property's authorised details and establish if it has been sold or rented."
    ],
@@ -21,12 +21,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:36Z",
    "http_status": 200,
-   "payload_sha256": "567ae746714c89d95e8826cc26f453437a74c04f1246eb4d56c4db4c9773d83d",
+   "payload_sha256": "1ea992e95112f0fe5a77dc8314b361d277e4aa8467bb4859a22a097d49ef9d7b",
    "quotes": [
     "DLD Customers can scan the QR code on each real estate advertisement to get a glimpse of the property's authorised details and establish if it has been sold or rented."
    ],
@@ -40,12 +40,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "ddb04130372117c65ec29eae14ff7f4b74b0fa60729381ec9c04a47fa13fbbcd",
+   "payload_sha256": "59220c82275ac2a67c98882e174ee9d2c3a23c442c10e9b25ece3d39fc1d23c2",
    "quotes": [
     "DLD Customers can scan the QR code on each real estate advertisement to get a glimpse of the property's authorised details and establish if it has been sold or rented."
    ],
@@ -59,12 +59,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "f944774cb102c1b3b7c9633697b7c336b6cf9c54c7e0c76830c60911cb1dac72",
+   "payload_sha256": "2811bd3d312193885378aa414654680f11bcd29b083542eb948a6a6e218616fa",
    "quotes": [
     "DLD Customers can scan the QR code on each real estate advertisement to get a glimpse of the property's authorised details and establish if it has been sold or rented."
    ],
@@ -78,12 +78,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "3aad20574a59d1f3aec410391e1756998dfd37ab90831d46ca6f6adf6f908cfa",
+   "payload_sha256": "fd51ef4a9c2b74998d84218a422587829b3722d03e260510ad2433e9a647efb6",
    "quotes": [
     "DLD Customers can scan the QR code on each real estate advertisement to get a glimpse of the property's authorised details and establish if it has been sold or rented."
    ],
@@ -97,12 +97,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "e894af0d51c752f9d38cfc7123c21dca5ba465ed22ae27836f9c0f7dbafd13f4",
+   "payload_sha256": "a56737e183eb7e3206fc1e25a90c9d99c77d4fa2db8ffbbb10e7d169e85376d0",
    "quotes": [
     "DLD Customers can scan the QR code on each real estate advertisement to get a glimpse of the property's authorised details and establish if it has been sold or rented."
    ],
@@ -116,12 +116,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-26T17:21:20Z",
    "http_status": 200,
-   "payload_sha256": "8b02f8b25e275283607820cf96b9a056ac2782dcf002b622d8d05e95e3765d3c",
+   "payload_sha256": "98f39f7b98415f6d1be7d44053e516bff6b3229a256a46a19d57c5baa65b3830",
    "quotes": [
     "DLD Customers can scan the QR code on each real estate advertisement to get a glimpse of the property's authorised details and establish if it has been sold or rented."
    ],

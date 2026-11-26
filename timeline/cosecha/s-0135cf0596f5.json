@@ -41,12 +41,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: URLError",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "2c4b18b8de91dd851cc0afd3c8907dc28da81971011fb50e7804251f85916037",
+   "payload_sha256": "89520fa42234be0138832cd83022ed38263a7a37d38d7cd838152ff890e3da86",
    "quotes": [],
    "ref": "cosecha/s-0135cf0596f5/2026-11-25T17:52:39Z",
    "run_id": "20261125T173639Z",

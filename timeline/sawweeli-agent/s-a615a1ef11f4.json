@@ -82,12 +82,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:20:31Z",
    "http_status": 200,
-   "payload_sha256": "271bdc71c93d5923988d4eec64fe08b55ad6410f106b3fc3125b52a6636efb55",
+   "payload_sha256": "fc165d67451ddc051fbe99c1feea5a30916e04fd0d9ab32992d1e53d9c656ec4",
    "quotes": [
     "Recruitment and Employment of Workers",
     "It is not permissible to carry out the activity of recruitment or mediation to recruit or",

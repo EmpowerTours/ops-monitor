@@ -104,12 +104,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:22:11Z",
    "http_status": 200,
-   "payload_sha256": "7eb634098f96b96a192c82cef3a5f6b2e6c3deda96f2a6c78d1caea0fc233109",
+   "payload_sha256": "6f5852a20f3ca66bf90d6bedd4379d1a0a0f88e636ce9dd0eb2670e7b9a9cb0e",
    "quotes": [
     "Check for the email ID from which you receive job offers. It should reflect the domain name of the organisation.",
     "Do not pay. If the hiring company or the agency asks you for money to process the visa or medical test, it is not a genuine company.",

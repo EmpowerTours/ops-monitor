@@ -161,12 +161,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:33:43Z",
    "http_status": 200,
-   "payload_sha256": "1b8707b9718dd19208ccc0f27616efd2b8bc0c5307f9c6e7f070effaad640dcb",
+   "payload_sha256": "de5a121990e5603540ea7cff1ae2029e8df599cf4716fc714368ac0f5fd23aa4",
    "quotes": [
     "importación y exportación de automóviles, cruceros, hidrocarburos y marinas turísticas",
     "El aeropuerto Internacional de Acapulco se ubica a 29 km al sureste del recinto portuario"

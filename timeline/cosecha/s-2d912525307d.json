@@ -162,12 +162,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:33:43Z",
    "http_status": 200,
-   "payload_sha256": "9dfb3d40fd3305055ecb06bcc9dfedd4fa6e6f3c444456f815be9e8c11aa9b90",
+   "payload_sha256": "5df9c70f6c4abfee2a945c0382ee83d3887ef22e81efc2c01a8c2b2b7be0aac7",
    "quotes": [
     "A(w) 64.75",
     "ACw 17.61"

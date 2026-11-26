@@ -92,12 +92,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:21:20Z",
    "http_status": 200,
-   "payload_sha256": "2246fc8c6edfe7db1483a443e0e01c5374ea6f5e18c663f0da2113ba2ea253b6",
+   "payload_sha256": "2761de4381b1c540770bd7c65e8af27496130a15a9b2ce2285a80b1d75518cd3",
    "quotes": [
     "2BR (split AC) AED 550 to 900 AED 750 to 1,200 AED 1,400 to 2,200 AED 900 to 1,600"
    ],

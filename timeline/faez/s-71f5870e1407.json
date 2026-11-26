@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T17:39:38Z",
    "http_status": 200,
-   "payload_sha256": "664c46678c3e2138e92a7b07fe249d768da685ccca6da104fa53f18109bca3f6",
+   "payload_sha256": "e0af09ec01dbc20f735a4576a20e716a70785a7db6ef9ad5a0d4cf3a542c9c0a",
    "quotes": [
     "https://www.difc.com/business/public-register"
    ],
@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-26T17:20:46Z",
    "http_status": 200,
-   "payload_sha256": "a1af6b6b7db20b5fe0788d9503058b62bc74c4706f9717eb96cf9a5907ce6bff",
+   "payload_sha256": "ad8780ae9267eb6228787c960499aa7c61e9bc11dba129e046b0ce2a6cf6a4a6",
    "quotes": [
     "https://www.difc.com/business/public-register"
    ],

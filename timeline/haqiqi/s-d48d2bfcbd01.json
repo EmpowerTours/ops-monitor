@@ -98,12 +98,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:22:11Z",
    "http_status": 200,
-   "payload_sha256": "c163fd0df242d5704f80bd94c92df06343548cd9018ddae68b4f615c231bf66f",
+   "payload_sha256": "00b4db108d9ea6b09d7bc7280cedb53ff4d35f39cf9070008484a8b276ab1325",
    "quotes": [
     "No, an ECR Passport Holder must come through eMigrate System.",
     "Send your offer letter/employment visa to the PBSK (email ID: pbsk.dubai@mea.gov.in"

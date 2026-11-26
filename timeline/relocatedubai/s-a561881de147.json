@@ -92,12 +92,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:21:20Z",
    "http_status": 200,
-   "payload_sha256": "3c68ab9f68f170e111578f63a33fa417c3928a8583a0617abd1796062fc8d82f",
+   "payload_sha256": "734c3a97b7e535964639d95603d18a90c27526031377ed2483e9cf5cd076a046",
    "quotes": [
     "Dubai Government Human Resource Department"
    ],

@@ -116,12 +116,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:20:33Z",
    "http_status": 200,
-   "payload_sha256": "f75f1f9d7ebcbcb3dadf61f5167d64887c5132d7a8a257613157b9b2eb560eac",
+   "payload_sha256": "be7ff43ccdc610ee1c2dd2b430a40e507585146d08565ed05c2492a35fbfeb22",
    "quotes": [
     "Please note the license will only be issued with an active lease.",
     "New Establishment Card 1,900 1,990",

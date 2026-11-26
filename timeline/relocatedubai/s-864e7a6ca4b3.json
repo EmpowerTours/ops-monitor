@@ -78,12 +78,12 @@
    "status": "quote_missing"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "883a90aea18b020aac0bb90e45e8ab4a419b39b0fbf5d94355bed3f50b011715",
+   "payload_sha256": "902355e5eff26b235de3994d371e725b4a5e9243e78fa368d6d63a2a5436ad57",
    "quotes": [
     "Studio apartment AED 40K",
     "1-bed apartment AED 58K",
@@ -97,12 +97,12 @@
    "status": "quote_missing"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "d185876222ef5caaa2764986ba7b97a68cda1470b630a78b11ba34672bb163a1",
+   "payload_sha256": "341a3bdf1a52f6468db2c988ef4ad35e4a0fdc81e4acf4f33cad63b8193d90ba",
    "quotes": [
     "Studio apartment AED 40K",
     "1-bed apartment AED 58K",
@@ -116,12 +116,12 @@
    "status": "quote_missing"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-26T17:21:20Z",
    "http_status": 200,
-   "payload_sha256": "15cb8e6dce741b1c171dba6651416d28a07da0d91f618ca545e07488b20ad210",
+   "payload_sha256": "f6e78ae76a2d8ec18e7f62a6aafd212adada96e5c89b8cd9949b75375a21f6cf",
    "quotes": [
     "Studio apartment AED 40K",
     "1-bed apartment AED 58K",

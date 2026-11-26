@@ -97,12 +97,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "63263171c79070f52f2d0612a5a0799ac0935463d18147f2ba89f3b192cc3e77",
+   "payload_sha256": "48a4e6504620dda3b98834a3459277fec83d30efdb35f9a4b5e01567d94cc815",
    "quotes": [
     "\"Personal savings\" with no bank statements cannot be verified.",
     "Without it, the application stalled for over a month.",
@@ -116,12 +116,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-26T17:21:20Z",
    "http_status": 200,
-   "payload_sha256": "ed247885a3a6c8053d86c31d7aff0a86c93400673c87caebc710df4f257a1fa6",
+   "payload_sha256": "2943c73c90708c9e82d356e0002ba7f1ea6a64d0e8ecbf15815b3262110d2375",
    "quotes": [
     "\"Personal savings\" with no bank statements cannot be verified.",
     "Without it, the application stalled for over a month.",

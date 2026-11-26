@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "5f05869a7b154082a4bfdd16f662d98e347a93658ba6ac0271f5766f33f37ac5",
+   "payload_sha256": "0de3a4c5e075272a135a3bff3272db729f78dbcd458a055dea85c8462ac75cf4",
    "quotes": [
     "This request allows the real estate investor owning a property the purchase value of which is equal to or more than 2 million AED at the time of purchase, to apply for a 10-years renewable residence permit.",
     "In the event that a mortgaged property, a bank letter indicating 2 million AED paid amount as a proof to be provided",
@@ -36,12 +36,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:36Z",
    "http_status": 200,
-   "payload_sha256": "bb98c8c83f2e6642fe5a4fb723aaf144a95861bbf35d39ebb699169bdd338ab1",
+   "payload_sha256": "4dc15d4503ee2b7ee62dac9833e00e96b0c57e691aca470fe1d6258c40041ed8",
    "quotes": [
     "This request allows the real estate investor owning a property the purchase value of which is equal to or more than 2 million AED at the time of purchase, to apply for a 10-years renewable residence permit.",
     "In the event that a mortgaged property, a bank letter indicating 2 million AED paid amount as a proof to be provided",
@@ -70,12 +70,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "f1fba7c6ee50ba6b8630145dc5f5feaa6a8a1f5a51c811f5b803a19d55e4d588",
+   "payload_sha256": "31525d579c5566e68aac411025929dba99a7dde014648171a36a3ec083685cd0",
    "quotes": [
     "This request allows the real estate investor owning a property the purchase value of which is equal to or more than 2 million AED at the time of purchase, to apply for a 10-years renewable residence permit.",
     "In the event that a mortgaged property, a bank letter indicating 2 million AED paid amount as a proof to be provided",
@@ -104,12 +104,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "02e81a8571cc39831f4a06ecbd889d46fda58ab404d03839d5b17c1c09117c81",
+   "payload_sha256": "affc0f4e5ba1c1b656147381b2b3b5e9b7240dc4e69cd407abd3520f94465fc1",
    "quotes": [
     "This request allows the real estate investor owning a property the purchase value of which is equal to or more than 2 million AED at the time of purchase, to apply for a 10-years renewable residence permit.",
     "In the event that a mortgaged property, a bank letter indicating 2 million AED paid amount as a proof to be provided",
@@ -138,12 +138,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "ca6737da75b4f6e4608a211b080501c4078ffdd41d921874d1acec97483d79ce",
+   "payload_sha256": "fb28445c470a8500f4b71847476ec52896ca54ab31a99a494f0f72b55b269085",
    "quotes": [
     "This request allows the real estate investor owning a property the purchase value of which is equal to or more than 2 million AED at the time of purchase, to apply for a 10-years renewable residence permit.",
     "In the event that a mortgaged property, a bank letter indicating 2 million AED paid amount as a proof to be provided",
@@ -172,12 +172,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "b7a8c6fdd39507f1a2e48f0cd24a9991c6f50672dc9bccdb0967cd46f00010b7",
+   "payload_sha256": "2042fb25b6ce58f6f0822a05966d89235d717372c70d3debb04ed98350e81b58",
    "quotes": [
     "This request allows the real estate investor owning a property the purchase value of which is equal to or more than 2 million AED at the time of purchase, to apply for a 10-years renewable residence permit.",
     "In the event that a mortgaged property, a bank letter indicating 2 million AED paid amount as a proof to be provided",
@@ -206,12 +206,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-26T17:21:20Z",
    "http_status": 200,
-   "payload_sha256": "29548f92963e0478d447a9fa5fde9ce9e598e7e0491208b93e98eb5278624cef",
+   "payload_sha256": "9f70d890b59c2585bebf0189e724c1877caf012d3abe899d7e5fb3225455d265",
    "quotes": [
     "This request allows the real estate investor owning a property the purchase value of which is equal to or more than 2 million AED at the time of purchase, to apply for a 10-years renewable residence permit.",
     "In the event that a mortgaged property, a bank letter indicating 2 million AED paid amount as a proof to be provided",

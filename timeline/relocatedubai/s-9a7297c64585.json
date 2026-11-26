@@ -110,12 +110,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:21:20Z",
    "http_status": 200,
-   "payload_sha256": "b9e29444abee05946a041a9b15a5f531b298f9f8aaad1063565c26a4788298af",
+   "payload_sha256": "2c4d7587e254eb30ae3ba654608d01e8e2e7de09bc2e8b00b4eb1ac23f9056a0",
    "quotes": [
     "Open your NEO BIZ account in 1 day",
     "• No minimum balance",
