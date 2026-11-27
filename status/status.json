@@ -4,7 +4,7 @@
       "cert_days": 70,
       "down_since": null,
       "issue": null,
-      "ms": 394,
+      "ms": 415,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -13,7 +13,7 @@
       "cert_days": 71,
       "down_since": null,
       "issue": null,
-      "ms": 222,
+      "ms": 228,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -22,7 +22,7 @@
       "cert_days": 81,
       "down_since": null,
       "issue": null,
-      "ms": 191,
+      "ms": 237,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -31,7 +31,7 @@
       "cert_days": 57,
       "down_since": null,
       "issue": null,
-      "ms": 198,
+      "ms": 255,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -40,7 +40,7 @@
       "cert_days": 69,
       "down_since": null,
       "issue": null,
-      "ms": 224,
+      "ms": 243,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -49,7 +49,7 @@
       "cert_days": 62,
       "down_since": null,
       "issue": null,
-      "ms": 217,
+      "ms": 235,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -58,16 +58,16 @@
       "cert_days": 63,
       "down_since": null,
       "issue": null,
-      "ms": 253,
+      "ms": 271,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     },
     "sawweeli-hub": {
-      "cert_days": 78,
+      "cert_days": 77,
       "down_since": null,
       "issue": null,
-      "ms": 239,
+      "ms": 241,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
@@ -76,16 +76,16 @@
       "cert_days": 64,
       "down_since": null,
       "issue": null,
-      "ms": 218,
+      "ms": 260,
       "reasons": [],
       "since": "2026-11-19T04:56:36Z",
       "status": "up"
     }
   },
-  "last_summary": "2026-11-26",
+  "last_summary": "2026-11-27",
   "outages": [],
   "records_alerts": {},
   "spend_alerts": {},
-  "updated": "2026-11-27T12:50:20Z",
+  "updated": "2026-11-27T21:47:17Z",
   "watch_alerts": {}
 }
