@@ -138,12 +138,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-27T17:08:32Z",
    "http_status": 200,
-   "payload_sha256": "85869b8b9e2c526405c5b4359d0eabbbd42168fc6615f127d4c02c3500097318",
+   "payload_sha256": "a9431099a216adc1994a9c85cf1c1cfcb718731b889bf6b9713565af3b9e35cb",
    "quotes": [
     "Article (3) of the above-mentioned Executive Council Resolution No. (2) of 2014 is hereby superseded by the following",
     "for a maximum of thirty (30) consecutive nights, be charged the",

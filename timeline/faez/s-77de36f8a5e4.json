@@ -82,12 +82,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-27T17:12:47Z",
    "http_status": 200,
-   "payload_sha256": "78833541bdc28ac58f57335fdcc1ee37bd1b765fd4635bef17ebb417cac10305",
+   "payload_sha256": "238bed34211cdf6e8116ac8025be82153445c5ee7d328d4b22b09758fe9a01d8",
    "quotes": [
     "eSupply is the official Procurement Portal for Dubai Government Tenders.",
     "online bidding tenders/RFX's published by over 40 major Dubai Government entities"

@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "175af3d30c70b514c42def01334b7e39e1e178d167cc7ec9d86010f5bbcc591d",
+   "payload_sha256": "41e5f86cbe3b42ddfe6f3fb5c54f2ccdd47cb59601039e8c9ea8cc6724d2fe40",
    "quotes": [
     "Under a virtual work visa, a foreigner may live in the UAE while working for a company outside the UAE.",
     "a copy of health insurance",
@@ -21,12 +21,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:36Z",
    "http_status": 200,
-   "payload_sha256": "3f60e7f1b86db98ca8e6663399761614073d53ad67307786279c7835efb6e315",
+   "payload_sha256": "3eb43c7b777e90496f4f227680743e1e0643df6ce3ebaa135bf10a3fbc1baa42",
    "quotes": [
     "Under a virtual work visa, a foreigner may live in the UAE while working for a company outside the UAE.",
     "a copy of health insurance",
@@ -40,12 +40,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "4f1766811836abbb8e2a8aeace43779c9831463f763a07499848f16b2b65de04",
+   "payload_sha256": "5592379e82ff229ae571f59f2cb5019f167c51c08e0232cb319ac904279936c7",
    "quotes": [
     "Under a virtual work visa, a foreigner may live in the UAE while working for a company outside the UAE.",
     "a copy of health insurance",
@@ -59,12 +59,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "199f5d2a72a56bc09ef6f7f4508e996fa48fcb7e5dac658ae51ee4ac4553827d",
+   "payload_sha256": "d9d539211f438bd249780854bc191abc69e0b63598f417817c7100c358b9e243",
    "quotes": [
     "Under a virtual work visa, a foreigner may live in the UAE while working for a company outside the UAE.",
     "a copy of health insurance",
@@ -78,12 +78,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "56bacd2b099c4e5f54b2034bde38c86530bcb6962593ee98ff35c1f5d4017729",
+   "payload_sha256": "9ab7efac81930ba2474526d6b9cb8ef1b77427e73f6cc726550aac5fad977c44",
    "quotes": [
     "Under a virtual work visa, a foreigner may live in the UAE while working for a company outside the UAE.",
     "a copy of health insurance",
@@ -97,12 +97,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "470d1d0b43e6784a9245e65360daf31ace677af0cc34a5e224449905390d5418",
+   "payload_sha256": "2434b57f85aa2603a4e6c44b8842b36944418349e3296fc9e2aca11975f03a4b",
    "quotes": [
     "Under a virtual work visa, a foreigner may live in the UAE while working for a company outside the UAE.",
     "a copy of health insurance",
@@ -116,12 +116,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:21:20Z",
    "http_status": 200,
-   "payload_sha256": "f36cab7ed78d4d713dfc17d95d8e781990006a4a484e8b8710171e6b907e7515",
+   "payload_sha256": "2468040caca1adb4b9f230e156d5f5d0668e151c68f8df9e6cc26cb678683325",
    "quotes": [
     "Under a virtual work visa, a foreigner may live in the UAE while working for a company outside the UAE.",
     "a copy of health insurance",
@@ -135,12 +135,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-27T17:15:30Z",
    "http_status": 0,
-   "payload_sha256": "550b312b294b3647da60df977629ddf39be2745a5eff54063b87c4ba93e7695e",
+   "payload_sha256": "3d53acec5a19a88d38aa1e8a852f625e6e4812e5db80a5c21681a1802c6fcc34",
    "quotes": [
     "Under a virtual work visa, a foreigner may live in the UAE while working for a company outside the UAE.",
     "a copy of health insurance",

@@ -191,12 +191,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "04be3a29d184fe85f0ba44cf9a59536cca24e0de6e3ad2d67328252ca29cf961",
+   "payload_sha256": "b5db6f5da1b9bc73ca967e44a76d8f4ab5f641bc36ea6eabdeda11082e78630f",
    "quotes": [
     "Fee Type : Federalfor request to release a consignment of agricultural products transferred to the Ministry 200",
     "The time to obtain the service : 1 working day"
@@ -212,12 +212,12 @@
    "status": "quote_missing"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:33:43Z",
    "http_status": 200,
-   "payload_sha256": "fcfb7df0944174046e7315becd051025ab291ccb7cd6ea0062238c5a04449c75",
+   "payload_sha256": "7ff07f9c8ccf7b6ce788f0af3d337ff1e6364dc734540a642c7c9d0b144d7a30",
    "quotes": [
     "Fee Type : Federalfor request to release a consignment of agricultural products transferred to the Ministry 200",
     "The time to obtain the service : 1 working day"
@@ -233,12 +233,12 @@
    "status": "quote_missing"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-27T17:14:01Z",
    "http_status": 200,
-   "payload_sha256": "e3121d9fe33b341a618b4fc533074a718d108ccc285afdfbb29746efa852b2f9",
+   "payload_sha256": "3e863ed83343c28dca8fd55d8299a4bdae755b1c4c15b7fd0c2952f1c467818e",
    "quotes": [
     "Fee Type : Federalfor request to release a consignment of agricultural products transferred to the Ministry 200",
     "The time to obtain the service : 1 working day"

@@ -32,12 +32,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "4c3381136764c047f8628088ba4cf33304136e953817fc8cd114a037efc919ca",
+   "payload_sha256": "6db268552cfb17b2861d9b413db74e4da3d7a063d2a50721a25c4cabca4b54b2",
    "quotes": [
     "List of Approved Slaughterhouses"
    ],
@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "c210332a4084c7e1594672f0feb08b98a7fe307165f7dbbda041057700442ae6",
+   "payload_sha256": "908231c073891dedc534a0c11a2ab336f4816c4185c5c6d5167f3e23ac6840f0",
    "quotes": [
     "List of Approved Slaughterhouses"
    ],
@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "5aceb2c0a7ee9d276b629df2d3c4aa80be7eda114611cb59e7e7cc48c4d61323",
+   "payload_sha256": "b3af2a358fe3e7915b4149e38a8ded53a5b5c65bc2a991819a82856773e3d4f2",
    "quotes": [
     "List of Approved Slaughterhouses"
    ],
@@ -77,12 +77,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T19:00:07Z",
    "http_status": 200,
-   "payload_sha256": "141a410b01212d811411fc967c4a3fa624ab384f603b778f45551d431b49785c",
+   "payload_sha256": "93e6f88ee39a48f8977263003cca1fe58f4d587fe3e3dbbe22315027bef3b892",
    "quotes": [
     "List of Approved Slaughterhouses"
    ],
@@ -92,12 +92,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:33:16Z",
    "http_status": 200,
-   "payload_sha256": "a366f8661c6084f2633e3b1306a304e80ea9be1278f8e7d6742a4ebd1cf99bdf",
+   "payload_sha256": "917137a8d2750ce3a5a067c2dc3525364606e926d808ff2fa9f7226133d48be1",
    "quotes": [
     "List of Approved Slaughterhouses"
    ],
@@ -107,12 +107,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 200,
-   "payload_sha256": "7a32f8b050321bb8bc64724d0e0e84fe9885cb34ef27dfc0c4f90e278698271e",
+   "payload_sha256": "3e03b0d922e29413b99683a6964a1cb3fe505b9662abdc79b50f3c70a2efca06",
    "quotes": [
     "List of Approved Slaughterhouses"
    ],
@@ -122,12 +122,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "f7256554cbfb1da82ae13b8a6e6cbe99b47a94926e96de69aa1a861e13a0f4c8",
+   "payload_sha256": "141bd821a65d731990ebd93c3ef90ca489fada138dc372f667693e23e31a7ba7",
    "quotes": [
     "List of Approved Slaughterhouses"
    ],
@@ -137,12 +137,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "b35f01b191106f0589c702ccdd4b368ad3940f7ca5b564930495adbc8111366f",
+   "payload_sha256": "c82cbd4cc154c4c858cc316bed8254809ebb8f00b9315619aae6351c9b9760ed",
    "quotes": [
     "List of Approved Slaughterhouses"
    ],
@@ -152,12 +152,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:33:43Z",
    "http_status": 200,
-   "payload_sha256": "d98c4530fc6df0c6e1ac6fdd4effdef9031e7b9972caecb79bfd5f39f0a02c30",
+   "payload_sha256": "15a72ce9ff50f58366b88da852a32a20498ba19ab0824b352c030ce4424b600e",
    "quotes": [
     "List of Approved Slaughterhouses"
    ],
@@ -167,12 +167,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-27T17:14:01Z",
    "http_status": 200,
-   "payload_sha256": "091b78145c8cf247b88add4edc9938b5d8f8c41ea641f28028455dd793028bf2",
+   "payload_sha256": "f8b7230eaa77520e46121c4862c13afb0843a87e21ec01c676ecdb8385aa434b",
    "quotes": [
     "List of Approved Slaughterhouses"
    ],

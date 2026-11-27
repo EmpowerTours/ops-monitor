@@ -167,12 +167,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-27T17:14:01Z",
    "http_status": 200,
-   "payload_sha256": "1564ee915eb844ab8417642ab77590f09d2c28a39e6165c5be9d4ea00ca562c9",
+   "payload_sha256": "ebffff68f9d564e0689b14c28cf6bfb0ff4c33033302b5655445d40efbe4ff9c",
    "quotes": [
     "5% of the value CIF (Cost Freight Insurance) value except for alcohol and cigarettes."
    ],

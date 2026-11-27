@@ -162,12 +162,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-27T17:11:11Z",
    "http_status": 200,
-   "payload_sha256": "f00db909ec245ca2ec18a350529ad93de78e89664027eb39790fe3ab4a0415ac",
+   "payload_sha256": "fca8c2d9619737d2a698d32ff81161e15b1ff4830f0ea569f913396542b4042f",
    "quotes": [
     "Job offer - عرض عمل",
     "Search By Transaction Number"

@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "739ad34d0802e7d7307bc1a259d67a6dfed49b3869b72640574046ed13aa738a",
+   "payload_sha256": "94b8d0d1edad4fa75996196e3bc00e475a892572c06d579b482e2b88eb2a65aa",
    "quotes": [
     "In Dubai, the customs tariff is 5 per cent of the value CIF (Cost Freight Insurance) value except for alcohol and cigarettes."
    ],
@@ -77,12 +77,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T19:00:07Z",
    "http_status": 200,
-   "payload_sha256": "c675637eed88f67b092b06949ba7f3c6dd3947bff938775ba255a2f09f465177",
+   "payload_sha256": "09e74fc64a26c87fb4380b6ebc53c9e2ae197237e8f2b8f09e6908bb0a0f5225",
    "quotes": [
     "In Dubai, the customs tariff is 5 per cent of the value CIF (Cost Freight Insurance) value except for alcohol and cigarettes."
    ],
@@ -92,12 +92,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:33:16Z",
    "http_status": 200,
-   "payload_sha256": "947b29886cfbd24a4e66167b7426eee5efe571893295fefc6bad8f02990ddbe7",
+   "payload_sha256": "3d8e9f4373121fd7230b9c6bdf75bc1eb744547267e44fe796df0e19c085f14c",
    "quotes": [
     "In Dubai, the customs tariff is 5 per cent of the value CIF (Cost Freight Insurance) value except for alcohol and cigarettes."
    ],
@@ -107,12 +107,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 200,
-   "payload_sha256": "2973455a17ddc9e0f8326c3dd007d3862e4d87ad52c6cbb2cef2bda32d913420",
+   "payload_sha256": "0154e79f62a8637b38ffd8f730031215ce25198ab86d87e843bb13616ac8edff",
    "quotes": [
     "In Dubai, the customs tariff is 5 per cent of the value CIF (Cost Freight Insurance) value except for alcohol and cigarettes."
    ],
@@ -122,12 +122,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "e0c5c7865f515cfef2d959bf210f7005773a7ad6c781d435f87707b610de768d",
+   "payload_sha256": "172fecbc847ff4c363415c90d0ba3a1ec8746e67537fef50a9f9368bf0c0d788",
    "quotes": [
     "In Dubai, the customs tariff is 5 per cent of the value CIF (Cost Freight Insurance) value except for alcohol and cigarettes."
    ],
@@ -137,12 +137,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "31bb1ce6fba497720a502084ddf7c978c9181758918512f76c00314674716608",
+   "payload_sha256": "67c48d2ebf3f69c4f43ec2f02c9f8e1a17a0870a7dfc6fa7440ef853aca89f42",
    "quotes": [
     "In Dubai, the customs tariff is 5 per cent of the value CIF (Cost Freight Insurance) value except for alcohol and cigarettes."
    ],
@@ -152,12 +152,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:33:43Z",
    "http_status": 200,
-   "payload_sha256": "bc26c91201bfc03483af2fe18cb85dddf71735e09fd9b888bb3c3e71dd12a3e3",
+   "payload_sha256": "89cd78c6160513a394a3d30601ae2d2139125babbd1df78e585960fe7a1766e1",
    "quotes": [
     "In Dubai, the customs tariff is 5 per cent of the value CIF (Cost Freight Insurance) value except for alcohol and cigarettes."
    ],
@@ -167,12 +167,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-27T17:14:01Z",
    "http_status": 0,
-   "payload_sha256": "6ed2a0bf210bd241d7e52a1034a4fdc4e38017c93e8ca0359c55dafc38c55d31",
+   "payload_sha256": "75b1261ab36fcd56e7da9689a2834b885852169a468eb5597d0776676a247699",
    "quotes": [
     "In Dubai, the customs tariff is 5 per cent of the value CIF (Cost Freight Insurance) value except for alcohol and cigarettes."
    ],

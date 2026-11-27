@@ -98,12 +98,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-26T17:22:11Z",
    "http_status": 200,
-   "payload_sha256": "f00864f39f31382475c3d70f4b24765519fe603fe6c63c27b19afb05c3a36559",
+   "payload_sha256": "8af367039e04e1cf7607da375b3de4ad5019d8576ce4b50e2e1e465b2379dfdd",
    "quotes": [
     "GDRFA Dubai called on all members of the community to obtain visa and residency services only through official and approved channels, and to avoid responding to unreliable advertisements or offers promoted through digital platforms.",
     "Dubai, United Arab Emirates - 19 June 2026"
@@ -114,12 +114,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-27T17:11:11Z",
    "http_status": 200,
-   "payload_sha256": "43b68cf7d3832595a190f3cb7b23fece8b9db42cd04287c06a34ac75dd9ccad9",
+   "payload_sha256": "7571d1fdb73f3d4488d639869f1968a57690cdcefd57c9d148a5c71121cf2781",
    "quotes": [
     "GDRFA Dubai called on all members of the community to obtain visa and residency services only through official and approved channels, and to avoid responding to unreliable advertisements or offers promoted through digital platforms.",
     "Dubai, United Arab Emirates - 19 June 2026"

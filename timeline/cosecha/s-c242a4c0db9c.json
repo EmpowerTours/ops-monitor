@@ -92,12 +92,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 200,
-   "payload_sha256": "92606a2d7ed2eab79954753ad05182a9ce812a6543e7a8bd39de13b181450698",
+   "payload_sha256": "dd27d9537e7b7a63e381a9459efa7f37751f1909f615c5f0d8e0bc7b06d2b8c9",
    "quotes": [
     "ECAS Product Type Honey"
    ],
@@ -107,12 +107,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "2495bcdb4960ba0ec5b228eddefa09d981973f0f3997d711972d065efdff782c",
+   "payload_sha256": "901d433d87cf89d62369f5dca7e9fe9c86f9e044e51c8b104ddd2dd3c3194d52",
    "quotes": [
     "ECAS Product Type Honey"
    ],
@@ -122,12 +122,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "379742c3a4d2e315de3aa7d1814148aad07b562f5d631d9fc7afb027b601e12c",
+   "payload_sha256": "01da6bf1e9d1661a81f02e9966d2b33d9d817eee64df21a78dbf9d73d09d979f",
    "quotes": [
     "ECAS Product Type Honey"
    ],
@@ -137,12 +137,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:33:43Z",
    "http_status": 200,
-   "payload_sha256": "0e8ef31a50c20c4f44f11d4b2775ba5b687bc1c18f6216887c55bbd8f767c2aa",
+   "payload_sha256": "dd1b4cd5be8363266258b4ff83065afd935ef05ae55f9ae7c2865e8ad19653d2",
    "quotes": [
     "ECAS Product Type Honey"
    ],
@@ -152,12 +152,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-27T17:14:01Z",
    "http_status": 0,
-   "payload_sha256": "a01f49ac547c931f0c226afde81633f4e955658da38d82843c2c63c87b4e65ae",
+   "payload_sha256": "0bd773e557aa784e596b0db987eb6a096ced7e4c9326b02a9374481f4621de48",
    "quotes": [
     "ECAS Product Type Honey"
    ],

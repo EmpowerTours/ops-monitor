@@ -92,12 +92,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:33:16Z",
    "http_status": 200,
-   "payload_sha256": "c695a685d197ba98a04a4e3ec56519ad48cf70071590f2581dec5535b116b9d2",
+   "payload_sha256": "433839f747c28a4636fd7be6a504f202a6ad0e7e3f147701bbfe2c2821b5559c",
    "quotes": [
     "For consignment of non-treated animal products and by-products: certified veterinary health certificate issued by the competent veterinary authorities"
    ],
@@ -107,12 +107,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 200,
-   "payload_sha256": "03c6df7cc3f4d9e364b8f093c583a5418aa31fe0e9db650baae66f37c9d7473f",
+   "payload_sha256": "222e7a29f420c14fce85c14efb9ed597c529982fd907afd7a94fbda8f98f921a",
    "quotes": [
     "For consignment of non-treated animal products and by-products: certified veterinary health certificate issued by the competent veterinary authorities"
    ],
@@ -122,12 +122,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "5de13fdd58e5114b0c2fef8965fefacd2cc6c3d661b503cf13d521f05e743589",
+   "payload_sha256": "0cc88a4eb0f8803d9568caf10420076b4fe844b32fa331ee853b631e0cfb51dd",
    "quotes": [
     "For consignment of non-treated animal products and by-products: certified veterinary health certificate issued by the competent veterinary authorities"
    ],
@@ -137,12 +137,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "cdc10d5f3fe3ecc83350a5aa4e3396d5877598295678d8dc37bf444eb53bc729",
+   "payload_sha256": "1617aa0f8cbe76afb30f110ebf383c571be6d8e0f4583eb6655ec6fd3a913908",
    "quotes": [
     "For consignment of non-treated animal products and by-products: certified veterinary health certificate issued by the competent veterinary authorities"
    ],
@@ -152,12 +152,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:33:43Z",
    "http_status": 200,
-   "payload_sha256": "5227bbd633b1d12e51d6cbd8b0a4159e6d6b1f60820aedf1715ead4f5281cd4f",
+   "payload_sha256": "a3470209537f0cfe6b8a8f25f5abe3a4e1ac57d82b1612553a314c77668131a6",
    "quotes": [
     "For consignment of non-treated animal products and by-products: certified veterinary health certificate issued by the competent veterinary authorities"
    ],
@@ -167,12 +167,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-27T17:14:01Z",
    "http_status": 200,
-   "payload_sha256": "24132dbca34c91904f3490759be1eadab7fded569700e1a89fb9bb3dd394f480",
+   "payload_sha256": "6689935ed7228a4ff8f065e6a9ec5110234b9dac3ac1d5f102c79f7a0fef5715",
    "quotes": [
     "For consignment of non-treated animal products and by-products: certified veterinary health certificate issued by the competent veterinary authorities"
    ],

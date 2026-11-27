@@ -152,12 +152,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-27T17:11:11Z",
    "http_status": 200,
-   "payload_sha256": "f6edf8fbd503bca4574884b864f235c5b729c520d0db55325cc983aa4e23d86d",
+   "payload_sha256": "b97646dc4df7145675c16908d30c0ca77e2b180e7000c6b2c5457ff725605e98",
    "quotes": [
     "Smart Dubai Government Est, Government Of Dubai"
    ],

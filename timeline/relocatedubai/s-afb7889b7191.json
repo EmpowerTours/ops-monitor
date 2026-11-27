@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "05ab636c0c0c8a0b80c5fda78595a20c6c5c0369bfd51585d378b35a41a26c90",
+   "payload_sha256": "d1ebcb78dbe0c2b81f5856eb1542ab652e8bed088e14791186a9e0445d104e6c",
    "quotes": [
     "The sponsor must have a minimum salary of AED 4,000 or AED 3,000 plus accommodation."
    ],
@@ -17,12 +17,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:36Z",
    "http_status": 200,
-   "payload_sha256": "b27db20b943eddcd319afddbb82bcafe40c05498fdc2fb0d0b6b7c9648bf2dcd",
+   "payload_sha256": "714a0674c73a78a0970903d57d13488408b48f80f8dbb8d1098b41e396cd2c6a",
    "quotes": [
     "The sponsor must have a minimum salary of AED 4,000 or AED 3,000 plus accommodation."
    ],
@@ -32,12 +32,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "23f9b4c56ee62022f819debb71815b81cd785b0853e977bb5dac550a9b31b5dd",
+   "payload_sha256": "b173f4cc7f2bdeb96d4100125dffbe1c63e206231fecd29451d1b866bb9724cb",
    "quotes": [
     "The sponsor must have a minimum salary of AED 4,000 or AED 3,000 plus accommodation."
    ],
@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "18dfc3ff119ddacc2e4d903d9b549c4d8cab748fe937824513a32f8d451d96cd",
+   "payload_sha256": "99d457422f1fb11601ec54b5acc54bd35cf484760c5db756682a98ea2e71eccc",
    "quotes": [
     "The sponsor must have a minimum salary of AED 4,000 or AED 3,000 plus accommodation."
    ],
@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "bb9829e55aacb51c5cae1bb48e166d796153303cf2fbeab5d4d68b1e512bbaca",
+   "payload_sha256": "0da15539b0db4086149ee9cb0057e9088d0c340502de65b2951da3cd65e2305f",
    "quotes": [
     "The sponsor must have a minimum salary of AED 4,000 or AED 3,000 plus accommodation."
    ],
@@ -77,12 +77,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "94de57479785d25352f5b7812d9272f2d00c518d7605d1b17db93c6265389bb5",
+   "payload_sha256": "6abb676ee06ea84d19c01386b7eb1bc6814789b6689f8b030851ff9284215be3",
    "quotes": [
     "The sponsor must have a minimum salary of AED 4,000 or AED 3,000 plus accommodation."
    ],
@@ -92,12 +92,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:21:20Z",
    "http_status": 200,
-   "payload_sha256": "2e7d8837e290b49f60541697f2c2c3e719462506bb8b96951a6c88a291be927c",
+   "payload_sha256": "309031279d5b19c3cc9850edb1247c894e8256fbc885a8e893d5d285a82b1dc3",
    "quotes": [
     "The sponsor must have a minimum salary of AED 4,000 or AED 3,000 plus accommodation."
    ],
@@ -107,12 +107,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-27T17:15:30Z",
    "http_status": 0,
-   "payload_sha256": "6f2e91580556404328d529f640764efb24d08b5cae339fa83a5bc0ac76f7574b",
+   "payload_sha256": "4d3806a70cde271ab0dadae7e0df161f436e195296f27eb3f580f5f65a89dd75",
    "quotes": [
     "The sponsor must have a minimum salary of AED 4,000 or AED 3,000 plus accommodation."
    ],

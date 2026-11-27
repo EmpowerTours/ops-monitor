@@ -32,12 +32,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "b6bd6a48a4d5fe365545cae5aa4305293bbc71c07250fd9033e13c029583b174",
+   "payload_sha256": "6453435c1932ea316bac3a263c02a22c56c3edacdef5ccdde45ca7dafbf8cc8a",
    "quotes": [
     "البريد الالكتروني info@moccae.gov.ae مركز الاتصال 8003050"
    ],
@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "10794defc9d877e78e58603a87a60190d2cf6df5f81ac86d619055e803f6e634",
+   "payload_sha256": "005a5180735dddd1f22518fcdf9b4dcc7cca0f4140bf8faaf2bf1b6315c746c4",
    "quotes": [
     "البريد الالكتروني info@moccae.gov.ae مركز الاتصال 8003050"
    ],
@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "32554637d209e70327b8d94269453bbc408f22937c5e4108c6a10dbb8d152865",
+   "payload_sha256": "369ab5893531703c3e84b4065018c3143891b1802a2ae08fa0a3e1b0c0f30acf",
    "quotes": [
     "البريد الالكتروني info@moccae.gov.ae مركز الاتصال 8003050"
    ],
@@ -77,12 +77,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T19:00:07Z",
    "http_status": 200,
-   "payload_sha256": "8117001aa95b2a23c6e7e1d8b2cdbf36d9235f93000fac3da4f1021924d86d86",
+   "payload_sha256": "dea51542770a5b26e90a4b85687583ed635fde132a43f9a2ef7171f2935186eb",
    "quotes": [
     "البريد الالكتروني info@moccae.gov.ae مركز الاتصال 8003050"
    ],
@@ -92,12 +92,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:33:16Z",
    "http_status": 200,
-   "payload_sha256": "8e135bc66ea88fa1d531687946b881938fb0e88d05c8062a357ee5225622345b",
+   "payload_sha256": "70785907a2cdde11903a887caaa1e2a927220559f49621c6d761b39e0a255cad",
    "quotes": [
     "البريد الالكتروني info@moccae.gov.ae مركز الاتصال 8003050"
    ],
@@ -107,12 +107,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 200,
-   "payload_sha256": "5c9c41bcc143de86809d31af9d1089e9fe56023b1c1452c73f17e709eab52732",
+   "payload_sha256": "6610bbff6e03d36b73feef9fb357db431e3663a2c32c42cd09d2ef08a1183c48",
    "quotes": [
     "البريد الالكتروني info@moccae.gov.ae مركز الاتصال 8003050"
    ],
@@ -122,12 +122,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "a0b8466a75a60698903b100d35bc379923cb844132861e6d5b965ac06f6eae0f",
+   "payload_sha256": "597a5d646d921c72c61b2c20c5dfc6c50019e7979c5cd852d8e9766228503855",
    "quotes": [
     "البريد الالكتروني info@moccae.gov.ae مركز الاتصال 8003050"
    ],
@@ -137,12 +137,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "4fd765e7bbe9b98c478894539b7431b17824eb467e5d5aee8168c24bd5e20402",
+   "payload_sha256": "5aaf7bf43f75fa52eeadef8fad19a1336deb7aa178ec346bb43183434c56b733",
    "quotes": [
     "البريد الالكتروني info@moccae.gov.ae مركز الاتصال 8003050"
    ],
@@ -152,12 +152,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:33:43Z",
    "http_status": 200,
-   "payload_sha256": "2fe5cfa1ecec3aa79c89108bc4f672e9ee59796a4cbf75730523b876a94a98f7",
+   "payload_sha256": "79043f01e97a6b5620d57a42c915c984bba5962c18190b2c38623f11b576fd89",
    "quotes": [
     "البريد الالكتروني info@moccae.gov.ae مركز الاتصال 8003050"
    ],
@@ -167,12 +167,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-27T17:14:01Z",
    "http_status": 200,
-   "payload_sha256": "f7767cd986989c7f79e4bb5f6c5839ae116b1d7a28dd9425c10fc526109470a4",
+   "payload_sha256": "7788316d5855f5c777559d8cfc4337ea88fc865f7208b1783e515dee0d0cc9ef",
    "quotes": [
     "البريد الالكتروني info@moccae.gov.ae مركز الاتصال 8003050"
    ],

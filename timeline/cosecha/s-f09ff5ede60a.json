@@ -38,12 +38,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "3db4c638d589201ec2d79abbae7bd799103fc7bf2a568f7f0a4a878587fcec93",
+   "payload_sha256": "5142869e0fe84ba9a15161583fa96f9a44752c58de81528752a6371aca101060",
    "quotes": [
     "Test Report from accredited and recognized laboratory as per the technical requirements mentioned under: UAE.S GSO 147:2019",
     "Validity of Test report should be less than 3 Year.",
@@ -56,12 +56,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "75a0602e7d3b2246e5b71d4acc3460b6a29c9a8c0511e7f206d2addaea3ca6b5",
+   "payload_sha256": "e00454e4ff9cc05ce25f93119a05bb24853dc718cc921d7ea378fee8c3c47c56",
    "quotes": [
     "Test Report from accredited and recognized laboratory as per the technical requirements mentioned under: UAE.S GSO 147:2019",
     "Validity of Test report should be less than 3 Year.",
@@ -74,12 +74,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "701fb98463be36572fa3e2ebdc234d488dc9f5e9de8ed3d95a84686424db0d4a",
+   "payload_sha256": "587f46f4d5bff98c10bd90ece4a8b935db944bc15b5594cc35e63b4c71f13966",
    "quotes": [
     "Test Report from accredited and recognized laboratory as per the technical requirements mentioned under: UAE.S GSO 147:2019",
     "Validity of Test report should be less than 3 Year.",
@@ -92,12 +92,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T19:00:07Z",
    "http_status": 200,
-   "payload_sha256": "4c11e4f99d0ce173897a5daf51275b89b3c432d00badca0c43989e9ac032238c",
+   "payload_sha256": "545cb23420749ecf55e640601aaeb334ee3a493b6a4ea9c290726d0e83ffe7fd",
    "quotes": [
     "Test Report from accredited and recognized laboratory as per the technical requirements mentioned under: UAE.S GSO 147:2019",
     "Validity of Test report should be less than 3 Year.",
@@ -110,12 +110,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:33:16Z",
    "http_status": 200,
-   "payload_sha256": "f0e31c5912d27f03f42afd5239a933faab95b85c9235fbca7b5d6953525ac287",
+   "payload_sha256": "7194ad3b0cda64e0f7fc1be2df4c8edd7f0b036fd0094c0ef928b35e8a3419e2",
    "quotes": [
     "Test Report from accredited and recognized laboratory as per the technical requirements mentioned under: UAE.S GSO 147:2019",
     "Validity of Test report should be less than 3 Year.",
@@ -128,12 +128,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 200,
-   "payload_sha256": "714f213d91b66698d33eae23eaf14d8836b9de66dea0fe07c8c34fdae202cee0",
+   "payload_sha256": "f531e47e13f0f84fb5a41400cdde9f4a5c5f01caa18447c1bef0e059e51b4c50",
    "quotes": [
     "Test Report from accredited and recognized laboratory as per the technical requirements mentioned under: UAE.S GSO 147:2019",
     "Validity of Test report should be less than 3 Year.",
@@ -146,12 +146,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "2e9bb865932970a6a6f77ff7d1b359ce9f63a7a595e6870b9b326afab3282c3f",
+   "payload_sha256": "b9dd075b50e6847d75ba40e2ffa263563ba1baf279c95bfe612d9687f1bc2b5e",
    "quotes": [
     "Test Report from accredited and recognized laboratory as per the technical requirements mentioned under: UAE.S GSO 147:2019",
     "Validity of Test report should be less than 3 Year.",
@@ -164,12 +164,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "5a29d47a59512de7121bf2f5022d5223877d8e16af2db38b8e707c607be83491",
+   "payload_sha256": "ad6744cdf7f0045281cf9f232c9092adbe7f834501504f61affba136d3809fcd",
    "quotes": [
     "Test Report from accredited and recognized laboratory as per the technical requirements mentioned under: UAE.S GSO 147:2019",
     "Validity of Test report should be less than 3 Year.",
@@ -182,12 +182,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:33:43Z",
    "http_status": 200,
-   "payload_sha256": "215a82def8e3832f95ff2e289298ca1b33cd1b882e0b8a1b91f5f7038ba0c14a",
+   "payload_sha256": "3dd2c6893442f9c1a5082ab7ef8b0689753b091939b829eedaa5cf7c02a022eb",
    "quotes": [
     "Test Report from accredited and recognized laboratory as per the technical requirements mentioned under: UAE.S GSO 147:2019",
     "Validity of Test report should be less than 3 Year.",
@@ -200,12 +200,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-27T17:14:01Z",
    "http_status": 0,
-   "payload_sha256": "e4424c091dc569f0be835c8813b540e17d1c1db88da1438879cd7576cf8ce9af",
+   "payload_sha256": "42b79ed98c89670d9936ad3ee8afaa0cbdd411e656d6520be0d923ed428bfd85",
    "quotes": [
     "Test Report from accredited and recognized laboratory as per the technical requirements mentioned under: UAE.S GSO 147:2019",
     "Validity of Test report should be less than 3 Year.",

@@ -172,12 +172,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-27T17:07:54Z",
    "http_status": 200,
-   "payload_sha256": "df5dfc7cc48453b015040fece8b0039476690c0f44bd2ddcf73c6884b9d55b51",
+   "payload_sha256": "e6e4453a68d6ff705d6f665270c41315a0fd4a39b92ba366568656679e211040",
    "quotes": [
     "OpenStreetMap is open data, licensed under the Open Data Commons Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF).",
     "You are free to copy, distribute, transmit and adapt our data, as long as you credit OpenStreetMap and its contributors.",

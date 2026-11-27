@@ -240,12 +240,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-27T17:15:30Z",
    "http_status": 200,
-   "payload_sha256": "e8c9c3ef05ada5061aeff59985143337fe8a004ac114f30f23363d7dca12d842",
+   "payload_sha256": "863893b31c2bfe03c6ba460074623efe55aae9a2f176c00af0c61e30f9944e75",
    "quotes": [
     "This request allows the real estate investor owning a property the purchase value of which is equal to or more than 2 million AED at the time of purchase, to apply for a 10-years renewable residence permit.",
     "In the event that a mortgaged property, a bank letter indicating 2 million AED paid amount as a proof to be provided",

@@ -2,12 +2,12 @@
  "cited_by": "faez",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-24T05:20:07Z",
    "http_status": 200,
-   "payload_sha256": "8a5359bdef71b3e3182772c701479c23aeccf7e57c2b25c7e0f27a28dd72a7b7",
+   "payload_sha256": "0b2265288981105bf83268d636b0129c17cbf67f0f18545bdf1d555a99c6203e",
    "quotes": [
     "It acts as the single online destination for all suppliers engaged for business with Dubai Government entities.",
     "View past tenders on Dubai's eSupply platform."
@@ -18,12 +18,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:19:31Z",
    "http_status": 200,
-   "payload_sha256": "c060ee4198f94b29a8a3fd03f07dd1a8acbae049d940a0b0463dd4c828fc8566",
+   "payload_sha256": "9bbea7296dfdf4229e14df75aa65541cb11966374d1f18cfa02981a6ed06aae3",
    "quotes": [
     "It acts as the single online destination for all suppliers engaged for business with Dubai Government entities.",
     "View past tenders on Dubai's eSupply platform."
@@ -34,12 +34,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:23:32Z",
    "http_status": 200,
-   "payload_sha256": "491a696959412774ff2f7c48cbe2f898c84a2f27662129cbe6c5010979c4e475",
+   "payload_sha256": "a230b991ddb43b07f267562ae8c795be0157d9e3be66c2dc9c2ecd975e3db986",
    "quotes": [
     "It acts as the single online destination for all suppliers engaged for business with Dubai Government entities.",
     "View past tenders on Dubai's eSupply platform."
@@ -50,12 +50,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:39:38Z",
    "http_status": 200,
-   "payload_sha256": "b8759028a10d5e7ca09e2ad2e63eb9818a8b93416be71e1f2a04c46cd67855e6",
+   "payload_sha256": "3574e73d158db232ce0cebf4c0ac36f776d6493b1b02c13e3fb439defa857c6b",
    "quotes": [
     "It acts as the single online destination for all suppliers engaged for business with Dubai Government entities.",
     "View past tenders on Dubai's eSupply platform."
@@ -66,12 +66,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:20:46Z",
    "http_status": 200,
-   "payload_sha256": "e128597aa7f94dc8bf37485c167e529c6513dfe3693951102b4a718c31eadf70",
+   "payload_sha256": "2893f1b0620a977da8fd7daa186b1be2b7d781b8729f49e07f2c29e3bae624f8",
    "quotes": [
     "It acts as the single online destination for all suppliers engaged for business with Dubai Government entities.",
     "View past tenders on Dubai's eSupply platform."
@@ -82,12 +82,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-27T17:12:47Z",
    "http_status": 0,
-   "payload_sha256": "0de1ea8cb27ed5d10a296b8eb995565c4028d9e03815228e6d28c421afa93d3d",
+   "payload_sha256": "20b6c64e6f2db7f9d4b3486b8ae34deb3bb815d5ae2eefdb915016e5f9b00f62",
    "quotes": [
     "It acts as the single online destination for all suppliers engaged for business with Dubai Government entities.",
     "View past tenders on Dubai's eSupply platform."

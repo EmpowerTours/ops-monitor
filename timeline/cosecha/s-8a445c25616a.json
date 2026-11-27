@@ -18,12 +18,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T01:32:05Z",
    "http_status": 200,
-   "payload_sha256": "f580d2a668506c7265d213f40d63fd1861573f0bb9591d9c0b07fc19a013317b",
+   "payload_sha256": "220a1ac23a6bfb2cf8c81f768737d4db40362f3edff0cc3b548a825832f0c056",
    "quotes": [
     "Labels must be in Arabic only or Arabic/English.",
     "The minimum information requirements for the Arabic label or sticker are:"
@@ -34,12 +34,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:27:05Z",
    "http_status": 200,
-   "payload_sha256": "b9b5638ca023dcaa175f4b50027c1ba0580cf3921bd8905a6e19e6205cfaa47c",
+   "payload_sha256": "69152e35f528a4464caa3327dc69134300cb6db669d054d815f3f65c43deb0b8",
    "quotes": [
     "Labels must be in Arabic only or Arabic/English.",
     "The minimum information requirements for the Arabic label or sticker are:"
@@ -50,12 +50,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T03:10:18Z",
    "http_status": 200,
-   "payload_sha256": "f429cc07a7d5df43b7b6d9dfee926aadf45b557ab5172f4d6f23cfba426de7ee",
+   "payload_sha256": "60ab58b9b4323b53370d2859814fdc28652df72cf31b92244165409021154859",
    "quotes": [
     "Labels must be in Arabic only or Arabic/English.",
     "The minimum information requirements for the Arabic label or sticker are:"
@@ -66,12 +66,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:15:38Z",
    "http_status": 200,
-   "payload_sha256": "a5ae1a95d8c41a7e04aa50fc6325efda18be6f2f2b49a58afb0b621fd7a92dff",
+   "payload_sha256": "c70a45e184515791894b7e0e440742f41b4311628fd90446f000569577263564",
    "quotes": [
     "Labels must be in Arabic only or Arabic/English.",
     "The minimum information requirements for the Arabic label or sticker are:"
@@ -82,12 +82,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T19:00:07Z",
    "http_status": 200,
-   "payload_sha256": "58e6a2b85f4c321bcda0bbcfbd93ff5fe40f584fd410480ffa3880698a365ead",
+   "payload_sha256": "03d1e4ac398d26eee6222f45622577b7742ea73a316fcd55ccc968e057d6bf8a",
    "quotes": [
     "Labels must be in Arabic only or Arabic/English.",
     "The minimum information requirements for the Arabic label or sticker are:"
@@ -98,12 +98,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:33:16Z",
    "http_status": 200,
-   "payload_sha256": "2948f37666256aefcbb7dc02775327b6e170d48bb72ed2c06149379d71061926",
+   "payload_sha256": "b5fe78944c05459db4bd23b5e22cdad597c764f8f81798314b22e073658ed88e",
    "quotes": [
     "Labels must be in Arabic only or Arabic/English.",
     "The minimum information requirements for the Arabic label or sticker are:"
@@ -114,12 +114,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 200,
-   "payload_sha256": "a4d3f18fd60cb3437bf424510e15e61d6776f63f85f73237ec9934316ead2fd6",
+   "payload_sha256": "35eb4fae86c2a6d9e83540244f42b6f65f9e9db8295d5e8336c9068d9ad55cd4",
    "quotes": [
     "Labels must be in Arabic only or Arabic/English.",
     "The minimum information requirements for the Arabic label or sticker are:"
@@ -130,12 +130,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "70fe4b93d08b3a7162f135e7884a70e3ae84d725c19ba5c49c0d9196e3ce5531",
+   "payload_sha256": "fbcd6cc6c748eada2fdfe10ebcb207f1029a8571309b44021d8076c269e9902c",
    "quotes": [
     "Labels must be in Arabic only or Arabic/English.",
     "The minimum information requirements for the Arabic label or sticker are:"
@@ -146,12 +146,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "35f1bdda92be5b5d0b97316fdf70676b8c9f5058c8628a006c33683c0f45de8b",
+   "payload_sha256": "b51843ca894b7dd780c673960e1cbdb5340902b1b85a41943b3e740d4ac7ba3a",
    "quotes": [
     "Labels must be in Arabic only or Arabic/English.",
     "The minimum information requirements for the Arabic label or sticker are:"
@@ -162,12 +162,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:33:43Z",
    "http_status": 200,
-   "payload_sha256": "508f0a60feb952bca37d4b20fb8b5e608936aaaab4ebdb89da134418eb9bdd54",
+   "payload_sha256": "bc28e3890f308598ec44a24050d8b58b4cd7ebfcce61b53362e9af9d310946bc",
    "quotes": [
     "Labels must be in Arabic only or Arabic/English.",
     "The minimum information requirements for the Arabic label or sticker are:"
@@ -178,12 +178,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-27T17:14:01Z",
    "http_status": 200,
-   "payload_sha256": "1eec313d19add46bd7fa0e933f2fd0563646481dd1e034663e4a725ffcfec69d",
+   "payload_sha256": "1a4a2761f9bd9449c213a2695e4fe9eeab1179635890b3498ef724b65c45fc96",
    "quotes": [
     "Labels must be in Arabic only or Arabic/English.",
     "The minimum information requirements for the Arabic label or sticker are:"

@@ -110,12 +110,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-24T05:33:16Z",
    "http_status": 200,
-   "payload_sha256": "954e0d5990c107ecc4ffba6c55d33aa8478f2f0c5a3cc3c6532f5b4af0b33e14",
+   "payload_sha256": "45a28a74cadf5f39f91516806a5d7641ebdfd36985f145393e6bbe1124953f95",
    "quotes": [
     "obtain a permit valid for 30 days from the date of issuance",
     "The consignment from a country or region where FMD has not been recorded for at least 12 months prior the collection of the product.",
@@ -128,12 +128,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:32:37Z",
    "http_status": 200,
-   "payload_sha256": "7fc43803e91984979d0fd14d8b58a23ff6e3b9b2136fece5c67e06e4e3c92f8e",
+   "payload_sha256": "09c9d756c943861be1321b13b797a2d3b474eda55d4936aff46ed91cde83ee44",
    "quotes": [
     "obtain a permit valid for 30 days from the date of issuance",
     "The consignment from a country or region where FMD has not been recorded for at least 12 months prior the collection of the product.",
@@ -146,12 +146,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:33:23Z",
    "http_status": 200,
-   "payload_sha256": "79f10b76ac5a3a2c15f8080921580c4d760af859d83688e1641b6f9251b2e339",
+   "payload_sha256": "eeac9582b9c605f57e4145702a5d7062d77490dc5811ad060c461c2b0db90517",
    "quotes": [
     "obtain a permit valid for 30 days from the date of issuance",
     "The consignment from a country or region where FMD has not been recorded for at least 12 months prior the collection of the product.",
@@ -164,12 +164,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "844c2c79d000c5fd37715b0c7d8981572f35d8b6d714dda23bf53a095433d4ac",
+   "payload_sha256": "12317948a23277865978b210c64610ba786ee48d3c1207829e074f711aa2262b",
    "quotes": [
     "obtain a permit valid for 30 days from the date of issuance",
     "The consignment from a country or region where FMD has not been recorded for at least 12 months prior the collection of the product.",
@@ -182,12 +182,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:33:43Z",
    "http_status": 200,
-   "payload_sha256": "3b11af34ac53813801f39429d7246d5f6a132fd133d944a10cfddd50fd6870a2",
+   "payload_sha256": "998f03ff7f24825301a2fcb1ccc3ba736417dbe84777f4e3020e20898bc20fbd",
    "quotes": [
     "obtain a permit valid for 30 days from the date of issuance",
     "The consignment from a country or region where FMD has not been recorded for at least 12 months prior the collection of the product.",
@@ -200,12 +200,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-27T17:14:01Z",
    "http_status": 200,
-   "payload_sha256": "59a97011274974a1d6a07b267ee087b338c55322a867a249840607a6a58bf6d7",
+   "payload_sha256": "90036e0c10e1ef4f83ac464d06ae649b5c52d2810990a1bb5465cf6cedc21004",
    "quotes": [
     "obtain a permit valid for 30 days from the date of issuance",
     "The consignment from a country or region where FMD has not been recorded for at least 12 months prior the collection of the product.",

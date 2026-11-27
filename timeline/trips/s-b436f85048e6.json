@@ -2,12 +2,12 @@
  "cited_by": "trips",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T02:56:08Z",
    "http_status": 200,
-   "payload_sha256": "e69be951e5225d828706d5d2b02dd3e8f595ea34e11f339acc5652241f59f661",
+   "payload_sha256": "54033335cb0656dbcb5d5ccdb867bba55c6875e73cb5e124bbbb59552854ddc7",
    "quotes": [
     "Passports must be valid for at least 6 months from the date of entry into the UAE."
    ],
@@ -17,12 +17,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:01:57Z",
    "http_status": 200,
-   "payload_sha256": "90ebf1269e001d09835866b035c1434af0415c742622bfbcb7c6ebe7c8db365b",
+   "payload_sha256": "e8ac8cb464f020effe67e785635a8e26ab5068a141d461baba30ba829798d71b",
    "quotes": [
     "Passports must be valid for at least 6 months from the date of entry into the UAE."
    ],
@@ -32,12 +32,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:45:47Z",
    "http_status": 200,
-   "payload_sha256": "64d261111dd155076668e6820baabcc24c781906b214e2de3200367edbda55c2",
+   "payload_sha256": "a7233ea45d1e44914786f7d9e6a3579d4c0d5edec08552b1a34d078d1f752350",
    "quotes": [
     "Passports must be valid for at least 6 months from the date of entry into the UAE."
    ],
@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:19:28Z",
    "http_status": 200,
-   "payload_sha256": "cd98e42f8714982a126d310fc54011a64c4d37a6798b927b79f50eb00a2e99f8",
+   "payload_sha256": "b3363115ac2861c4354019a96fb59b6f872dd46229de8509b8494d8738f85716",
    "quotes": [
     "Passports must be valid for at least 6 months from the date of entry into the UAE."
    ],
@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:18:50Z",
    "http_status": 200,
-   "payload_sha256": "159b3a07020f5bd7a814880ac59d9374cac62a351e86588fdc320c2e59b1223c",
+   "payload_sha256": "c1d8e5cc5645de7c837021273b95b696e6f12df8f878f74e779902b16ae0e553",
    "quotes": [
     "Passports must be valid for at least 6 months from the date of entry into the UAE."
    ],
@@ -77,12 +77,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:19:46Z",
    "http_status": 200,
-   "payload_sha256": "a7e4d7879f7d9dafc2f6d7dc85637fbc2a92e2d9b676de7eb226e510850cadfe",
+   "payload_sha256": "88bd1d03a2f162043fa82519eccb57d2c70ebd169f99012af7c1522da8e53e67",
    "quotes": [
     "Passports must be valid for at least 6 months from the date of entry into the UAE."
    ],
@@ -92,12 +92,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:38:57Z",
    "http_status": 200,
-   "payload_sha256": "b10483285598a8964fd6798e761f0094d216d0669ca7a1a79f83faace0362382",
+   "payload_sha256": "2f450bcc419534bab40c412a928f1655cf58d31700cae0aac71cf615e52433ee",
    "quotes": [
     "Passports must be valid for at least 6 months from the date of entry into the UAE."
    ],
@@ -107,12 +107,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:20:07Z",
    "http_status": 200,
-   "payload_sha256": "b87846246b1dce6ebf21cece00f9272d38c7b94de6a0e7034650e32ee2262fe8",
+   "payload_sha256": "cfca9ed0aa3631c7503b2dc43cca03045ba25aa09fed1f6f94817f0015e5d3d9",
    "quotes": [
     "Passports must be valid for at least 6 months from the date of entry into the UAE."
    ],
@@ -122,12 +122,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-27T17:08:32Z",
    "http_status": 0,
-   "payload_sha256": "5569758b40993dc22711d674d48864345063e45770bdde5c654d397e03d0b2cc",
+   "payload_sha256": "fbbc6ef58d317dd436a681cdef03cc7f08d40686392d651a2fb94c740f05a147",
    "quotes": [
     "Passports must be valid for at least 6 months from the date of entry into the UAE."
    ],

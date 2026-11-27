@@ -121,12 +121,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-27T17:11:44Z",
    "http_status": 200,
-   "payload_sha256": "973ad37db903e5235593867c8ad63c51852e17503cb140002a268eaa170eab71",
+   "payload_sha256": "a37ff60c7f7950d587e2f51a6fe812fdee26f35a0af4184901f1e3677154234b",
    "quotes": [
     "The full incorporation takes 3-4 weeks.",
     "Please note the license will only be issued with an active lease.",

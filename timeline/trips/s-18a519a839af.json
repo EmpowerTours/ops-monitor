@@ -82,12 +82,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-27T17:08:32Z",
    "http_status": 200,
-   "payload_sha256": "978a0126bdde8f5ad62ddb4ae31c4170880d16e8b9bb58f85d88b910b3c6d55e",
+   "payload_sha256": "4d4fb5088713c1e05ea12b1ad34d839251cff0b1a94e848ca9670813f5bb644c",
    "quotes": [
     "رسم البلدية على مبيعات المنشآت الفندقية في إمارة دبي",
     "\"رسم البلدية \" ام احاس به لقن أس ي ( 10٪ )"

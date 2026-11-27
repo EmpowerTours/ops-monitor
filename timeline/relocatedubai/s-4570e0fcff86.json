@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "e6479f967f9eebddca07cd71335faf4918e248c96ac2fed6d6fe257d5f989f28",
+   "payload_sha256": "789490c6ce5437bebf2cf2c6d920a28bb6dfb552b8c0d43c9fd4ecbb393bc988",
    "quotes": [
     "Job seekers are not required to pay money to any recruitment agency as the onus to pay such fees lies with the employers.",
     "Dubai Careers - Dubai Government job portal"
@@ -18,12 +18,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:36Z",
    "http_status": 200,
-   "payload_sha256": "a7ff743f906ad7f3d8c209a31d7af09f5cc3e0008ffc3bda0fa694cfcc68d028",
+   "payload_sha256": "80671489e91b27f7738f2f826cf87980614f35dfcf5b726a0852aca971a5e584",
    "quotes": [
     "Job seekers are not required to pay money to any recruitment agency as the onus to pay such fees lies with the employers.",
     "Dubai Careers - Dubai Government job portal"
@@ -34,12 +34,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "7afc7ec985bd5120f67049fe36ca727963205e12a05629b8cdaf88de2b2bb85a",
+   "payload_sha256": "4c5be0ed7b38a556d8db19a0ccb74e8cd26e776fbe06fd204ba997c966b17122",
    "quotes": [
     "Job seekers are not required to pay money to any recruitment agency as the onus to pay such fees lies with the employers.",
     "Dubai Careers - Dubai Government job portal"
@@ -50,12 +50,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "e9acb3ad0740cc38adb413696907c19954f03029e15596af1a7a2877e2aa77c4",
+   "payload_sha256": "dc2c2ff10550461ee53423a39e961ecfccb3af0d028251bd595448e28ca01892",
    "quotes": [
     "Job seekers are not required to pay money to any recruitment agency as the onus to pay such fees lies with the employers.",
     "Dubai Careers - Dubai Government job portal"
@@ -66,12 +66,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "96f3a41979999061614f421a012614e4d5475bfe3d14806320e888b008773580",
+   "payload_sha256": "0dad0577bfdd69fbf7778f63696a67bd1310a36ca04d3f50ffec64be9bde7e2e",
    "quotes": [
     "Job seekers are not required to pay money to any recruitment agency as the onus to pay such fees lies with the employers.",
     "Dubai Careers - Dubai Government job portal"
@@ -82,12 +82,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "2046ccc7cd621350d3e8f02ea60d401f7518b9982b57408df048884531754fba",
+   "payload_sha256": "73af98289798f3b8e7ff10806178a6a9daf3cab5b71662f3ff5bd2c3985487f6",
    "quotes": [
     "Job seekers are not required to pay money to any recruitment agency as the onus to pay such fees lies with the employers.",
     "Dubai Careers - Dubai Government job portal"
@@ -98,12 +98,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:21:20Z",
    "http_status": 200,
-   "payload_sha256": "56132bd84fb281869c113e69e16a2d8e2a5ce6984ac44e3a9577294333f2bade",
+   "payload_sha256": "cb26dc4294f734426101083469495738deab5b4083fd18b4d5801b9ff848cade",
    "quotes": [
     "Job seekers are not required to pay money to any recruitment agency as the onus to pay such fees lies with the employers.",
     "Dubai Careers - Dubai Government job portal"
@@ -114,12 +114,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-27T17:15:30Z",
    "http_status": 0,
-   "payload_sha256": "ff7c1b6c9add3db783f41e0106cfeb436d7f5fde542292b132885f23c715f76c",
+   "payload_sha256": "701c4a9d2c98fa3921e34e37633119f87f18ce4d484e948915e0d0c9740842a7",
    "quotes": [
     "Job seekers are not required to pay money to any recruitment agency as the onus to pay such fees lies with the employers.",
     "Dubai Careers - Dubai Government job portal"

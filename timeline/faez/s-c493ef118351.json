@@ -2,12 +2,12 @@
  "cited_by": "faez",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-24T05:20:07Z",
    "http_status": 200,
-   "payload_sha256": "73f4bd1e22d5ab11ca7a025001d432bbb5ad9314aed40eaaf6754cc5d7374b70",
+   "payload_sha256": "5b1d60a622d7c9d90e0791bfdef2e3658cce3e821c1acc2b6721013f8571c04e",
    "quotes": [
     "Search for licence information - Dubai Economy and Tourism",
     "Check business name - Invest in Dubai"
@@ -18,12 +18,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:19:31Z",
    "http_status": 200,
-   "payload_sha256": "cb833dea47244bbee88bec927d06f3951f408c0637734d5c02d9cfbea82df502",
+   "payload_sha256": "5058fc463c1f5c98cc92882723d2726cf41522268575e1a7b7c9a10499658400",
    "quotes": [
     "Search for licence information - Dubai Economy and Tourism",
     "Check business name - Invest in Dubai"
@@ -34,12 +34,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:23:32Z",
    "http_status": 200,
-   "payload_sha256": "381d79ca132d018762e08d26893a456f47594305a8576f4d2e20cb5c2a0be18b",
+   "payload_sha256": "5466f2340cd48c3f22725e7c9e02058a9cb6aea9c13a376def34cdbad497ed9c",
    "quotes": [
     "Search for licence information - Dubai Economy and Tourism",
     "Check business name - Invest in Dubai"
@@ -50,12 +50,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:39:38Z",
    "http_status": 200,
-   "payload_sha256": "be9a03cb601e24ba5651af9dc83fbee7c9b2e87595fb973cddfadc9624beca1e",
+   "payload_sha256": "da2b1d86025edf88a8e787a6b66ead77bfc40353fcba0f9b8b7837f3cdd0efb2",
    "quotes": [
     "Search for licence information - Dubai Economy and Tourism",
     "Check business name - Invest in Dubai"
@@ -66,12 +66,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:20:46Z",
    "http_status": 200,
-   "payload_sha256": "ce8c31b9db20f6acfd1b42dbde2e697aa48edc1dd5c1d34a2ab205f5c5fb15cf",
+   "payload_sha256": "2ead2ca65c50f273f0e94db6b90851b970e9a9451083d7de5d3f335f558d2fec",
    "quotes": [
     "Search for licence information - Dubai Economy and Tourism",
     "Check business name - Invest in Dubai"
@@ -82,12 +82,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-27T17:12:47Z",
    "http_status": 0,
-   "payload_sha256": "50d84f7feae44092dd74e850484affa5f0123eb2b6d4c4ea03e786298988f0c4",
+   "payload_sha256": "531b89d64174dcd4fdff7fda283408b773f2f5e2c40596fb7c8f991d59e242a6",
    "quotes": [
     "Search for licence information - Dubai Economy and Tourism",
     "Check business name - Invest in Dubai"

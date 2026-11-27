@@ -170,12 +170,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-26T17:21:20Z",
    "http_status": 200,
-   "payload_sha256": "0a8716df2025cf0dab34fedf349a8e2b7aa039b95ebfed90b6108e97a0e0c482",
+   "payload_sha256": "22c15b1ef0b33bf163aa20d5d8be871d25e2d74f72576f92e1393c3bbc073f0c",
    "quotes": [
     "The residence permit is valid for 10 years and can be extended if the same conditions are met.",
     "The applicant must own a property or a group of properties with a total value of no less than AED 2 million.",
@@ -198,12 +198,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-27T17:15:30Z",
    "http_status": 200,
-   "payload_sha256": "e38e33814b4dca2d2f1e37453d35b9d3fc02055e57a226063c3dd578131de451",
+   "payload_sha256": "55a67ca8cae0c81e288054a75694f15e234dfb7cb05faa4d6cef524917a29644",
    "quotes": [
     "The residence permit is valid for 10 years and can be extended if the same conditions are met.",
     "The applicant must own a property or a group of properties with a total value of no less than AED 2 million.",

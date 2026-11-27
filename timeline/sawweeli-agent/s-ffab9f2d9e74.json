@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-23T18:02:57Z",
    "http_status": 200,
-   "payload_sha256": "1d6c58c65b49a6d71d9c74f6646bcf5fb686a2d0d6a554391c26acfade2114fb",
+   "payload_sha256": "ac65870148081f6cfcd9ef1d781622c0389f80134661fa6c07f81afefeddbdb9",
    "quotes": [
     "The employer must apply for the standard work visa."
    ],
@@ -62,12 +62,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:06Z",
    "http_status": 200,
-   "payload_sha256": "ad0eb22c15db03d26f716b3c0e946ef26175260f0331e53b7fce4702b820aed4",
+   "payload_sha256": "70a80a13fe802097f0a8f94f8ddde51b5555e0d45040d1e936ef1e854c1ad427",
    "quotes": [
     "The employer must apply for the standard work visa."
    ],
@@ -77,12 +77,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:19:56Z",
    "http_status": 200,
-   "payload_sha256": "c450ee2d6d8acfc2fdbb90d71071f8a1441341741b95f2b9533df1909b12cc49",
+   "payload_sha256": "ed5b009cd986044ed31b912ffe3630809971841c747a12df0a1b8e31093fc773",
    "quotes": [
     "The employer must apply for the standard work visa."
    ],
@@ -92,12 +92,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:19:17Z",
    "http_status": 200,
-   "payload_sha256": "6eabadaac71ceefe46508ed852654a8cc3a295b7c92a9ce6c44703d79afe6cda",
+   "payload_sha256": "d62c3e314754d839a046d6a3d63985e998b85a317dc9ef6006f8edcc872d32ef",
    "quotes": [
     "The employer must apply for the standard work visa."
    ],
@@ -107,12 +107,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:23:18Z",
    "http_status": 200,
-   "payload_sha256": "e3a77cc9ee31f8b73fad6830ed5b96ded247925d36f0717b2e3d4a5ecf1bb6cb",
+   "payload_sha256": "c24336bb79cbab53523ccfca8ca872ee8a39dadad1f4508f4adb0acfaecfb92e",
    "quotes": [
     "The employer must apply for the standard work visa."
    ],
@@ -122,12 +122,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:39:26Z",
    "http_status": 200,
-   "payload_sha256": "b4abec6882f4da63faebd5eb89eaa864de9bb8f16ace69ec976ad5cf13efd225",
+   "payload_sha256": "32fd087873f8da823d502cbba871ddeb8bedc674282832d0ce6a106dc7789be0",
    "quotes": [
     "The employer must apply for the standard work visa."
    ],
@@ -137,12 +137,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:20:31Z",
    "http_status": 200,
-   "payload_sha256": "898e49ed6add287856de41ce0eae421d04da953e80bc2d348715615e25fddfd5",
+   "payload_sha256": "13318739b745e237f48bd6ed40566f7864b0564fd559fb047d6e06e17f1ef885",
    "quotes": [
     "The employer must apply for the standard work visa."
    ],
@@ -152,12 +152,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-27T17:11:11Z",
    "http_status": 0,
-   "payload_sha256": "63510cd49476688d1af275c7bce802cc0c8d9d188230827715d0f561226fd075",
+   "payload_sha256": "69607f10353a5faad2035cda21bc0705547a5e9d454f3b8b78a2a00646c9e3c7",
    "quotes": [
     "The employer must apply for the standard work visa."
    ],

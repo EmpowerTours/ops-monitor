@@ -107,12 +107,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-26T17:20:07Z",
    "http_status": 200,
-   "payload_sha256": "dc606845c6af2014081bae1e49a7c43e05213ef8c2fd8033218bb0b564abb15d",
+   "payload_sha256": "96d913e1bfac86c8a08d346bbc6d62697a072d131d90ef0e5ad9c2d7ce6efa82",
    "quotes": [
     "Expiry of the permitted stay period for the foreigner in the State, or the cancellation or expiration of the (entry visa / residence permit / exit permit / newborn registration), per day. - 50 AED"
    ],
@@ -122,12 +122,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-27T17:08:32Z",
    "http_status": 200,
-   "payload_sha256": "604350ad7428750b54b2155db8eada53283f9bf0ce6ed6e0a24b5d7b7ba6697b",
+   "payload_sha256": "ac32e31ae2ba2a76214c9f29f90b64fba9c59151173f9fc737c424c79f189a0f",
    "quotes": [
     "Expiry of the permitted stay period for the foreigner in the State, or the cancellation or expiration of the (entry visa / residence permit / exit permit / newborn registration), per day. - 50 AED"
    ],

@@ -92,12 +92,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-26T17:22:11Z",
    "http_status": 200,
-   "payload_sha256": "33c298dc4247f65826b085d73ceb52ca1ea8dcf136fa4a96f7d1bb5518655f26",
+   "payload_sha256": "85780cdb0888fe697fa014513f3661a1afd6fa0829ae901e3a27df4cd25f9dc7",
    "quotes": [
     "• Avoid untrustworthy websites to protect your data Do not enter your personal information on unofficial websites or applications, as these sites may be a source of manipulation or fraud."
    ],
@@ -107,12 +107,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-27T17:11:11Z",
    "http_status": 200,
-   "payload_sha256": "3ec35887cce334db6bfbe15a4f3a2e35121c097f1995be1a9a1529a691d6048f",
+   "payload_sha256": "189db735304c122b3b9ba44bed62d20b0b710fbfd5870a844575e62cd2bf2649",
    "quotes": [
     "• Avoid untrustworthy websites to protect your data Do not enter your personal information on unofficial websites or applications, as these sites may be a source of manipulation or fraud."
    ],

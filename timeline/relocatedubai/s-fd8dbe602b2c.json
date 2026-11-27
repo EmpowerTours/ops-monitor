@@ -121,12 +121,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-27T17:15:30Z",
    "http_status": 200,
-   "payload_sha256": "f6a49dc7d51395a48061507d3600c4418f4f23794560dc552e0edf4d0957f4c3",
+   "payload_sha256": "611af637e7878ca4a67743b8440504102bf1f9f4f0a722fac21cd8afa92838c7",
    "quotes": [
     "Get up and running in 3 working days",
     "99/PER MONTH",

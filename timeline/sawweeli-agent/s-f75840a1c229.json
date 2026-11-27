@@ -87,12 +87,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-27T17:11:11Z",
    "http_status": 200,
-   "payload_sha256": "860aa65a2d4c6973aafabea4f5650318234d1ec72aea0d67fbf4b111ef00ecce",
+   "payload_sha256": "8cf3a99c3051ad1bac68fabd700d8c7b723e36897a52a280429bfea06cf750c1",
    "quotes": [
     "FEDERAL DECREE LAW NO. (20) OF 2023 AMENDING CERTAIN PROVISIONS OF",
     "The following text shall replace Article (54) of Federal Decree Law No. (33) of 2021",

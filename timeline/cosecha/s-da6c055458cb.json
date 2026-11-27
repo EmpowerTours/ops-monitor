@@ -137,12 +137,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-25T17:52:39Z",
    "http_status": 200,
-   "payload_sha256": "0ac317b4fe3c6a1dc8606c52b550e78d748dc5c25f11d95bbaa42cd59fca06cf",
+   "payload_sha256": "1c8f0510344243fdc302761e1ff8a0e2f3016a55376c0b7be98d7de4d664fae7",
    "quotes": [
     "approval is obtained to import an agricultural consignment including (seeds & tubers, seedlings & plants & palm seedlings, and honey bees)"
    ],
@@ -152,12 +152,12 @@
    "status": "quote_missing"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:33:43Z",
    "http_status": 200,
-   "payload_sha256": "a610ca925f9cd0988682109875a46e3fab5422a52b4f70fb0e571eb8ded9053e",
+   "payload_sha256": "0bbf475aa55a7e70d4d7b851687eb2a0c90b9e3bf34f7bb2c5b5720073eb1838",
    "quotes": [
     "approval is obtained to import an agricultural consignment including (seeds & tubers, seedlings & plants & palm seedlings, and honey bees)"
    ],
@@ -167,12 +167,12 @@
    "status": "quote_missing"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-27T17:14:01Z",
    "http_status": 200,
-   "payload_sha256": "3889fff2162e1c81fec2b6617e8179a97e171b6499b184490287345665ba9569",
+   "payload_sha256": "28f88d5e25f61e77988bd496ecdbe2d6d45086031220eba825f4e68662f88070",
    "quotes": [
     "approval is obtained to import an agricultural consignment including (seeds & tubers, seedlings & plants & palm seedlings, and honey bees)"
    ],

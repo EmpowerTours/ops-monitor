@@ -19,12 +19,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T02:12:25Z",
    "http_status": 200,
-   "payload_sha256": "4b31f5d1c06a7fcdaf9fe7932b97b8e1aa3552e79a727daa4e7290a62f123b57",
+   "payload_sha256": "56573132a0c4bc049139e19a9b3c9d495b2c348ac2aaa7f963fecca6096c20b0",
    "quotes": [
     "If you are offered a job in the UAE, you must get an offer letter issued by the UAE's Ministry of Human Resources and Emiratisation (MOHRE), signed by the authorised manager.",
     "You can verify the validity of the job offer using its reference number through the enquiry service",
@@ -36,12 +36,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:56:36Z",
    "http_status": 200,
-   "payload_sha256": "9258a1c47a0a2c136897fbf255f2e81392c334d8e6b10d1c624a45029ae9df7b",
+   "payload_sha256": "9d25b07844865c84c07666b30cb19d4bee957917e92ded320610341a0987173a",
    "quotes": [
     "If you are offered a job in the UAE, you must get an offer letter issued by the UAE's Ministry of Human Resources and Emiratisation (MOHRE), signed by the authorised manager.",
     "You can verify the validity of the job offer using its reference number through the enquiry service",
@@ -53,12 +53,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:02:57Z",
    "http_status": 200,
-   "payload_sha256": "94618a99fa94b95f103c467ec7f5065d52dcb04aed76a34041717e3b5fb19915",
+   "payload_sha256": "b43e290ea41eb43d400d63a90ab3038bbb377561602556945a748bdc032d1002",
    "quotes": [
     "If you are offered a job in the UAE, you must get an offer letter issued by the UAE's Ministry of Human Resources and Emiratisation (MOHRE), signed by the authorised manager.",
     "You can verify the validity of the job offer using its reference number through the enquiry service",
@@ -70,12 +70,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:06Z",
    "http_status": 200,
-   "payload_sha256": "5afd0c3bb5204ac6c3a85d1401e7a67461577f16dcf08835b303dd3131156580",
+   "payload_sha256": "aeee0bca523a16d5266e55150ea16abcf13f6ccb2ed2fa390b62a334afc8a1df",
    "quotes": [
     "If you are offered a job in the UAE, you must get an offer letter issued by the UAE's Ministry of Human Resources and Emiratisation (MOHRE), signed by the authorised manager.",
     "You can verify the validity of the job offer using its reference number through the enquiry service",
@@ -87,12 +87,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:19:56Z",
    "http_status": 200,
-   "payload_sha256": "5aa5d565ed4ad9f5d9ba010319d39b035f834584040459b1a55d3a0190eeef7a",
+   "payload_sha256": "a811184845bd49a532232cd01004c7a3926c4020f08964b87e6f90b1c4f7d908",
    "quotes": [
     "If you are offered a job in the UAE, you must get an offer letter issued by the UAE's Ministry of Human Resources and Emiratisation (MOHRE), signed by the authorised manager.",
     "You can verify the validity of the job offer using its reference number through the enquiry service",
@@ -104,12 +104,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:19:17Z",
    "http_status": 200,
-   "payload_sha256": "075176ce6c4fe48685bf8591ce0234ce157311a8ce07fd14ce289c6223a277fb",
+   "payload_sha256": "9f837eeaf36ecfa7d586531ba8bdd4e8548ed059a256a06f25de6d09e7c70bf8",
    "quotes": [
     "If you are offered a job in the UAE, you must get an offer letter issued by the UAE's Ministry of Human Resources and Emiratisation (MOHRE), signed by the authorised manager.",
     "You can verify the validity of the job offer using its reference number through the enquiry service",
@@ -121,12 +121,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:23:18Z",
    "http_status": 200,
-   "payload_sha256": "ed7a1f2b27837a7e5358db161cec223e6379e01b285916f52ca613e90e0e8454",
+   "payload_sha256": "19a8be0ebcaf50bffb28056e63267ab95d6411c39ea653b727c90cf32595c035",
    "quotes": [
     "If you are offered a job in the UAE, you must get an offer letter issued by the UAE's Ministry of Human Resources and Emiratisation (MOHRE), signed by the authorised manager.",
     "You can verify the validity of the job offer using its reference number through the enquiry service",
@@ -138,12 +138,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:39:26Z",
    "http_status": 200,
-   "payload_sha256": "20dfa5f308b406561b6aa4179dd742f4a433c2cd76f3c59ad83b400ce99d97d2",
+   "payload_sha256": "586b9ab4a9367bd6cb81f90ba43c7d4b072f5b3e139caae561dc1fe4992873b3",
    "quotes": [
     "If you are offered a job in the UAE, you must get an offer letter issued by the UAE's Ministry of Human Resources and Emiratisation (MOHRE), signed by the authorised manager.",
     "You can verify the validity of the job offer using its reference number through the enquiry service",
@@ -155,12 +155,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:20:31Z",
    "http_status": 200,
-   "payload_sha256": "08fcf08ec33ba5cf2762fcf045b32d20c830899e7a1024cb405cad2083670bc9",
+   "payload_sha256": "979f49479000222f03b4063be4c33cd5af46b3300221c6e31b28af227ebe6764",
    "quotes": [
     "If you are offered a job in the UAE, you must get an offer letter issued by the UAE's Ministry of Human Resources and Emiratisation (MOHRE), signed by the authorised manager.",
     "You can verify the validity of the job offer using its reference number through the enquiry service",
@@ -172,12 +172,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-27T17:11:11Z",
    "http_status": 0,
-   "payload_sha256": "2c835e0211164fb19d0f6e8751bbfa12ee5d7cf5fa85d36c6228d51febc93781",
+   "payload_sha256": "870ffadc8ee924c09dff30626c37a43a8f8eb470e12ae4cd08a1fdcfe0561f1b",
    "quotes": [
     "If you are offered a job in the UAE, you must get an offer letter issued by the UAE's Ministry of Human Resources and Emiratisation (MOHRE), signed by the authorised manager.",
     "You can verify the validity of the job offer using its reference number through the enquiry service",

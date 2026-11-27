@@ -121,12 +121,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-27T17:11:44Z",
    "http_status": 200,
-   "payload_sha256": "b2fd4f445964c3cf09b88e084d0eb0ed3d28e4a82e1690844f5bcb009d93074f",
+   "payload_sha256": "fea3c3e539de1e689de0bc8ba371cc498a4db8a01498c9ac8b30e21c303c2d13",
    "quotes": [
     "Simple and fully digital process",
     "From trade license to a proof of address, it's straightforward.",

@@ -2,12 +2,12 @@
  "cited_by": "relocatedubai",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T18:04:09Z",
    "http_status": 200,
-   "payload_sha256": "fd9cef37285f3de749836e469f412e5c833783136e637b737bc8449fb27cbd0e",
+   "payload_sha256": "b2a120eed3112c952dac333a74e65d7d6b6f29d864dee374cf783815f1d1f317",
    "quotes": [
     "Freelance work permit - It is issued to individuals who wish to engage in freelance work independently"
    ],
@@ -17,12 +17,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:36Z",
    "http_status": 200,
-   "payload_sha256": "f11fb345d00d487b747a8ca6c29d7bfb02803686a65f90684490a5568849b63f",
+   "payload_sha256": "0d9c2f8c7c2c320789805eba9e8db5d6f20f0e6e324b9416798871c787c1761a",
    "quotes": [
     "Freelance work permit - It is issued to individuals who wish to engage in freelance work independently"
    ],
@@ -32,12 +32,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:20:48Z",
    "http_status": 200,
-   "payload_sha256": "3ecef97f30014bb1d17aa54c83451ecea3860bfa173f7c1aa2d1ce17d65729fe",
+   "payload_sha256": "afef9279f2daa362bb913255c1eb1406363aa1902d5f6d3fef1dd08122bfee9f",
    "quotes": [
     "Freelance work permit - It is issued to individuals who wish to engage in freelance work independently"
    ],
@@ -47,12 +47,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:20:04Z",
    "http_status": 200,
-   "payload_sha256": "06c84ac1256fc15e0d1884f3c0ff35caa30ab5230b27b240274a3dc336796778",
+   "payload_sha256": "d1a3142e8c00f4e6e63bb1173533f63cefb25e512c71fff834c18691ff6f495c",
    "quotes": [
     "Freelance work permit - It is issued to individuals who wish to engage in freelance work independently"
    ],
@@ -62,12 +62,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:24:07Z",
    "http_status": 200,
-   "payload_sha256": "922fd6bed235be1cc20be1d718c0440b14ebda9b64b05a460acaaa1b55376c0b",
+   "payload_sha256": "361d3397bb408f50c60737873c6775a697de1fe219be696693e6ef24d04382d2",
    "quotes": [
     "Freelance work permit - It is issued to individuals who wish to engage in freelance work independently"
    ],
@@ -77,12 +77,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:40:06Z",
    "http_status": 200,
-   "payload_sha256": "d2cd3a591156beea77eebd43c94a66d2da52618a6fe03608af05e7ff4012e5c5",
+   "payload_sha256": "5002fe5b941872d8c2ddfb1272b0b02e5d39f4382ab6778df66dd8a917a516d3",
    "quotes": [
     "Freelance work permit - It is issued to individuals who wish to engage in freelance work independently"
    ],
@@ -92,12 +92,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:21:20Z",
    "http_status": 200,
-   "payload_sha256": "b005a6625791b7bf9587b94859aa4c7886c604321bbfaeeb103f497a8a902021",
+   "payload_sha256": "492265cfcb6db06b334aab443c591780ac7994ed9e0ac17a695ec85bdeb13fc8",
    "quotes": [
     "Freelance work permit - It is issued to individuals who wish to engage in freelance work independently"
    ],
@@ -107,12 +107,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-27T17:15:30Z",
    "http_status": 0,
-   "payload_sha256": "b31e4a25ad60dea0eb3e34b42b27af6cd2d286cdacdfdc518271ea2d6f3ed4d5",
+   "payload_sha256": "ec8c1343f29899c73db23403b2ab161076494891dce1e3ad1a4dcea10bd3da71",
    "quotes": [
     "Freelance work permit - It is issued to individuals who wish to engage in freelance work independently"
    ],

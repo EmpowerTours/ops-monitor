@@ -107,12 +107,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-27T17:15:30Z",
    "http_status": 200,
-   "payload_sha256": "acc7f177897166e6f40c5b8e5bd902c395f30c173525160515ec3418323ea324",
+   "payload_sha256": "932af9243a74fa7cfa66a95c5870a74244b69220ae230689ca63db114a120a60",
    "quotes": [
     "a tailored proposal that outlines the best type of license, business activities, visa package, and office solutions."
    ],

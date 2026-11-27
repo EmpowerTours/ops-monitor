@@ -122,12 +122,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:39:26Z",
    "http_status": 200,
-   "payload_sha256": "a0269db371a530dce99269bbf1d3490a92b82b5cef5ebcf733d6793ce247c1c8",
+   "payload_sha256": "58be389b81ce5415f6ec62afe916d6b61236f9e2b344559e0d69dc173059aa71",
    "quotes": [
     "The United Arab Emirates' Government Platform"
    ],
@@ -137,12 +137,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:20:31Z",
    "http_status": 200,
-   "payload_sha256": "eec59ef871feb4a46e530087a9affb74c0ca9475a6a805408cac1d7d7c1d54da",
+   "payload_sha256": "a3b9438954c5e7c87738504e957dce88c8799a522990c8b63f943402b9851df9",
    "quotes": [
     "The United Arab Emirates' Government Platform"
    ],
@@ -152,12 +152,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-27T17:11:11Z",
    "http_status": 0,
-   "payload_sha256": "341f6d96a53c74f13590a1c6fb945d8808d91d84dd1bdae35d7af77acc9b18ed",
+   "payload_sha256": "a7f99cf1eb76c6e20eced8bace2a3f8691ff6ac2930971f8b1d7da3131543342",
    "quotes": [
     "The United Arab Emirates' Government Platform"
    ],
