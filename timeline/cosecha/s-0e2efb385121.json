@@ -175,6 +175,22 @@
    "run_id": "20261126T171752Z",
    "sha256": "dc9ef8b028a2682b20b4351a6b15d601f2ce236451434a3fb904404e8e2b9d9e",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-27T17:14:01Z",
+   "http_status": 0,
+   "payload_sha256": "f16ffd15d8b627c5a865f4af3039c9024392fc0fda8f387d22b9d0d7c667e306",
+   "quotes": [
+    "Halal Certification Services",
+    "While the Halal National Mark is optional"
+   ],
+   "ref": "cosecha/s-0e2efb385121/2026-11-27T17:14:01Z",
+   "run_id": "20261127T165808Z",
+   "sha256": "",
+   "status": "unreachable"
   }
  ],
  "source_id": "s-0e2efb385121",

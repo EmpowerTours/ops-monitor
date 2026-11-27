@@ -119,6 +119,23 @@
    "run_id": "20261126T171752Z",
    "sha256": "ac055d25f28da7a5137fce4c7d5477545bc13aa9939c4b5169aa750caaab978b",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-27T17:11:44Z",
+   "http_status": 200,
+   "payload_sha256": "840ea5b7d0ef152771f42cabd451353c384ac53f9ac63f2d43da262994034f00",
+   "quotes": [
+    "This service is free of charge",
+    "who operate legally in Dubai submit their information",
+    "Provides accessible source for businesses and government entities to verify AI service providers."
+   ],
+   "ref": "asas/s-4e52f0feecad/2026-11-27T17:11:44Z",
+   "run_id": "20261127T165808Z",
+   "sha256": "ac055d25f28da7a5137fce4c7d5477545bc13aa9939c4b5169aa750caaab978b",
+   "status": "verified"
   }
  ],
  "source_id": "s-4e52f0feecad",

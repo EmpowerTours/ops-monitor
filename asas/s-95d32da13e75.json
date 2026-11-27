@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-26T17:20:33Z",
+ "fetched_at": "2026-11-27T17:11:44Z",
  "id": "s-95d32da13e75",
- "last_read_fetched_at": "2026-11-26T17:20:33Z",
+ "last_read_fetched_at": "2026-11-27T17:11:44Z",
  "manifest_fingerprint": "88e1a6ce9dd14d5303e5bea94df01c5953cee3634377db389b73734d09f4a601",
- "run_id": "20261126T171752Z",
+ "run_id": "20261127T165808Z",
  "sha256": "9f3de5edb8a6173b81a3062abe4a2d82a0eecbbb79020c58b8f6b0d889028d0c",
  "status": "verified",
  "url": "https://wio.io/easy-onboarding"

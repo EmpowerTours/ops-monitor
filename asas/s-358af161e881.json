@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-26T17:20:33Z",
+ "fetched_at": "2026-11-27T17:11:44Z",
  "id": "s-358af161e881",
  "last_read_fetched_at": "2026-11-26T17:20:33Z",
  "manifest_fingerprint": "3e4623c69023b0775b635054fa726d800ed9acc7a8a1788fb77dd03ec7cb55ee",
- "run_id": "20261126T171752Z",
+ "run_id": "20261127T165808Z",
  "sha256": "c5a8929c5db4680547dcd6773257cb2dabf6c456b29bef751dca8de3e655e3b3",
- "status": "verified",
+ "status": "unreachable",
  "url": "https://u.ae/en/information-and-services/visa-and-emirates-id/visa-information/general-provisions-for-the-residence-visa"
 }

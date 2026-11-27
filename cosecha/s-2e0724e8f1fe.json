@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-26T17:33:43Z",
+ "fetched_at": "2026-11-27T17:14:01Z",
  "id": "s-2e0724e8f1fe",
- "last_read_fetched_at": "2026-11-26T17:33:43Z",
+ "last_read_fetched_at": "2026-11-27T17:14:01Z",
  "manifest_fingerprint": "eee1ce8ce51b16022856d2d494147607be45945dc11ad197a80620c643e31bca",
- "run_id": "20261126T171752Z",
+ "run_id": "20261127T165808Z",
  "sha256": "369c4a4910ccb31cbd73a66a624a8fcd8e16529ff1085293a7fee1a863210e29",
  "status": "changed_quote_ok",
  "url": "https://moccae.gov.ae/Handlers/DownloadPDF.ashx?id=67415"

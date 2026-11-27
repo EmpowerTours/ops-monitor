@@ -105,6 +105,21 @@
    "run_id": "20261126T171752Z",
    "sha256": "7a7ca84934d54cf6627deaccedcb4c2f99c71dc2ab64d84993a42e87e01901f9",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-27T17:11:44Z",
+   "http_status": 200,
+   "payload_sha256": "02a10f8c40713c590b99a256ca3cff178d9f656c189ad7c7fa9cebb465eb9b35",
+   "quotes": [
+    "Meydan Free Zone, Meydan Grandstand, 6th Floor, Meydan Rd, Nad Al Sheba 1, Dubai, UAE"
+   ],
+   "ref": "asas/s-2da8d91c6bf2/2026-11-27T17:11:44Z",
+   "run_id": "20261127T165808Z",
+   "sha256": "7a7ca84934d54cf6627deaccedcb4c2f99c71dc2ab64d84993a42e87e01901f9",
+   "status": "verified"
   }
  ],
  "source_id": "s-2da8d91c6bf2",

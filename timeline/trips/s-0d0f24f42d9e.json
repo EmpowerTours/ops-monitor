@@ -180,6 +180,24 @@
    "run_id": "20261126T171752Z",
    "sha256": "7e3876d7289bd3ebed898e3ff864005b281051a0165394e19cde57b6f00b28d4",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-27T17:08:32Z",
+   "http_status": 200,
+   "payload_sha256": "4b77b0dd7b21aa2965b74163b302721d115cf1eee837c8cac4c64ce955e64330",
+   "quotes": [
+    "Universal link: https://m.uber.com/looking",
+    "Encoded pickup Location JSON object.",
+    "Encoded drop Location JSON object.",
+    "URL encoded pickup location nickname."
+   ],
+   "ref": "trips/s-0d0f24f42d9e/2026-11-27T17:08:32Z",
+   "run_id": "20261127T165808Z",
+   "sha256": "7e3876d7289bd3ebed898e3ff864005b281051a0165394e19cde57b6f00b28d4",
+   "status": "verified"
   }
  ],
  "source_id": "s-0d0f24f42d9e",

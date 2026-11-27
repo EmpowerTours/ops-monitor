@@ -175,6 +175,31 @@
    "run_id": "20261126T171752Z",
    "sha256": "31984912812b90ee8521d64658ae0cd76f8cbd15a070c7cbf1f0e08c1019385a",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": true,
+   "fetched_at": "2026-11-27T17:15:30Z",
+   "http_status": 200,
+   "payload_sha256": "fade76f6d737fcb4e0217893e3aa98e23809e9c1d17a3e87316d16fa62172d64",
+   "quotes": [
+    "entitles the holder to remain in the country for (60) sixty days from entry until the necessary processes for issuing residency have been completed.",
+    "2. A passport copy, valid for at least 6 months.",
+    "3. Partnership or investment contract.",
+    "4. Trade license.",
+    "- (a public shareholding company).",
+    "A private joint stock company.",
+    "- A limited liability company.",
+    "- Simple recommendation company.",
+    "Solidarity Company.",
+    "Upon incorporation or contribution, the investor's or partner's share cannot be less than one million paid Dirhams or its equivalent in other currencies.",
+    "48.0 Hour(s)"
+   ],
+   "ref": "relocatedubai/s-d4f9e52c5ca2/2026-11-27T17:15:30Z",
+   "run_id": "20261127T165808Z",
+   "sha256": "5b7ca1ee14098ce07459df296f6e406be0ed3995f4ddbc19d3eb6bb159ee6dfb",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-d4f9e52c5ca2",

@@ -165,6 +165,21 @@
    "run_id": "20261126T171752Z",
    "sha256": "8249a3da7a57ed1b8c60ccc348bce278e4c526998338fccd9f4364c345c2d0cb",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-27T17:14:01Z",
+   "http_status": 202,
+   "payload_sha256": "e80acdf9cd5cdc98cbaf70fff078dc198d19fa08a2cd3a91a61e5e1bf2f54bbd",
+   "quotes": [
+    "Additional declarations to be inserted on the reverse of the phytosanitary certificate for ware potatoes"
+   ],
+   "ref": "cosecha/s-11965f612923/2026-11-27T17:14:01Z",
+   "run_id": "20261127T165808Z",
+   "sha256": "",
+   "status": "unreachable"
   }
  ],
  "source_id": "s-11965f612923",

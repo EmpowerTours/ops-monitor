@@ -256,6 +256,33 @@
    "run_id": "20261126T171752Z",
    "sha256": "122ce01133573dfeb824a6411763c9b841e5c7d88ec29f1b4338359c0f6f9105",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-27T17:11:11Z",
+   "http_status": 0,
+   "payload_sha256": "1da9a9dfd87aaa7d782cc60b159b80956b8eb1d0de097e3530ba049820a855ac",
+   "quotes": [
+    "Government job portals:",
+    "Dubai Careers - Dubai Government job portal",
+    "Federal Government job portal - Federal Authority for Government Human Resources-",
+    "Abu Dhabi Government job portal",
+    "Job seekers services in Sharjah",
+    "Government of Ajman jobs- Kawader",
+    "RAK jobs",
+    "Fujairah Government jobs",
+    "Private job portals:",
+    "MoHRE grants licences of recruitment agencies to UAE citizens only.",
+    "Job seekers are not required to pay money to any recruitment agency as the onus to pay such fees lies with the employers.",
+    "If the hiring company or the agency asks you for money to process the visa or medical test, it is not a genuine company.",
+    "You can send your CV to licensed recruitment agencies in the UAE."
+   ],
+   "ref": "sawweeli-agent/s-4570e0fcff86/2026-11-27T17:11:11Z",
+   "run_id": "20261127T165808Z",
+   "sha256": "",
+   "status": "unreachable"
   }
  ],
  "source_id": "s-4570e0fcff86",

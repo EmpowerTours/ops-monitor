@@ -112,6 +112,22 @@
    "run_id": "20261126T171752Z",
    "sha256": "ee591d80b160207b6785c25c151a4db2cf70baa192fba7ac8ed6a037931e1a0b",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": true,
+   "fetched_at": "2026-11-27T17:12:47Z",
+   "http_status": 200,
+   "payload_sha256": "e605a0c7ab7dba002729d81e8901a4b4949dee18095901cf3f931777c29a3037",
+   "quotes": [
+    "Home / Contact",
+    "Contact Customer Service"
+   ],
+   "ref": "faez/s-d070f20262c7/2026-11-27T17:12:47Z",
+   "run_id": "20261127T165808Z",
+   "sha256": "e35651dbb82b151f0f318c0bce59d9a82c46f5bcf6ca825f40be64b44d03eeef",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-d070f20262c7",

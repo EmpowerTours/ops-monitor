@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-26T17:20:46Z",
+ "fetched_at": "2026-11-27T17:12:47Z",
  "id": "s-1ad2c876d9fb",
  "last_read_fetched_at": "",
  "manifest_fingerprint": "1241b161c85f234bf007434fa8070603cb5212cca286a7c70301eba1a380b781",
- "run_id": "20261126T171752Z",
+ "run_id": "20261127T165808Z",
  "sha256": "",
  "status": "unreachable",
  "url": "https://apis.data.dubai/secure/ddads/openapi/1.0.0/det/det_tradename-open-api"

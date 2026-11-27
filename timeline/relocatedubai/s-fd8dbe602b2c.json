@@ -119,6 +119,23 @@
    "run_id": "20261126T171752Z",
    "sha256": "cf3b17cc8e68ad31037f46e57d00426530854c5c771d7b47fb6b6771787df12a",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-27T17:15:30Z",
+   "http_status": 200,
+   "payload_sha256": "f6a49dc7d51395a48061507d3600c4418f4f23794560dc552e0edf4d0957f4c3",
+   "quotes": [
+    "Get up and running in 3 working days",
+    "99/PER MONTH",
+    "249/PER MONTH"
+   ],
+   "ref": "relocatedubai/s-fd8dbe602b2c/2026-11-27T17:15:30Z",
+   "run_id": "20261127T165808Z",
+   "sha256": "cf3b17cc8e68ad31037f46e57d00426530854c5c771d7b47fb6b6771787df12a",
+   "status": "verified"
   }
  ],
  "source_id": "s-fd8dbe602b2c",

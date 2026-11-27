@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-26T17:33:43Z",
+ "fetched_at": "2026-11-27T17:14:01Z",
  "id": "s-c395efc48183",
- "last_read_fetched_at": "2026-11-26T17:33:43Z",
+ "last_read_fetched_at": "2026-11-27T17:14:01Z",
  "manifest_fingerprint": "635db72149a15997f58783a6180439f6b022b12220e7aff481019cfefc99df3f",
- "run_id": "20261126T171752Z",
+ "run_id": "20261127T165808Z",
  "sha256": "48bf51ef4906ccca5fcc15e1027ca14c4fe514e264f10f507a443c811133bd16",
  "status": "verified",
  "url": "https://ventanillaunica.economia.gob.mx/procedure/1039?l=en"

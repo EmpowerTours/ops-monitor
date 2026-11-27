@@ -112,6 +112,22 @@
    "run_id": "20261126T171752Z",
    "sha256": "1f1192417f79312d188b23a54d58846766bba401cc74d0bad94e4e109400f5bc",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-27T17:15:30Z",
+   "http_status": 200,
+   "payload_sha256": "24923eab91d9c67bcb5be313dc745631e2a2971d3ece1d9b744d7189433a4e85",
+   "quotes": [
+    "Ajman Free Zone offers a dedicated E-Commerce License package starting from AED 5555.",
+    "Unlimited access to coworking space"
+   ],
+   "ref": "relocatedubai/s-5900abd79f10/2026-11-27T17:15:30Z",
+   "run_id": "20261127T165808Z",
+   "sha256": "1f1192417f79312d188b23a54d58846766bba401cc74d0bad94e4e109400f5bc",
+   "status": "verified"
   }
  ],
  "source_id": "s-5900abd79f10",

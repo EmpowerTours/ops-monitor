@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-26T17:33:43Z",
+ "fetched_at": "2026-11-27T17:14:01Z",
  "id": "s-dd202c7b51bb",
- "last_read_fetched_at": "2026-11-26T17:33:43Z",
+ "last_read_fetched_at": "2026-11-27T17:14:01Z",
  "manifest_fingerprint": "f8bb22495c90b1e095443f0b8dc9c2a5fa6e3fbe3249bf776d0646fb6373747b",
- "run_id": "20261126T171752Z",
- "sha256": "172a5a523a2c4d80c317536b18494c8d6d404be300eb48146c57e8d7d8d3de4d",
- "status": "verified",
+ "run_id": "20261127T165808Z",
+ "sha256": "2f1d00c71d006d7edd210e2f976ba133295d9b4171749aaec46d1832c238882a",
+ "status": "changed_quote_ok",
  "url": "https://www.moccae.gov.ae/ar/contact-us"
 }

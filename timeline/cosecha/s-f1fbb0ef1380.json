@@ -198,6 +198,24 @@
    "run_id": "20261126T171752Z",
    "sha256": "7f5422d1e83b4c0cfd6d49f7096fea0591e70b39efa7d2ea0fd178b3beb6f2d3",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": true,
+   "fetched_at": "2026-11-27T17:14:01Z",
+   "http_status": 200,
+   "payload_sha256": "59a97011274974a1d6a07b267ee087b338c55322a867a249840607a6a58bf6d7",
+   "quotes": [
+    "obtain a permit valid for 30 days from the date of issuance",
+    "The consignment from a country or region where FMD has not been recorded for at least 12 months prior the collection of the product.",
+    "The consignment from a country or region where Blue Tongue has not been recorded for at least 12 months prior the collection of the product.",
+    "Sperm donor animals were protected from mosquito bites (Culicoids) for at least 60 days before and during collection of semen, eggs or embryos."
+   ],
+   "ref": "cosecha/s-f1fbb0ef1380/2026-11-27T17:14:01Z",
+   "run_id": "20261127T165808Z",
+   "sha256": "f8cddb3f81f6acc9cbab96c6f0750a9725dc51cdd2853f68398663d88cb4f293",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-f1fbb0ef1380",

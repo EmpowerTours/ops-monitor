@@ -133,6 +133,25 @@
    "sha256": "487588a691b206a59f16627655a61847d01b6416dd75a49525a02c95858289dd",
    "sha256_ar": "bed918fee3e5d08cbe522bd342d37a315232094a5da5c7ff74018b8d6c1c63ce",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-27T17:15:30Z",
+   "http_status": 200,
+   "payload_sha256": "2682b8c86bbe6e30b945b8e9de0016b80b7ee0747bfd30b48bcfab04809038c2",
+   "quotes": [
+    "This service enables parties to review the rental case history of the other party within the Rental Disputes Center system prior to drawing a lease contract."
+   ],
+   "quotes_ar": [
+    "تمكن هذه الخدمة الأطراف قبل الشروع في تحرير عقد الإيجار من الاستعلام عن صحيفة الحالة الإيجارية للطرف الآخر في نظام مركز فض المنازعات الإيجارية."
+   ],
+   "ref": "relocatedubai/s-f01ff580ec69/2026-11-27T17:15:30Z",
+   "run_id": "20261127T165808Z",
+   "sha256": "487588a691b206a59f16627655a61847d01b6416dd75a49525a02c95858289dd",
+   "sha256_ar": "bed918fee3e5d08cbe522bd342d37a315232094a5da5c7ff74018b8d6c1c63ce",
+   "status": "verified"
   }
  ],
  "source_id": "s-f01ff580ec69",

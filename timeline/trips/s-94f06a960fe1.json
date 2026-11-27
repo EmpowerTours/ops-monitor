@@ -80,6 +80,22 @@
    "run_id": "20261126T171752Z",
    "sha256": "71cb9641e1b7dc7dba0b0e4358b0aa5115bc6a1c6de517078dc2d59dce4839f2",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-27T17:08:32Z",
+   "http_status": 200,
+   "payload_sha256": "482b540308ae8770b7cee65a9deb3e275d7684cd93379cd1647df56c2539c66e",
+   "quotes": [
+    "Fee imposed on the Sales of Hotel Establishments pursuant to the above-mentioned Regulation No. (2) of 2006 are hereby reduced from ten percent (10%) to seven percent (7%).",
+    "determine the time frames within which the reductions referred to in paragraph (b) and paragraph (c)"
+   ],
+   "ref": "trips/s-94f06a960fe1/2026-11-27T17:08:32Z",
+   "run_id": "20261127T165808Z",
+   "sha256": "71cb9641e1b7dc7dba0b0e4358b0aa5115bc6a1c6de517078dc2d59dce4839f2",
+   "status": "verified"
   }
  ],
  "source_id": "s-94f06a960fe1",

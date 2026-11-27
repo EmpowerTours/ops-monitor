@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-26T17:20:07Z",
+ "fetched_at": "2026-11-27T17:08:32Z",
  "id": "s-4098f0e154af",
- "last_read_fetched_at": "2026-11-26T17:20:07Z",
+ "last_read_fetched_at": "2026-11-27T17:08:32Z",
  "manifest_fingerprint": "cd7a76816598db6e56036215947d01ab14aeb9be2845553ccf4034d0caf3e3cc",
- "run_id": "20261126T171752Z",
+ "run_id": "20261127T165808Z",
  "sha256": "ce50a07f88d781313ab41a887427136ed4e1841f9faac1b4d7bb0ad4c7032536",
  "status": "verified",
  "url": "https://www.dubaitaxi.ae/en/our-services/airport-taxi"

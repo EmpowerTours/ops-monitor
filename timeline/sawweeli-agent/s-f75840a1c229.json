@@ -85,6 +85,23 @@
    "run_id": "20261126T171752Z",
    "sha256": "25488b1a87de1f25d2094a9b7c663162d45108ed76a19a7a47b71060efc54899",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-27T17:11:11Z",
+   "http_status": 200,
+   "payload_sha256": "860aa65a2d4c6973aafabea4f5650318234d1ec72aea0d67fbf4b111ef00ecce",
+   "quotes": [
+    "FEDERAL DECREE LAW NO. (20) OF 2023 AMENDING CERTAIN PROVISIONS OF",
+    "The following text shall replace Article (54) of Federal Decree Law No. (33) of 2021",
+    "This Decree Law shall be published in the Official Gazette and shall take effect on"
+   ],
+   "ref": "sawweeli-agent/s-f75840a1c229/2026-11-27T17:11:11Z",
+   "run_id": "20261127T165808Z",
+   "sha256": "25488b1a87de1f25d2094a9b7c663162d45108ed76a19a7a47b71060efc54899",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-f75840a1c229",

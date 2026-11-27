@@ -119,6 +119,23 @@
    "run_id": "20261126T171752Z",
    "sha256": "3575657bbff1aceb10e599f1abb9340f76e9e46f58cb254afdca8b1ae7fe947f",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-27T17:15:30Z",
+   "http_status": 200,
+   "payload_sha256": "a1161a475c8ee70b64a6b13bd9dd9195e904f53c8232a1b6aeffd7737702e125",
+   "quotes": [
+    "Basic Biz Package Perfect for entrepreneurs and smaller start-ups",
+    "Save on office space costs with special flexi desk options (eligible for one UAE residency visa)",
+    "Package price AED 35,484"
+   ],
+   "ref": "relocatedubai/s-6ce32c04844b/2026-11-27T17:15:30Z",
+   "run_id": "20261127T165808Z",
+   "sha256": "3575657bbff1aceb10e599f1abb9340f76e9e46f58cb254afdca8b1ae7fe947f",
+   "status": "verified"
   }
  ],
  "source_id": "s-6ce32c04844b",

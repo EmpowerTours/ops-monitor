@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-26T17:20:33Z",
+ "fetched_at": "2026-11-27T17:11:44Z",
  "id": "s-89a3e6f91a9f",
- "last_read_fetched_at": "2026-11-26T17:20:33Z",
+ "last_read_fetched_at": "2026-11-27T17:11:44Z",
  "manifest_fingerprint": "201e1672f3ec1b64dbc517d34923aa8b263320867103c9e8c406324457ee572c",
- "run_id": "20261126T171752Z",
+ "run_id": "20261127T165808Z",
  "sha256": "10789e83fac303b5f855b3aeed99e1bac631b42a1e6e61788ed4201eee9969f1",
  "status": "verified",
  "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf"

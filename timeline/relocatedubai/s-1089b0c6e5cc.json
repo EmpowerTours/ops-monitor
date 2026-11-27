@@ -119,6 +119,23 @@
    "run_id": "20261126T171752Z",
    "sha256": "854b518ebe015ce276bb05e31c27456ba0f66741cf50172fd55f6d16c5bbf643",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": null,
+   "fetched_at": "2026-11-27T17:15:30Z",
+   "http_status": 0,
+   "payload_sha256": "d7a90981e40d49a826136fb58549a1a2f819a2a7e02b12404ac9415dd13b19bf",
+   "quotes": [
+    "a long-term, renewable residence visa valid for 5 or 10 years",
+    "5 years (real estate investments)",
+    "Minimum capital of AED 2 million; property ownership or contribution to an establishment paying at least AED 250,000 annually in taxes"
+   ],
+   "ref": "relocatedubai/s-1089b0c6e5cc/2026-11-27T17:15:30Z",
+   "run_id": "20261127T165808Z",
+   "sha256": "",
+   "status": "unreachable"
   }
  ],
  "source_id": "s-1089b0c6e5cc",
