@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-27T17:15:30Z",
+ "fetched_at": "2026-11-28T15:52:36Z",
  "id": "s-b9cf180d312f",
- "last_read_fetched_at": "2026-11-27T17:15:30Z",
+ "last_read_fetched_at": "2026-11-28T15:52:36Z",
  "manifest_fingerprint": "bbf7407ede9a0167e14955d69862d7740c408a1fe7d2d4f3c87cd359ae0092ca",
- "run_id": "20261127T165808Z",
+ "run_id": "20261128T154915Z",
  "sha256": "763638c29d56396fe2e32b8a75b3861e4806ae85a185f22ff2f7814caa2cbe1d",
  "status": "changed_quote_ok",
  "url": "https://dubailand.gov.ae/en/eservices/request-for-golden-visa-investor/"

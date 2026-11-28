@@ -192,6 +192,22 @@
    "run_id": "20261127T165808Z",
    "sha256": "d495237d85a86dc187f8e0c6f4d7d4bdb2aab0c571eff88d240e3c9117326849",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-28T16:05:05Z",
+   "http_status": 200,
+   "payload_sha256": "602ed44dfe10d8ec5ee1624e46ba699630a21caf85fa4eb7c7fbfc99ca3086cb",
+   "quotes": [
+    "2025: Present, widespread",
+    "Pest status declared by NPPO: Transitory pest, actionable and under eradication (2018-09)"
+   ],
+   "ref": "cosecha/s-926ffc6da4bd/2026-11-28T16:05:05Z",
+   "run_id": "20261128T154915Z",
+   "sha256": "d495237d85a86dc187f8e0c6f4d7d4bdb2aab0c571eff88d240e3c9117326849",
+   "status": "verified"
   }
  ],
  "source_id": "s-926ffc6da4bd",

@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-27T17:08:32Z",
+ "fetched_at": "2026-11-28T15:51:18Z",
  "id": "s-e19247eefbc6",
- "last_read_fetched_at": "2026-11-27T17:08:32Z",
+ "last_read_fetched_at": "2026-11-28T15:51:18Z",
  "manifest_fingerprint": "2804f2d666b9bf03bb9b2b7b2eb6780a00d28a8dfd285c99c6cce609f12565dc",
- "run_id": "20261127T165808Z",
- "sha256": "5617637e7b09f37ac63817605fa859d30b03dfc8a0918d289c42f867dedd2fe2",
+ "run_id": "20261128T154915Z",
+ "sha256": "d3a699612f00b08a96ca72282db905bced646c28a535fefcfbc3e110adab2cd5",
  "status": "no_quotes",
  "url": "https://www.airbnb.com/s/Dubai/homes"
 }

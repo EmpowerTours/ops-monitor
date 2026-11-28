@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-27T17:07:54Z",
+ "fetched_at": "2026-11-28T15:51:01Z",
  "id": "s-5a4db31fb821",
- "last_read_fetched_at": "2026-11-26T17:19:47Z",
+ "last_read_fetched_at": "2026-11-28T15:51:01Z",
  "manifest_fingerprint": "8f130c3aaa24b906664a13519ef9cdf2c9bf567f1d76439420d63aa535b224d0",
- "run_id": "20261127T165808Z",
+ "run_id": "20261128T154915Z",
  "sha256": "86344bcd0709ad07d0ef548786a4cf7fa18fa7dff1a2b362f8f63cbcb81babcf",
- "status": "unreachable",
+ "status": "verified",
  "url": "https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws"
 }

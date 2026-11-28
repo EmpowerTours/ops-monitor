@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-27T17:12:47Z",
+ "fetched_at": "2026-11-28T15:51:57Z",
  "id": "s-d070f20262c7",
- "last_read_fetched_at": "2026-11-27T17:12:47Z",
+ "last_read_fetched_at": "2026-11-28T15:51:57Z",
  "manifest_fingerprint": "9ea58b937ac2ffe2054bb808d90122e57f9476b05bb933a041bc5a2af1fe95d9",
- "run_id": "20261127T165808Z",
- "sha256": "e35651dbb82b151f0f318c0bce59d9a82c46f5bcf6ca825f40be64b44d03eeef",
+ "run_id": "20261128T154915Z",
+ "sha256": "56238edb3a7d30d88c64dce3f4edb049744f67d2c6f684d56ced7087ad2eaf73",
  "status": "changed_quote_ok",
  "url": "https://www.jafza.ae/contact"
 }

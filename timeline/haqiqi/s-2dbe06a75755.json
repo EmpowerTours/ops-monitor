@@ -128,6 +128,22 @@
    "run_id": "20261127T165808Z",
    "sha256": "f508f8f86f09329614b23962f348749428d3d84900127f9f1d2863057a53639d",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": true,
+   "fetched_at": "2026-11-28T15:51:49Z",
+   "http_status": 200,
+   "payload_sha256": "a0294d688ba335a4021c628fb1479d74891b5800a3ebc9c81ebc6026c08dfef3",
+   "quotes": [
+    "GDRFA Dubai called on all members of the community to obtain visa and residency services only through official and approved channels, and to avoid responding to unreliable advertisements or offers promoted through digital platforms.",
+    "Dubai, United Arab Emirates - 19 June 2026"
+   ],
+   "ref": "haqiqi/s-2dbe06a75755/2026-11-28T15:51:49Z",
+   "run_id": "20261128T154915Z",
+   "sha256": "053cfad0e03892656005dd87771851074fffa0fe01a7760cb80304764ea56671",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-2dbe06a75755",

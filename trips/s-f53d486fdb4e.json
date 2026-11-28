@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-27T17:08:32Z",
+ "fetched_at": "2026-11-28T15:51:18Z",
  "id": "s-f53d486fdb4e",
- "last_read_fetched_at": "2026-11-27T17:08:32Z",
+ "last_read_fetched_at": "2026-11-28T15:51:18Z",
  "manifest_fingerprint": "5ebebf099dd1504d2679732a73cf6f982a3df10d6f12fc75f202e46f65c084c3",
- "run_id": "20261127T165808Z",
- "sha256": "863f367543b71acb79d7216e7d1e65cabe8b099633b7e6b24ccbfc60e09b9749",
+ "run_id": "20261128T154915Z",
+ "sha256": "13f9a337efe1993672ad956d2dc5c0c6748e31de86574487e0b76b74c23d5d8d",
  "status": "changed_quote_ok",
  "url": "https://tax.gov.ae/en/taxes/vat.aspx"
 }

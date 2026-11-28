@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-27T17:12:47Z",
+ "fetched_at": "2026-11-28T15:51:57Z",
  "id": "s-71f5870e1407",
- "last_read_fetched_at": "2026-11-27T17:12:47Z",
+ "last_read_fetched_at": "2026-11-28T15:51:57Z",
  "manifest_fingerprint": "53b202db93090b3b5c59be1498b85e4c7c6aead7d6547ac960281cd5c5596f8c",
- "run_id": "20261127T165808Z",
+ "run_id": "20261128T154915Z",
  "sha256": "dad8f031930e762d47b9a3c11307866cda9e47239243d2ab561590ff7b5a174d",
  "status": "verified",
  "url": "https://www.difc.com/sitemap.xml"

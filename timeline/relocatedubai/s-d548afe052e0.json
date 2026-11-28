@@ -128,6 +128,22 @@
    "run_id": "20261127T165808Z",
    "sha256": "03ded300c68f09ed8fb6745a51dfae007ba522662d8d280b3e92333eab8fea5e",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-28T15:52:36Z",
+   "http_status": 200,
+   "payload_sha256": "f1de6a5bdd7b60a4a0fb0e8d87f1e01ddbb9f8a46cf4741b19ec07963737399a",
+   "quotes": [
+    "Grade 4 118 12,172 24,890 45,730",
+    "KG 1 115 9,679 19,662 37,368"
+   ],
+   "ref": "relocatedubai/s-d548afe052e0/2026-11-28T15:52:36Z",
+   "run_id": "20261128T154915Z",
+   "sha256": "03ded300c68f09ed8fb6745a51dfae007ba522662d8d280b3e92333eab8fea5e",
+   "status": "verified"
   }
  ],
  "source_id": "s-d548afe052e0",

@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-27T17:15:30Z",
+ "fetched_at": "2026-11-28T15:52:36Z",
  "id": "s-f01ff580ec69",
- "last_read_fetched_at": "2026-11-27T17:15:30Z",
+ "last_read_fetched_at": "2026-11-28T15:52:36Z",
  "manifest_fingerprint": "d164b3b770a373651413f9f31e43fd49ba20f8d9237fc7e47f930e8f52b659d1",
- "run_id": "20261127T165808Z",
+ "run_id": "20261128T154915Z",
  "sha256": "487588a691b206a59f16627655a61847d01b6416dd75a49525a02c95858289dd",
  "sha256_ar": "bed918fee3e5d08cbe522bd342d37a315232094a5da5c7ff74018b8d6c1c63ce",
  "status": "verified",

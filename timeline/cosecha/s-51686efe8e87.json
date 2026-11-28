@@ -180,6 +180,21 @@
    "run_id": "20261127T165808Z",
    "sha256": "e4a1c776076e052ef9d5e1e3f677421e68715261b85c84ca6d757c1f016d85ad",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-28T16:05:05Z",
+   "http_status": 200,
+   "payload_sha256": "18f05d10f316b3b65bd62f09109bcf4cbe2b2449a3cf954b5bd8957a3f70e825",
+   "quotes": [
+    "Value Added Tax (VAT) was introduced across the UAE on 1st January 2018 at a standard rate of 5%."
+   ],
+   "ref": "cosecha/s-51686efe8e87/2026-11-28T16:05:05Z",
+   "run_id": "20261128T154915Z",
+   "sha256": "e4a1c776076e052ef9d5e1e3f677421e68715261b85c84ca6d757c1f016d85ad",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-51686efe8e87",

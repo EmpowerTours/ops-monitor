@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-27T17:11:11Z",
+ "fetched_at": "2026-11-28T15:51:49Z",
  "id": "s-853a604b1079",
- "last_read_fetched_at": "2026-11-27T17:11:11Z",
+ "last_read_fetched_at": "2026-11-28T15:51:49Z",
  "manifest_fingerprint": "c6a894239556812448d61f2e7437656afd959c6100be4b95a8568a5532df758d",
- "run_id": "20261127T165808Z",
+ "run_id": "20261128T154915Z",
  "sha256": "14d5b19c9f32d8fd4dccfd4ba7e6287658e4b5e02d32b1e7359ac92b255a48eb",
  "status": "verified",
  "url": "https://www.slbfe.lk/"

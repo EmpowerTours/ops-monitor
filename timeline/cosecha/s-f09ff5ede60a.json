@@ -216,6 +216,24 @@
    "run_id": "20261127T165808Z",
    "sha256": "",
    "status": "unreachable"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-28T16:05:05Z",
+   "http_status": 200,
+   "payload_sha256": "342cd5a8579bc2f9a3f5a7ae48ebf69479f78a14032424ae002ac451eeadc18f",
+   "quotes": [
+    "Test Report from accredited and recognized laboratory as per the technical requirements mentioned under: UAE.S GSO 147:2019",
+    "Validity of Test report should be less than 3 Year.",
+    "The Honey is not heated or treated to the limit that changes its formulation or reduce its Quality",
+    "Product Sampling according to UAE.S GSO 126:1990"
+   ],
+   "ref": "cosecha/s-f09ff5ede60a/2026-11-28T16:05:05Z",
+   "run_id": "20261128T154915Z",
+   "sha256": "c66999bb80e8e8b7e6746f9bca3042d3aca70994dbe657c272cce5a5dc371740",
+   "status": "verified"
   }
  ],
  "source_id": "s-f09ff5ede60a",

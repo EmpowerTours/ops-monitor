@@ -152,6 +152,25 @@
    "run_id": "20261127T165808Z",
    "sha256": "60c1950346e2ff4ff72fa37192c64d3e2f8c5cf7344c1774937a268d033da53f",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-28T15:51:51Z",
+   "http_status": 200,
+   "payload_sha256": "45414bbbb93a3938cb430b4798e82410ada763921e32d4aefbb026d756ec91af",
+   "quotes": [
+    "Please note the license will only be issued with an active lease.",
+    "New Establishment Card 1,900 1,990",
+    "Renewal Establishment Card 1,950 2,010",
+    "New Employment Package(Outside) 2,950 3,900",
+    "The Required PSA deposit will be AED 1000/visa instead of 2500/visa:"
+   ],
+   "ref": "asas/s-dc70294233c6/2026-11-28T15:51:51Z",
+   "run_id": "20261128T154915Z",
+   "sha256": "60c1950346e2ff4ff72fa37192c64d3e2f8c5cf7344c1774937a268d033da53f",
+   "status": "verified"
   }
  ],
  "source_id": "s-dc70294233c6",

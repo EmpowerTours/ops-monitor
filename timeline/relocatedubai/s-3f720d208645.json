@@ -136,6 +136,23 @@
    "run_id": "20261127T165808Z",
    "sha256": "7d8ebb62f15e39b18f9b9e774b0b9c415262d798e5678a50a9376237b056db98",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-28T15:52:36Z",
+   "http_status": 200,
+   "payload_sha256": "b194660bbace3b4dcd8e28f0f4d7f21d1885c2519fe5b50caf313448a84f6ae1",
+   "quotes": [
+    "SmartStart Business Account (AED Only)",
+    "Monthly Service Fee 125.00",
+    "Draft Collection Foreign Currency (International / GCC) Unavailable"
+   ],
+   "ref": "relocatedubai/s-3f720d208645/2026-11-28T15:52:36Z",
+   "run_id": "20261128T154915Z",
+   "sha256": "7d8ebb62f15e39b18f9b9e774b0b9c415262d798e5678a50a9376237b056db98",
+   "status": "verified"
   }
  ],
  "source_id": "s-3f720d208645",

@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-27T17:15:30Z",
+ "fetched_at": "2026-11-28T15:52:36Z",
  "id": "s-875764dd3890",
- "last_read_fetched_at": "2026-11-26T17:21:20Z",
+ "last_read_fetched_at": "2026-11-28T15:52:36Z",
  "manifest_fingerprint": "bbca38fc0595fd090efd7e8bd6b99258e67529cef54750349f63326f42c629ee",
- "run_id": "20261127T165808Z",
+ "run_id": "20261128T154915Z",
  "sha256": "39cf189a2bfd087ef1c484f0e89b264e1cbd48405b87d0a4ef0667ed25958681",
- "status": "unreachable",
+ "status": "verified",
  "url": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/residence-visa/residence-visa-for-working-outside-the-uae"
 }

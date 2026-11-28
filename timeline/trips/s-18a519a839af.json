@@ -96,6 +96,22 @@
    "run_id": "20261127T165808Z",
    "sha256": "07107abd324d64d35fc8c8323c7ba3627f2c9a062577e35ea51673cb850c4806",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-28T15:51:18Z",
+   "http_status": 200,
+   "payload_sha256": "0c4f9a6178003aecf1f928d897003868af083b67258c331879a3e57c4193c3e8",
+   "quotes": [
+    "رسم البلدية على مبيعات المنشآت الفندقية في إمارة دبي",
+    "\"رسم البلدية \" ام احاس به لقن أس ي ( 10٪ )"
+   ],
+   "ref": "trips/s-18a519a839af/2026-11-28T15:51:18Z",
+   "run_id": "20261128T154915Z",
+   "sha256": "07107abd324d64d35fc8c8323c7ba3627f2c9a062577e35ea51673cb850c4806",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-18a519a839af",

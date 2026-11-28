@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-27T17:11:11Z",
+ "fetched_at": "2026-11-28T15:51:49Z",
  "id": "s-de12ae67866b",
- "last_read_fetched_at": "2026-11-27T17:11:11Z",
+ "last_read_fetched_at": "2026-11-28T15:51:49Z",
  "manifest_fingerprint": "97560d763ad87309c878859bb4a3cbe55b16d0c094b752329d40e77aed1159a8",
- "run_id": "20261127T165808Z",
- "sha256": "47b4454595947239e8914bb908451a3277da8eb67afb516f9e949f2c9e93015c",
+ "run_id": "20261128T154915Z",
+ "sha256": "f0718980a8b0df1dd4e039ec462373f0be86bda3fc8f9d7460035c935a6e1e11",
  "status": "changed_quote_ok",
  "url": "https://www.oep.gov.bd/agencies"
 }

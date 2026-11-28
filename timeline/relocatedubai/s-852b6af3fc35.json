@@ -128,6 +128,22 @@
    "run_id": "20261127T165808Z",
    "sha256": "40eb4452634e12ce6d7efcb42945418aa2a47f4feda668792f8dff79d9954fa3",
    "status": "quote_missing"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-28T15:52:36Z",
+   "http_status": 200,
+   "payload_sha256": "4a4b82b87f2fa68e246656338471fe1fe070fab2f452df6bce32ce590f4661c9",
+   "quotes": [
+    "Media Package Starting from AED 5750",
+    "Standard Package Starting from AED 6875"
+   ],
+   "ref": "relocatedubai/s-852b6af3fc35/2026-11-28T15:52:36Z",
+   "run_id": "20261128T154915Z",
+   "sha256": "40eb4452634e12ce6d7efcb42945418aa2a47f4feda668792f8dff79d9954fa3",
+   "status": "quote_missing"
   }
  ],
  "source_id": "s-852b6af3fc35",

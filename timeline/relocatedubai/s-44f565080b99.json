@@ -128,6 +128,22 @@
    "run_id": "20261127T165808Z",
    "sha256": "86ab147650bb92adfe27763bc691ca54ba7697735aeb5b68b7e7128ce83b0bd8",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-28T15:52:36Z",
+   "http_status": 200,
+   "payload_sha256": "b1d1fe7e1a07ec30fb80730d933d39f32d423ebe359cb61e97c50244baa99610",
+   "quotes": [
+    "The Nol travel card on the Dubai Metro and bus network runs at 220 AED a month for the unlimited Silver card",
+    "the Gold card with the upgraded zone runs at 350 AED a month."
+   ],
+   "ref": "relocatedubai/s-44f565080b99/2026-11-28T15:52:36Z",
+   "run_id": "20261128T154915Z",
+   "sha256": "86ab147650bb92adfe27763bc691ca54ba7697735aeb5b68b7e7128ce83b0bd8",
+   "status": "verified"
   }
  ],
  "source_id": "s-44f565080b99",

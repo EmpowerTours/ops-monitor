@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-27T17:15:30Z",
+ "fetched_at": "2026-11-28T15:52:36Z",
  "id": "s-6ce32c04844b",
- "last_read_fetched_at": "2026-11-27T17:15:30Z",
+ "last_read_fetched_at": "2026-11-28T15:52:36Z",
  "manifest_fingerprint": "0969f9bfe8dcb2a21d8320be8a510e5570bc0ef1809dba1a0549e5f1234ed4de",
- "run_id": "20261127T165808Z",
+ "run_id": "20261128T154915Z",
  "sha256": "3575657bbff1aceb10e599f1abb9340f76e9e46f58cb254afdca8b1ae7fe947f",
  "status": "verified",
  "url": "https://www.dmcc.ae/business-setup-package?hsLang=en"

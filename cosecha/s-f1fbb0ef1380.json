@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-27T17:14:01Z",
+ "fetched_at": "2026-11-28T16:05:05Z",
  "id": "s-f1fbb0ef1380",
- "last_read_fetched_at": "2026-11-27T17:14:01Z",
+ "last_read_fetched_at": "2026-11-28T16:05:05Z",
  "manifest_fingerprint": "0131f8a5083cf446c75c2c5153b4e4336fc709364fbb767e851cfda8e678fcc2",
- "run_id": "20261127T165808Z",
+ "run_id": "20261128T154915Z",
  "sha256": "f8cddb3f81f6acc9cbab96c6f0750a9725dc51cdd2853f68398663d88cb4f293",
  "status": "changed_quote_ok",
  "url": "https://moccae.gov.ae/en/services/importpermitsemen"

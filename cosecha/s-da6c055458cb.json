@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-27T17:14:01Z",
+ "fetched_at": "2026-11-28T16:05:05Z",
  "id": "s-da6c055458cb",
- "last_read_fetched_at": "2026-11-27T17:14:01Z",
+ "last_read_fetched_at": "2026-11-28T16:05:05Z",
  "manifest_fingerprint": "ea022ce18004131c9f1c034c00e6369fd9851d2695a5b0d12b2809c84687a137",
- "run_id": "20261127T165808Z",
+ "run_id": "20261128T154915Z",
  "sha256": "0eaf82a3097e7476db6324ae5f646db1ad75ece6c9c4278f6fd35d217da4f9ac",
  "status": "quote_missing",
  "url": "https://www.moccae.gov.ae/en/services/import-permit"

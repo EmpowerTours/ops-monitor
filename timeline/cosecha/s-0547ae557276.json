@@ -224,6 +224,25 @@
    "run_id": "20261127T165808Z",
    "sha256": "3fbf399f076bec8294741d8c093692aab74cd082071cc25cb3f61950ebd72cc7",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-28T16:05:05Z",
+   "http_status": 200,
+   "payload_sha256": "5d33ce5261ba219ef3c2c7a76b6ab9900f4ad8de14aa7a8619ef52440850f2dc",
+   "quotes": [
+    "Attesting commercial invoices and certificates of origin through the eDAS System",
+    "mandatory for goods imported into the UAE valued at Dh10,000 and above, effective from February 1, 2023",
+    "14-day grace period from the Bill of Entry (BOE) date",
+    "fine of AED 500 per invoice",
+    "If the port of discharge is a free zone, there is no need to attest the document"
+   ],
+   "ref": "cosecha/s-0547ae557276/2026-11-28T16:05:05Z",
+   "run_id": "20261128T154915Z",
+   "sha256": "3fbf399f076bec8294741d8c093692aab74cd082071cc25cb3f61950ebd72cc7",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-0547ae557276",

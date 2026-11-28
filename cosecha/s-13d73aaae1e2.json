@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-27T17:14:01Z",
+ "fetched_at": "2026-11-28T16:05:05Z",
  "id": "s-13d73aaae1e2",
- "last_read_fetched_at": "2026-11-26T17:33:43Z",
+ "last_read_fetched_at": "2026-11-28T16:05:05Z",
  "manifest_fingerprint": "14caaaad34889e04f7abfe45ff4f5dd0ea07416ebf29f4337309d04236b38be9",
- "run_id": "20261127T165808Z",
- "sha256": "f01e460590307ddf96c07f781b2bb7143d6c5423ea36684a19018a51681b6e21",
- "status": "unreachable",
+ "run_id": "20261128T154915Z",
+ "sha256": "4912af8cfb40847728b3f08edf70c4899e65b3d15426628d118210743f5e92be",
+ "status": "changed_quote_ok",
  "url": "https://moiat.gov.ae/en/services/issue-conformity-certificates-for-regulated-products"
 }

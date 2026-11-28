@@ -144,6 +144,24 @@
    "run_id": "20261127T165808Z",
    "sha256": "60362197ffec0f1c3b249168e1291bcb7d7db29b17d889b52f8a194c7059d51a",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-28T15:52:36Z",
+   "http_status": 200,
+   "payload_sha256": "da2a888716194a29047e67ebf619f6bc95e5b4e05fd30b687992e3675aa2b673",
+   "quotes": [
+    "From AED 5,750",
+    "Choose up to 5 business activities from over 2000 options",
+    "Investor Visa with Emirates ID AED 2,530",
+    "you can complete this process in just 45 minutes."
+   ],
+   "ref": "relocatedubai/s-010e7cbc49cb/2026-11-28T15:52:36Z",
+   "run_id": "20261128T154915Z",
+   "sha256": "60362197ffec0f1c3b249168e1291bcb7d7db29b17d889b52f8a194c7059d51a",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-010e7cbc49cb",

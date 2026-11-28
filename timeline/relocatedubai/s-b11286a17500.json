@@ -128,6 +128,22 @@
    "run_id": "20261127T165808Z",
    "sha256": "4794b830921acf3804609db62cfb93e09da9b6330fe3b42d3337791ac2ba5210",
    "status": "changed_quote_ok"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-28T15:52:36Z",
+   "http_status": 200,
+   "payload_sha256": "11774efc5f416485721476b57ffb1da2bb7f529ea409eddb069f77578f20b92c",
+   "quotes": [
+    "Single 250 to 450 62 to 112 1,000 to 1,800",
+    "Couple 350 to 650 87 to 162 1,400 to 2,600"
+   ],
+   "ref": "relocatedubai/s-b11286a17500/2026-11-28T15:52:36Z",
+   "run_id": "20261128T154915Z",
+   "sha256": "4794b830921acf3804609db62cfb93e09da9b6330fe3b42d3337791ac2ba5210",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-b11286a17500",

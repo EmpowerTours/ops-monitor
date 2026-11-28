@@ -192,6 +192,22 @@
    "run_id": "20261127T165808Z",
    "sha256": "90f6ffb79e67bf00c3258414a4f01011a3d0c9b13c015abcc2ef3899093b6d98",
    "status": "verified"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-28T16:05:05Z",
+   "http_status": 200,
+   "payload_sha256": "c06cfaf9f6621b7ade4922b23ae4a1b864f5fd4e4751dd41bab6cb7945335f40",
+   "quotes": [
+    "0409 - Natural honey",
+    "Health certificate from the country of origin"
+   ],
+   "ref": "cosecha/s-5d5d4b596594/2026-11-28T16:05:05Z",
+   "run_id": "20261128T154915Z",
+   "sha256": "90f6ffb79e67bf00c3258414a4f01011a3d0c9b13c015abcc2ef3899093b6d98",
+   "status": "verified"
   }
  ],
  "source_id": "s-5d5d4b596594",

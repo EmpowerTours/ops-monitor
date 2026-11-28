@@ -128,6 +128,22 @@
    "run_id": "20261127T165808Z",
    "sha256": "",
    "status": "unreachable"
+  },
+  {
+   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_url": "",
+   "changed_since_previous": false,
+   "fetched_at": "2026-11-28T15:52:36Z",
+   "http_status": 200,
+   "payload_sha256": "7dac390ffb61149324ce7528307c70fbeea312f5102273eae4e6acf32f2d7028",
+   "quotes": [
+    "Job seekers are not required to pay money to any recruitment agency as the onus to pay such fees lies with the employers.",
+    "Dubai Careers - Dubai Government job portal"
+   ],
+   "ref": "relocatedubai/s-4570e0fcff86/2026-11-28T15:52:36Z",
+   "run_id": "20261128T154915Z",
+   "sha256": "122ce01133573dfeb824a6411763c9b841e5c7d88ec29f1b4338359c0f6f9105",
+   "status": "changed_quote_ok"
   }
  ],
  "source_id": "s-4570e0fcff86",
