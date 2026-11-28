@@ -146,12 +146,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-28T15:52:36Z",
    "http_status": 200,
-   "payload_sha256": "da2a888716194a29047e67ebf619f6bc95e5b4e05fd30b687992e3675aa2b673",
+   "payload_sha256": "252fde595c3f5a0c3e8e80cabb22c73db7ec5538e8930cce26917c0552fff641",
    "quotes": [
     "From AED 5,750",
     "Choose up to 5 business activities from over 2000 options",

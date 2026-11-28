@@ -130,12 +130,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-28T15:52:36Z",
    "http_status": 200,
-   "payload_sha256": "f1de6a5bdd7b60a4a0fb0e8d87f1e01ddbb9f8a46cf4741b19ec07963737399a",
+   "payload_sha256": "058f0a0e05a1a6f5fce69914e88f9a122c431dac1b6a3e9fbd8a9fda4851f35b",
    "quotes": [
     "Grade 4 118 12,172 24,890 45,730",
     "KG 1 115 9,679 19,662 37,368"

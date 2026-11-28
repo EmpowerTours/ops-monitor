@@ -114,12 +114,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-27T17:12:47Z",
    "http_status": 200,
-   "payload_sha256": "d3359ffc4bfbee44dfd4a32bfff8f6ef3173fc1601668f8eb2c8a5144d1ef222",
+   "payload_sha256": "735118cb2fe6ece8664bee04f51fdf779f323f111aa77194cdfa1a16eb328f3a",
    "quotes": [
     "Home / Contact",
     "Contact Customer Service"
@@ -130,12 +130,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-28T15:51:57Z",
    "http_status": 200,
-   "payload_sha256": "c674a25c870a8bad0435ffc05e56068d2daf4b6213d9239ebea13f92200e5222",
+   "payload_sha256": "22185e2182b473eb30d474d9e306a4b5c81c73422463e38be99d433301feaf4b",
    "quotes": [
     "Home / Contact",
     "Contact Customer Service"

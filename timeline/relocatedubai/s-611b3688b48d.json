@@ -163,12 +163,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-27T17:15:30Z",
    "http_status": 200,
-   "payload_sha256": "87c9e495f83dc7d53ebbf46a25fdbcaccfd83615fdc217eb6aa42519bfc01796",
+   "payload_sha256": "ae2b4646cdb2ea20dd1e948bfd1c73be6c271a86fcc04d70f61054c8163f96cd",
    "quotes": [
     "A green residence permit allows an investor or partner in a commercial project to reside in the country for up to five years without needing a guarantor or employer.",
     "It is renewable under the same terms as when it was first issued.",
@@ -186,12 +186,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-28T15:52:36Z",
    "http_status": 200,
-   "payload_sha256": "d267f64cdb39a0652f748dc4127c98b7190e8613613333a5ee40a429177e2d3c",
+   "payload_sha256": "22d374c344ce47fe2e99ac063d75a57069ff1925dea6793255d4fd7fb3dc34fa",
    "quotes": [
     "A green residence permit allows an investor or partner in a commercial project to reside in the country for up to five years without needing a guarantor or employer.",
     "It is renewable under the same terms as when it was first issued.",

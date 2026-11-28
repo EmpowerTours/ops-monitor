@@ -2,12 +2,12 @@
  "cited_by": "sawweeli-agent",
  "entries": [
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-23T01:22:59Z",
    "http_status": 200,
-   "payload_sha256": "1974749bd8145237a2a63d249a2fb6209c6c002fcb2d616434b0ceb2400f0572",
+   "payload_sha256": "ec2dabeb2eecf2042e02d44379e06c9428e472bfd11426e2301681fec466fe4b",
    "quotes": [
     "Centrepoint سنتربوينت",
     "Emirates طيران الإمارات",
@@ -51,12 +51,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:12:25Z",
    "http_status": 200,
-   "payload_sha256": "2e7181799700828ee1fbf27660d561e09251f73ad73ed1254c282be45c1fe14a",
+   "payload_sha256": "db99020e45d52fc7945494c9b0a694be4402f0611350011177a1eed9e27e7411",
    "quotes": [
     "Centrepoint سنتربوينت",
     "Emirates طيران الإمارات",
@@ -100,12 +100,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T02:56:36Z",
    "http_status": 200,
-   "payload_sha256": "41418feb32a15d3a26d305c18d2a6c171cb1d702808becf18211089c88149365",
+   "payload_sha256": "5e37afc28cbde2620d7368ddc3470e937a6063c12c8f2c5d5cfbca5997ebf28b",
    "quotes": [
     "Centrepoint سنتربوينت",
     "Emirates طيران الإمارات",
@@ -152,12 +152,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:02:57Z",
    "http_status": 200,
-   "payload_sha256": "2906d0fdd4955319264be48759a8d3d7b1d43c285412fc04fb17ea5b00b95d38",
+   "payload_sha256": "386bac569ce9fcd5a1ecec4bb7c7549a82ea3b21dd85d984163bb3223f20a172",
    "quotes": [
     "Centrepoint سنتربوينت",
     "Emirates طيران الإمارات",
@@ -204,12 +204,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-23T18:46:06Z",
    "http_status": 200,
-   "payload_sha256": "a1ba6b09bba3743e4dba87228c9159625b0d8fea64bc5d9b8691d3bb5f3523bb",
+   "payload_sha256": "533ceb21b5754798d682f77017f59d08bef0b4f9d75ce9a17448026a46bf5596",
    "quotes": [
     "Centrepoint سنتربوينت",
     "Emirates طيران الإمارات",
@@ -256,12 +256,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T05:19:56Z",
    "http_status": 200,
-   "payload_sha256": "b94802f1000573e8d0c6d509c91d48dc7355f6aae51a7366f7f2b37ffefe505e",
+   "payload_sha256": "9fb67af13a6636c0f0ca9add533872d29eb9345f0f4c3231d2644a5c03e7091b",
    "quotes": [
     "Centrepoint سنتربوينت",
     "Emirates طيران الإمارات",
@@ -308,12 +308,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-24T18:19:17Z",
    "http_status": 200,
-   "payload_sha256": "a98ed264c77f42ec8397a4418c7bb61fa16824d1e5307182026ee4aee8463f24",
+   "payload_sha256": "966d7b7b6ed6a3ce17872e2621a94c3b45833ee3ebda7162a319c0e5b023335c",
    "quotes": [
     "Centrepoint سنتربوينت",
     "Emirates طيران الإمارات",
@@ -360,12 +360,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T05:23:18Z",
    "http_status": 200,
-   "payload_sha256": "feaad3578ad3890683a6d1161e54d4a26936d267e33376965ba82cc3bfea32f8",
+   "payload_sha256": "0897fcf706e09858fbb99d6b2ee0a818da3984d1b811aa727234d49767c738ea",
    "quotes": [
     "Centrepoint سنتربوينت",
     "Emirates طيران الإمارات",
@@ -412,12 +412,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-25T17:39:26Z",
    "http_status": 200,
-   "payload_sha256": "c60acbf8a32b3d14a3d20744f4d6d6482786a3ba8af1caf49f3ce3131ee58117",
+   "payload_sha256": "4545037ce9b39a1890f0f5ae3cb519f40f68bc0cdc164c0aec945bd0b0601219",
    "quotes": [
     "Centrepoint سنتربوينت",
     "Emirates طيران الإمارات",
@@ -464,12 +464,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-26T17:20:31Z",
    "http_status": 200,
-   "payload_sha256": "bbb62ccd818b7e3e73f98458af3a8b2a3666d64b460e3e92c2080e647c2bef99",
+   "payload_sha256": "5492ab41fb117abbbda8a59666a3da84900fdfbdb9bba3ae7c12d0ce1a793ca8",
    "quotes": [
     "Centrepoint سنتربوينت",
     "Emirates طيران الإمارات",
@@ -516,12 +516,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-27T17:11:11Z",
    "http_status": 200,
-   "payload_sha256": "9cecc814c2becc7731bc143902d0f18e0c5e080a8e7a5ad35f47c103dd699c1b",
+   "payload_sha256": "8353b08907b50082dce53b4ed85b5be6cc385df7ef7ea51934689bfd48ea7be2",
    "quotes": [
     "Centrepoint سنتربوينت",
     "Emirates طيران الإمارات",
@@ -568,12 +568,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-28T15:51:49Z",
    "http_status": 200,
-   "payload_sha256": "765e4b8384a7b0c5a332e2af991ece8b0a75c0a90c6b4fad965fb354d0ce9ca7",
+   "payload_sha256": "a768902ee932d64dc98ac2b6f220f90e28605098f2a0d3168e0a1ee398216467",
    "quotes": [
     "Centrepoint سنتربوينت",
     "Emirates طيران الإمارات",

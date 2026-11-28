@@ -194,12 +194,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-28T16:05:05Z",
    "http_status": 200,
-   "payload_sha256": "163018007c5589571ca429d4a084824210af1b2cf757ff62a267949c851e0355",
+   "payload_sha256": "519bdc758dd2ed8fa44ede48c4871c4836b1f2735f5f15db9c72cd934f56e188",
    "quotes": [
     "List of Members recognised as FMD-free where vaccination is not practised",
     "Mexico"

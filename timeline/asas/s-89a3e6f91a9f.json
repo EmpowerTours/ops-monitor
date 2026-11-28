@@ -130,12 +130,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-28T15:51:51Z",
    "http_status": 200,
-   "payload_sha256": "8affd2302c63a24be57414048621cb374a8dfed7a19e609d503784d37a925645",
+   "payload_sha256": "e1a3730d1a7e178a2cc2add36566926bfcd19c219c51b41922a1c921f16a7383",
    "quotes": [
     "Artículo 9o.- Se consideran residentes en territorio nacional:",
     "a) Las que hayan establecido su casa habitación en México."

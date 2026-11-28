@@ -106,12 +106,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": null,
    "fetched_at": "2026-11-28T15:51:51Z",
    "http_status": 0,
-   "payload_sha256": "6e09a4f238f340696cc439db445d40dbe0eb3f93ded31dcd59f29fd52189d74f",
+   "payload_sha256": "1c90a28df3b609c027faef7e9e3f0d23d01ee346c02ab16c29a3edd1ec5528e9",
    "quotes": [],
    "ref": "asas/s-511edd5c1d9a/2026-11-28T15:51:51Z",
    "run_id": "20261128T154915Z",

@@ -154,12 +154,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-28T15:52:36Z",
    "http_status": 200,
-   "payload_sha256": "aaa0902691c0974b5f90c90ddbe4099d744d3b4bd3f4c6997dc19fd6534c6611",
+   "payload_sha256": "734315b70322b6be0f8b8caa575d6e7443d4da1520d155cf80d88b0faad8a117",
    "quotes": [
     "This service enables parties to review the rental case history of the other party within the Rental Disputes Center system prior to drawing a lease contract."
    ],

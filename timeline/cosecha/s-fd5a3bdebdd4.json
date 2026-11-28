@@ -204,12 +204,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-28T16:05:05Z",
    "http_status": 200,
-   "payload_sha256": "74e7f82af1ba9d68cefdc31feb912aa5f322fbc6041996021b0fbd490ff03195",
+   "payload_sha256": "40d22ab21919520418c4777f05d2ab5cbc6b3c1091e6081b5b1245834257136f",
    "quotes": [
     "Obtención del certificado fitosanitario internacional para exportación",
     "Estimated cost MXN 717",

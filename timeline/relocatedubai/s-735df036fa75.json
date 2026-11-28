@@ -122,12 +122,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-28T15:52:36Z",
    "http_status": 200,
-   "payload_sha256": "ba8315a9272c4399250f18851eb3c1dcfdbe1336997fc47c191add952d7c0dfb",
+   "payload_sha256": "967c8a41a648a354a7f4781275c7cfaad76b049993f15fbe79efa60a154b27fd",
    "quotes": [
     "DSBH redefines company formation by combining same-day licensing"
    ],

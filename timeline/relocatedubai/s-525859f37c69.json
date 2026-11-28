@@ -138,12 +138,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-28T15:52:36Z",
    "http_status": 200,
-   "payload_sha256": "0f83ca6ec33d4ab3cacbd9ce4d2a312e74da9d2cfb4a9144ff095edf575dbb0a",
+   "payload_sha256": "d98be9039ef3b0e39f25bf8b60bbe6062c9ed873292fbc8ccfc726bbe9e0e3a7",
    "quotes": [
     "Search By Transaction Number",
     "Passport Number (*)",

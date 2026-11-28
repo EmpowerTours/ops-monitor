@@ -92,12 +92,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-28T15:51:57Z",
    "http_status": 200,
-   "payload_sha256": "5c017bfbabb1323649ee994fa291d94163c60b71871e5912339b2df753309567",
+   "payload_sha256": "05bd0873f8279ac38e7928fb3bdea2467e15b707f3f9aa11e61b649dd08304bb",
    "quotes": [
     "https://www.difc.com/business/public-register"
    ],

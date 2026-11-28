@@ -152,12 +152,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-26T17:33:43Z",
    "http_status": 200,
-   "payload_sha256": "77897271735eef78277ae424b0560b86c6282aa7cad4e88dca182638087df561",
+   "payload_sha256": "4d1a242ef634623d0a2e607790954fcd160631504b4dae947c17d370d2b4fc0c",
    "quotes": [
     "5% of the value CIF (Cost Freight Insurance) value except for alcohol and cigarettes."
    ],
@@ -167,12 +167,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-27T17:14:01Z",
    "http_status": 200,
-   "payload_sha256": "ebffff68f9d564e0689b14c28cf6bfb0ff4c33033302b5655445d40efbe4ff9c",
+   "payload_sha256": "22332f9e2ef6d669072759d3f4c4863077d130c068aab620049bd659d481b5d9",
    "quotes": [
     "5% of the value CIF (Cost Freight Insurance) value except for alcohol and cigarettes."
    ],
@@ -182,12 +182,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-28T16:05:05Z",
    "http_status": 200,
-   "payload_sha256": "8f97b600d96f133b891498f1cd8d70c811922fbe3099de933b855b9c42f038ea",
+   "payload_sha256": "b1f5601fd977b6f5e0fd5ed6a84a7a4be591e47794f91481eca749c74b0aa13e",
    "quotes": [
     "5% of the value CIF (Cost Freight Insurance) value except for alcohol and cigarettes."
    ],

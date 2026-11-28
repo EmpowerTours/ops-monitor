@@ -122,12 +122,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-28T15:51:51Z",
    "http_status": 200,
-   "payload_sha256": "1011757a6d9f5279dc729f4572f3ea28b1bf9e4037b3a4b3e7bb6be3d9c06eae",
+   "payload_sha256": "e059d9435b18ea803d60df98b210a676abd78d2f53e003bdd84c709baa9ff988",
    "quotes": [
     "Meydan Free Zone, Meydan Grandstand, 6th Floor, Meydan Rd, Nad Al Sheba 1, Dubai, UAE"
    ],

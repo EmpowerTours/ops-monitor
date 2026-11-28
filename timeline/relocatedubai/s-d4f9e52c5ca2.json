@@ -177,12 +177,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-27T17:15:30Z",
    "http_status": 200,
-   "payload_sha256": "a74d4b463da247ca743983a066630b64f21f7d22ca1a9ac2bfe0e2eb00af5239",
+   "payload_sha256": "92957a0a3d3f92083e11239c576fa4c8b5751aecab38b001850b1d4d160267d6",
    "quotes": [
     "entitles the holder to remain in the country for (60) sixty days from entry until the necessary processes for issuing residency have been completed.",
     "2. A passport copy, valid for at least 6 months.",
@@ -202,12 +202,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-28T15:52:36Z",
    "http_status": 200,
-   "payload_sha256": "1a70567963df51769d097938eb4ec1ef703aaca26b0398c8e54622e069d32fcb",
+   "payload_sha256": "7a9ecbab56b3351eaa53a1f19bed939764c4753701d05c7beff3419820ab1330",
    "quotes": [
     "entitles the holder to remain in the country for (60) sixty days from entry until the necessary processes for issuing residency have been completed.",
     "2. A passport copy, valid for at least 6 months.",

@@ -114,12 +114,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-27T17:15:30Z",
    "http_status": 200,
-   "payload_sha256": "c0dbbb310bbd19ef2c91bf91681ff44126b0292a25a6b3be0e32069f6e559b23",
+   "payload_sha256": "6a252155280a9cacad0fa000a914193696ce645e1ce19420021b2fbfed03616e",
    "quotes": [
     "Provide evidence that he works for an entity outside the UAE and that the work is being done remotely.",
     "Submit proof that he has a monthly income of no less than (3,500) US dollars or the equivalent in foreign currencies."
@@ -130,12 +130,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-28T15:52:36Z",
    "http_status": 200,
-   "payload_sha256": "795b3b4b92517454499d98d947dd49dfbe546ae16168132926d9ef9d6fbdd768",
+   "payload_sha256": "49eb5aa6082b52680deb921dbc879a8728efbe6967d3d9e2dd8476d0f4cf122a",
    "quotes": [
     "Provide evidence that he works for an entity outside the UAE and that the work is being done remotely.",
     "Submit proof that he has a monthly income of no less than (3,500) US dollars or the equivalent in foreign currencies."

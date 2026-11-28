@@ -182,12 +182,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-28T16:05:05Z",
    "http_status": 200,
-   "payload_sha256": "6a688132c9b3c6d839453ab04370a5780bf6518965d61068fe19f46d20f3869e",
+   "payload_sha256": "5276da25e0b56986f1217c1ffd15343a076d8a4d2c254815a83fc16d9a04ef32",
    "quotes": [
     "Mexico لا يوجد مسالخ معتمدة All the slaughterhouses are not approved"
    ],

@@ -114,12 +114,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "not archived: deferred (per-run cap)",
+   "archive_status": "not archived: the page changed before it could be archived",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-27T17:11:11Z",
    "http_status": 200,
-   "payload_sha256": "5efe6cdf1be8995e338e436eb573b0aa92fe00cd893d0ae845b0f4810e4b7004",
+   "payload_sha256": "409a323adabe581122d5abad5179c5d2532c67f3bcfc37d65d0320d0127c8806",
    "quotes": [
     "License Status",
     "Agency List"
@@ -130,12 +130,12 @@
    "status": "changed_quote_ok"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-28T15:51:49Z",
    "http_status": 200,
-   "payload_sha256": "394a3bdd07ee838eca75bff4cb0069307750d347163fb111b2694ef8ad8c2e8c",
+   "payload_sha256": "dfe2689b2af9216f3aafbbbdddac6f19d1c36d7046a54de6f67ad2bdbaa697a6",
    "quotes": [
     "License Status",
     "Agency List"

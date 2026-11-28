@@ -167,12 +167,12 @@
    "status": "unreachable"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": true,
    "fetched_at": "2026-11-28T16:05:05Z",
    "http_status": 200,
-   "payload_sha256": "0f2925fc1b785fa27f54df6a972c24a106739d7a3a37342f3900b4f904cb2938",
+   "payload_sha256": "17a55f0acbe477e8793eb3d26ed56ad3c699ec570b77700e438b258b73b51a67",
    "quotes": [
     "ECAS Product Type Honey"
    ],

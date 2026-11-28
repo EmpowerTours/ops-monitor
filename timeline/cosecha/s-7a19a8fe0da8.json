@@ -182,12 +182,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-28T16:05:05Z",
    "http_status": 200,
-   "payload_sha256": "428c5b688d052f33ad6bc2e188652f381b99e5dd4ad2557b5f29783ee232d64d",
+   "payload_sha256": "3d39d62e0280664ffc3efb0abd97ae2cbc25bb7e9cc3be516b17296d7780a67c",
    "quotes": [
     "يحظر استيراد النبات ات أو جزء منها ما عدا الثمار من الدول التي سجل بها مرض الاصفرار المميت"
    ],

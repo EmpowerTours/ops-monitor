@@ -154,12 +154,12 @@
    "status": "verified"
   },
   {
-   "archive_status": "pending: Save Page Now runs after the reports",
+   "archive_status": "not archived: deferred (per-run cap)",
    "archive_url": "",
    "changed_since_previous": false,
    "fetched_at": "2026-11-28T15:51:51Z",
    "http_status": 200,
-   "payload_sha256": "0ab3ebfa2d0efb498a04790e5bb49a0519aae1138a10cbad607bada80e1e8ba5",
+   "payload_sha256": "a37285d644f1c9f838ca845b8ac7100265c7174474d88c368efb8fd33c1f4c55",
    "quotes": [
     "The starting cost is AED 12,500 for a business license, including company registration.",
     "Additional services such as immigration or establishment card, company stamp, visa allocation, and residency visas are available on a pay-as-you-go basis and are not charged upfront.",
